@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS na Pagina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>DOM</h2>
+    <p>O <abbr title="Document object model">DOM</abbr> só esta presente dentro do navegador.</p>
+    <p>A arvore <strong>DOM</strong>começa da raiz o <code>window</code></p>
+    <pre style="font: normal 27px fantasy;">
+                               window
+                                      &DownArrow;
+        location   document   history
+                                      &DownArrow;
+                                 HTML
+                                      &DownArrow;
+                        head         body
+                             &DownArrow;               &DownArrow;
+                meta   title      &DownArrow;
+                                              &DownArrow;
+                                   h2  p   p   div
+                                             &DownArrow;
+                                         strong
+</pre>
+    <p><i><small>mapa DOM até essa parte da pagina.</small></i></p>
+    <h2>Selecionar elementos DOM</h2>
+    <table border="2">
+        <th>Metedos de acesso</th>
+        <th>Comando</th>
+        <tr>
+            <td>Marca</td>
+            <td><code>getElementsByTagName<abbr title="o [] após os () indicam a posição do elemento.">()</abbr></code></td>
+        </tr>
+            <tr>
+                <td>ID</td>
+                <td><code>getElementById()</code></td>
+            </tr>
+            <tr>
+                <td>Nome</td>
+                <td><code>getElementsByName()</code></td>
+            </tr>
+            <tr>
+                <td>Classe</td>
+                <td><code>getElementsByClassName()</code></td>
+            </tr>
+            <tr>
+                <td>Seletor</td>
+                <td><code>querySelector('nometag <abbr title="Quando classe use   ' . '     ||   Quando id use  ' # ' ">#</abbr> nomeid')</code></td>
+            </tr>
+    </table>
+
+    
+    <div id = 'objeto_0'><br> Clique em mim</div>
+    <br>
+    <script>
+        var paragrafo1 = window.document.getElementsByTagName('p')[1]
+        window.document.write(paragrafo1.innerHTML)
+     </script>
+
+     <script>
+         var titulo = document.getElementsByTagName('h2')[0]
+         titulo.style.color = 'violet'
+     </script>
+
+     <script>
+         var click = document.getElementById('objeto_0')
+         click.innerText = 'Definimos uma variavel com o elemento encurtar o comando. E poder trabalhar de maneira simplificada → objeto.acoes' 
+     </script>
+
+    <h1 style="font: normal 54px times;">Interações</h1>
+    <p>Fundamentos explicados vamos a integração dos mesmos.</p>
+    <h2>Eventos</h2>
+    <p>Para definir um evento escolha o catilho que dispara a ação.</p>
+    <h3>Mouse</h3>
+    <table border="2">
+        <th>Codigo</th>
+        <th>Evento</th>
+        <tr>
+            <td><code>mouseenter</code></td>
+            <td>Quando Mouse entra no objeto</td>
+        </tr>
+        <tr>
+            <td><code>mousemove</code></td>
+            <td>Quando Mouse move sobre o objeto</td>
+        </tr>
+        <tr>
+            <td><code>mousedown</code></td>
+            <td>Quando Mouse permanece clicado</td>
+        </tr>
+        <tr>
+            <td><code>mouseup</code></td>
+            <td>Quando Mouse solta o click</td>
+        </tr>
+        <tr>
+            <td><code>click</code></td>
+            <td>Quando Mouse clica no objeto rapidamente</td>
+        </tr>
+        <tr>
+            <td><code>mouseout</code></td>
+            <td>Quando Mouse sai do objeto</td>
+        </tr>
+
+
+    </table>
+    <h2>Função</h2>
+    
+    <p><code>&lt;div id='nome_id'<strong><abbr title="metodo">onclick</abbr>         = 'nome_ação'</strong>()&gt;</code></p>
+    <p>O metodo pode ser chamado no html dentro da &lt;div&gt;</p>
+    <p>No Script defina a função em um bloco <strong>function</strong> nome_ação()</p>
+
+    <div id="interagir" onclick="clicou()" onmouseout="saiu()">
+        interagir
+    </div>
+    <script>
+        var objeto = document.getElementById('interagir')
+        objeto.addEventListener('mouseenter', entrou)
+
+        function clicou()
+        {objeto.style.backgroundColor = 'gold'}
+        function saiu()
+        {objeto.style.backgroundColor = 'black';
+        objeto.innerText = 'saiu'}
+        function entrou()
+        {objeto.innerText = 'entrou'}
+        
+        </script>
+    <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando 'nome variavel'<strong>.addEventListener('evento', nome_ação)</strong></P>
+    <p><small><em>Faça um para cada ação.</em></small></p>
+
+    <h2>Interagindo com usuario.</h2>
+    <p>Para uma caixa para receber uma entrada de usuario utilize a tag &lt;input&gt;</p>
+    <input type="number" name="txt1" id="n1">
+    <input type="number" name="txt2" id="n2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="resultado">Resultado</div>
+
+    <script>
+        var txt1 = document.getElementById('n1')
+        var txt2 = document.getElementById('n2')
+        var resultado = document.querySelector('div#resultado')
+
+        function somar(){
+            var result = Number(txt1.value) + Number(txt2.value)
+            resultado.innerHTML = `O resultado da soma entre ${txt1.value} mais ${txt2.value} foi <strong>${result}</strong>`}
+    </script>
+    
+    <h2>Condições</h2>
+    <h3>Condição composta</h3>
+    <p>Use a tag <strong>if</strong></p>
+    <p>Par ou Impar</p>
+    
+    <input type="number" name="parimpar" id="numpi">
+    <input type="button" value="verificar" onclick="parimpou()">
+    <div id="posspi">Aguardando teste...</div>
+
+    <script>
+        var numpi = document.querySelector('input#numpi')
+        var parest = document.querySelector('div#posspi')
+        
+
+        function parimpou() {
+            if (Number(numpi.value) % 2 == 0)
+                {parest.innerHTML = `O numero ${numpi.value} é um numero <strong>par</strong>`}
+            else
+                {parest.innerHTML = `O numero ${numpi.value} <strong>impar</strong>`}
+        } </script>
+
+    <h3>Condições Aninhadas</h3>
+    <p>Condições dentro de Conções. Dentro do verdadeiro ou falso é so acrescentar mais Condições.</p>
+    <p>Para isso use o <mark>else if</mark></p>
+
+    Digite sua idade <input type="number" name="idade" id="idade">
+    <input type="button" value="Confirmar" onclick="votar()">
+    <div id="obrvoto"></div>
+
+    <script>
+        var idade = document.querySelector('input#idade')
+        var votores = document.querySelector('div#obrvoto')
+
+        function votar()
+        {if (idade.value >=18 && idade.value <= 64)
+            votores.innerHTML = `Você tem ${idade.value} anos, voto obrigatorio.`
+        else if (idade.value >=16 && idade.value <=18 || idade.value >= 65)
+            votores.innerHTML = `Você tem ${idade.value} anos, Seu voto é opicional`
+        else
+        {votores.innerHTML = 'Não vota.'}}
+        </script>
+
+    <h3>Condições Multiplas</h3>
+    <p>O mando swich() e nele existe o case e sempre coloque o <mark>break</mark> após cada um. <br></p>
+    <h4>Dia da semana</h4>
+    <table border="1">
+        <tr>
+            <td>
+                <div id="dia" style="font-size: 18px;"></div>
+            </td>
+        </tr>
+    </table>
+
+    <script style="font: xx-large;">
+        var data = new Date()
+        var dias = data.getDay()
+        var local = document.querySelector('div#dia')
+
+        switch (dias) {
+            case 0:
+                local.innerHTML = '<i>Domingo</i>'
+                break;
+            case 1:
+                local.innerHTML = 'Segunda'
+                break;
+            case 2:
+                local.innerHTML = '<u>Terça</u>'
+                break;
+            case 3:
+                local.innerHTML = '<strong>Quarta</strong>'
+                break;
+            case 4:
+                local.innerHTML = 'Quinta'
+                break;
+            case 5:
+                local.innerHTML ='Sextou'
+                break;
+            case 6:
+                local.innerHTML = 'Sabado'
+                break;
+        
+            default:
+                document.write(`o dia ${dias} não é um dia valido. Ou seu progrma esta incompleto.`)
+                break;
+        }
+
+
+
+
+    </script>
+    
+
+
+
+    <h2>Separe seus Scripts</h2>
+    <p> Utilize a tag &lt;<abbr title="script  :  scr">script</abbr> src=""&gt;</p>
+
+
+    
+    
+
+
+    <p><a href="../jsindex.html" rel="prev">Voltar para intro</a></p>
+    
+
+</body>
+</html>

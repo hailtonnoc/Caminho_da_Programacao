@@ -1,0 +1,39 @@
+body
+{
+    background: radial-gradient( rgba(114, 15, 207, 0.812)9%, rgba(232, 255, 25, 0.816)63%, rgba(255, 25, 25, 0.813))36%, url("XXXMATERIAISXXX/IMAGENS/time-wallpaper-3.jpg");
+    font-size: 18px;
+}
+
+
+
+
+#tempo
+{
+    color: rgb(255, 187, 0);
+    font-size: 1.8em;
+}
+
+#diames, #diarest
+{
+    font-size: 45px;
+}
+
+.spin:hover
+{
+    transition: 3.6s;
+    transform:rotate(396deg);
+}
+
+footer
+{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+}
+
+ul
+{
+    background-color: rgba(245, 245, 245, 0.212);
+    border-radius: 18px 225% 90% 18px;
+    width: 54.9%;
+}

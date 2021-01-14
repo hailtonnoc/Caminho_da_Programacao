@@ -1,0 +1,105 @@
+header
+{
+    padding: 12px;
+    border: outset;
+    border-width: 9px;
+    border-color: gold;
+}
+
+h1 
+{
+    display:inline;
+    font: normal 81px times;
+    position: relative;
+    bottom: 18px;
+
+}
+
+
+
+body 
+{
+    background: repeating-linear-gradient(gold,#5f4f40);
+}
+nav
+{
+    position: absolute;
+    right: 1%;
+    top: 96%;
+}
+
+nav li
+{
+    display: inline;
+    margin: 0  12px 0 18px;
+}
+
+nav a
+{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    font-size: 21px;
+}
+
+main
+{
+    margin: 18px;
+}
+
+.indice
+{
+    position: relative;
+    width: 999px;
+    margin: 0 auto;
+}
+
+.desc
+{
+    width: 999px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.desc img
+{
+    margin: 9px;
+}
+
+.desc img:hover
+{
+    margin-left: 1px;
+}
+
+.desc li
+{
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 9px 18px ;
+    box-sizing: border-box;
+    border: 6px groove gold;
+    border-radius: 9px 6px;
+    background: rgba(226, 225, 176, 0.342);
+
+}
+
+.desc h2
+{
+    font-size: 27px;
+    font-weight: bolder;
+}
+
+footer
+{
+    text-align: center;
+    padding: 36px;
+}

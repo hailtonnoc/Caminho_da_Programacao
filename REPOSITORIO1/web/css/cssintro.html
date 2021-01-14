@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <img id="header" src="../../XXXMATERIAISXXX/IMAGENS/rainbow.jpg" alt="inicialwall">
+    
+    <header>
+        <h1 style="color: rgb(80, 206, 158);">Iniciando <abbr title="Cascading Style Sheets">CSS</abbr></h1>
+
+    </header>
+    
+    <main>
+        <section class="tiposcss">
+            <h2 style="color: rgb(197, 72, 72); font-size: xx-large;" >Na linha</h2>
+            <p><small>(Utilize quando for um detralher infimo.)</small></p>
+            <p>Dentro da tag inicial anuncie o <strong>style=</strong> "seguido: alteração ; outra: alteração"</p>
+
+            <h2>No arquivo</h2>
+            <small>(Utilize quando tiver poucas configurações.) </small>
+            <p>Utilize a tag <strong>&lt;style&gt;</strong> dentro da tag &lt;head&gt;</p>
+
+            <h2>Arquivo separado</h2>
+            <small>(Utilize sempre.)</small>
+            <p>Utilize a tag &lt;<abbr title="link  :  css">link</abbr> rel="stylesheet" href="style.css"&gt;</p>      
+        </section>
+        
+        <img src="../../XXXMATERIAISXXX/IMAGENS/csstipos.jpg" alt="css tipos" class="descri">
+
+        <section class="idenficadores">
+            <h2>Identificando elemento</h2>
+            <p>Por ordem de relevancia, respectivamente 100, <strong style="color: blue;">10</strong> e 1. De preferencia a classes já que o <strong>JS</strong> costuma a usar os id.</p>
+
+            
+
+            <h3><em>Id</em>endificadores</h3>
+            <p>Metodo query selector, utiliza o nome da tag seguido do idenficador de id <strong style="font-size: 21px;">#</strong> e o nome do id. <br> exemplo; <strong>div#nome</strong></p>
+
+            <h3 style="color: blue;"><i>Class</i>es</h3>
+            <p>Da mesma maneira que o idenficador distigue um item o a classe distigue um conjunto de itens. <br> O simbolo de idenficação é o <strong>.</strong> resultando no selector <strong>tag.nome</strong></p>
+
+            <h3>Ordem de tags</h3>
+            <p>Consiste em idenficar através dos elementos por exempo uma <abbr title="alterar o strong que esta dentro de uma emphase dentro de um paragrafo"><strong>p em strong</strong></abbr></p>
+            <p>para mais de uma tag com a mesma configuração utilize uma "<strong style="font-size: 36px;">,</strong>"  .</p>
+            <p>Para um elemento direto e nenhum outro use "<strong style="font-size: 36px;">&gt;</strong>"</p>
+
+            <p>Para um elemento direto logo apos outro "<strong style="font-size: 36px;">+</strong>"</p>
+
+            <p>Para todos elementos direto logo apos outro "<strong style="font-size: 36px;">~</strong>"</p>
+
+            <p>Para todos elementos exeto o que contem (algo) " tag:<strong style="font-size: 36px;">not</strong>(#id)"</p>
+
+            <h3>Pseudo elementos / Indicando ação</h3>
+            <p>No <strong>CSS3</strong> é possivel ainda fazer transformações através de interações com ele mesmo, após idenficar o elemento utilize <strong style="font-size: 27px;"><code>:'ação'
+        
+            </code></strong></p>
+            <table border="2">
+                <thead>
+                    <th>P. Codigo</th>
+                    <th>Posição</th>
+                </thead>
+                <tr>
+                    <td>:nth-child(x)</td>
+                    <td>Elemento posição x</td>
+                </tr>
+                <tr>
+                    <td>:last-child</td>
+                    <td>Ultimo elemento</td>
+                </tr>
+                <tr>
+                    <td>:first-letter</td>
+                    <td>Primeira letra</td>
+                </tr>
+                <tr>
+                    <td>:first-line</td>
+                    <td>Primeira linha</td>
+                </tr>
+                <tr>
+                    <td>:before</td>
+                    <td>Antes</td>
+                </tr>
+                <tr>
+                    <td>:after</td>
+                    <td>Depois</td>
+                </tr>
+                <tr>
+                    <td>content:   ;</td>
+                    <td>Contem </td>
+                </tr>
+
+            </table>
+        </section>
+
+        <section>
+            <h2>Unidades de medida</h2>
+            <p>Ainda é possivel utilizar o complemento <strong>calc</strong>(36% - 3px)</p>
+            <table border="1">
+                <thead>
+                    <th>Medida</th>
+                    <th>Função</th>
+                </thead>
+                <tr>
+                    <td>%</td>
+                    <td>Poporcional ao display</td>
+                </tr>
+                <tr>
+                    <td>px</td>
+                    <td>Pixel</td>
+                </tr>
+                <tr>
+                    <td>em</td>
+                    <td>Proporcinal ao <abbr title="2em == 2x">padrão</abbr></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+
+    <p><a href="css_anotacoes/csscomandos.html" rel="next">Comandos</a></p>
+    <p><a href="../../index.html" rel="prev"><img src="../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a></p>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+body 
+{
+    background: rgb(255, 255, 255);
+    color: rgb(24, 113, 245);
+}
+
+form
+{
+    margin: 40px 0;
+}
+
+form label, legend
+{
+    display: block;
+    font-size: 18px;
+    margin: 0 0 6px;
+}
+.input-padrao
+{
+    display: block;
+    margin: 0 0 18px;
+    padding: 9px 27px;
+    width: 50%;
+}
+
+.checkbox
+{
+    margin: 9px 0;
+}
+
+fieldset
+{
+    border: none;
+}
+
+.enviar
+{
+    width: 45%;
+    padding: 18px 0;
+    background: blue;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.enviar:hover
+{
+    background: purple;
+    transition: 2s;
+    cursor: pointer;
+}
+
+.mapa
+{
+    padding: 3em 0;
+}
+
+.mapa h4
+{
+    text-align: center;
+}
+
+.mapa p
+{
+    padding: 0 0 2em;
+}

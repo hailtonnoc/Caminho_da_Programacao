@@ -1,0 +1,33 @@
+body 
+{
+    background: linear-gradient( rgba(255, 217, 0, 0.507),rgba(224, 193, 14, 0.87));
+    font-size: 21px;
+}
+
+h1 {font: normal 63px times; text-shadow: rgb(158, 120, 24) 9px 9px 4.5px;}
+h2 {font-size: normal 54px times; text-shadow: rgb(158, 120, 24) 6px 6px 3.6px;}
+h3 {font-size: normal 45px times; text-shadow: rgb(158, 120, 24) 3px 3px 1.8px;}
+
+pre 
+{
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: top;
+}
+
+#moldeclass, #objeto, #objetof, #inseguranca
+{
+    background: rgba(245, 245, 245, 0.493);
+    width: 63%;
+    font-size: 1.63em;
+    border-radius: 6px;
+    box-shadow: rgb(109, 86, 27) 6px 6px 3px ;
+}
+
+div#interagir {background: black;
+font: normal 27px fantasy;
+color: white;
+width: 270px;
+height: 270px;
+line-height: 270px;
+text-align: center;}

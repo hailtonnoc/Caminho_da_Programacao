@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Js medio</title>
+</head>
+<body>
+    <h1>Repetições</h1>
+    <h2>While</h2>
+    <p>Repetição simples ou looping</p>
+    <h3>Com teste no inicio</h3>
+    <p>Utilize o <strong>while</strong></p>
+    <script>
+        var contador = 0
+        while (contador <10)
+        {
+            document.write(`${contador}`)
+            document.write('')
+            contador++
+        }
+    </script>
+    <h3>Com teste no final</h3>
+    <small>Comece com o comando <strong>do</strong> e feche com o while</small><br>
+    <script>
+        var cont = 0
+        do
+        {
+            document.write(`${cont}`)
+            cont ++
+        } while (cont < 10)
+    </script>
+
+    <h2>for</h2>
+    <p>Estrutura de Repetição com variavel de controle.</p>
+    <p><code>for(inicio;teste;incr)</code></p>
+
+    <script>
+        for (var c=0 ; c <10 ; c++)
+        {document.write(`${c}`)}
+
+    </script>
+
+
+    <h1>Variaveis Compostas</h1>
+    <p>Diferente das variaveis de simples que conseguem armazenar apenas um valor por vez as variaveis compostas são um agrupamento bem organizado de dados.</p>
+    <p>var nome = <strong>[el0, el1, el2]</strong></p>
+    <script>
+        var exemp = [0,1,2]
+        document.write(exemp)
+    </script>
+    <p>para adicionar elementos utilize <code>nome[posição]=valor</code></p>
+    <script>
+        exemp[3]= 3
+
+        document.write(exemp)
+    </script>
+    <p>ou para adicionar automaticamente no final utilize o metodo <strong><code>.push(<small>valor</small> )</code></strong></p>
+
+    <h3>Utilitarios variavel composta</h3>
+    <table border="2">
+        <th>codigo</th>
+        <th>função</th>
+        <tr>
+            <td><code><strong>.length()</strong></code></td>
+            <td>Contar elementos</td>
+        </tr>
+        <tr>
+            <td><code><strong>.sort()</strong></code></td>
+            <td>Ordenar elementos</td>
+        </tr>
+        <tr>
+            <td><code><strong>.indexOf( <small>item</small> )</strong></code></td>
+            <td>Retorna a posição do item</td>
+        </tr>
+    </table>
+    <script>
+        var vetor = [9,8,7,6,5,4,3,2,1,0]
+        for(var pos=0; pos < vetor.length ; pos++)
+        {
+            document.write(` a posição ${pos} contem o valor ${vetor[pos]}`)
+        }
+
+        
+
+        //Simplificado
+        //for(var pos in valores) {}
+    </script>
+    <p></p>
+    <script>
+        document.write(`o numero 9 do vetor esta na posição ${vetor.indexOf(9)}`)
+    </script>
+
+    
+
+    <h2 style="font-size: 1.8em;"><strong style="font-size: 1.2em;">Class</strong>es</h2>
+    <p>classe funciona como um molde, tento em vista a criação de varios objetos com as mesmas caracteristicas.</p>
+    <code>
+        <pre>
+            <strong>class</strong> pessoa
+            {                      <small>atributos</small>
+                nome;
+                cpf;
+                nascimento;
+            }
+        </pre>
+        <pre>
+            <strong>class</strong> conta
+            {                      <small>atributos</small>
+                corretora;
+                tipo de investimento;
+                saldo;
+                nivel;
+            }
+        </pre>
+    </code>
+    <p><em>Lembre sempre de analisar os objetos a serem criados e <strong>abstraia</strong> as estruturas.</em></p>
+    <h3><strong style="font-size: 1.45em;">Const</strong>ruindo / <small>Criando <strong>objeto</strong></small></h3>
+    <code>
+        <pre>
+            <strong>const</strong> pessoa1 = <strong>new</strong> nome()
+            ...
+            const pessoa2= new nome()
+
+            pessoa1.nome = "Hailton";
+            pessoa1.cpf = 45048007209;
+            pessoa1.nasimento = 25/04/1996;
+            ...
+            pessoa2.nome = "Oliveira";
+            pessoa2.cpf = 45048007209;
+            pessoa2.nasimento = 25/04/1996;
+        </pre>
+        <pre>
+                <strong>const</strong> conta1 = new conta()
+            
+                conta1.corretora = "NocInvestimentos";
+                conta1.tipodeinvestimento = "MercadoAberto";
+                conta1.saldo = 999.99;
+                conta1.nivel = "tranquileba";
+        
+        </pre>
+    </code>
+    <p>Resultado Final</p>
+    <div id="moldeclass"></div>
+
+    <h3>Função em Classes</h3>
+    <p>Criando um objeto completo contendo forma e funções</p>
+    <code>
+        <pre>
+            class conta
+            {
+                corretora;
+                tipo de investimento;
+                saldo;
+                nivel;
+
+                <div style="border: 3px solid rgb(231, 222, 138);">
+                    <strong>sacar(</strong>valor)
+                    {
+                        if(<abbr title="'DESTA' então ele trabalha com a proria conta">this</abbr>.saldo >= valor)
+                        {<strong>this</strong>.saldo -= valor;}
+                    }
+    
+                    <strong>Deposito</strong>(valor)
+                    {
+                        if(valor >=0)
+                        {this.saldo += valor;}
+                    }
+                </div>
+            }
+        </pre>
+    </code>
+    <p>Resultado final</p>
+    <div id="objeto"></div>
+    <p>Após um saque de R&#36;<abbr title="PARAMETROS / ARGUMENTO">9</abbr></p>
+    <code>
+        <pre>
+            <strong>conta1.sacar(<abbr title="VALOR">9</abbr>)</strong>
+            <strong>conta1.depositar(9000)</strong>
+        </pre>
+    </code>
+    <div id="objetof"></div>
+
+    <h2>Melhorando Função</h2>
+    <p>Mantendo a segurança de variaveis afim que não possam ser alteradas por fora da função.</p>
+    <code>
+        <pre>
+            <strong>conta.saldo = 180000;</strong>
+        </pre>
+    </code>
+    <div id="inseguranca"></div>
+    <h3>_Segurança</h3>
+    <p>Para manter um atributo com a sua manipulação estritamente atrelada as funções de sua classe atribua antes do atributo o "<strong style="font-size: 1.3em;">_</strong>" ou sua variante "<strong style="font-size: 1.3em;">#</strong>"</p>
+    <h3>Retorno</h3>
+    <p>O comando <strong>return</strong></p>
+
+    <script src="jsmedio.js"></script>
+
+    <p><a href="../jsindex.html" rel="prev">Voltar ao indice</a></p>
+</body>
+</html>

@@ -1,0 +1,64 @@
+body
+{
+    margin: 9px;
+    background: linear-gradient( purple,  #206cfa3f);
+}
+
+h1
+{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 360%;
+    margin: 1.8%;
+}
+
+.blococ
+{
+    display: inline-block;
+    width: 39.9%;
+    padding: 9px;
+    margin: 18px;
+    border: 3px groove darkblue;
+    border-radius: 9px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 6px 1px  rgba(128, 0, 128, 0.643);
+    position: relative;
+    left: 1.8%;
+
+}
+
+.blococ:hover
+{
+    color: rgba(56, 25, 158, 0.965);
+    font-size: large;
+    transition: 0.9s;
+    transform: scale(1.18);
+}
+
+td
+{
+    padding: 0 3px;
+}
+
+
+.blocof
+{
+    display: inline-block;
+    width: 39.9%;
+    padding: 9px;
+    margin: 18px;
+    border: 3px groove darkblue;
+    border-radius: 9px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 6px 1px  rgba(128, 0, 128, 0.643);
+    position: relative;
+    left: 1.8%;
+}
+
+.blocof:hover
+{
+    color: rgba(56, 25, 158, 0.965);
+    font-size: large;
+    transition: 1.8s;
+    transform: rotate(-36deg) scale(1.18);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Comandos</h1>
+    <p>Veremos por ordem de desenvolvimento passo a passo desta maravilhosa plataforma.</p>
+    <h2>Primeiros Comandos</h2>
+    <h3>Janelas</h3>
+    <p>Utilizamos o inicio <strong><code>window.</code></strong></p>
+    <p>Seguido da funcionalidade desejada;</p>
+    <p><code>window.<strong>alert('<small>descreve alerta</small>')</strong></code></p>
+    <p><code>window.<strong>confirm</strong>()</code></p>
+    <p><code>window.<strong>prompt</strong>()</code></p>
+
+    <h2>Variaveis e Tipos Primitivos </h2>
+    <p>Espaço para memoria com configuração previa.</p>
+    <h3>procedimento;</h3>
+    <p>Declarar que o é uma <strong>var</strong>iavel.</p>
+    <p><strong><code>var</code></strong></p>
+    <q>No JavaScript moderno tambem é possivel uasar a palavra <code>let</code></q>
+    <p>Após Declarar a <strong>var</strong>riavel precisa declarar tbm sua identificação.</p>
+    <p><code>var <strong>nome</strong>=</code>' o dado '</p>
+    <h3>Tipos Primitivos Primordiais</h3>
+    <h4><abbr title="ex; Hailton, JavaScript, abc123...">STRING</abbr></h4>
+    <h4><abbr title="ex; 3, 6, 9, 1.618033, -18.81...">NUMBER</abbr></h4>
+    <h4><abbr title=" true | false">BOOLEANO</abbr></h4>
+    <h4>OBJECT</h4>
+    <p>Para ver o tipo Primitivos utilize a palavra reservada <code>typeof </code> seguido da varialvel.</p>
+    <p><pre>
+        <code>
+    var nome = <small>'Hailton'</small>
+    typeof nome        
+   ><small>'string'</small> 
+    typeof <small>9.36</small>
+   ><small>'number'</small>
+    var test = <small>(3+6)==9</small>
+   ><small>'boolean'</small>
+        </code>
+    </pre></p>
+    <h2>Modelagem de dados</h2>
+    <p>O JavaScript sempre salva os input de dados como <abbr title="conjunto de carateres"><strong>string</strong></abbr></p>
+    <h3>É necessario converter os dados.</h3>
+    <p>Para isso basta usar a seguinte sintaxe;</p>
+    <pre><code>
+        Number.<strong>parseInt</strong><small>(variavel)</small>
+    ou
+               <strong>parsefloat</strong><small>()</small>
+    </code></pre>
+    <p>o <code>Number.</code> é opicional</p>
+    <p>o <code><strong>Number</strong></code>(variavel) faz a conversão automaticamente</p>
+    <h3>E para string</h3>
+    <p><code><strong>String</strong></code>(variavel) faz a conversão automaticamente</p>
+
+    <h2>Utilização de strings</h2>
+    <p>'Estou aprendendo' <abbr title="concatenar">+</abbr> variavel</p>
+    <p>`Estou aprendendo <abbr title="template">$</abbr>{variavel}`</p>
+   
+   <script>
+    //var nome = window.prompt("Bem Vindo A primeira aula de JavaScript.\nQual seu nome?")
+    document.write(`E ai ${nome}`)
+    </script>
+
+<p>Formatar strings;</p>
+<p><code>variavel.<strong>length()</strong></code> Contar caracteres</p>
+<p><code>variavel.<strong>toUpperCase</strong>()</code> Deixar MAIUSCULO</p>
+<p><code>variavel.<strong>toLoweCase</strong>()</code> Deixar minusculo</p> 
+ 
+<p><code>variavel.<strong>toFixed</strong>(2)</code> com 2 casas depois da virgula</p>
+<p><code>variavel.<strong>toLocalString</strong><small>('pt-br', {style: 'currency', currency: 'BRL'})</small></code> com formato de moeda</p>
+
+
+<h2>&lt;div&gt;</h2>
+<p>Não representa nada, apenas um espaço para agrupamento de fluxo, como um objeto. <br>
+Geralmente é utilizado um class ou um id para idenficar. <code>&lt;div id = "nome_objeto"&gt;</code></p>
+
+<p><a href="../jsindex.html">Voltar ao JS intro</a></p>
+    
+</body>
+</html>

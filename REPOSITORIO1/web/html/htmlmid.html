@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML midia</title>
+</head>
+<body>
+    <h1>Midia</h1>
+    <h2>Imagens</h2>
+    <h3>Favicon</h3>
+    <p>Imagens que ficam na aba. Deve ser declarado na <strong>&lt;head&gt;</strong>. Tag link:favicon</p>
+    <p><code>&lt;link rel="shortcut icon" href=<strong>"favicon.ico"</strong> type="image/x-icon"></code></p>
+    <h3>Imagem na pagina</h3>
+    <p>Para inserir uma imagem basta usar a tag <strong>&lt;img&gt;</strong></p>
+    <p><code>&lt;img src="<strong>link</strong>" alt=<strong>"descricao"</strong>&gt;</code></p>
+    <p>O link pode ser local ou uma <abbr title="Idenficador Uniforme de Recurso">URI</abbr>.</p>
+    <h3>Imagem adaptavel</h3>
+    <p>Ajuda a Ajustar a diferentes tipos de dispositivos</p>
+    <p>Para isso utilizamos a tag &lt;picture&gt;</p>
+    <p>Para criar essa analise de tamanho de tela utilize a tag;<br> <code>&lt;<abbr title="midia type">source media</abbr>="(max-width: <mark>
+        tamanho<strong>px</strong>
+    </mark>)" srcset="<strong>local img</strong>" type="image/<strong>tipo</strong>"&gt;</code></p>
+    <p><i><small>Sempre organize os tamanhos em ordem crescente. E a tag <mark>&lt;img&gt;</mark> é necessaria como imagem inicial.</small></i></p>
+    <picture>
+        <source media="(max-width: 450px )" srcset="../../XXXMATERIAISXXX/IMAGENS/CEREBRISSIMO.png" type="image/png">
+        <source media="(max-width: 1100px )" srcset="../../XXXMATERIAISXXX/IMAGENS/media.png" type="image/png">
+       <img src="../../XXXMATERIAISXXX/IMAGENS/grande.png" alt="imagem cerebro">
+    </picture>
+    
+    
+    <h2>Links</h2>
+    <h3>Usando links externos</h3>
+    <p>Voce pode acessar meu insta atraves de <a href="https://www.instagram.com/hailton.noc/?hl=pt-br" target="blank" rel="external">Perfil</a> </p>
+     
+    <h3>Links para download</h3>
+    <a href="../../XXXMATERIAISXXX/DOCUMENTOS/Hailton Oliveira.pdf" download="Hailton Oliveira.pdf" type="application/pdf">baixar curriculo</a></li>
+
+    <h3>Usando Links internos</h3>
+    <p><a href="html.html" rel="prev"><mark>Voltar HTML</mark></a></p>
+
+    <h2>Audio</h2>
+    <p>Utilize a tag &lt;audio&gt;</p>
+    <p>Para adicionar menu de reprodução inserir dentro da tag audio a configuração <mark>controls</mark>.</p>
+    <p>Opções de carregamento <mark>preload</mark></p>
+    <table border="1">
+        <th>Codigo</th>
+        <th>Função</th>
+        <tr>
+            <td>auto</td>
+            <td>Carrega tudo junto com a pagina</td>
+        </tr>
+        <tr>
+            <td>metadata</td>
+            <td>Carrega apenas informações do audio</td>
+        </tr>
+        <tr>
+            <td>none</td>
+            <td>Não carrega nada se não clicar</td>
+        </tr>
+
+
+    </table>
+    <audio src="../../XXXMATERIAISXXX/AUDIO/IM.mp3" preload="none" controls></audio>
+
+
+    <h2>Video</h2>
+    <h3>Local em servidor</h3>
+    <p><small>Não recomentado. Desta maneira consome a banda do servidor.</small></p>
+    <p>Para adicionar um video utilize a tag &lt;video&gt;. Assim como  devemos adaptar imagens a diferentes tipos de dispositivos, com videos não é diferente.</p>
+    <p>Devemos utilizar o metodo &lt;<abbr title="source : src">source</abbr>&gt;</p>
+    <video controls width="500">
+        <source src="../../XXXMATERIAISXXX/VIDEOS/ITSOK.webm" type="video/webm">
+            <source src="../../XXXMATERIAISXXX/VIDEOS/ITSOK.m4v" type="video/mp4">
+    </video>
+    <h3>Atraves de outros servidores</h3>
+    <p>Youtube</p>
+    <iframe width="500" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><small>A desvantagem é por se tornar um video publico. <br>É possivel usar outros sevidores de video, que <mark style="background-color: aqua;">
+        diminui o custo de hospedagem do cliente.
+    </mark></small></p>
+
+
+</body>
+</html>
