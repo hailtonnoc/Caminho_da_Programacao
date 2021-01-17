@@ -44,6 +44,12 @@ article, section
     color: rgb(228, 109, 208);
 }
 
+.simplecode
+{
+    font-weight: bolder;
+    font-size: 1.45em;
+}
+
 .verdecode
 {
     color: rgb(122, 184, 60);

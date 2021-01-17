@@ -36,15 +36,17 @@
 
     <article>
         <h3>DOCTYPE</h3>
-    <code>&lt;!DOCTYPE <abbr title="Indica ultima versão, o HTML5">html</abbr>&gt;</code>
+    <code class="simplecode">&lt;!DOCTYPE <abbr title="Indica ultima versão, o HTML5">html</abbr>&gt;</code>
     <p>Convoca um comportamento do navegador para que leia em formato HTML, já que cada um tem sua propia maneira de ler o HTML.</p>
-        <p> &lt;<strong style="font-size: 1.8em;">html</strong>> e &lt;/html&gt; demarca a página web, onde vai todo seu conteudo e parametos;</p>
+        <p> <code class="simplecode">&lt;<strong style="font-size: 1.8em;">html</strong>> e &lt;/html&gt;</code> demarca a página web, onde vai todo seu conteudo e parametos;</p>
 
-        <h2>Divisões Basicas</h2>
         <p>O HTML possui duas divisões basicas, uma para as <strong class="ashead" style="color: gray;">configurações da pagina</strong>, e a parte do <strong class="asbody" style="color: darkred;">conteudo apresentavel</strong>. </p>
+        <h2>Divisões Basicas</h2>
+
         <section id="shead">
+
             <h3 class="h3emp"><strong class="ashead" style="color: gray;">head</strong></h3>
-            <p>Aqui fica todos os ajustes e informações referente a estrutura da pagina.</p>
+            <p> <code class="simplecode">&lt;head&gt; e &lt;/head&gt;</code> Aqui fica todos os ajustes e informações referente a estrutura da pagina.</p>
 
             <p>&lt;meta&gt; é a tag responsavel por passar informações para pagina. como <br>
                         &lt;meta <code class="verdecode">charset</code>="UTF-8"&gt;
@@ -59,23 +61,33 @@
 
         <section id="sbody">
             <h3 class="h3emp" style="color: darkred;">body</h3>
-            <p>O texto entre &lt;body> e &lt;/body> é a informação visível na página;</p>
+            <p>Os Elementos entre <code class="simplecode">&lt;body> e &lt;/body></code> é a informação visível na página;</p>
             
-            <h3>Elementos</h3>
+            <h2>Elementos</h2>
+
             <h4>Titulos</h4>
-            <p>Cada um h representa um subinivel h1, h2, h3,h4, h5 e h6 do anterior ou uma biforcação do assunto.  </p>
             <p>O texto entre &lt;h1> e &lt;/h1> é exibido como cabeçalho;</p>
+            <p>Cada um h representa um subinivel h1, h2, h3,h4, h5 e h6 do anterior, uma tangente do assunto.  </p>
+            <p>A tag &lt;p&gt; e &lt;p&gt; apresentam o conteudo dos paragrafos.</p>
+
+            <h3>Divisões do Material</h3>
+            <p>Para uma melhor vusualização e organização do codigo utilizamos a tag <strong>&lt;div&gt;</strong> com intuito de genericamente <strong>div</strong>idir o conteudo.</p>
+            <p>Quando as divisões forem para formulario utilize a tag &lt;<strong>fieldset</strong>&gt;</p>
+            <h3>Conteudo importante</h3>
+            <p>Utilizamos a tag &lt;main&gt; para dar notoriedade a um determinado tipo de conteudo.</p>
+            
+            <h4>header</h4>
+            <p>Demarca o cabecalho.</p>
             <h4>Section</h4>
             <p>É um texto generico ou uma seção.</p>
             <h4>Article</h4>
             <p>Uma peça independente do conteudo do documento, como um blog ou jornal.</p>
             <h4>Aside</h4>
             <p>Conteudo pouco relacionado.</p>
-            <h4>Footer</h4>
-            <p>Rodapé , informações sobre direitos autorais.</p>
             <h4>Figure</h4>
             <p>conteudo independente, como video e imagem.</p>
-            <p>O texto entre &lt;p> e &lt;/p> é exibido como parágrafo;</p>
+            <h4>Footer</h4>
+            <p>Rodapé , informações sobre direitos autorais.</p>
 
             <h3>Listas</h3>
             <p>Utilizamos a tag &lt;ol&gt; para uma lista ordenada.</p>
@@ -97,14 +109,6 @@
             <p>A tag &lt;input&gt; indica onde o usuario deve inserir os dados. Geralmente vem em &lt;form&gt;</p>
             <code>&lt;input type="text" <strong>nome = 'primeiro'</strong>&gt;</code> 
         
-            
-        
-            <h3>Divisões</h3>
-            <p>Para uma melhor vusualização e organização do codigo utilizamos a tag <strong>&lt;div&gt;</strong> com intuito de genericamente <strong>div</strong>idir o conteudo.</p>
-            <p>Quando as divisões forem para formulario utilize a tag &lt;<strong>fieldset</strong>&gt;</p>
-        
-            <h3>Conteudo importante</h3>
-            <p>Utilizamos a tag &lt;main&gt; para dar notoriedade a um determinado tipo de conteudo.</p>
         
             <h2>Input</h2>
             <p>Area para inserção de dados e interação com usuario. <br>
