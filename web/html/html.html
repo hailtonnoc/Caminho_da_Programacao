@@ -14,6 +14,7 @@
             <div class="cabecalho">L</div>anguage</h1>
     </header>
     <p>Pode ser considerada a ligua mãe ou lingua primordial da <abbr title="World Wide Web">WWW</abbr>.</p>
+
     <h2>Função</h2>
     <ul>
         <li>Publicar documentos online possuindo cabeçalho, texto, quadros e tabelas, listas e fotos.</li>
@@ -23,23 +24,26 @@
 
     <h2>Tags</h2>
     <p>Marcações que caracterizam o texto. E modelam o html.</p>
+
     <h3>Regras de &lt;tag&gt;</h3>
     <p>Aparecem entre colchetes angulares &lt; &gt;.</p>
     <p>Geralmente uma abrindo e outra fechando, quando a tag é de informação então temos apenas uma. E não são case sensitive. </p>
+
     <h3>Estrutura do HTML</h3>
     <p>Inicialmente declaramos a tag !</p>
-    <h3>DOCTYPE</h3>
-    <code>&lt;!DOCTYPE <abbr title="Indica ultima versão, o HTML5">html</abbr>&gt;</code>
-    <p>Convoca um comportamento do navegador para que leia em formato HTML, já que cada um tem sua propia maneira de ler o HTML.</p>
+    
     
 
     <article>
-        <p> &lt;html> e &lt;/html&gt; demarca a página web, onde vai todo seu conteudo e parametos;</p>
+        <h3>DOCTYPE</h3>
+    <code>&lt;!DOCTYPE <abbr title="Indica ultima versão, o HTML5">html</abbr>&gt;</code>
+    <p>Convoca um comportamento do navegador para que leia em formato HTML, já que cada um tem sua propia maneira de ler o HTML.</p>
+        <p> &lt;<strong style="font-size: 1.8em;">html</strong>> e &lt;/html&gt; demarca a página web, onde vai todo seu conteudo e parametos;</p>
 
         <h2>Divisões Basicas</h2>
-        <p>O HTML possui duas divisões basicas, uma para as <strong style="color: gray;">configurações da pagina</strong>, e a parte do <strong style="color: darkred;">conteudo apresentavel</strong>. </p>
+        <p>O HTML possui duas divisões basicas, uma para as <strong class="ashead" style="color: gray;">configurações da pagina</strong>, e a parte do <strong class="asbody" style="color: darkred;">conteudo apresentavel</strong>. </p>
         <section id="shead">
-            <h3 class="h3emp" style="color: gray;">head</h3>
+            <h3 class="h3emp"><strong class="ashead" style="color: gray;">head</strong></h3>
             <p>Aqui fica todos os ajustes e informações referente a estrutura da pagina.</p>
 
             <p>&lt;meta&gt; é a tag responsavel por passar informações para pagina. como <br>
@@ -51,45 +55,16 @@
             <p>&lt;title&gt; e &lt;/title&gt; define o titulo da aba no navegador;</p>
         </section>
 
+        <br>
 
         <section id="sbody">
             <h3 class="h3emp" style="color: darkred;">body</h3>
             <p>O texto entre &lt;body> e &lt;/body> é a informação visível na página;</p>
-            <p>O texto entre &lt;h1> e &lt;/h1> é exibido como cabeçalho;</p>
-            <p>O texto entre &lt;p> e &lt;/p> é exibido como parágrafo;</p>
-        
-            <h3>Links</h3>
-            <p>Utilizando a tag &lt;a&gt;</p>
-            <p>Para link externo use <code>&lt;a href="http://exemplo.ai"<strong> target = "blank"</strong>>&lt;/a&gt;</code> </p>
-            <section class="mapa">
-                <h4>&lt;iframe&gt;</h4>
-                <p>Abre uma especie de janela para conteudos externos como maps</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5768983770554!2d-46.754609949151536!3d-23.65531878456099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53d9f964f181%3A0x19efb0e3faf5eefd!2sRua%20Canuto%20Luiz%20do%20Nascimento%2C%20364%20-%20Jardim%20Capelinha%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005850-140!5e0!3m2!1spt-BR!2sbr!4v1609869867727!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        
-                <p>O youtube tambem trabalha com iframe</p>
-            </section>
             
-            <h3>Tabelas</h3>
-            <p>Utilizamos a tag &lt;table&gt;  dentro da mesma o <strong>border</strong> realizara as bordas e o <strong>bgcolor</strong> a cor de fundo.</p>
-            <p>A tag &lt;thead&gt; indica a linha do cabeçario</p>
-            <p>A tag &lt;th&gt; indica o titulo da coluna </p>
-            <p>A tag &lt;tr&gt; indica a linha</p>
-            <p>E a tag &lt;td&gt; para indicar as celulas.</p>
-            
-            <h3>Listas</h3>
-            <p>Utilizamos a tag &lt;ol&gt; para uma lista ordenada.</p>
-            <p>E a tag &lt;ul&gt; para uma lista não ordenada.</p>
-            <p>A tag &lt;li&gt; é utilizada para demarcar o item</p>
-            <h4><strong>Nav</strong>egação</h4>
-            <p>Utilizamos a tag &lt;nav&gt; para uma lista de navegação.</p>
-        
-            <h3>Campo de texto</h3>
-            <p>A tag &lt;input&gt; indica onde o usuario deve inserir os dados. Geralmente vem em &lt;form&gt;</p>
-            <code>&lt;input type="text" <strong>nome = 'primeiro'</strong>&gt;</code> 
-        
             <h3>Elementos</h3>
-            <h4>Hierarquia de Titulos</h4>
+            <h4>Titulos</h4>
             <p>Cada um h representa um subinivel h1, h2, h3,h4, h5 e h6 do anterior ou uma biforcação do assunto.  </p>
+            <p>O texto entre &lt;h1> e &lt;/h1> é exibido como cabeçalho;</p>
             <h4>Section</h4>
             <p>É um texto generico ou uma seção.</p>
             <h4>Article</h4>
@@ -100,6 +75,29 @@
             <p>Rodapé , informações sobre direitos autorais.</p>
             <h4>Figure</h4>
             <p>conteudo independente, como video e imagem.</p>
+            <p>O texto entre &lt;p> e &lt;/p> é exibido como parágrafo;</p>
+
+            <h3>Listas</h3>
+            <p>Utilizamos a tag &lt;ol&gt; para uma lista ordenada.</p>
+            <p>E a tag &lt;ul&gt; para uma lista não ordenada.</p>
+            <p>A tag &lt;li&gt; é utilizada para demarcar o item</p>
+            <h4><strong>Nav</strong>egação</h4>
+            <p>Utilizamos a tag &lt;nav&gt; para uma lista de navegação.</p>
+
+            <h3>Tabelas</h3>
+            <p>Utilizamos a tag &lt;table&gt;  dentro da mesma o <strong>border</strong> realizara as bordas e o <strong>bgcolor</strong> a cor de fundo.</p>
+            <p>A tag &lt;thead&gt; indica a linha do cabeçario</p>
+            <p>A tag &lt;th&gt; indica o titulo da coluna </p>
+            <p>A tag &lt;tr&gt; indica a linha</p>
+            <p>E a tag &lt;td&gt; para indicar as celulas.</p>
+            
+            
+        
+            <h3>Campo de texto</h3>
+            <p>A tag &lt;input&gt; indica onde o usuario deve inserir os dados. Geralmente vem em &lt;form&gt;</p>
+            <code>&lt;input type="text" <strong>nome = 'primeiro'</strong>&gt;</code> 
+        
+            
         
             <h3>Divisões</h3>
             <p>Para uma melhor vusualização e organização do codigo utilizamos a tag <strong>&lt;div&gt;</strong> com intuito de genericamente <strong>div</strong>idir o conteudo.</p>
@@ -160,6 +158,17 @@
             <p>Para exigir o <strong>input</strong> respecifique na tag a palavra reservada <strong>required.</strong></p>
             <h4>Marcado</h4>
             <p>A tag <strong>inpult</strong> deve conter a paralavra reservada <strong>checked</strong> para que a pagina carregue previamente selecionada.</p>
+
+            <h3>Links</h3>
+            <p>Utilizando a tag &lt;a&gt;</p>
+            <p>Para link externo use <code>&lt;a href="http://exemplo.ai"<strong> target = "blank"</strong>>&lt;/a&gt;</code> </p>
+            <section class="mapa">
+                <h4>&lt;iframe&gt;</h4>
+                <p>Abre uma especie de janela para conteudos externos como maps</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5768983770554!2d-46.754609949151536!3d-23.65531878456099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53d9f964f181%3A0x19efb0e3faf5eefd!2sRua%20Canuto%20Luiz%20do%20Nascimento%2C%20364%20-%20Jardim%20Capelinha%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005850-140!5e0!3m2!1spt-BR!2sbr!4v1609869867727!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        
+                <p>O youtube tambem trabalha com iframe</p>
+            </section>
         </section>
     </article>
 
