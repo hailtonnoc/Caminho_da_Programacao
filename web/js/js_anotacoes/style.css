@@ -2,6 +2,7 @@ body
 {
     background: linear-gradient( rgba(255, 217, 0, 0.507),rgba(224, 193, 14, 0.87));
     font-size: 21px;
+    margin: 1.8%;
 }
 
 h1 {font: normal 63px times; text-shadow: rgb(158, 120, 24) 9px 9px 4.5px;}

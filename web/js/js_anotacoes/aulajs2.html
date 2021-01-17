@@ -7,18 +7,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Operadores</h1>
-    <h2>Aritimeticos</h2>
-    <p>Relacionado a operações <abbr title="**   %   /   *   -    +   .">matematicas</abbr>.</p>
-    <h2>Relacionais</h2>
-    <p>Retorna um valor <abbr title="&lt;   &gt;   &lt;=   &gt;=   ==   !=">booleano</abbr>.</p>
-    <h2>Logicos</h2>
-    <p>Une Operadores ou nega. ! nega. <strong>&&</strong> todos verdadeiro. <strong>||</strong> um verdadeiro. </p>
-    <h2>Ternarios</h2>
-    <p><mark style="background-color: aqua;">?</mark>caso <strong>verdadeiro</strong></p>
-    <p><mark style="background-color: aqua;">:</mark>caso <strong>falso</strong></p>
+    <h1>Modulos</h1>
+    <p>Trabalhar com modulos permite uma melhor redistribuição das classes em arquivos proprios. Tornando o codigo mais padronizado e faciliando a manutenção. <small>Nomeie o arquivo com letra maiuscula para indicar classe.</small></p>
+
+    <h2>Comunicação entre Classes</h2>
+    <p>Para que a classe possa ser acessada de fora do arquivo utilize <strong>export</strong><small> class</small></p>
+    <p>Para utilizar a classe defina o <strong>import</strong>{Nome<small>Classe</small>} <strong>from</strong> "../nodes/ClasseSeparada1.js"</p>
+    <code>
+        <pre>
+            <strong>import</strong>{Classe} <strong>from</strong> "./ArquivoClasse.js"
+        </pre>
+    </code>
+    <h3>Integração entre arquivos</h3>
+    <p>Para utilizar os comandos em um arquivo o mesmo precisa ser definido como um modulo.</p>
+    <p>Em então no terminal do <strong>node</strong> dentro da pasta que contenha o arquivo<strong>.js</strong> que acessara as classes <em>insira o comando para criar o package</em><strong>.json</strong>.</p>
+    <code><strong>npm</strong> init</code>
+    <code>
+        <pre>
+            package name: (projeto) <small>nome</small>
+            version: (1.0.0)
+            description: <small>projeto feito com exemplo</small>
+            entry point: (index.js) <small>arquivo.js</small>
+            test command:
+            git repository:
+            keywords:
+            author: Hailton
+            license: (ISC)
+
+            ...<small>previa</small>
+
+            Is this OK?(yes)
+        </pre>
+    </code>
+    <p>Retorne no arquivo criado package.json <br>Então após <code>"license": "ISC"</code> <sTRONg>,</sTRONg></p>
+    <P>Adicione <code>"type": "module"</code></P>
+    <h3>Resultado final</h3>
+    <code>
+        <pre>
+            {
+                "name": "conectandoclasses",
+                "version": "1.0.0",
+                "description": "conectando as classes",
+                "main": "index.js",
+                "scripts": {"test": "echo \"Error: no test specified\" && exit 1"},
+                "author": "Hailton",
+                "license": "ISC"<strong>,</strong>
+                <strong>"type": "module"</strong>
+            }
+            
+        </pre>
+    </code>
 
     <p><a href="../jsindex.html" rel="prev">Voltar ao JS intro</a></p>
-
 </body>
 </html>
