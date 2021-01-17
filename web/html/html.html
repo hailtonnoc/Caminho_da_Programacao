@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hyper Text Markup Language</h1>
+    <header>
+        <h1><div class="cabecalho">H</div>yper 
+            <div class="cabecalho">T</div>ext 
+            <div class="cabecalho">M</div>arkup 
+            <div class="cabecalho">L</div>anguage</h1>
+    </header>
     <p>Pode ser considerada a ligua mãe ou lingua primordial da <abbr title="World Wide Web">WWW</abbr>.</p>
     <h2>Função</h2>
     <ul>
@@ -18,122 +23,144 @@
 
     <h2>Tags</h2>
     <p>Marcações que caracterizam o texto. E modelam o html.</p>
-    <h3>Regras</h3>
+    <h3>Regras de &lt;tag&gt;</h3>
     <p>Aparecem entre colchetes angulares &lt; &gt;.</p>
-    <p>Geralmente uma abrindo e outra fechando. E não são case sensitive. </p>
+    <p>Geralmente uma abrindo e outra fechando, quando a tag é de informação então temos apenas uma. E não são case sensitive. </p>
     <h3>Estrutura do HTML</h3>
     <p>Inicialmente declaramos a tag !</p>
     <h3>DOCTYPE</h3>
-    <p>Convoca um comportamento do navegador, já que cada um tem sua propia maneira de ler o HTML.</p>
-
-    <p> &lt;html> e &lt;/html&gt; descreve a página web;</p>
-    <p>&lt;title&gt; e &lt;/title&gt; define o titulo da aba no navegador;</p>
-    <p>O texto entre &lt;body> e &lt;/body> é a informação visível na página;</p>
-    <p>O texto entre &lt;h1> e &lt;/h1> é exibido como cabeçalho;</p>
-    <p>O texto entre &lt;p> e &lt;/p> é exibido como parágrafo;</p>
-
-    <h3>Links</h3>
-    <p>Utilizando a tag &lt;a&gt;</p>
-    <p>Para link externo use <code>&lt;a href="http://exemplo.ai"<strong> target = "blank"</strong>>&lt;/a&gt;</code> </p>
-    <section class="mapa">
-        <h4>&lt;iframe&gt;</h4>
-        <p>Abre uma especie de janela para conteudos externos como maps</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5768983770554!2d-46.754609949151536!3d-23.65531878456099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53d9f964f181%3A0x19efb0e3faf5eefd!2sRua%20Canuto%20Luiz%20do%20Nascimento%2C%20364%20-%20Jardim%20Capelinha%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005850-140!5e0!3m2!1spt-BR!2sbr!4v1609869867727!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-
-        <p>O youtube tambem trabalha com iframe</p>
-    </section>
+    <code>&lt;!DOCTYPE <abbr title="Indica ultima versão, o HTML5">html</abbr>&gt;</code>
+    <p>Convoca um comportamento do navegador para que leia em formato HTML, já que cada um tem sua propia maneira de ler o HTML.</p>
     
-    <h3>Tabelas</h3>
-    <p>Utilizamos a tag &lt;table&gt;  dentro da mesma o <strong>border</strong> realizara as bordas e o <strong>bgcolor</strong> a cor de fundo.</p>
-    <p>A tag &lt;thead&gt; indica a linha do cabeçario</p>
-    <p>A tag &lt;th&gt; indica o titulo da coluna </p>
-    <p>A tag &lt;tr&gt; indica a linha</p>
-    <p>E a tag &lt;td&gt; para indicar as celulas.</p>
+
+    <article>
+        <p> &lt;html> e &lt;/html&gt; demarca a página web, onde vai todo seu conteudo e parametos;</p>
+
+        
+
+        <h2>Divisões Basicas</h2>
+        <p>O HTML possui duas divisões basicas, uma para as <strong>configurações da pagina</strong>, e a parte do <strong>conteudo apresentavel</strong>. </p>
+        <section>
+            <h3>head</h3>
+            <p>Aqui fica todos os ajustes e informações referente a estrutura da pagina.</p>
+
+            <p>&lt;meta&gt; é a tag responsavel por passar informações para pagina. como <br>
+                        &lt;meta <code class="verdecode">charset</code>="UTF-8"&gt;
+                <br>   &lt;meta <code class="verdecode">name</code>="viewport" <code class="verdecode">content</code>="width=device-width, initial-scale=1.0"&gt;
+
+            </p>
+
+            <p>&lt;title&gt; e &lt;/title&gt; define o titulo da aba no navegador;</p>
+        </section>
+
+
+        <p>O texto entre &lt;body> e &lt;/body> é a informação visível na página;</p>
+        <p>O texto entre &lt;h1> e &lt;/h1> é exibido como cabeçalho;</p>
+        <p>O texto entre &lt;p> e &lt;/p> é exibido como parágrafo;</p>
     
-    <h3>Listas</h3>
-    <p>Utilizamos a tag &lt;ol&gt; para uma lista ordenada.</p>
-    <p>E a tag &lt;ul&gt; para uma lista não ordenada.</p>
-    <p>A tag &lt;li&gt; é utilizada para demarcar o item</p>
-    <h4><strong>Nav</strong>egação</h4>
-    <p>Utilizamos a tag &lt;nav&gt; para uma lista de navegação.</p>
-
-    <h3>Campo de texto</h3>
-    <p>A tag &lt;input&gt; indica onde o usuario deve inserir os dados. Geralmente vem em &lt;form&gt;</p>
-    <code>&lt;input type="text" <strong>nome = 'primeiro'</strong>&gt;</code> 
-
-    <h3>Elementos</h3>
-    <h4>Hierarquia de Titulos</h4>
-    <p>Cada um h representa um subinivel h1, h2, h3,h4, h5 e h6 do anterior ou uma biforcação do assunto.  </p>
-    <h4>Section</h4>
-    <p>É um texto generico ou uma seção.</p>
-    <h4>Article</h4>
-    <p>Uma peça independente do conteudo do documento, como um blog ou jornal.</p>
-    <h4>Aside</h4>
-    <p>Conteudo pouco relacionado.</p>
-    <h4>Footer</h4>
-    <p>Rodapé , informações sobre direitos autorais.</p>
-    <h4>Figure</h4>
-    <p>conteudo independente, como video e imagem.</p>
-
-    <h3>Divisões</h3>
-    <p>Para uma melhor vusualização e organização do codigo utilizamos a tag <strong>&lt;div&gt;</strong> com intuito de genericamente <strong>div</strong>idir o conteudo.</p>
-    <p>Quando as divisões forem para formulario utilize a tag &lt;<strong>fieldset</strong>&gt;</p>
-
-    <h3>Conteudo importante</h3>
-    <p>Utilizamos a tag &lt;main&gt; para dar notoriedade a um determinado tipo de conteudo.</p>
-
-    <h2>Input</h2>
-    <p>Area para inserção de dados e interação com usuario. <br>
-    Ulitlize a tag &lt;input&gt;</p>
-
-    <form>
-        <fieldset class="input"> 
-            <legend>Como esta?</legend>   
-            <label for="on"><input type="radio" name="acao" id="on">Estudando</label>
-            
-            <label for="off"><input type="radio" name="acao" id="off" checked>Ignorando</label>
-
-            <p><small>É importante que os inputs tenham o mesmo name assim, não podemos selecionar os dois.</small></p>
-
-            <label><input type="checkbox" name="" id="" class="checkbox" checked>  Decidido.</label>
-        </fieldset>
-        <fieldset class="input">
-            <legend>Que periodo é agora?</legend>
-            <select >
-                <option>manha</option>
-                <option>tarde</option>
-                <option value="">noite</option>
-            </select>
-        </fieldset>
-        <fieldset>
-            <label for="ex">Digite</label>
-            <input type="text" name="exemplo" id="ex" class="input-padrao" required placeholder="Qualquer coisa">
-
-            <label>Email<input type="email" name="email" id="email" required placeholder="Hailton.Oliveira@dominio.com" class="input-padrao"></label>
-
-            <label for="mensagem">Mensagem</label>
-            <textarea name="mbox" id="mensagem" cols="60" rows="15" class="input-padrao" required></textarea>
-
-            <input type="submit" value="Enviar essa pes..." class="enviar">
-        </fieldset>
-    </form>
-
+        <h3>Links</h3>
+        <p>Utilizando a tag &lt;a&gt;</p>
+        <p>Para link externo use <code>&lt;a href="http://exemplo.ai"<strong> target = "blank"</strong>>&lt;/a&gt;</code> </p>
+        <section class="mapa">
+            <h4>&lt;iframe&gt;</h4>
+            <p>Abre uma especie de janela para conteudos externos como maps</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5768983770554!2d-46.754609949151536!3d-23.65531878456099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53d9f964f181%3A0x19efb0e3faf5eefd!2sRua%20Canuto%20Luiz%20do%20Nascimento%2C%20364%20-%20Jardim%20Capelinha%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005850-140!5e0!3m2!1spt-BR!2sbr!4v1609869867727!5m2!1spt-BR!2sbr" width="100%" height="450" frameborder="" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     
-    <h4>Etiqueta</h3>
-    <p>A tag &lt;label&gt; cria um rotulo para o ponto de seleção.</p>
-    <p>É possivel localizar a seleção através do getElementsByName 'name'[<small>'<abbr title="numero da posição">local</abbr>'</small>].<strong>checked</strong></p>
-    <h4>Legenda</h4>
-    <p>A tag &lt;<strong>legend</strong>&gt; é exelente para nomear enunciados de input.</p>
-
-    <h3>Formulario</h3>
-    <p>O <strong>form</strong>ulario é a area declarada para recolhimento de inputs.</p>
-    <p>Utilize a tag &lt;form&gt;</p>
-
-    <p>Utilize o site <a href="http://mobileinputtypes.com/" target="blank" rel="external">Mobile input types</a> para adequar melhor a tela de celular</p>
-    <h4>Obrigatorio</h4>
-    <p>Para exigir o <strong>input</strong> respecifique na tag a palavra reservada <strong>required.</strong></p>
-    <h4>Marcado</h4>
-    <p>A tag <strong>inpult</strong> deve conter a paralavra reservada <strong>checked</strong> para que a pagina carregue previamente selecionada.</p>
+            <p>O youtube tambem trabalha com iframe</p>
+        </section>
+        
+        <h3>Tabelas</h3>
+        <p>Utilizamos a tag &lt;table&gt;  dentro da mesma o <strong>border</strong> realizara as bordas e o <strong>bgcolor</strong> a cor de fundo.</p>
+        <p>A tag &lt;thead&gt; indica a linha do cabeçario</p>
+        <p>A tag &lt;th&gt; indica o titulo da coluna </p>
+        <p>A tag &lt;tr&gt; indica a linha</p>
+        <p>E a tag &lt;td&gt; para indicar as celulas.</p>
+        
+        <h3>Listas</h3>
+        <p>Utilizamos a tag &lt;ol&gt; para uma lista ordenada.</p>
+        <p>E a tag &lt;ul&gt; para uma lista não ordenada.</p>
+        <p>A tag &lt;li&gt; é utilizada para demarcar o item</p>
+        <h4><strong>Nav</strong>egação</h4>
+        <p>Utilizamos a tag &lt;nav&gt; para uma lista de navegação.</p>
+    
+        <h3>Campo de texto</h3>
+        <p>A tag &lt;input&gt; indica onde o usuario deve inserir os dados. Geralmente vem em &lt;form&gt;</p>
+        <code>&lt;input type="text" <strong>nome = 'primeiro'</strong>&gt;</code> 
+    
+        <h3>Elementos</h3>
+        <h4>Hierarquia de Titulos</h4>
+        <p>Cada um h representa um subinivel h1, h2, h3,h4, h5 e h6 do anterior ou uma biforcação do assunto.  </p>
+        <h4>Section</h4>
+        <p>É um texto generico ou uma seção.</p>
+        <h4>Article</h4>
+        <p>Uma peça independente do conteudo do documento, como um blog ou jornal.</p>
+        <h4>Aside</h4>
+        <p>Conteudo pouco relacionado.</p>
+        <h4>Footer</h4>
+        <p>Rodapé , informações sobre direitos autorais.</p>
+        <h4>Figure</h4>
+        <p>conteudo independente, como video e imagem.</p>
+    
+        <h3>Divisões</h3>
+        <p>Para uma melhor vusualização e organização do codigo utilizamos a tag <strong>&lt;div&gt;</strong> com intuito de genericamente <strong>div</strong>idir o conteudo.</p>
+        <p>Quando as divisões forem para formulario utilize a tag &lt;<strong>fieldset</strong>&gt;</p>
+    
+        <h3>Conteudo importante</h3>
+        <p>Utilizamos a tag &lt;main&gt; para dar notoriedade a um determinado tipo de conteudo.</p>
+    
+        <h2>Input</h2>
+        <p>Area para inserção de dados e interação com usuario. <br>
+        Ulitlize a tag &lt;input&gt;</p>
+    
+        <form>
+            <fieldset class="input"> 
+                <legend>Como esta?</legend>   
+                <label for="on"><input type="radio" name="acao" id="on">Estudando</label>
+                
+                <label for="off"><input type="radio" name="acao" id="off" checked>Ignorando</label>
+    
+                <p><small>É importante que os inputs tenham o mesmo name assim, não podemos selecionar os dois.</small></p>
+    
+                <label><input type="checkbox" name="" id="" class="checkbox" checked>  Decidido.</label>
+            </fieldset>
+            <fieldset class="input">
+                <legend>Que periodo é agora?</legend>
+                <select >
+                    <option>manha</option>
+                    <option>tarde</option>
+                    <option value="">noite</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="ex">Digite</label>
+                <input type="text" name="exemplo" id="ex" class="input-padrao" required placeholder="Qualquer coisa">
+    
+                <label>Email<input type="email" name="email" id="email" required placeholder="Hailton.Oliveira@dominio.com" class="input-padrao"></label>
+    
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mbox" id="mensagem" cols="60" rows="15" class="input-padrao" required></textarea>
+    
+                <input type="submit" value="Enviar essa pes..." class="enviar">
+            </fieldset>
+        </form>
+    
+        
+        <h4>Etiqueta</h3>
+        <p>A tag &lt;label&gt; cria um rotulo para o ponto de seleção.</p>
+        <p>É possivel localizar a seleção através do getElementsByName 'name'[<small>'<abbr title="numero da posição">local</abbr>'</small>].<strong>checked</strong></p>
+        <h4>Legenda</h4>
+        <p>A tag &lt;<strong>legend</strong>&gt; é exelente para nomear enunciados de input.</p>
+    
+        <h3>Formulario</h3>
+        <p>O <strong>form</strong>ulario é a area declarada para recolhimento de inputs.</p>
+        <p>Utilize a tag &lt;form&gt;</p>
+    
+        <p>Utilize o site <a href="http://mobileinputtypes.com/" target="blank" rel="external">Mobile input types</a> para adequar melhor a tela de celular</p>
+        <h4>Obrigatorio</h4>
+        <p>Para exigir o <strong>input</strong> respecifique na tag a palavra reservada <strong>required.</strong></p>
+        <h4>Marcado</h4>
+        <p>A tag <strong>inpult</strong> deve conter a paralavra reservada <strong>checked</strong> para que a pagina carregue previamente selecionada.</p>
+    </article>
 
 
     <p><big><a href="htmlmod.html" rel="next">Modelando Texto</a></big><small> (tags)</small></p>

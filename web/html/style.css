@@ -4,6 +4,30 @@ body
     color: rgb(24, 113, 245);
 }
 
+.cabecalho
+{
+    display: inline;
+    color: rgba(98, 90, 14, 0.644);
+    font-size: 1.36em;
+}
+h1
+{
+    font-size: 1.12;
+}
+
+article, section
+{
+    border: inset 4.5px ;
+    padding: 1.08%;
+}
+
+.verdecode
+{
+    color: rgb(122, 184, 60);
+    font-size: 1.36em;
+    font-weight: ;
+}
+
 form
 {
     margin: 40px 0;
