@@ -98,7 +98,7 @@
     <p>classe funciona como um molde, tento em vista a criação de varios objetos com as mesmas caracteristicas.</p>
     <code>
         <pre>
-            <strong>class</strong> pessoa
+            <strong>class</strong> cliente
             {                      <small>atributos</small>
                 nome;
                 cpf;
@@ -143,6 +143,29 @@
     </code>
     <p>Resultado Final</p>
     <div id="moldeclass"></div>
+    <h4>Definindo <strong style="font-size: 1.63em;"><code>constructor</code></strong>()</h4>
+    <p>Organizando a sintaxe e protegendo de alterações fora da função.</p>
+    <code>
+        <pre>
+            class Cliente
+            {
+                nome;
+                _cpf;
+
+                <div class="funci">
+                    <strong>constructor</strong>(nome, cpf)
+                    {
+                        this.nome = nome;
+                        this._cpf = cpf;
+                    }
+                </div>
+            }
+        </pre>
+        <pre>
+            <small>Utilizando</small>
+            const clienteH = new Cliente("<strong>Hailton, 45048007209</strong>");
+        </pre>
+    </code>
 
     <h3>Função em Classes</h3>
     <p>Criando um objeto completo contendo forma e funções</p>
@@ -155,7 +178,7 @@
                 saldo;
                 nivel;
 
-                <div style="border: 3px solid rgb(231, 222, 138);">
+                <div class="funci">
                     <strong>sacar(</strong>valor)
                     {
                         if(<abbr title="'DESTA' então ele trabalha com a proria conta">this</abbr>.saldo >= valor)
@@ -182,16 +205,6 @@
     </code>
     <div id="objetof"></div>
 
-    <h2>Melhorando Função</h2>
-    <p>Mantendo a segurança de variaveis afim que não possam ser alteradas por fora da função.</p>
-    <code>
-        <pre>
-            <strong>conta.saldo = 180000;</strong>
-        </pre>
-    </code>
-    <div id="inseguranca"></div>
-    <h3>_Segurança</h3>
-    <p>Para manter um atributo com a sua manipulação estritamente atrelada as funções de sua classe atribua antes do atributo o "<strong style="font-size: 1.3em;"><abbr title="Acessivel para visualização.">_</abbr></strong>" ou sua variante "<strong style="font-size: 1.3em;"><abbr title="Inacessivel">#</abbr></strong>"</p>
     <h3>Retorno</h3>
     <p>O comando <strong>return</strong> serve para indicar a função a "<abbr title="Lembrar">devolver</abbr>" a atribudo.</p>
     <p>Ainda o retorno pode servir para parar a execução de uma função caso a mesma esteja em desconformidade. Promovoendo a diminuição de indentação.</p>
@@ -205,6 +218,46 @@
 
         </pre>
     </code>
+
+    <h2>Melhorando Função</h2>
+    <p>Mantendo a segurança de variaveis afim que não possam ser alteradas por fora da função.</p>
+    <code>
+        <pre>
+            <strong>conta.saldo = 180000;</strong>
+        </pre>
+    </code>
+    <div id="inseguranca"></div>
+
+    <h3>_Segurança</h3>
+    <p>Para manter um atributo com a sua manipulação estritamente atrelada as funções de sua classe atribua antes do atributo o "<strong style="font-size: 1.3em;"><abbr title="Acessivel para visualização.">_</abbr></strong>" ou sua variante "<strong style="font-size: 1.3em;"><abbr title="Inacessivel">#</abbr></strong>"</p>
+
+    <h3>Protegendo atributo</h3>
+    <p>Metodo <strong>set</strong> é possivel fererenciar o tipo de atributo aceitavel.</p>
+    <code>
+        <pre>
+            <strong>set</strong> cliente(novoValor)
+            {
+                if(novoValor <strong>instanceof</strong> <abbr title="CLASSE">Cliente</abbr>)
+                {this.<abbr title="instancia que recebe valor atribuido">_cliente</abbr> = novoValor;}
+            }
+        </pre>
+    </code>
+    <p>Metodo <strong>get</strong> é possivel realizar a leitura de determinado atributo. Mas nunca altera-lo.</p>
+    <code>
+        <pre>
+            <strong>get</strong> saldo()
+            {
+                return this.<strong>_saldo</strong>;
+            }
+        </pre>
+        <pre>
+            <small>Utilizando</small>
+            <code>console.log(contaH<strong>.saldo</strong>)</code>
+        </pre>
+    </code>
+
+    <h4>Alteração dos objetos via função</h4>
+    <p>Cuidado com as operações realizadas em funções, essas <strong>alteram</strong> os objetos já que o mesmo esta sendo passado como <strong>referencia</strong>.</p>
 
     <script src="jsmedio.js"></script>
 

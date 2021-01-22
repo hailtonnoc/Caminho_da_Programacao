@@ -1,30 +1,38 @@
+import { Cliente } from "./ClasseSeparada1.js";
 export class Contas
 {
+    static numeroConta = 0;
     corretora;
-    cliente;
+    _cliente;
 
-    #saldo = 0;
+    _saldo = 0;
+
+    set cliente(novoCliente)
+    {
+        if(novoCliente instanceof Cliente)
+        {this._cliente = novoCliente;}
+    }
+
+    get saldo()
+    {
+        return this._saldo
+    }
 
     depositar(valor)
     {
-        if(valor < 0) return; // o que eu não gostaria que acontecesse 
-        {this.#saldo += valor}
+        if(valor < 0) return; //return; o que eu não gostaria que acontecesse 
+        {this._saldo += valor}
     }
 
     sacar(valor)
     {
-        if(valor <= this.#saldo)
-        {this.#saldo -= valor}
-        console.log('saldo atual '+ this.#saldo)
+        if(this._saldo>=valor)
+        {this._saldo -= valor; return valor;}
+    }
 
-    }
-    transferir(valor, Conta)
+    transf(valor, Contas)
     {
-        const valorSacado = this.sacar(valor);
-        Conta.depositar(valorSacado);
-    }
-    extrato()
-    {
-        console.log(this.#saldo)
+        this.sacar(valor);
+        Contas.depositar(valor);
     }
 }

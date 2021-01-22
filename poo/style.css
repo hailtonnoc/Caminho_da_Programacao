@@ -1,0 +1,34 @@
+body
+{
+    font-size: 1.18em;
+    margin: 1%;
+}
+
+#fundamentalg
+{
+    display: grid;
+    grid-template-areas:"analise", "algoritimo", "codifica" ;
+    grid-template-rows: 54vh;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#analisealg
+{
+grid-area: analise;
+grid-row: 1/1;
+grid-column: 1/1;
+}
+
+#algoritimoalg
+{
+grid-area: algoritimo;
+grid-row: 1/1;
+grid-column:2/2;
+}
+
+#codificaalg
+{
+grid-area: codifica;
+grid-row: 1/1;
+grid-column:3/3;
+}

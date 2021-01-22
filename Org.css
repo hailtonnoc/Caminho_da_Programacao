@@ -1,11 +1,31 @@
 body
 {
+    margin: 0.36%;
     background: radial-gradient( rgba(114, 15, 207, 0.812)9%, rgba(232, 255, 25, 0.816)63%, rgba(255, 25, 25, 0.813))36%, url("XXXMATERIAISXXX/IMAGENS/time-wallpaper-3.jpg");
     font-size: 18px;
 }
 
+header
+{
+    display: inline;
+    margin-top: 0%;
+}
+h1
+{
+    margin: 3px;
+}
+h2
+{
+    font-size: 2.07em;
+}
 
-
+main
+{
+    display: grid;
+    grid-template-areas:"controle","conteudo","rodape" ;
+    grid-template-columns: 99%;
+    grid-template-rows: 12vh 63vh 9vh;
+}
 
 #tempo
 {
@@ -13,9 +33,84 @@ body
     font-size: 1.8em;
 }
 
-#diames, #diarest
+.conthoras
 {
+    font-size: 1.8em;
+    font-weight: bolder;
+    color: whitesmoke;
+
+}
+
+.controle
+{
+    grid-area: controle;
+    grid-row: 1/1;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-areas: "controle1","controle2","controle3";
+    grid-template-columns: 36% 27% 36%;
+    padding: 0.3%;
+}
+
+#horaspercen
+{
+    text-align: left;
+    font-size: 1.44em;
+    font-weight: bolder;
+    grid-area: controle1;
+    grid-row: 1/1;
+    grid-column: 1/1;
+    display: relative;
+    right: 100%;
+}
+
+#diames
+{
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: bolder;
+    grid-area: controle1;
+    grid-row: 1/1;
+    grid-column: 2/2;
+    padding: 1%;
+}
+
+#diarest
+{
+    text-align: right;
     font-size: 45px;
+    font-size: 45px;
+    grid-area: controle2;
+    grid-row: 1/1;
+    grid-column: 3/3;
+}
+
+.setlist
+{
+    grid-area: conteudo;
+    grid-row: 2/3;
+    grid-column: auto;
+    display: grid;
+    grid-template-areas: "front", "back";
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    padding: 1%;
+}
+
+#front
+{
+    grid-area: front;
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+
+#back
+{
+    grid-area: back;
+    grid-row: 1/1;
+    grid-area: 2/2;
+    float: right;
+
 }
 
 .spin:hover
@@ -26,6 +121,9 @@ body
 
 footer
 {
+    grid-area: rodape;
+    grid-row: 4/4;
+    grid-column: 2/3;
     font-size: 36px;
     color: white;
     text-align: center;
@@ -36,4 +134,8 @@ ul
     background-color: rgba(245, 245, 245, 0.212);
     border-radius: 18px 225% 90% 18px;
     width: 54.9%;
+}
+li
+{
+    font-size: 1.8em;
 }
