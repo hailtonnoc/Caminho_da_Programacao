@@ -8,27 +8,81 @@ body
 {
     display: grid;
     grid-template-areas:"analise", "algoritimo", "codifica" ;
-    grid-template-rows: 54vh;
+    grid-template-rows: 63vh;
     grid-template-columns: 33% 33% 33%;
 }
-
 #analisealg
 {
 grid-area: analise;
 grid-row: 1/1;
 grid-column: 1/1;
 }
-
 #algoritimoalg
 {
 grid-area: algoritimo;
 grid-row: 1/1;
 grid-column:2/2;
 }
-
 #codificaalg
 {
 grid-area: codifica;
 grid-row: 1/1;
 grid-column:3/3;
+}
+
+#dados
+{
+    display: grid;
+    grid-template-areas: "string", "number", "boleano";
+    grid-template-rows: 18vh;
+    grid-template-columns: 33% 33% 33%;
+    margin: 1%;
+    margin-top: 0%;
+    margin-bottom: 2%;
+    padding-top: 0%;
+}
+#string
+{
+    grid-area: string;
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+#number
+{
+    grid-area: string;
+    grid-row: 1/1;
+    grid-column: 2/2;
+}
+#boleano
+{
+    grid-area: string;
+    grid-row: 1/1;
+    grid-column: 3/3;
+}
+
+#operador
+{
+    display: grid;
+    grid-template-areas: "aritimetico", "relacional", "logico";
+    grid-template-rows: 36vh;
+}
+#aritimetico
+{
+    grid-area: aritimetico;
+    grid-row: 1/1;
+    grid-column: 1/1;
+}
+#relacional
+{
+    grid-area: aritimetico;
+    grid-row: 1/1;
+    grid-column: 2/2;
+
+}
+#logico
+{
+    grid-area: aritimetico;
+    grid-row: 1/1;
+    grid-column: 3/3;
+
 }
