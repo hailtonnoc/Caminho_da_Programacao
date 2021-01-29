@@ -1,2 +1,4 @@
 # Caminho_da_Programacao
- Front e Back end
+ Full stack
+ Deter o conhecimento de todas as areas é o equivalente a diminuir as próprias limitações.
+ 
