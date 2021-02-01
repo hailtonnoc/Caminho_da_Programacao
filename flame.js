@@ -2,7 +2,7 @@
         const tempo = new Date
         const diames = tempo.getDate()
         localdiames.innerHTML = `Hoje é dia <strong style = "font-size: 1.81em; color: white;" >${diames}</strong>`
-        const diarest =31 - diames
+        const diarest =28 - diames
         const localdiarest = document.querySelector('div#diarest')
         localdiarest.innerHTML = `Faltam <strong style ="font-size:1.54em; color: red;">${diarest}</strong> para terminar o mês.`
 
