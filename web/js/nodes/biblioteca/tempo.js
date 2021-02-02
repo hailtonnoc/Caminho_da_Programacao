@@ -1,3 +1,4 @@
+
 var datas = new Date
 var hora = datas.getHours()
 var diaSemana = datas.getDay()
