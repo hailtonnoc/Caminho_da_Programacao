@@ -1,9 +1,8 @@
-
-var datas = new Date
-var hora = datas.getHours()
-var diaSemana = datas.getDay()
-var diaMes = datas.getDate()
-var gMes = datas.getMonth()
+const datas = new Date
+const hora = datas.getHours()
+const diaSemana = datas.getDay()
+const diaMes = datas.getDate()
+const gMes = datas.getMonth()
 
 //fragmento segundos ou minutos 
 const fragsm = 60
@@ -80,4 +79,25 @@ switch(gMes)
         break;
 }
 
-console.log(mes)
+
+const localdiames = document.querySelector('div#diames')
+localdiames.innerHTML = `Hoje é dia <strong style = "font-size: 1.81em; color: white;" >${diaMes}</strong>`
+const diarest = mes[1] - diaMes
+const localdiarest = document.querySelector('div#diarest')
+localdiarest.innerHTML = `Faltam <strong style ="font-size:1.54em; color: red;">${diarest}</strong> para terminar o mês.`
+
+const localhora = document.querySelector('div#horaspercen')
+
+const dormiu = 6
+const rhora = hora - dormiu
+const hdisponivel = 18
+const mdisponivel = fragsm*hdisponivel
+const mpassado = (rhora*fragsm) + datas.getMinutes()
+
+
+const consumo = ((mpassado/mdisponivel)*100)
+
+localhora.innerHTML = 
+`<div class="horascontrol">
+        São <strong class="conthoras">${hora}</strong>horas e passaram aproximadamente <strong class="conthoras">${consumo.toFixed(2)}%</strong> do dia ativo. Restam <small style="font-size:1.27em; color: red;">${(100-consumo).toFixed(2)}%</small>
+</div>`
