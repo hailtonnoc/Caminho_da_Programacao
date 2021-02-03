@@ -109,7 +109,7 @@
             <p>Para criar uma lista definimos a <strong>var</strong>iavel seguido do metodo <code>Array()</code> e dentro dos parenteses escrevemos os itens.</p>
             <code>
                 <pre>
-                    <strong>const</strong> nomeLista = <strong>new Array</strong>("item", "item", "item"...)
+                    <strong>const</strong> nomeLista = <strong>new Array</strong>("item1", "item2", "item3", "item4"...)
                 </pre>
             </code>
             <p>Para <strong>adicionar</strong> um item na lista utilize o metodo nomeLista<code>.push</code>("item")</p>
@@ -228,13 +228,33 @@
             <code>
                 <pre>
                     let cont = 0
-                    while (cont <= 1)
+                    let achou = false;
+                    while (cont&lt;4)
                     {
-
+                        if(nomeLista[cont] == 'item4')
+                        achou = true;
+                        break;
                     }
+                    cont += 1
                 </pre>
             </code>
 
+            <h3>Para</h3>
+            <p>utilize a tag <strong>for</strong><br>Utilize um contador como parâmetro </p>
+            <code>
+                <pre>
+                    
+                    let achou = false;
+
+                    for (<abbr title="variavel de controle">let i = 0</abbr> ;<abbr title="parametro / condição">i&lt;4</abbr> ;<abbr title="execução de final de looping">i += 1</abbr>)
+                    {
+                        if(nomeLista[i] == 'item4')
+                        achou = true;
+                        break;
+                    }
+                    
+                </pre>
+            </code>
 
 
         </section>
