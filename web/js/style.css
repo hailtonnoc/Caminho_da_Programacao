@@ -50,19 +50,19 @@ nav a:hover
 
 main
 {
-    margin: 18px;
+    margin: 3px;
 }
 
 .indice
 {
     position: relative;
-    width: 999px;
+    width: 99%;
     margin: 0 auto;
 }
 
 .desc
 {
-    width: 999px;
+    width: 99%;
     margin: 0 auto;
     padding: 50px 0;
 }

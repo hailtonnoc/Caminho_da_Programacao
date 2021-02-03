@@ -5,9 +5,23 @@ body
     margin: 1.8%;
 }
 
-h1 {font: normal 63px times; text-shadow: rgb(158, 120, 24) 9px 9px 4.5px;}
-h2 {font-size: normal 54px times; text-shadow: rgb(158, 120, 24) 6px 6px 3.6px;}
-h3 {font-size: normal 45px times; text-shadow: rgb(158, 120, 24) 3px 3px 1.8px;}
+h1
+{
+    font: normal 63px times; 
+    text-shadow: rgb(158, 120, 24) 9px 9px 4.5px;
+}
+
+h2
+{
+    font: normal 2.7em times;
+    text-shadow: rgb(158, 120, 24) 6px 6px 3.6px;
+}
+
+h3
+{
+    font-size: normal 45px times; 
+    text-shadow: rgb(158, 120, 24) 3px 3px 1.8px;
+}
 
 pre 
 {
@@ -35,5 +49,5 @@ text-align: center;}
 
 .funci
 {
-    border: 3px solid rgb(231, 222, 138);"
+    border: 3px solid rgb(231, 222, 138);
 }
