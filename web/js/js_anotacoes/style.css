@@ -30,6 +30,11 @@ pre
     vertical-align: top;
 }
 
+.enfase
+{
+    font-size: 1.18em;
+}
+
 #moldeclass, #objeto, #objetof, #inseguranca
 {
     background: rgba(245, 245, 245, 0.493);
@@ -50,4 +55,10 @@ text-align: center;}
 .funci
 {
     border: 3px solid rgb(231, 222, 138);
+}
+
+.stable
+{
+    border: solid goldenrod 3px;
+    bor
 }
