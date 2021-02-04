@@ -7,157 +7,191 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>DOM</h2>
-    <p>O <abbr title="Document object model">DOM</abbr> só esta presente dentro do navegador.</p>
-    <p>A arvore <strong>DOM</strong>começa da raiz o <code>window</code></p>
-    <pre style="font: normal 27px fantasy;">
-                            window
-                                    &DownArrow;
-        location   <a href="../../html/html.html">document</a>   history
-                                    &DownArrow;
-                                HTML
-                                        &DownArrow;
-                        head         body
-                            &DownArrow;               &DownArrow;
-                meta   title      &DownArrow;
+
+    <main>
+        <section class="conhecendom">
+            <h1>DOM</h1>
+            <p>O <abbr title="Document object model">DOM</abbr> só esta presente dentro do navegador.</p>
+            <p>A arvore <strong>DOM</strong>começa da raiz o <code>window</code></p>
+            <pre style="font: normal 27px fantasy;">
+                                    window
                                             &DownArrow;
-                            h2  p       p   div
+                location   <a href="../../html/html.html">document</a>   history
                                             &DownArrow;
-                                    strong
-    </pre>
-    <p><i><small>mapa DOM até essa parte da pagina.</small></i></p>
-    <h2>Selecionar elementos DOM</h2>
-    <table border="2">
-        <th>Metedos de acesso</th>
-        <th>Comando</th>
-        <tr>
-            <td>Marca</td>
-            <td><code>getElementsByTagName<abbr title="o [] após os () indicam a posição do elemento.">()</abbr></code></td>
-        </tr>
-            <tr>
-                <td>ID</td>
-                <td><code>getElementById()</code></td>
-            </tr>
-            <tr>
-                <td>Nome</td>
-                <td><code>getElementsByName()</code></td>
-            </tr>
-            <tr>
-                <td>Classe</td>
-                <td><code>getElementsByClassName()</code></td>
-            </tr>
-            <tr>
-                <td>Seletor</td>
-                <td><code>querySelector('nometag <abbr title="Quando classe use   ' . '     ||   Quando id use  ' # ' ">#</abbr> nomeid')</code></td>
-            </tr>
-    </table>
+                                        HTML
+                                                &DownArrow;
+                                head         body
+                                    &DownArrow;               &DownArrow;
+                        meta   title      &DownArrow;
+                                                    &DownArrow;
+                                    h2  p       p   div
+                                                    &DownArrow;
+                                            strong
+            </pre>
+            <p><i><small>mapa DOM até essa parte da pagina.</small></i></p>
+        </section>
 
-    
-    <div id = 'objeto_0'><br> Clique em mim</div>
-    <br>
-    <script>
-        var paragrafo1 = window.document.getElementsByTagName('p')[1]
-        window.document.write(paragrafo1.innerHTML)
-    </script>
-
-    <script>
-        var titulo = document.getElementsByTagName('h2')[0]
-        titulo.style.color = 'violet'
-    </script>
-
-    <script>
-        var click = document.getElementById('objeto_0')
-        click.innerText = 'Definimos uma variavel com o elemento encurtar o comando. E poder trabalhar de maneira simplificada → objeto.acoes' 
-    </script>
-
-    <h1 style="font: normal 54px times;">Interações</h1>
-    <p>Fundamentos explicados vamos a integração dos mesmos.</p>
-    <h2>Eventos</h2>
-    <p>Para definir um evento escolha o catilho que dispara a ação.</p>
-    <h3>Mouse</h3>
-    <table border="2">
-        <th>Codigo</th>
-        <th>Evento</th>
-        <tr>
-            <td><code>mouseenter</code></td>
-            <td>Quando Mouse entra no objeto</td>
-        </tr>
-        <tr>
-            <td><code>mousemove</code></td>
-            <td>Quando Mouse move sobre o objeto</td>
-        </tr>
-        <tr>
-            <td><code>mousedown</code></td>
-            <td>Quando Mouse permanece clicado</td>
-        </tr>
-        <tr>
-            <td><code>mouseup</code></td>
-            <td>Quando Mouse solta o click</td>
-        </tr>
-        <tr>
-            <td><code>click</code></td>
-            <td>Quando Mouse clica no objeto rapidamente</td>
-        </tr>
-        <tr>
-            <td><code>mouseout</code></td>
-            <td>Quando Mouse sai do objeto</td>
-        </tr>
-
-
-    </table>
-    
-    <h2>Função</h2>
-    
-    <p><code>&lt;div id='nome_id'<strong><abbr title="metodo">onclick</abbr>         = 'nome_ação'</strong>()&gt;</code></p>
-    <p>O metodo pode ser chamado no html dentro da &lt;div&gt;</p>
-    <p>No Script defina a função em um bloco <strong>function</strong> nome_ação()</p>
-
-    <div id="interagir" onclick="clicou()" onmouseout="saiu()">
-        interagir
-    </div>
-    <script>
-        var objeto = document.getElementById('interagir')
-        objeto.addEventListener('mouseenter', entrou)
-
-        function clicou()
-        {objeto.style.backgroundColor = 'gold'}
-        function saiu()
-        {objeto.style.backgroundColor = 'black';
-        objeto.innerText = 'saiu'}
-        function entrou()
-        {objeto.innerText = 'entrou'}
+        <section class="selecionadores">
+            <h2>Selecionar elementos DOM</h2>
+            <table border="2">
+                <th>Metedos de acesso</th>
+                <th>Comando</th>
+                <tr>
+                    <td>Marca</td>
+                    <td><code>getElementsByTagName<abbr title="o [] após os () indicam a posição do elemento.">()</abbr></code></td>
+                </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td><code>getElementById()</code></td>
+                    </tr>
+                    <tr>
+                        <td>Nome</td>
+                        <td><code>getElementsByName()</code></td>
+                    </tr>
+                    <tr>
+                        <td>Classe</td>
+                        <td><code>getElementsByClassName()</code></td>
+                    </tr>
+                    <tr>
+                        <td>Seletor</td>
+                        <td><code>querySelector('nometag <abbr title="Quando classe use   ' . '     ||   Quando id use  ' # ' ">#</abbr> nomeid')</code></td>
+                    </tr>
+            </table>
         
+            
+            <div id = 'objeto_0'><br> Clique em mim</div>
+            <br>
+            <script>
+                var paragrafo1 = window.document.getElementsByTagName('p')[1]
+                window.document.write(paragrafo1.innerHTML)
+            </script>
+        
+            <script>
+                var titulo = document.getElementsByTagName('h2')[0]
+                titulo.style.color = 'violet'
+            </script>
+        
+            <script>
+                var click = document.getElementById('objeto_0')
+                click.innerText = 'Definimos uma variavel com o elemento encurtar o comando. E poder trabalhar de maneira simplificada → objeto.acoes' 
+            </script>
+        
+            <h3>Definindo objetos</h3>
+            <p>Para facilitar a manipulação de elementos podemos definir como <strong>var</strong>iáveis</p>
+            <code>
+                <pre>
+                    <strong>var</strong> tituloPrincipal = document.querySelector("h1")
+        
+                    tituloPrincipal.textContent = "Document Object Model"
+                </pre>
+            </code>
+            <script>
+                var tituloPrincipal = document.querySelector('h1')
+                tituloPrincipal.textContent = "Document Object Model"
+            </script>
+        </section>
+
+        <section class="boasPraticas">
+            <h2>Boas praticas</h2>
+            <p>A fim  de manter a coerência do código e evitar falhas. <br>
+            Utilize <strong>class</strong>es ou <strong>id</strong>entificadores. Isso garante que mesmo com a mudança de tags o comportamento continue o mesmo.</p>
+            <p>Separar o <strong>script</strong> do arquivo html. Facilita a principalmente a manutenção do código. Para isso utilize a tag <strong>script:src</strong></p>
+            <code>&lt;script src=" <small>caminho</small> "&gt;&lt;/script&gt;</code>
+
+        </section>
+    
+        <h1 style="font: normal 54px times;">Interações</h1>
+        <p>Fundamentos explicados vamos a integração dos mesmos.</p>
+
+        <section class="eventos">
+            <h2>Eventos</h2>
+            <p>Para definir um evento escolha o catilho que dispara a ação.</p>
+            <h3>Mouse</h3>
+            <table border="2">
+                <th>Codigo</th>
+                <th>Evento</th>
+                <tr>
+                    <td><code>mouseenter</code></td>
+                    <td>Quando Mouse entra no objeto</td>
+                </tr>
+                <tr>
+                    <td><code>mousemove</code></td>
+                    <td>Quando Mouse move sobre o objeto</td>
+                </tr>
+                <tr>
+                    <td><code>mousedown</code></td>
+                    <td>Quando Mouse permanece clicado</td>
+                </tr>
+                <tr>
+                    <td><code>mouseup</code></td>
+                    <td>Quando Mouse solta o click</td>
+                </tr>
+                <tr>
+                    <td><code>click</code></td>
+                    <td>Quando Mouse clica no objeto rapidamente</td>
+                </tr>
+                <tr>
+                    <td><code>mouseout</code></td>
+                    <td>Quando Mouse sai do objeto</td>
+                </tr>
+        
+        
+            </table>
+        </section>
+        
+        <h2>Função</h2>
+        
+        <p><code>&lt;div id='nome_id'<strong><abbr title="metodo">onclick</abbr>         = 'nome_ação'</strong>()&gt;</code></p>
+        <p>O metodo pode ser chamado no html dentro da &lt;div&gt;</p>
+        <p>No Script defina a função em um bloco <strong>function</strong> nome_ação()</p>
+    
+        <div id="interagir" onclick="clicou()" onmouseout="saiu()">
+            interagir
+        </div>
+        <script>
+            var objeto = document.getElementById('interagir')
+            objeto.addEventListener('mouseenter', entrou)
+    
+            function clicou()
+            {objeto.style.backgroundColor = 'gold'}
+            function saiu()
+            {objeto.style.backgroundColor = 'black';
+            objeto.innerText = 'saiu'}
+            function entrou()
+            {objeto.innerText = 'entrou'}
+            
+            </script>
+        <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando 'nome variavel'<strong>.addEventListener('evento', nome_ação)</strong></P>
+        <p><small><em>Faça um para cada ação.</em></small></p>
+    
+        <h2>Interagindo com usuario.</h2>
+        <p>Para uma caixa para receber uma entrada de usuario utilize a tag &lt;input&gt;</p>
+        <input type="number" name="txt1" id="n1">
+        <input type="number" name="txt2" id="n2">
+        <input type="button" value="somar" onclick="somar()">
+        <div id="resultado">Resultado</div>
+    
+        <script>
+            var txt1 = document.getElementById('n1')
+            var txt2 = document.getElementById('n2')
+            var resultado = document.querySelector('div#resultado')
+    
+            function somar(){
+                var result = Number(txt1.value) + Number(txt2.value)
+                resultado.innerHTML = `O resultado da soma entre ${txt1.value} mais ${txt2.value} foi <strong>${result}</strong>`}
         </script>
-    <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando 'nome variavel'<strong>.addEventListener('evento', nome_ação)</strong></P>
-    <p><small><em>Faça um para cada ação.</em></small></p>
-
-    <h2>Interagindo com usuario.</h2>
-    <p>Para uma caixa para receber uma entrada de usuario utilize a tag &lt;input&gt;</p>
-    <input type="number" name="txt1" id="n1">
-    <input type="number" name="txt2" id="n2">
-    <input type="button" value="somar" onclick="somar()">
-    <div id="resultado">Resultado</div>
-
-    <script>
-        var txt1 = document.getElementById('n1')
-        var txt2 = document.getElementById('n2')
-        var resultado = document.querySelector('div#resultado')
-
-        function somar(){
-            var result = Number(txt1.value) + Number(txt2.value)
-            resultado.innerHTML = `O resultado da soma entre ${txt1.value} mais ${txt2.value} foi <strong>${result}</strong>`}
-    </script>
-    
-
-
-
-
-    <h2>Separe seus Scripts</h2>
-    <p> Utilize a tag &lt;<abbr title="script  :  scr">script</abbr> src=""&gt;</p>
-
-
+        
     
     
+    
+    
+        <h2>Separe seus Scripts</h2>
+        <p> Utilize a tag &lt;<abbr title="script  :  scr">script</abbr> src=""&gt;</p>
+    
+    
+        
+        
+    </main>
 
 
     <p><a href="../jsindex.html" rel="prev">Voltar para intro</a></p>
