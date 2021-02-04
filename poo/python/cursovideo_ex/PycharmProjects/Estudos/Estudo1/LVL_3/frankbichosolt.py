@@ -1,0 +1,8 @@
+string = input('Qual a porra da frase? ')
+print('ok a frase é ', string)
+print()
+old = input('o que merda gostaria de mudar? ')
+new = input('Pelo que? ')
+string = string.replace(old, new)
+print(' a nova frase é ')
+print(string)
