@@ -6,10 +6,10 @@ var vUnitario = produto.querySelector('.info-unidade')
 var unid = vUnitario.textContent
 
 var vTotal = produto.querySelector(".info-total")
-var total = vTotal.innerHTML
-console.log(total)
 
-total = estq * unid
+var total = estq * unid
+
+vTotal.textContent = total
 
 console.log(estq)
 console.log(unid)
