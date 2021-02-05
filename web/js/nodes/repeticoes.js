@@ -66,7 +66,8 @@ produtoTr.appendChild(quantidadeTd)
 produtoTr.appendChild(unidadeTd)
 produtoTr.appendChild(totalTd)
 
-console.log(produtoTr)
+var tabela = document.querySelector('.corpoTabela')
+tabela.appendChild(produtoTr)
 
 }
 )
