@@ -1,16 +1,44 @@
-var produto = document.querySelector(".produto1")
+//selecionando elemento geral
+var produtos = document.querySelectorAll(".produto")
 
-var estoque = produto.querySelector('.info-estoque')
-var estq = estoque.textContent
-var vUnitario = produto.querySelector('.info-unidade')
-var unid = vUnitario.textContent
 
-var vTotal = produto.querySelector(".info-total")
+for(var i = 0; i < produtos.length ; i++)
+{
+    var produto = produtos[i]
+    
+    //selecionando sub-elementos
+    var estoque = produto.querySelector('.info-estoque')
+    var estq = estoque.textContent
+    var vUnitario = produto.querySelector('.info-unidade')
+    var unid = vUnitario.textContent
 
-var total = estq * unid
+    var vTotal = produto.querySelector(".info-total")
 
-vTotal.textContent = total
 
-console.log(estq)
-console.log(unid)
-console.log(total)
+    //função
+    var temEstoque = true
+    var temValorUni = true
+
+    if(estq <= 0)
+    {
+        temEstoque = false 
+        vTotal.textContent = "Estoque invalido"
+    }
+
+    if(unid <= 0)
+    {
+        temValorUni = false
+        vTotal.textContent = "Valor unitário invalido"
+    }
+
+    if(temEstoque && temValorUni)
+    {
+        var total = estq * unid
+        vTotal.textContent = total
+    }
+}
+
+
+
+
+
