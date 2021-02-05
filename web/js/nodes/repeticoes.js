@@ -38,11 +38,10 @@ for(var i = 0; i < produtos.length ; i++)
 }
 
 
-var teste = document.getElementById('teste')
-teste.addEventListener('click', alertando)
+const botao = document.getElementById('salvar')
 
-function alertando()
+botao.addEventListener('click', function()
 {
-    alert('clicou')
+    alert('funcionando catchorro')
 }
-
+)

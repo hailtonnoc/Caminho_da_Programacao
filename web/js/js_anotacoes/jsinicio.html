@@ -169,12 +169,40 @@
             </table>
         </section>
         
-        <h2>Função</h2>
-        
+        <h2>Função</h2>        
         <p><code>&lt;div id='nome_id'<strong><abbr title="metodo">onclick</abbr>         = 'nome_ação'</strong>()&gt;</code></p>
-        <p>O método pode ser chamado no html dentro da &lt;div&gt;</p>
+        <p>O método pode ser chamado no html dentro da &lt;tag&gt;</p>
+
+        <h3>Função</h3>
         <p>No Script defina a função em um bloco <strong>function</strong> nome_ação()</p>
-    
+        <code>
+            <pre>
+                function alertando()
+                {
+                    alert('clicou')
+                }
+            </pre>
+        </code>
+
+        <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando nome_variavel<strong>.addEventListener('evento', nome_ação)</strong></P>
+        <p><small><em>Faça um para cada ação.</em></small></p>
+
+        <h3>Função Anónima</h3>
+        <p>A função anonima é uma finção que só existe dentro da chamada do evento.</p>
+        <code>
+            <pre>
+                var teste = document.getElementById('teste')
+                teste.addEventListener('click', <strong>funtion ()
+                    {
+                        alert.( "<small>sou uma função anónima</small>"" )
+                    }
+                </strong> )
+            </pre>
+        </code>
+
+        <p>Para prevenir um comportamento padrão dentro de <strong>function</strong>(event) declare <strong>event</strong> em seguida <code>event.<strong>preventDefault</strong>();</code></p>
+
+        <br>
         <div id="interagir" onclick="clicou()" onmouseout="saiu()">
             interagir
         </div>
@@ -194,10 +222,9 @@
             {objeto.innerText = 'entrou'}
             
         </script>
-        <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando 'nome variavel'<strong>.addEventListener('evento', nome_ação)</strong></P>
-        <p><small><em>Faça um para cada ação.</em></small></p>
+        
     
-        <h2>Interagindo com usuario.</h2>
+        <h3>Usando dados de input.</h3>
         <p>Para uma caixa para receber uma entrada de usuario utilize a tag &lt;input&gt;</p>
         <input type="number" name="txt1" id="n1">
         <input type="number" name="txt2" id="n2">
