@@ -36,6 +36,10 @@ pre
 {
     font-size: 1.18em;
 }
+.aenfase:hover
+{
+    font-size: 1.08em;
+}
 
 #moldeclass, #objeto, #objetof, #inseguranca
 {

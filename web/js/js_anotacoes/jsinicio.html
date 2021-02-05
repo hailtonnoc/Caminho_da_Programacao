@@ -71,11 +71,6 @@
             </script>
         
             <script>
-                var titulo = document.getElementsByTagName('h2')[0]
-                titulo.style.color = 'violet'
-            </script>
-        
-            <script>
                 var click = document.getElementById('objeto_0')
                 click.innerText = 'Definimos uma variavel com o elemento encurtar o comando. E poder trabalhar de maneira simplificada → objeto.acoes' 
             </script>
@@ -104,8 +99,39 @@
 
         </section>
     
-        <h1 style="font: normal 54px times;">Interações</h1>
-        <p>Fundamentos explicados vamos a integração dos mesmos.</p>
+        <section class="interagindo">
+            <h1 style="font: normal 54px times;">Interações</h1>
+            <p>Fundamentos explicados vamos a integração dos mesmos. <br>
+                Como vimos acima uma simples reatribuição do <strong>.textContent</strong> de um arquivo pode modificar seu conteúdo, ainda, existem algumas outra palavras reservadas que permitem a semelhantes reatribuições como <strong>.innerText</strong> ou <strong>.innerHTML</strong>
+            </p>
+            <h3>Interagindo com estilo &#x1F60E;</h3>
+            <p>Após selecionar o elemento a ser manipulado declare o <strong id="colori">.style</strong> em seguida <strong>.mudança = "<small>caracteristica</small>"</strong></p>
+            <code>
+                <pre>
+                    var titulo = document.querySelector('#colori')
+                    titulo.style.color = 'aqua'
+                </pre>
+            </code>
+            <p>Caso a mudança contenha 2 palavras utilize o padrão de sem espaço a parir da segunda palavra começa com maiúscula como <strong id="bground">.backgroundColor</strong> </p>
+            <script>
+                var titulo = document.querySelector('#colori')
+                titulo.style.color = 'aqua'
+
+                var ground = document.querySelector('#bground')
+                ground.style.backgroundColor = 'lightblue'
+            </script>
+
+            <div class="estiloboa">
+                <h3>Estilo em boas praticas</h3>
+                <p>Ao ives de trocar o estilo diretamente, é prudente adicionar uma classe contendo o estilo necessário. Assim a manutenção será feita no <a href="../../css/cssintro.html">CSS</a> e não no JS.</p>
+                <code>
+                    <pre>
+                        elemento<strong>.classList</strong>.add(<small>"nome classe"</small>)
+                    </pre>
+                </code>
+            </div>
+
+        </section>
 
         <section class="eventos">
             <h2>Eventos</h2>
@@ -146,7 +172,7 @@
         <h2>Função</h2>
         
         <p><code>&lt;div id='nome_id'<strong><abbr title="metodo">onclick</abbr>         = 'nome_ação'</strong>()&gt;</code></p>
-        <p>O metodo pode ser chamado no html dentro da &lt;div&gt;</p>
+        <p>O método pode ser chamado no html dentro da &lt;div&gt;</p>
         <p>No Script defina a função em um bloco <strong>function</strong> nome_ação()</p>
     
         <div id="interagir" onclick="clicou()" onmouseout="saiu()">
@@ -197,7 +223,7 @@
         
     </main>
 
-
+    <script src="jsinicio.js"></script>r
     <p><a href="../jsindex.html" rel="prev">Voltar para intro</a></p>
     
 
