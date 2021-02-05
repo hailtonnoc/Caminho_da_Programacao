@@ -1,7 +1,6 @@
 //selecionando elemento geral
 var produtos = document.querySelectorAll(".produto")
 
-
 for(var i = 0; i < produtos.length ; i++)
 {
     var produto = produtos[i]
@@ -39,6 +38,11 @@ for(var i = 0; i < produtos.length ; i++)
 }
 
 
+var teste = document.getElementById('teste')
+teste.addEventListener('click', alertando)
 
-
+function alertando()
+{
+    alert('clicou')
+}
 

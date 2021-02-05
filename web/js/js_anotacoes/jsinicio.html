@@ -183,14 +183,17 @@
             objeto.addEventListener('mouseenter', entrou)
     
             function clicou()
-            {objeto.style.backgroundColor = 'gold'}
+            {
+                objeto.style.backgroundColor = 'blue'
+                objeto.innerText = 'cliclou'
+            }
             function saiu()
             {objeto.style.backgroundColor = 'black';
             objeto.innerText = 'saiu'}
             function entrou()
             {objeto.innerText = 'entrou'}
             
-            </script>
+        </script>
         <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando 'nome variavel'<strong>.addEventListener('evento', nome_ação)</strong></P>
         <p><small><em>Faça um para cada ação.</em></small></p>
     
@@ -223,7 +226,7 @@
         
     </main>
 
-    <script src="jsinicio.js"></script>r
+    <script src="jsinicio.js"></script>
     <p><a href="../jsindex.html" rel="prev">Voltar para intro</a></p>
     
 
