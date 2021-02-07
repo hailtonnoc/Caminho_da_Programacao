@@ -169,84 +169,97 @@
             </table>
         </section>
         
-        <h2>Função</h2>        
-        <p><code>&lt;div id='nome_id'<strong><abbr title="metodo">onclick</abbr>         = 'nome_ação'</strong>()&gt;</code></p>
-        <p>O método pode ser chamado no html dentro da &lt;tag&gt;</p>
-
-        <h3>Função</h3>
-        <p>No Script defina a função em um bloco <strong>function</strong> nome_ação()</p>
-        <code>
-            <pre>
-                function alertando()
-                {
-                    alert('clicou')
-                }
-            </pre>
-        </code>
-
-        <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando nome_variavel<strong>.addEventListener('evento', nome_ação)</strong></P>
-        <p><small><em>Faça um para cada ação.</em></small></p>
-
-        <h3>Função Anónima</h3>
-        <p>A função anonima é uma finção que só existe dentro da chamada do evento.</p>
-        <code>
-            <pre>
-                var teste = document.getElementById('teste')
-                teste.addEventListener('click', <strong>funtion ()
+        <section class="funcoes">
+            <h2>Função</h2>
+            <p><code>&lt;div id='nome_id'<strong><abbr title="metodo">onclick</abbr>         = 'nome_ação'</strong>()&gt;</code></p>
+            <p>O método pode ser chamado no html dentro da &lt;tag&gt;</p>
+            <h3>Função</h3>
+            <p>No Script defina a função em um bloco <strong>function</strong> nome_ação()</p>
+            <code>
+                <pre>
+                    function alertando()
                     {
-                        alert.( "<small>sou uma função anónima</small>"" )
+                        alert('clicou')
                     }
-                </strong> )
-            </pre>
-        </code>
-
-        <p>Para prevenir um comportamento padrão dentro de <strong>function</strong>(event) declare <strong>event</strong> em seguida <code>event.<strong>preventDefault</strong>();</code></p>
-
-        <br>
-        <div id="interagir" onclick="clicou()" onmouseout="saiu()">
-            interagir
-        </div>
-        <script>
-            var objeto = document.getElementById('interagir')
-            objeto.addEventListener('mouseenter', entrou)
-    
-            function clicou()
-            {
-                objeto.style.backgroundColor = 'blue'
-                objeto.innerText = 'cliclou'
-            }
-            function saiu()
-            {objeto.style.backgroundColor = 'black';
-            objeto.innerText = 'saiu'}
-            function entrou()
-            {objeto.innerText = 'entrou'}
+                </pre>
+            </code>
+            <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando nome_variavel<strong>.addEventListener('evento', nome_ação)</strong></P>
+            <p><small><em>Faça um para cada ação.</em></small></p>
+            <h3>Função Anónima</h3>
+            <p>A função anonima é uma finção que só existe dentro da chamada do evento.</p>
+            <code>
+                <pre>
+                    var teste = document.getElementById('teste')
+                    teste.addEventListener('click', <strong>funtion ()
+                        {
+                            alert.( "<small>sou uma função anónima</small>"" )
+                        }
+                    </strong> )
+                </pre>
+            </code>
+            <p>Para prevenir um comportamento padrão dentro de <strong>function</strong>(event) declare <strong>event</strong> em seguida <code>event.<strong>preventDefault</strong>();</code></p>
+            <br>
+            <div id="interagir" onclick="clicou()" onmouseout="saiu()">
+                interagir
+            </div>
+            <script>
+                var objeto = document.getElementById('interagir')
+                objeto.addEventListener('mouseenter', entrou)
+                function clicou()
+                {
+                    objeto.style.backgroundColor = 'blue'
+                    objeto.innerText = 'cliclou'
+                }
+                function saiu()
+                {objeto.style.backgroundColor = 'black';
+                objeto.innerText = 'saiu'}
+                function entrou()
+                {objeto.innerText = 'entrou'}
             
-        </script>
+            </script>
+        </section>
         
     
-        <h3>Usando dados de input.</h3>
-        <p>Para uma caixa para receber uma entrada de usuario utilize a tag &lt;input&gt;</p>
-        <input type="number" name="txt1" id="n1">
-        <input type="number" name="txt2" id="n2">
-        <input type="button" value="somar" onclick="somar()">
-        <div id="resultado">Resultado</div>
-    
-        <script>
-            var txt1 = document.getElementById('n1')
-            var txt2 = document.getElementById('n2')
-            var resultado = document.querySelector('div#resultado')
-    
-            function somar(){
-                var result = Number(txt1.value) + Number(txt2.value)
-                resultado.innerHTML = `O resultado da soma entre ${txt1.value} mais ${txt2.value} foi <strong>${result}</strong>`}
-        </script>
-        
+        <section class="input">
+            <h3>Usando dados de input.</h3>
+            <p>Para uma caixa receber uma entrada de usuario utilize a tag <strong>&lt;input&gt;</strong> <br>
+            Para capturar o valor do campo defina um objeto para o campo e utilize o elemento <strong><code>.value</code></strong></p>
+            <code>
+                <pre>
+                    &lt;input type="number" name="<strong>txt1</strong>" id="n1"&gt;
+                    var txt1 = document.getElementById('n1')
+                    txt1<strong>.value</strong>
+                </pre>
+            </code>
+            <p>O processo pode se tornar mais confortável e cognoscivel caso seja definido um objeto para o <strong>&lt;form&gt;</strong> já que pode ser usado o <strong>name</strong> do input com o .value</p>
+            <code>
+                <pre>
+                    var formulario = document.getElementsByTagName('form')
+                    formulario.<strong>txt1</strong>.value
+                </pre>
+            </code>
+            <form>
+                <input type="number" name="txt1" id="n1">
+                <input type="number" name="txt2" id="n2">
+                <input type="button" value="somar" onclick="somar()">
+                <div id="resultado">Resultado</div>
+            </form>
+            <script>
+                var txt1 = document.getElementById('n1')
+                var txt2 = document.getElementById('n2')
+                var resultado = document.querySelector('div#resultado')
+                function somar(){
+                    var result = Number(txt1.value) + Number(txt2.value)
+                    resultado.innerHTML = `O resultado da soma ${txt1.value} + ${txt2.value} =  <strong></strong>`}
+            </script>
+            
+        </section>
     
     
     
     
         <h2>Separe seus Scripts</h2>
-        <p> Utilize a tag &lt;<abbr title="script  :  scr">script</abbr> src=""&gt;</p>
+        <p> Utilize a tag &lt;<abbr title="script  :  scr">script</abbr> src=" <small>local</small> "&gt; <a href="../js_anotacoes/aulajs2.html">modularize</a> a fim de trabalhar melhor o código.</p>
     
     
         

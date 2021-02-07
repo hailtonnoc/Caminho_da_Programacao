@@ -42,9 +42,9 @@ botao.addEventListener('click', function(event)
 {
     event.preventDefault()
 
-//pegar elementos
+//pegar valor dos elementos
 var form = document.querySelector('.entrada')
-
+//                 name do input
 var produto = form.produto.value;
 var quantidade = form.quantidade.value;
 var unidade = form.vunidade.value;

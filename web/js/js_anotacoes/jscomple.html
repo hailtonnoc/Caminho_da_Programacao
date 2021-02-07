@@ -3,53 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Complementar</title>
 </head>
 <body>
-    <h1>Fucionalidades</h1>
-    <h2>Pegar elementos do computador</h2>
-    <h3>Data/ Horas</h3>
-    <p>Todo tipo de metrica ligada a Data pode definir um <strong>new Date()</strong> </p>
-    <p>Depois escolher qual parametro de hora deve ser buscado. O exemplo abaixo foi de horas com o <mark>.getHours</mark>. <small>É a hora da marquina alocada</small></p>
-    <script>
-        var data = new Date
-        var hora = data.getHours()
-        document.write(`${hora}`)
-    </script>
-
-    <h2>Inserindo elementos</h2>
-    <input type="radio" name="estado" id="on">
-    <label for="on">Disposto</label>
-    <input type="radio" name="estado" id="off">
-    <label for="off">Cansado</label>
-    <input type="button" value="Mostrar" onclick="inserir()">
+    <header>
+        <h1>Fucionalidades</h1>
+    </header>
     
-    <div id="aqui"></div>
-    <p>Utilizaremos a <code>document.<strong>createElement</strong>('<abbr title="exemplo">img</abbr>')</code></p>
-    <p>O comando <code>obj.<strong>setAttribute</strong>('<abbr title="Qual atributo">id</abbr>','valor')</code></p>
-    <p>E para inserir temor o comando <code><abbr title="variavel ligado ao local">local</abbr>.<strong>appendChild(<abbr title="obj a ser Inserido">obj</abbr>)</strong></code></p>
+    <main>
+        <section class="novos_elementos">
+            <h2>Inserindo elementos</h2>
+                
+            <p>Utilizaremos a <code>document.<strong>createElement</strong>('<abbr title="tag a ser criada ex; img, h1, tr, td... "><small>tag</small></abbr>')</code></p>
+            <p>O comando obj<code>.<strong>setAttribute</strong>('<abbr title="Qual atributo">id</abbr>','valor')</code> insere atributos ao objeto.</p>
+            <p>E para inserir o  <code><abbr title="variável ligado ao local">local</abbr>.<strong>appendChild(<abbr title="obj a ser Inserido"><small>obj</small></abbr>)</strong></code> <br>
+                Onde através do documet pode ser expressado todo caminho DOM onde será alocado o elemento criado.</p>
 
-    <script>
-        var img = document.createElement('img')
-        img.setAttribute('id','foto')
-        var aqui = document.querySelector('div#aqui')        
+            <input type="radio" name="estado" id="on">
+            <label for="on">Disposto</label>
+            <input type="radio" name="estado" id="off">
+            <label for="off">Cansado</label>
+            <input type="button" value="Mostrar" onclick="inserir()">
         
-        var estou = document.getElementsByName('estado')
+            <div id="aqui"></div>
+                
+            <script>
+                var aqui = document.querySelector('#aqui')
+                
+                var img = document.createElement('img')
+                img.setAttribute('id','foto')
+                
+                var estou = document.getElementsByName('estado')
 
-        function inserir()
-        {
-            if (estou[0].checked)
-            {img.setAttribute('src','../../../XXXMATERIAISXXX/IMAGENS/trampo.jpg')}
-            else if(estou[1].checked)
-            {img.setAttribute('src','../../../XXXMATERIAISXXX/IMAGENS/cansado.jpg')}
+                function inserir()
+                {
+                    if (estou[0].checked)
+                        {img.setAttribute('src','../../../XXXMATERIAISXXX/IMAGENS/trampo.jpg')}
+                    else if(estou[1].checked)
+                        {img.setAttribute('src','../../../XXXMATERIAISXXX/IMAGENS/cansado.jpg')}
+                    aqui.appendChild(img)
+                }
+            </script>
 
-            aqui.appendChild(img)
-        }
+            <code>
+                <pre>
+                    var produtoTr = document.createElement("tr")
+                    var produtoTd = document.createElement("td")
 
-
-    </script>
-
-
+                    produtoTr.appendChild(produtoTd)
+                    var tabela = document.querySelector('.corpoTabela')
+                    tabela.appendChild(produtoTr)
+                </pre>
+            </code>
+            <p>Com <strong>.appendChild()</strong> é possivel encadear elementos para inserir componentes complexos como tabelas.</p>
+        </section>
+        
+    </main>
 
 
 
