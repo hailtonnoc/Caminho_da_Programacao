@@ -11,7 +11,8 @@ campoFiltro.addEventListener('input', function()
             var produto = produtos[i]
             var tdNome = produto.querySelector('.info-nome')
             var nome = tdNome.textContent
-            if(nome != this.value)
+            var expressao = RegExp(this.value, "i")
+            if(!expressao.test(nome))
                 {produto.classList.add('invisivel')}
             else
                 {produto.classList.remove('invisivel')}
