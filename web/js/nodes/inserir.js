@@ -14,7 +14,7 @@ var unidade = form.vunidade.value;
 var produto = obtemProdutoEstoque(form)
 console.log(produto)
 
-/*
+/*Substituído por montarTr
 criar elementos
 var produtoTr = document.createElement("tr")
 
@@ -39,6 +39,7 @@ var produtoTr = montarTr(produto)
 var tabela = document.querySelector('.corpoTabela')
 tabela.appendChild(produtoTr)
 
+form.reset()
 }
 )
 
@@ -58,7 +59,8 @@ function obtemProdutoEstoque(form)
 function montarTr(produto)
 {
     var produtoTr = document.createElement("tr")
-
+    produtoTr.classList.add('produto')
+    /*subistituido por montaTd
     var produtoTd = document.createElement("td")
     var quantidadeTd = document.createElement("td")
     var unidadeTd = document.createElement("td")
@@ -68,6 +70,12 @@ function montarTr(produto)
     quantidadeTd.textContent = produto.quantidade
     unidadeTd.textContent = produto.valorUnitario
     totalTd.textContent = produto.total
+    */
+    var produtoTd = montaTd(produto.nome, 'info-nome')
+    var quantidadeTd = montaTd(produto.quantidade, 'info-estoque')
+    var unidadeTd = montaTd(produto.valorUnitario, 'info-unidade')
+    var totalTd = montaTd(produto.total, 'info-total')
+
 
     produtoTr.appendChild(produtoTd)
     produtoTr.appendChild(quantidadeTd)
@@ -75,4 +83,13 @@ function montarTr(produto)
     produtoTr.appendChild(totalTd)
 
     return produtoTr //ta vendo
+}
+
+function montaTd(dado, classe)
+{
+    var td = document.createElement('td')
+    td.textContent = dado
+    td.classList.add(classe)
+
+    return td
 }
