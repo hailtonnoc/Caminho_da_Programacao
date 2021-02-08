@@ -11,7 +11,7 @@ produtos.forEach(function(produto)
 
 var tabela = document.querySelector('.corpoTabela')
 
-tabela.addEventListener('click', function(event)
+tabela.addEventListener('dblclick', function(event)
 {
     var alvo = event.target
     var paiAlvo = alvo.parentNode
