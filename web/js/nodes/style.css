@@ -1,0 +1,10 @@
+label
+{
+    display: inline;
+}
+
+.fadeOut
+{
+    opacity: 0;
+    transition: 0.5s;
+}

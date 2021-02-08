@@ -13,7 +13,10 @@ var tabela = document.querySelector('.corpoTabela')
 
 tabela.addEventListener('dblclick', function(event)
 {
-    var alvo = event.target
-    var paiAlvo = alvo.parentNode
-    paiAlvo.remove()
+    event.target.parentNode.classList.add('fadeOut')
+
+    setTimeout(function()
+    {
+        event.target.parentNode.remove()
+    },500)
 })
