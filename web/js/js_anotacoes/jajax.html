@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ajax</title>
+</head>
+<body>
+    <header>
+        <h1>Ajax</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Permite a conexão com servidores</h2>
+            <p>Para solicitar utilize uma <i>new </i><strong>XMLHttpRequest</strong>();</p>
+            <code>
+                <pre>
+                    var ex = new <strong>HMLHttpResquest</strong>()
+                </pre>
+            </code>
+            <h3>Configurando</h3>
+            <p>ex<strong>.open</strong>("<small>tipo</small>", "<small>valor</small>") abre a conexão da solicitação.</p>
+            <table border="1">
+                <thead>
+                    <th>Tipos</th>
+                    <th>Função</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GET</td>
+                        <td>Pegar itens</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>ex<strong>.send</strong>() envia a solicitação.</p>
+            <p>ex.<strong>responseText</strong> retorna o texto da resposta. <br>
+            Esse texto de resposta deve ser considerado um <abbr title="Java Script Object Notation">JSON</abbr> que é um tipo de texto para transporte de informações.</p>
+            <p><strong>JSON.parce</strong>('<small>textoResposta</small>') Converte o JSON para Objetos JavaScript.</p>
+
+        </section>
+    </main>
+    
+</body>
+</html>
