@@ -42,6 +42,9 @@
                 </pre>
             </code>
             <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
+            <p>Enviar dados ao servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
+            <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
+            
             <h3>Exportando Modulos</h3>
             <p>Utilize o comando <code>module.exports = <small>nome => {}</small></code><br>
             para exportar instale o modulo <code>consign</code> ele ira agrupar todas as rotas e colocar tudo dentro do <strong>app</strong>.</p>
@@ -71,9 +74,18 @@
             <p>O mesmo é invocado no terminal com o comando <code>npm <strong>start</strong></code></p>
 
             <h3>Facilitando comandos</h3>
+            <h4>nodemon</h4>
             <p>A biblioteca <strong>nodemon</strong> é uma boa alternativa para atualizar as alterações do servidor. <br>
-            salve apenas em desenvolvimento <code>--save-dev <strong>nodemon</strong></code> para restartar o servidor utilize o comando <strong>rs</strong>.
-            </p>
+            salve apenas em desenvolvimento <code>--save-dev <strong>nodemon</strong></code> para restartar o servidor utilize o comando <strong>rs</strong>.</p>
+            <h4>body-parser</h4>
+            <p>converte entradas em objetos diversos</p>
+            <code>
+                <pre>
+        <small>configurando:</small>
+                        app.<strong>use</strong>(bodyParser.urlencoded({extended:true}))
+                </pre>
+            </code>
+
         </section>
 
     </main>
