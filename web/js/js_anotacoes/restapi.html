@@ -30,15 +30,18 @@
                 <pre>
                     const express = <strong>require('<abbr title="chamada de biblioteca">express</abbr>')</strong>
 
-                    const app = express()
+                    <strong>const app = express()</strong>
                 </pre>
             </code>
-            <p>Defina um escutador para as requisições do servidor</p>
+            <p>Defina um escutador para as requisições do servidor.</p>
             <code>
                 <pre>
-                    app<strong>.listen</strong>(<abbr title="porta">3000</abbr>)
+                    app<strong>.listen</strong>(<abbr title="porta">3000</abbr>, função)
+        <small>ex:</small>
+                    app.listen(3000, function(){console.log('servidor rodando na porta 3000')})
                 </pre>
             </code>
+            <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
 
         </section>
 
