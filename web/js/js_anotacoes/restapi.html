@@ -9,12 +9,37 @@
 </head>
 <body>
     <header>
-        <h1>API's</h1>
+        <h1>API's Rest</h1>
     </header>
     <main>
         <section>
-            <h2>API <i class="fa fa-window-restore" aria-hidden="true"></i></h2>
-            
+            <h2>API</h2>
+            <h3>No terminal</h3>
+
+            <p>Para inicar o projeto utilize o <abbr title="Node Package Manager">npm</abbr> com o comando <strong>init</strong></p>
+            <code><pre>npm init</pre></code>
+            <p>Após sera criado o packagel.json que ira abrigar todos os dados do projeto.</p>
+            <p>Criado enter point geralmente utilize o nome "index.js"
+                <br>
+                Dentro dele executaremos o servidor para isso usaremos o modulo "Express" que permite executar servidores a partir dele.
+            </p>
+            <p>O comando a ser utilizado é o <code>npm install.</code></p>
+            <code><pre>npm install <strong>express</strong></pre></code>
+            <p>Chamando módulos do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. o mesmo deve ser requerido.</p>
+            <code>
+                <pre>
+                    const express = <strong>require('<abbr title="chamada de biblioteca">express</abbr>')</strong>
+
+                    const app = express()
+                </pre>
+            </code>
+            <p>Defina um escutador para as requisições do servidor</p>
+            <code>
+                <pre>
+                    app<strong>.listen</strong>(<abbr title="porta">3000</abbr>)
+                </pre>
+            </code>
+
         </section>
 
     </main>
