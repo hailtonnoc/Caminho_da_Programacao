@@ -12,13 +12,13 @@
         <h1>API's Rest</h1>
     </header>
     <main>
-        <section>
+        <section class="configurando">
             <h2>API</h2>
             <h3>No terminal</h3>
 
-            <p>Para inicar o projeto utilize o <abbr title="Node Package Manager">npm</abbr> com o comando <strong>init</strong></p>
+            <p>Para iniciar o projeto utilize o <abbr title="Node Package Manager">npm</abbr> com o comando <strong>init</strong></p>
             <code><pre>npm init</pre></code>
-            <p>Após sera criado o packagel.json que ira abrigar todos os dados do projeto.</p>
+            <p>Após sera criado o package.json que ira abrigar todos os dados do projeto.</p>
             <p>Criado enter point geralmente utilize o nome "index.js"
                 <br>
                 Dentro dele executaremos o servidor para isso usaremos o modulo "Express" que permite executar servidores a partir dele.
@@ -42,7 +42,38 @@
                 </pre>
             </code>
             <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
+            <h3>Exportando Modulos</h3>
+            <p>Utilize o comando <code>module.exports = <small>nome => {}</small></code><br>
+            para exportar instale o modulo <code>consign</code> ele ira agrupar todas as rotas e colocar tudo dentro do <strong>app</strong>.</p>
+            <code>
+                <pre>
+                    consign()
+                    .include('<small>pasta</small>')
+                    .into(app)
+                </pre>
+            </code>
 
+        </section>
+
+        <section class="ajustando_json">
+            <h2>Manipulando <code>package.json</code></h2>
+            <h3><code>"scripts":</code></h3>
+            <p>pode ser inserido scripts para trabalhar diretamente no terminal.</p>
+            <code>
+                <pre>
+    <small>ex:</small>
+                        <small>"stripts":</small> {
+                        <strong>"start"</strong>: "node index.js",
+
+                        <small>"test": "echo \"Error: no test specified\...</small>
+                </pre>
+            </code>
+            <p>O mesmo é invocado no terminal com o comando <code>npm <strong>start</strong></code></p>
+
+            <h3>Facilitando comandos</h3>
+            <p>A biblioteca <strong>nodemon</strong> é uma boa alternativa para atualizar as alterações do servidor. <br>
+            salve apenas em desenvolvimento <code>--save-dev <strong>nodemon</strong></code> para restartar o servidor utilize o comando <strong>rs</strong>.
+            </p>
         </section>
 
     </main>
