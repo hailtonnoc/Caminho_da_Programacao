@@ -10,6 +10,7 @@
 <body>
     <header>
         <h1>Ajax</h1>
+        <p><small>Faz requisições assíncronas, ou seja, sem travar o JS.</small></p>
     </header>
     <main>
         <section>
@@ -39,6 +40,24 @@
             <p>ex.<strong>responseText</strong> retorna o texto da resposta. <br>
             Esse texto de resposta deve ser considerado um <abbr title="Java Script Object Notation">JSON</abbr> que é um tipo de texto para transporte de informações.</p>
             <p><strong>JSON.parce</strong>('<small>textoResposta</small>') Converte o JSON para Objetos JavaScript.</p>
+            <p>ex<strong>.status</strong> Retorna o estado da conexão.</p>
+            <table border="1">
+                <thead>
+                    <th>Codigo</th>
+                    <th>Significado</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>200</td>
+                        <td>Bem Sucedido</td>
+                    </tr>
+                    <tr>
+                        <td>404</td>
+                        <td>Não encontrado</td>
+                    </tr>
+                </tbody>
+            </table>
+
 
         </section>
     </main>
