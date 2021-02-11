@@ -39,7 +39,7 @@ class Atendimento
                 if(erro)
                 {res.status(400).json(erro)}
                 else
-                {res.status(201).json(resultados)}
+                {res.status(201).json(atendimento)}
             })
         }
 
@@ -82,7 +82,7 @@ class Atendimento
             if(erro)
             {res.status(400).json(erro)}
             else
-            {res.status(200).json(resultados)}
+            {res.status(200).json({...valores, id})}
 
         })
 
