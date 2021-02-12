@@ -8,13 +8,18 @@ body
 h1
 {
     font: normal 63px times; 
-    text-shadow: rgb(158, 111, 24) 9px 9px 4.5px;
+    text-shadow: rgb(190, 99, 65) 9px 9px 4.5px;
 }
 
 h2
 {
     font: normal 2.7em times;
     text-shadow: rgba(24, 87, 158, 0.445) 6px 6px 3.6px;
+}
+
+.titulo
+{
+    color: rgb(190, 99, 65);
 }
 
 h3
