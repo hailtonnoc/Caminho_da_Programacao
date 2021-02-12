@@ -26,18 +26,30 @@ h3
 pre 
 {
     display: inline-block;
-    font-size: 18px;
+    font-size: 1.08em;
     font-family: 'VT323', monospace;
     color: rgb(0, 162, 255);
     vertical-align: top;
     padding: 1.8%;
-    border: solid rgb(224, 119, 20) 1px;
+    border: solid rgba(30, 129, 210, 0.103) 1px;
 }
 
 small
 {
     font-family: monospace;
     color: black;
+}
+
+div
+{
+    border: solid black 2px;
+    margin: 1%;
+    padding: 1%;
+}
+
+.enfa
+{
+    font-size: 1.8em;
 }
 
 .enfase
