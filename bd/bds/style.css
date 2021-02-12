@@ -1,3 +1,51 @@
-body {
-    color: darkblue;
+body 
+{
+    background: linear-gradient( rgba(255, 255, 255, 0.507)81%,rgba(14, 122, 224, 0.87));
+    font-size: 21px;
+    margin: 1.8%;
 }
+
+h1
+{
+    font: normal 63px times; 
+    text-shadow: rgb(158, 111, 24) 9px 9px 4.5px;
+}
+
+h2
+{
+    font: normal 2.7em times;
+    text-shadow: rgba(24, 87, 158, 0.445) 6px 6px 3.6px;
+}
+
+h3
+{
+    font-size: normal 45px times; 
+    text-shadow: rgba(24, 93, 158, 0.397) 3px 3px 1.8px;
+}
+
+pre 
+{
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'VT323', monospace;
+    color: rgb(0, 162, 255);
+    vertical-align: top;
+    padding: 1.8%;
+    border: solid rgb(224, 119, 20) 1px;
+}
+
+small
+{
+    font-family: monospace;
+    color: black;
+}
+
+.enfase
+{
+    font-size: 1.18em;
+}
+.aenfase:hover
+{
+    font-size: 1.08em;
+}
+
