@@ -1,6 +1,6 @@
 body 
 {
-    background: linear-gradient( rgba(255, 255, 255, 0.507)81%,rgba(14, 122, 224, 0.87));
+    background: linear-gradient( rgba(255, 255, 255, 0.507)90%,rgba(14, 122, 224, 0.87));
     font-size: 1.08em;
     margin: 1.8%;
 }
@@ -50,6 +50,11 @@ div
     border: solid black 2px;
     margin: 1%;
     padding: 1%;
+}
+
+.divg
+{
+    border: solid black 3px;
 }
 
 .enfa

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabelas MySQL</title>
+</head>
+<body>
+    <header>
+        <h1>Comandos Tabela</h1>
+    </header>
+    <main>
+        <section class="Principais divg">
+            <h2>Criação</h2>
+            <p>Apara Criar uma tabela utilize o comando:</p>
+            <code>
+                <pre>
+                    CREATE TABLE <small>nome</small>
+                    (
+                        <small>id</small> int not null auto_increment,
+                        <small>caracteristica_0</small> varchar (40),
+                        <small>caracteristica_1</small> date,
+                        <small>caracteristica_3</small> enum ('x', 'y'),
+                        primary key (<small>id</small>)
+                    ) default charset = utf8;
+                </pre>
+            </code>
+
+            <h2>Exclusão</h2>
+            <p>Para exclusão utilize:</p>
+            <code>
+                <pre>
+                    DROP TABLE <small>nome </small>;
+                </pre>
+            </code>
+        </section>
+
+        <section class="Modais divg">
+            <h2>Alterando</h2>
+            <h3>Coluna inteira</h3>
+            <code>
+                <pre>
+                    ALTER TABLE <small>nome_tabela</small>
+                    ADD COLUMN <small>nome_caracteristica</small> varchar (9) <abbr title="não existe before, só after ou first">AFTER</abbr> <small>caracteristica_0</small>;
+                </pre>
+            </code>
+            <code>
+                <pre>
+                    ALTER TABLE <small>nome_tabela</small>
+                    DROP COLUMN <small>nome_caracteristica</small>;
+                </pre>
+            </code>
+
+            <h3>Elemento da Coluna</h3>
+            <p>Modificando propriedade dos atributos</p>
+            <code>
+                <pre>
+                    ALTER TABLE <small>nome_tabela</small>
+                    MODIFY COLUMN <small>nome_coluna</small> varchar (21) not null default '';
+                </pre>
+            </code>
+            <p>Para renomear a coluna utilize o comando</p>
+            <code>
+                <pre>
+                    ALTER TABLE <small>nome</small>
+                    CHANGE COLUMN <small>nome_antigo nome_novo</small> varchar (21) not null default '';
+                </pre>
+            </code>
+
+            <p>Comando de redefinição total, então se torna necessário reescrever os atributos da coluna.</p>
+        </section>
+
+    </main>
+    <a href="sql.html" rel="prev"><img src="../../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a>
+
+</body>
+</html>
