@@ -37,17 +37,23 @@
                     <div>
                         <h3 class="enfa"><img src="../../../XXXMATERIAISXXX/IMAGENS/arquivo.png" alt="tabelas"> Tabelas</h3>
                         <p>Posteriormente temos as tabelas que servirão para agrupar tipos de registros específicos. Uma boa analogia é uma pasta já que a mesma ordena os atributos dos registros. <br>
-                        <strong>Tabelas</strong> e <abbr title="caracteristicas">colunas</abbr> devem seguir alguns parametros como, o nome conter caracteres de a-Z, 0-9. Começando sempre por letras.
+                        <strong>Tabelas</strong> e <abbr title="caracteristicas">colunas</abbr> devem seguir alguns parametros como, o nome conter caracteres de a-Z, 0-9 e _. Começando sempre por letras.
                         </p>
 
                         <code>
                             <pre>
-                    CREATE TABLE <small>pessoas</small>
+                    CREATE TABLE <small>nome</small>
                     (
-                        <small>caracteristica_0</small> varchar (40)
-                        <small>caracteristica_1</small> date
-                        <small>caracteristica_3</small> date
-                    );
+                        <small>id</small> int not null auto_increment,
+                        <small>caracteristica_0</small> varchar (40),
+                        <small>caracteristica_1</small> date,
+                        <small>caracteristica_3</small> enum ('x', 'y'),
+                        primary key (<small>id</small>)
+                    ) default charset = utf8;
+
+
+
+                    DROP TABLE <small>nome </small>;
                             </pre>
                         </code>
                         <p>O que caracterizam as tabelas é o tipo de resistro que a mesma irá manter.</p>
@@ -56,6 +62,22 @@
 
                         <h3 class="enfa"><img src="../../../XXXMATERIAISXXX/IMAGENS/tables.png" alt="registros"> Resistros</h3>
                         <p>Cada registro é único, como por exemplo as pessoas, cada uma com características próprias, porém, todas permanecem ao mesmo grupo, no caso a raça humana.</p>
+
+                        <code>
+                            <pre>
+                                INSERT INTO <small>tabela_nome</small>
+                                (id, caracteristica_0, caracteristica_1, caracteristica_3)
+                                VALUES
+                                <small>(default, 'Nome',    '1996-04-21',    'y')</small>,
+                                <small>(default, 'Nome_1',    '1996-05-20',    'x')</small>;
+                            </pre>
+                        </code>
+
+                        <p>Uma maneira de identificar esse atributo unico é com a constraint <code>primary key</code></p>
+
+                        <p>Caso a ordem for a mesma da tabela pode omitir a linha de descrição e colocar <br><code>INSERT INTO <small>tabela_nome</small> VALUES </code><br>(valores);<br>
+                            Pode ser inseridos varios registros simultaneamente.
+                        </p>
                         </div>
                 </div>
             </div>
@@ -94,7 +116,24 @@
         <section class="DML">
             <h2><strong class="titulo">D</strong>ata <strong class="titulo">M</strong>anipulation <strong class="titulo">L</strong>anguage</h2>
 
-            
+            <table border="1">
+                <thead>
+                    <th>Comando</th>
+                    <th>Função</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>INSERT INTO</td>
+                        <td>inserir dados</td>
+                    </tr>
+                    <tr>
+                        <td>VALUES</td>
+                        <td>precessão dos valores</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
 
         </section>
 
