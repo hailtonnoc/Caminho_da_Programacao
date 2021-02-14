@@ -73,7 +73,7 @@ section#arvore
 {
     background: rgba(245, 245, 245, 0.819);
     border-radius: 6px;
-    width: 21%;
+    width: 30%;
     padding: 9px;
     margin: 9px;
     box-shadow: 3px 3.6px 3.69px rgba(14, 11, 187, 0.399);
@@ -121,5 +121,5 @@ footer p
 footer img:hover
 {
     transition: 9s;
-    transform:rotate(450deg);
+    transform:rotate(720deg);
 }
