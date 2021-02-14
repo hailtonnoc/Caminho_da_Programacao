@@ -16,7 +16,7 @@
     <main>
         <section class="Principais divg">
             <h2>Criação</h2>
-            <p>Apara Criar uma tabela utilize o comando:</p>
+            <p>Criar uma tabela utilize o comando:</p>
             <code>
                 <pre>
                     CREATE TABLE <small>nome</small>
@@ -29,6 +29,7 @@
                     ) default charset = utf8;
                 </pre>
             </code>
+            <p>Para verificar uma tabela antes de sua criação <mark><code> CREATE TABLE IF NOT EXISTS <small>nome_tabela</small>(...); </code></mark></p>
 
             <h2>Exclusão</h2>
             <p>Para exclusão utilize:</p>
@@ -37,10 +38,21 @@
                     DROP TABLE <small>nome </small>;
                 </pre>
             </code>
+            <p>O mesmo <strong>if exist</strong> serve para verificar uma tabela antes de sua exclusão <mark><code> DROP TABLE IF EXISTS <small>nome_tabela</small>; </code></mark></p>
+            
         </section>
 
         <section class="Modais divg">
             <h2>Alterando</h2>
+            <h3>Tabela interira</h3>
+            <p>Para renomear a tabela:</p>
+            <code>
+                <pre>
+                        ALTER TABLE <small>nome_tabela</small>
+                        RENAME TO <small>novo_nome</small>;
+                </pre>
+            </code>
+
             <h3>Coluna inteira</h3>
             <code>
                 <pre>
@@ -75,6 +87,7 @@
         </section>
 
     </main>
+    <br>
     <a href="sql.html" rel="prev"><img src="../../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a>
 
 </body>
