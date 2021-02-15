@@ -99,12 +99,43 @@
                         WHERE <small>coluna</small> &lt;= <small>'valor'</small> ;
                     </pre>
                 </code>
+                <h4>Valores entre um e outro</h4>
                 <code>
                     <pre>
                         SELECT <small>nome_coluna0, nome_coluna1</small> FROM <small>nome_table</small>
-                        WHERE <small>coluna</small> between <small>'valor'</small> and <small>'valor'</small> ;
+                        WHERE <small>coluna</small> BETWEEN <small>'valor'</small> AND <small>'valor'</small> ;
                     </pre>
                 </code>
+                <h4>Valores específicos</h4>
+                <code>
+                    <pre>
+                        SELECT <small>nome_coluna0, nome_coluna1</small> FROM <small>nome_table</small>
+                        WHERE <small>coluna</small> IN <small>('valor0','valor1','valor2')</small> ;
+                    </pre>
+                </code>
+                <h4>Operadores <strong>LÓGICOS</strong> podem ser usados para combinar busca.</h4>
+                <pre>
+                    WHERE <small>coluna</small> &gt;= <small>'valor'</small> AND <small>coluna</small> &lt;= <small>'valor'</small>
+                    WHERE <small>coluna</small> &gt;= <small>'valor'</small> OR <small>coluna</small> &lt;= <small>'valor'</small>
+                    WHERE <small>coluna</small> NOT <small>'valor'</small>
+                </pre>
+
+            </div>
+
+            <div class="selecaoAvancada">
+                <h3>Retornando valores Parecidos</h3>
+                <p>Para retornar apenas valores parecidos ou com fragmentos de 'x' utilize <strong>LIKE</strong>.(Case sensitive)</p>
+                <code>
+                    <pre>
+                        SELECT <small>nome_coluna0, nome_coluna1</small> FROM <small>nome_table</small>
+                        WHERE <small>coluna</small> LIKE <small>'<strong style="font-size: 1.27em;">%</strong>x<strong style="font-size: 1.27em;">%</strong>'</small>;
+                    </pre>
+                </code>
+                <p>O carácter coringa % substitui por varios ou nenhum carácter  </p>
+                <p>nada ou qualquer coisa ante:</p>
+                <code>'%x'</code>
+                <p>nada ou qualquer coisa depois</p>
+                <code>x%</code>
 
             </div>
 
