@@ -15,19 +15,51 @@
     </header>
     <main>
         <section>
-            <h2>Inserindo Registros</h2>
-            <p>Para inserir Registros utilize os comandos abaixo:</p>
-            <code>
-                <pre>
-                    INSERT INTO <small>tabela_nome</small>
-                    (id, caracteristica_0, caracteristica_1, caracteristica_3)
-                    VALUES
-                    <small>(default, 'Nome',    '1996-04-21',    'y')</small>,
-                    <small>(default, 'Nome_1',    '1996-05-20',    'x')</small>;
-                </pre>
-            </code>
+            <div class="inserindo">
+                <h2>Inserindo Registros</h2>
+                <p>Para inserir Registros utilize os comandos abaixo:</p>
+                <code>
+                    <pre>
+                        INSERT INTO <small>tabela_nome</small>
+                        (id, caracteristica_0, caracteristica_1, caracteristica_3)
+                        VALUES
+                        <small>(default, 'Nome',    '1996-04-21',    'y')</small>,
+                        <small>(default, 'Nome_1',    '1996-05-20',    'x')</small>;
+                    </pre>
+                </code>
+            </div>
 
-            
+            <div class="alterando">
+                <h2>Alterando Registro</h2>
+                <p>Utilize o comando <strong>UPDATE</strong> desta maneira:</p>
+                <code>
+                    <pre>
+                        UPDATE <small>nome_tabela</small>
+                        SET <small>nome_coluna = 'novo_valor', nome_outra_coluna = 'novo_valor'</small>
+                        WHERE <small>coluna_identificadora = 'valor_identificar'</small> ;
+                    </pre>
+                </code>
+                <p>Ainda é possível colocar antes do final do comando o <mark><code>LIMIT 1</code></mark> limitando o numero de grandes modificações.</p>
+            </div>
+
+            <div class="deletando">
+                <h2>Deletando registro</h2>
+                <code>
+                    <pre>
+                        DELETE FROM <small>nome_tabela</small>
+                        WHERE <small>coluna_idenficica = 'valor_idenficador'</small>;
+                    </pre>
+                </code>
+                <p>Para deletar <strong>TODOS</strong> os registros da tabela utilize o comando <strong>TRUNCATE</strong></p>
+                <code>
+                    <pre>
+                        TRUNCATE TABLE <small>nome_table</small>;
+                    </pre>
+                </code>
+
+            </div>
+
+
         </section>
 
 
