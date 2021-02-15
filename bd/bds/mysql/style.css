@@ -28,6 +28,11 @@ h3
     text-shadow: rgba(24, 93, 158, 0.397) 3px 3px 1.8px;
 }
 
+code
+{
+    font-family: 'VT323', monospace;
+}
+
 pre 
 {
     display: inline-block;

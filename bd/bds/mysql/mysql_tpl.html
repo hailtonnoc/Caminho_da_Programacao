@@ -59,6 +59,55 @@
 
             </div>
 
+            <div class="selecionando">
+                <h2>Selecionando registros</h2>
+                <p>Para selecionar registro utilizaremos uma vasta combinação do comando <strong>SELECT</strong>.</p>
+                <h3>Seleção geral</h3>
+                <code>
+                    <pre>
+                        SELECT <small><abbr title="TUDO">*</abbr></small> FROM <small>nome_table</small>;
+                    </pre>
+                </code>
+                <h3>Seleção Ordenada</h3>
+                <code>
+                    <pre>
+                        SELECT <small><abbr title="TUDO">*</abbr></small> FROM <small>nome_table</small>
+                        ORDER BY <small>nome_coluna</small>;
+                    </pre>
+                </code>
+                <h3>Seleção Ordem inversa</h3>
+                <code>
+                    <pre>
+                        SELECT <small><abbr title="TUDO">*</abbr></small> FROM <small>nome_table</small>
+                        ORDER BY <small>nome_coluna</small> <strong>DESC</strong>;
+                    </pre>
+                </code>
+
+                <h3>Formatando retorno</h3>
+                <p>Para retornar apenas colunas desejadas substitua <strong>*</strong> pelo nome das colunas.</p>
+                <code>
+                    <pre>
+                        SELECT <small>nome_coluna0, nome_coluna1</small> FROM <small>nome_table</small>;
+                    </pre>
+                </code>
+
+                <h3>Critérios para retorno</h3>
+                <p>Para retornar apenas linhas desejadas coloque o <code>WHERE</code> nome das colunas e os critérios.</p>
+                <code>
+                    <pre>
+                        SELECT <small>nome_coluna0, nome_coluna1</small> FROM <small>nome_table</small>
+                        WHERE <small>coluna</small> &lt;= <small>'valor'</small> ;
+                    </pre>
+                </code>
+                <code>
+                    <pre>
+                        SELECT <small>nome_coluna0, nome_coluna1</small> FROM <small>nome_table</small>
+                        WHERE <small>coluna</small> between <small>'valor'</small> and <small>'valor'</small> ;
+                    </pre>
+                </code>
+
+            </div>
+
 
         </section>
 
