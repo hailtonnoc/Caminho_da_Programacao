@@ -135,7 +135,63 @@
                 <p>nada ou qualquer coisa ante:</p>
                 <code>'%x'</code>
                 <p>nada ou qualquer coisa depois</p>
-                <code>x%</code>
+                <code>'x%'</code>
+                <h4>Que tenha alguma coisa</h4>
+                <p>Para que tenha obrigatoriamente algo antes ou depois utilize <strong>_</strong> .</p>
+
+            </div>
+
+            <div class="informacoes">
+                <h2>Extraindo informações</h2>
+                <h3>Puxando uma Lista de todos os itens</h3>
+                <code>
+                    <pre>
+                        SELECT DISTINCT <small>coluna</small> FROM <small>tabela</small>;
+                    </pre>
+                </code>
+
+                <h3>Puxando uma Lista de todos os itens e sua quantidade.</h3>
+                <code>
+                    <pre>
+                        SELECT <small>coluna</small>, COUNT(*) FROM <small>tabela</small>
+                        GROUP BY <small>coluna</small>;
+                    </pre>
+                </code>
+
+                <h3>Contando itens</h3>
+                <code>
+                    <pre>
+                        SELECT COUNT(*) FROM <small>tabela</small> WHERE <small>coluna != 'valor'</small>;
+                    </pre>
+                </code>
+
+                <h3>Verificando qual o maior</h3>
+                <code>
+                    <pre>
+                        SELECT MAX(<small>coluna</small>) FROM <small>tabela</small>;
+                    </pre>
+                </code>
+
+                <h3>Verificando qual o menor</h3>
+                <code>
+                    <pre>
+                        SELECT MIN(<small>coluna</small>) FROM <small>tabela</small>;
+                    </pre>
+                </code>
+
+                <h3>Somando qual o total</h3>
+                <code>
+                    <pre>
+                        SELECT SUM(<small>coluna_valores</small>) FROM <small>tabela</small> WHERE <small>coluna</small> &LT; 'valor';
+                    </pre>
+                </code>
+
+                <h3>Verificando qual a media</h3>
+                <code>
+                    <pre>
+                        SELECT AVG(<small>coluna</small>) FROM <small>tabela</small>;
+                    </pre>
+                </code>
 
             </div>
 
