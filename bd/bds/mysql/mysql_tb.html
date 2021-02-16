@@ -244,14 +244,14 @@
             <p>Criar uma tabela utilize o comando:</p>
             <code>
                 <pre>
-                    CREATE TABLE <small>nome</small>
-                    (
-                        <small>id</small> int not null auto_increment,
-                        <small>caracteristica_0</small> varchar (40),
-                        <small>caracteristica_1</small> date,
-                        <small>caracteristica_3</small> enum ('x', 'y'),
-                        primary key (<small>id</small>)
-                    ) default charset = utf8;
+    CREATE TABLE <small>nome</small>
+    (
+        <small>id</small> int not null auto_increment,
+        <small>caracteristica_0</small> varchar (40),
+        <small>caracteristica_1</small> date,
+        <small>caracteristica_3</small> enum ('x', 'y'),
+        primary key (<small>id</small>)
+    ) default charset = utf8;
                 </pre>
             </code>
             <p>Para verificar uma tabela antes de sua criação <mark><code> CREATE TABLE IF NOT EXISTS <small>nome_tabela</small>(...); </code></mark></p>
@@ -260,7 +260,7 @@
             <p>Para exclusão utilize:</p>
             <code>
                 <pre>
-                    DROP TABLE <small>nome </small>;
+    DROP TABLE <small>nome </small>;
                 </pre>
             </code>
             <p>O mesmo <strong>if exist</strong> serve para verificar uma tabela antes de sua exclusão <mark><code> DROP TABLE IF EXISTS <small>nome_tabela</small>; </code></mark></p>
@@ -273,22 +273,22 @@
             <p>Para renomear a tabela:</p>
             <code>
                 <pre>
-                        ALTER TABLE <small>nome_tabela</small>
-                        RENAME TO <small>novo_nome</small>;
+    ALTER TABLE <small>nome_tabela</small>
+    RENAME TO <small>novo_nome</small>;
                 </pre>
             </code>
 
             <h3>Coluna inteira</h3>
             <code>
                 <pre>
-                    ALTER TABLE <small>nome_tabela</small>
-                    ADD COLUMN <small>nome_caracteristica</small> varchar (9) <abbr title="não existe before, só after ou first">AFTER</abbr> <small>caracteristica_0</small>;
+    ALTER TABLE <small>nome_tabela</small>
+    ADD COLUMN <small>nome_caracteristica</small> varchar (9) <abbr title="não existe before, só after ou first">AFTER</abbr> <small>caracteristica_0</small>;
                 </pre>
             </code>
             <code>
                 <pre>
-                    ALTER TABLE <small>nome_tabela</small>
-                    DROP COLUMN <small>nome_caracteristica</small>;
+    ALTER TABLE <small>nome_tabela</small>
+    DROP COLUMN <small>nome_caracteristica</small>;
                 </pre>
             </code>
 
@@ -296,15 +296,15 @@
             <p>Modificando propriedade dos atributos</p>
             <code>
                 <pre>
-                    ALTER TABLE <small>nome_tabela</small>
-                    MODIFY COLUMN <small>nome_coluna</small> varchar (21) not null default '';
+    ALTER TABLE <small>nome_tabela</small>
+    MODIFY COLUMN <small>nome_coluna</small> varchar (21) not null default '';
                 </pre>
             </code>
             <p>Para renomear a coluna utilize o comando</p>
             <code>
                 <pre>
-                    ALTER TABLE <small>nome</small>
-                    CHANGE COLUMN <small>nome_antigo nome_novo</small> varchar (21) not null default '';
+        ALTER TABLE <small>nome</small>
+        CHANGE COLUMN <small>nome_antigo nome_novo</small> varchar (21) not null default '';
                 </pre>
             </code>
 
