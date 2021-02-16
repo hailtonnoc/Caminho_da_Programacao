@@ -2,18 +2,20 @@ body
 {
     background: linear-gradient( rgba(255, 255, 255, 0.507)90%,rgba(14, 122, 224, 0.87));
     font-size: 1.08em;
+    font-family: monospace;
     margin: 1.8%;
+
 }
 
 h1
 {
-    font: normal 63px times; 
+    font: normal 3.06em 'VT323' ; 
     text-shadow: rgb(190, 99, 65) 9px 9px 4.5px;
 }
 
 h2
 {
-    font: normal 2.7em times;
+    font: normal 2.7em 'VT323';
     text-shadow: rgba(24, 87, 158, 0.445) 6px 6px 3.6px;
 }
 
@@ -24,13 +26,14 @@ h2
 
 h3
 {
-    font-size: normal 45px times; 
+    font: normal 1.8em 'VT323'; 
     text-shadow: rgba(24, 93, 158, 0.397) 3px 3px 1.8px;
 }
 
 code
 {
     font-family: 'VT323', monospace;
+    font-size: 1.08em;
 }
 
 pre 
@@ -53,8 +56,8 @@ small
 div
 {
     border: solid black 2px;
-    margin: 1%;
-    padding: 1%;
+    margin: 0.9%;
+    padding: 1.5%;
 }
 
 .divg
