@@ -93,3 +93,8 @@ details div
 {
     display: inline-block;
 }
+
+td
+{
+    padding: 1%;
+}
