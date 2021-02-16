@@ -75,4 +75,7 @@ div
 {
     font-size: 1.08em;
 }
-
+.tipopri div
+{
+    display: inline-block;
+}
