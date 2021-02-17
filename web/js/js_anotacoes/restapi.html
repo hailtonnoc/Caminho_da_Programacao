@@ -10,52 +10,69 @@
 <body>
     <header>
         <h1>API's Rest</h1>
+        <p>Interface de programação para aplicações</p>
     </header>
+
     <main>
         <section class="configurando">
-            <h2>API</h2>
-            <p>Interface de programação para aplicações</p>
-            <h3>No terminal</h3>
 
-            <p>Para iniciar o projeto utilize o <abbr title="Node Package Manager">npm</abbr> com o comando <strong>init</strong></p>
-            <code><pre>npm init</pre></code>
-            <p>Após sera criado o package.json que ira abrigar todos os dados do projeto.</p>
-            <p>Criado enter point geralmente utilize o nome "index.js"
-                <br>
-                Dentro dele executaremos o servidor para isso usaremos o modulo "Express" que permite executar servidores a partir dele.
-            </p>
-            <p>O comando a ser utilizado é o <code>npm install.</code></p>
-            <code><pre>npm install <strong>express</strong></pre></code>
-            <p>Chamando módulos do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. o mesmo deve ser requerido.</p>
-            <code>
-                <pre>
-                    const express = <strong>require('<abbr title="chamada de biblioteca">express</abbr>')</strong>
+            <div class="instalandomd">
+                <h2>Preparando Ambiente</h2>
+                <p>No terminal:</p>
+                <h3>JSON</h3>
+                <p>Para iniciar o projeto utilize o <abbr title="Node Package Manager">npm</abbr> com o comando <strong>init</strong> ou <strong>init <abbr title="JSON pré pronto">-y</abbr></strong> isso criará o arquivo package.<strong>JSON</strong> que ira abrigar todos os dados do projeto. </p>
+                <code><pre>npm init</pre></code>
+                
+                <h3>Express</h3>
+                <p>Dentro dele executaremos o servidor para isso usaremos o modulo "Express" que permite criar e executar servidores a partir dele.</p>
+                <p>O comando a ser utilizado é o <code>npm install.</code></p>
+                <code><pre>npm install <strong>express</strong></pre></code>
 
-                    <strong>const app = express()</strong>
-                </pre>
-            </code>
-            <p>Defina um escutador para as requisições do servidor.</p>
-            <code>
-                <pre>
-                    app<strong>.listen</strong>(<abbr title="porta">3000</abbr>, função)
-        <small>ex:</small>
-                    app.listen(3000, function(){console.log('servidor rodando na porta 3000')})
-                </pre>
-            </code>
-            <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
-            <p>Enviar dados ao servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
-            <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
-            
-            <h3>Exportando Modulos</h3>
-            <p>Utilize o comando <code>module.exports = <small>nome => {}</small></code><br>
-            para exportar instale o modulo <code>consign</code> ele ira agrupar todas as rotas e colocar tudo dentro do <strong>app</strong>.</p>
-            <code>
-                <pre>
-                    consign()
-                    .include('<small>pasta</small>')
-                    .into(app)
-                </pre>
-            </code>
+                <h3>Body Parser</h3>
+                <p>converte entradas em objetos diversos JSON e JS.</p>
+                <code><pre>npm install <strong>body-parser</strong></pre></code>
+
+                <h3>MySQL</h3>
+                <p>Permite a conexão entre o API rest e o MySQL</p>
+                <code><pre>npm install <strong>mysql</strong></pre></code>
+
+                <h4>Sequelize</h4>
+                <code><pre>npm install <strong>sequelize</strong></pre></code>
+            </div>
+
+
+            <div class="preparandoIndex">
+                <p>Criado enter point geralmente utilize o nome "index.js"</p>
+                <p>Chamando módulos do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. o mesmo deve ser requerido.</p>
+                <code>
+                    <pre>
+                        const express = <strong>require('<abbr title="chamada de biblioteca">express</abbr>')</strong>
+                        <strong>const app = express()</strong>
+                    </pre>
+                </code>
+                <p>Defina um escutador para as requisições do servidor.</p>
+                <code>
+                    <pre>
+                        app<strong>.listen</strong>(<abbr title="porta">3000</abbr>, função)
+                        <small>ex:</small>
+                        app.listen(3000, function(){console.log('servidor rodando na porta 3000')})
+                    </pre>
+                </code>
+                <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
+                <p>Enviar dados ao servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
+                <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
+                
+                <h3>Exportando Modulos</h3>
+                <p>Utilize o comando <code>module.exports = <small>nome => {}</small></code><br>
+                para exportar instale o modulo <code>consign</code> ele ira agrupar todas as rotas e colocar tudo dentro do <strong>app</strong>.</p>
+                <code>
+                    <pre>
+                        consign()
+                        .include('<small>pasta</small>')
+                        .into(app)
+                    </pre>
+                </code>
+            </div>
 
         </section>
 
@@ -80,14 +97,13 @@
             <p>A biblioteca <strong>nodemon</strong> é uma boa alternativa para atualizar as alterações do servidor. <br>
             salve apenas em desenvolvimento <code>--save-dev <strong>nodemon</strong></code> para restartar o servidor utilize o comando <strong>rs</strong>.</p>
 
-            <h4>body-parser</h4>
-            <p>converte entradas em objetos diversos</p>
             <code>
                 <pre>
         <small>configurando:</small>
                         app.<strong>use</strong>(bodyParser.urlencoded({extended:true}))
                 </pre>
             </code>
+
 
             <h4>moment</h4>
             <p><code><strong>moment</strong></code>é biblioteca dedicada a trabalhar com datas, fazer calculos, manipular datas e formatar.</p>
