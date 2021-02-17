@@ -42,20 +42,21 @@
 
 
             <div class="preparandoIndex">
+                <h3>Arquivo Principal</h3>
                 <p>Criado enter point geralmente utilize o nome "index.js"</p>
-                <p>Chamando módulos do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. o mesmo deve ser requerido.</p>
+                <p>Chamando módulo do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. O mesmo deve ser requerido.<br> Após defina também sua <abbr title="'app'">instância</abbr>.</p>
                 <code>
                     <pre>
-                        const express = <strong>require('<abbr title="chamada de biblioteca">express</abbr>')</strong>
-                        <strong>const app = express()</strong>
+    const express = <strong>require('<abbr title="chamada de biblioteca">express</abbr>')</strong>
+    <strong>const app = express()</strong>
                     </pre>
                 </code>
-                <p>Defina um escutador para as requisições do servidor.</p>
+                <p>Para a API funcionar defina um escutador para as requisições do servidor.<br> Esse escutador recebe uma porta e em seguida uma <a href="../js_anotacoes/jsinicio.js">Função</a>.</p>
                 <code>
                     <pre>
-                        app<strong>.listen</strong>(<abbr title="porta">3000</abbr>, função)
-                        <small>ex:</small>
-                        app.listen(3000, function(){console.log('servidor rodando na porta 3000')})
+    app<strong>.listen</strong>(<abbr title="porta">3000</abbr>, <abbr title="CALLBACK">função</abbr>)
+<small>ex:</small>
+    app.listen(3000, () => console.log('servidor rodando na porta 3000'))
                     </pre>
                 </code>
                 <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
