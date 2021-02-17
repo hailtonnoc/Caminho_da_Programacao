@@ -274,11 +274,15 @@
                         <td>Condição verdadeira, regra de negocio</td>
                     </tr>
                     <tr>
-                        <td>PRIMARY KE</td>
+                        <td>AUTO_INCREMENT </td>
+                        <td>auto atribui um valor</td>
+                    </tr>
+                    <tr>
+                        <td>PRIMARY KEY</td>
                         <td>Indica chave primaria</td>
                     </tr>
                     <tr>
-                        <td>FOREING KEY</td>
+                        <td>FOREIGN KEY</td>
                         <td>Indica chave estrangeira</td>
                     </tr>
                 </tbody>
@@ -297,7 +301,9 @@
         <small>caracteristica_0</small> varchar (40),
         <small>caracteristica_1</small> date,
         <small>caracteristica_3</small> enum ('x', 'y'),
-        primary key (<small>id</small>)
+        <small>caracteristica_4</small> int,
+        primary key (<small>id</small>),
+        foreign key (<small>caracteristica_4</small>) references <small>outra_tabela</small>(<small>coluna_out_tabela</small>)
     ) default charset = utf8;
                 </pre>
             </code>

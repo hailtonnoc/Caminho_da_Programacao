@@ -141,8 +141,8 @@
 
             </div>
 
-            <div class="informacoes">
-                <h2>Extraindo informações</h2>
+            <details class="informacoes">
+                <summary><h2>Extraindo informações</h2></summary>
                 <h3>Puxando uma Lista de todos os itens</h3>
                 <code>
                     <pre>
@@ -211,7 +211,40 @@
                     </pre>
                 </code>
 
-            </div>
+            </details>
+
+            <details class="juntando">
+                <summary><h2>JOIN</h2></summary>
+                <div>
+                    <h3>Juntando tabelas</h3>
+                    <p>Para juntar tabelas a fim de visualizar uma informação completa utilize primeriamente uma <code>FOREIGN KEY</code> criando uma relação entre os dados. <mark>INNER JOIN</mark></p>
+                    <code>
+                        <pre>
+    SELECT <small>nome_tb</small>.<small>nome_coluna</small>, <small>nome_outra_tb</small>.<small>nome_coluna</small>
+    FROM <small>nome_tb</small> JOIN <small>nome_outra_tb</small>
+    ON <small>nome_tb</small>.<small>coluna_PK</small> = <small>nome_outra_tb</small>.<small>coluna_FK</small>;
+                        </pre>
+                    </code>
+                    <P>Diminuir comando abreviando nome das tabelas com o <mark>AS</mark></P>
+                    <code>
+                        <pre>
+    SELECT <small>tb1</small>.<small>nome_coluna</small>, <small>tb2</small>.<small>nome_coluna</small>
+    FROM <small>nome_tb</small> AS <small>tb1</small> JOIN <small>nome_outra_tb</small> AS <small>tb2</small>
+    ON <small>tb1</small>.<small>coluna_PK</small> = <small>tb2</small>.<small>coluna_FK</small>;
+                        </pre>
+                    </code>
+
+                    <p>Caso queira visualizar também os dados não relacionado utilize o <mark>OUTER JOIN</mark> definindo qual tabela deve ser visualizada completamente <mark>LEFT</mark> ou <mark>RIGHT</mark>. </p>
+                    <code>
+                        <pre>
+    SELECT <small>tb1</small>.<small>nome_coluna</small>, <small>tb2</small>.<small>nome_coluna</small>
+    FROM <small>nome_tb</small> AS <small>tb1</small> LEFT JOIN <small>nome_outra_tb</small> AS <small>tb2</small>
+    ON <small>tb1</small>.<small>coluna_PK</small> = <small>tb2</small>.<small>coluna_FK</small>;
+                        </pre>
+                    </code>
+
+                </div>
+            </details>
 
 
         </section>

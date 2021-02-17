@@ -1,6 +1,6 @@
 body 
 {
-    background: linear-gradient( rgba(255, 255, 255, 0.507)90%,rgba(14, 122, 224, 0.87));
+    background: linear-gradient( rgba(14, 122, 224, 0.87),  rgba(255, 255, 255, 0.507)9%);
     font-size: 1.08em;
     font-family: monospace;
     margin: 1.8%;
@@ -97,4 +97,9 @@ details div
 td
 {
     padding: 1%;
+}
+
+mark
+{
+    background-color: orange;
 }
