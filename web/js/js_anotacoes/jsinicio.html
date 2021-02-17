@@ -174,6 +174,7 @@
             <h2>Função</h2>
             <p><code>&lt;div id='nome_id'<strong><abbr title="metodo">onclick</abbr>         = 'nome_ação'</strong>()&gt;</code></p>
             <p>O método pode ser chamado no html dentro da &lt;tag&gt;</p>
+
             <h3>Função</h3>
             <p>No Script defina a função em um bloco <strong>function</strong> nome_ação()</p>
             <code>
@@ -184,25 +185,11 @@
                     }
                 </pre>
             </code>
-            <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando nome_variavel<strong>.addEventListener('evento', nome_ação)</strong></P>
-            <p><small><em>Faça um para cada ação.</em></small></p>
-            <h3>Função Anónima</h3>
-            <p>A função anonima é uma finção que só existe dentro da chamada do evento.</p>
-            <code>
-                <pre>
-                    var teste = document.getElementById('teste')
-                    teste.addEventListener('click', <strong>funtion ()
-                        {
-                            alert.( "<small>sou uma função anónima</small>"" )
-                        }
-                    </strong> )
-                </pre>
-            </code>
-            <p>Para prevenir um comportamento padrão dentro de <strong>function</strong>(event) declare <strong>event</strong> em seguida <code>event.<strong>preventDefault</strong>();</code></p>
-            <br>
+
             <div id="interagir" onclick="clicou()" onmouseout="saiu()">
                 interagir
             </div>
+
             <script>
                 var objeto = document.getElementById('interagir')
                 objeto.addEventListener('mouseenter', entrou)
@@ -218,6 +205,39 @@
                 {objeto.innerText = 'entrou'}
             
             </script>
+
+            <P>Ainda é possivel alocar um monitor para chamar o metodo dentro do script. <br> Utilizando nome_variavel<strong>.addEventListener('evento', nome_ação)</strong></P>
+            <p><small><em>Faça um para cada ação.</em></small></p>
+
+            <h3>Função Anónima</h3>
+            <p>A função anonima é uma finção que só existe dentro da chamada do evento.</p>
+            <code>
+                <pre>
+                    var teste = document.getElementById('teste')
+                    teste.addEventListener('click', <strong>funtion ()
+                        {
+                            alert.( "<small>sou uma função anónima</small>"" )
+                        }
+                    </strong> )
+                </pre>
+            </code>
+            <p>Para prevenir um comportamento padrão dentro de <strong>function</strong>(event) declare <strong>event</strong> em seguida <code>event.<strong>preventDefault</strong>();</code></p>
+            <br>
+            <h3>Arrow Function 🏹</h3>
+            <p>Disponíveis desde o <abbr title="Ecma Script">ES</abbr>6 de 2015 essas funções anónimas dominam o callback.</p>
+            <p><strong>Funcionamento:</strong> inicialmente omitimos a palavra reservada <i>function</i> estando apenas () seguido da => e também eliminamos caso a função tenha apenas uma ação o {}, ainda a mesma sempre retorna valor então o <i>return</i> tbm se encontra implícito. Explicar trabalho <strong>this</strong></p>
+            <p>Exemplo simples de X + Y </p>
+            <code>
+                <pre>
+        function sum(x, y)
+        {
+            return x + y
+        }
+                </pre>
+            </code>
+            <p>Com Arrow function</p>
+            <code><pre>var sum = (x, y) =&gt; x + y </pre></code>
+
         </section>
         
     
