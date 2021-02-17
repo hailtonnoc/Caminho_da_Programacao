@@ -242,6 +242,18 @@
     ON <small>tb1</small>.<small>coluna_PK</small> = <small>tb2</small>.<small>coluna_FK</small>;
                         </pre>
                     </code>
+                    <h3>Unindo varias tabelas</h3>
+                    <p>Para trabalhar com as relações de varias tabelas é possível unir vários joins.</p>
+                    <code>
+                        <pre>
+    SELECT <small>tb1</small>.<small>nome_coluna</small>, <small>tb2</small>.<small>nome_coluna</small>
+    FROM <small>nome_tb</small> AS <small>tb1</small> LEFT JOIN <small>nome_outra_tb</small> AS <small>tb2</small>
+    ON <small>tb1</small>.<small>coluna_PK</small> = <small>tb2</small>.<small>coluna_FK</small>
+    JOIN <small>nome_outra</small> AS <small>tb3</small>
+    ON <small>tb3</small>.<small>coluna_PK</small> = <small>tb2</small>.<small>coluna_FK</small>;
+                        </pre>
+                    </code>
+                
 
                 </div>
             </details>
