@@ -10,10 +10,17 @@
 <body>
     <header>
         <h1>API's Rest</h1>
-        <p>Interface de programação para aplicações</p>
+        <p>Estado de Transferência representativo.</p>
     </header>
 
     <main>
+        <section class="entendendo">
+            <h2>Estados</h2>
+            <h3>Entidades</h3>
+            <p>Os dados circularam entre <strong>Servidor <i>REST</i></strong> e <strong>Cliente</strong> essa articulação sera realizada sempre por uma <i>requisição</i> que devolvera sempre uma <i>resposta</i>.</p>
+            <p>Essas serão direcionadas sempres aos <i>verbos HTTP</i> (get, post, delete, patch) </p>
+
+        </section>
         <section class="configurando">
 
             <div class="instalandomd">
@@ -39,7 +46,6 @@
                 <h4>Sequelize</h4>
                 <code><pre>npm install <strong>sequelize</strong></pre></code>
             </div>
-
 
             <div class="preparandoIndex">
                 <h3>Arquivo Principal</h3>
@@ -141,9 +147,7 @@
 
 
 
-                <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
-                <p>Enviar dados ao servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
-                <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
+
                 
                 <h3>Exportando Modulos</h3>
                 <p>Utilize o comando <code>module.exports = <small>nome => {}</small></code><br>
@@ -157,7 +161,33 @@
                 </code>
             </div>
 
+            <div class="chamadas">
+                <h3>Requisições</h3>
+                <p>Podemos declarar no index principal mas por via de organização do codigo é prudente considerar colocar o comando em um arquivo separado.</p>
+                <code><pre>app.use('caminho', função(requisicao, resposta){})</pre></code>
+                <p>Em um novo arquivo:</p>
+                <code>
+                    <pre>
+    const roteador = require('express').Router()
+
+    roteador.use('/', (requisicao, resposta) =>
+    {
+        resposta.send('connected')
+    })
+
+    module.exports = roteador
+                    </pre>
+                </code>
+
+                <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
+                <p>Enviar dados ao servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
+                <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
+    
+            </div>
+
         </section>
+
+
 
         <section class="ajustando_json">
             <h2>Manipulando <code>package.json</code></h2>
