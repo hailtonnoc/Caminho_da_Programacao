@@ -44,6 +44,8 @@
             <div class="preparandoIndex">
                 <h3>Arquivo Principal</h3>
                 <p>Criado enter point geralmente utilize o nome "index.js"</p>
+
+                <h4>Definindo Express</h4>
                 <p>Chamando módulo do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. O mesmo deve ser requerido.<br> Após defina também sua <abbr title="'app'">instância</abbr>.</p>
                 <code>
                     <pre>
@@ -51,14 +53,60 @@
     <strong>const app = express()</strong>
                     </pre>
                 </code>
-                <p>Para a API funcionar defina um escutador para as requisições do servidor.<br> Esse escutador recebe uma porta e em seguida uma <a href="../js_anotacoes/jsinicio.js">Função</a>.</p>
+                <p>Para a API funcionar defina um escutador para as requisições do servidor.<br> Esse escutador recebe uma porta e em seguida uma <a href="../js_anotacoes/jsinicio.js">Função</a> que serve como um callback simples para teste.</p>
                 <code>
                     <pre>
     app<strong>.listen</strong>(<abbr title="porta">3000</abbr>, <abbr title="CALLBACK">função</abbr>)
 <small>ex:</small>
-    app.listen(3000, () => console.log('servidor rodando na porta 3000'))
+    app.listen(3000, () => console.log('servidor na porta 3000 ok'))
                     </pre>
                 </code>
+
+                <h4>Definindo Body parser</h4>
+                <p>O mesmo sera usado como um plugin, então após a requisição usar ele no <code>app</code> usando a chamada do <code>.json()</code> como função, pois sera o formato de trabalho.</p>
+                <code>
+                    <pre>
+        ...
+    const app = express()
+    const bodyParser = <strong>require('body-parser')</strong>
+
+    app.<strong>use(bodyParser.json())</strong>
+                    </pre>
+                </code>
+
+                <h4>Comunicando com Banco de dados</h4>
+                <p>Criar arquivo .js de comunicação de preferencia em uma pasta separada para conexão. O modulo <strong>Sequelize</strong> sera o responsável por essa comunicação.</p>
+                <code>
+                    <pre>
+    const Sequelize = require('sequelize')
+<small><i>declarando instância:</i></small>
+    const instancia = <strong>new Sequelize()</strong>
+
+    module.exports = instancia
+                    </pre>
+                </code>
+                <p>As <strong>configurações</strong> do acesso ao banco de dados vai dentro da instância.</p>
+                <code>
+                    <pre>
+        ...
+    const instancia = <strong>new Sequelize(</strong>
+        <i>
+            'nome_bancoDados',
+            'usuario',
+            'senha',
+            {
+                host: 'ip_maquina',
+                dialect: 'tipode_BancoDados'
+            }
+        </i>
+    <strong>)</strong>
+    
+    module.exports = instancia
+                    </pre>
+                </code>
+
+
+
                 <p>Pegar a requisição <code><strong>.get</strong>()</code></p>
                 <p>Enviar dados ao servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
                 <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
