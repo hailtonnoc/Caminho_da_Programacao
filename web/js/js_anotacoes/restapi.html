@@ -88,9 +88,9 @@
                 <p>As <strong>configurações</strong> do acesso ao banco de dados vai dentro da instância.</p>
                 <code>
                     <pre>
+
         ...
-    const instancia = <strong>new Sequelize(</strong>
-        <i>
+    const instancia = <strong>new Sequelize(</strong><i>
             'nome_bancoDados',
             'usuario',
             'senha',
@@ -102,6 +102,40 @@
     <strong>)</strong>
     
     module.exports = instancia
+                    </pre>
+                    <pre>
+        ...
+    <strong>const config = require('config')</strong>
+    const instancia = new Sequelize(
+        config.get('mysql.banco-de-dados'),
+        config.get('mysql.usuario'),
+        config.get('mysql.senha'),
+        {
+            host: config.get('mysql.host'),
+            dialect: 'mysql'
+        }
+    )
+    
+    module.exports = instancia
+                    </pre>
+                </code>
+
+                <h5>Config</h5>
+                <p>Modulo para isolar dados importantes em produção.</p>
+                <code><pre>npm install config</pre></code>
+
+                <p>Após a instalação do modulo escrever um objeto JSON contendo o objeto com dados de acesso a modo de ser expresso nas configurações do <strong>Sequelize.</strong></p>
+                <code>
+                    <pre>
+    {
+        "mysql":
+        {
+            "banco-de-dados": "nome",
+            "usuario": "root",
+            "senha": "123456",
+            "host": "127.0.0.1"
+        }
+    }
                     </pre>
                 </code>
 
