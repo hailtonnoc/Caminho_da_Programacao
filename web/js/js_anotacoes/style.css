@@ -1,7 +1,7 @@
 body 
 {
     background: linear-gradient( rgba(255, 217, 0, 0.507),rgba(224, 193, 14, 0.87));
-    font-size: 21px;
+    font-size: 1.2em;
     margin: 1.8%;
 }
 
@@ -71,4 +71,11 @@ text-align: center;}
 div
 {
     border: solid rgb(109, 86, 27) 2.7px;
+}
+
+summary
+{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-shadow: rgb(158, 120, 24) 9px 9px 4.5px;
 }
