@@ -38,7 +38,7 @@
                 <p>O comando a ser utilizado é o <code>npm install.</code></p>
                 <code><pre>npm install <strong>express</strong></pre></code>
 
-                <details>
+                <details class="modulos">
                     <summary>Funcionais</summary>
                     <h3>Body Parser</h3>
                     <p>converte entradas em objetos diversos JSON e JS.</p>
@@ -52,8 +52,19 @@
             </div>
 
             <div class="preparandoIndex">
-                <h3>Arquivo Principal</h3>
+                <h2>Arquivo Principal</h2>
                 <p>Criado enter point geralmente utilize o nome "index.js" ou "sever.js"</p>
+                <code>
+                    <pre>
+    const http = require('http');
+    const app = <strong>require('./app')</strong>
+    const port = process.env.PORT || 3000;
+    const server = http.createServer(<strong>app</strong>);
+    server.listen(port);
+                    </pre>
+                </code>
+
+                <p>Defina um arquivo <strong>app.js</strong> caso siga o modelo, como pode notar no arquivo acima o mesmo de encontra na mesma pasta do arquivo principal. </p>
 
                 <h4>Definindo Express</h4>
                 <p>Chamando módulo do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. O mesmo deve ser requerido.<br> Após defina também sua <abbr title="'app'">instância</abbr>.</p>
@@ -63,6 +74,52 @@
     <strong>const app = express()</strong>
                     </pre>
                 </code>
+
+                <p>A partir desse novo arquivo <strong>app</strong> é possível definir as <strong>rotas</strong> de novos arquivos responsáveis por entregar diversas funções.</p>
+
+                <code>
+                    <pre>
+    const express = require('express')
+    const app = express()
+
+    const <strong>rota</strong> = require('./pasta/arquivo')
+    app.use('/definiCaminhoURL', <strong>rota</strong>);
+
+    <strong>module.exports = app;</strong>
+                    </pre>
+                </code>
+                
+            <div class="chamadas">
+                <h3>Requisições</h3>
+                <p>Podemos declarar no index principal mas por via de organização do código é prudente considerar colocar o comando em um arquivo separado.</p>
+                <small>Lembrar sempre de referenciar o comando no arquivo principal.</small>
+                <code><pre>app.use('/caminho', função(requisicao, resposta){})</pre></code>
+                <p>Em um novo arquivo:</p>
+                <code>
+                    <pre>
+    const roteador = require('express').Router()
+
+    roteador.use('/', (requisicao, resposta) =>
+    {
+        resposta.send('connected')
+    })
+
+    module.exports = roteador
+                    </pre>
+                </code>
+
+                <h3>Verbos HTTP</h3>
+                <p>Retornar dados <code><strong>.get</strong></code>('<small>/local</small>', função)</p>
+                <p>Inserir dados no servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
+                <p>Alterar dados no servidor<code><strong>.path</strong></code>('<small>/local</small>', função)</p>
+                <p>Apagar dados no servidor<code><strong>.delete</strong></code>('<small>/local</small>', função)</p>
+
+
+                <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
+    
+            </div>
+
+
                 <p>Para a API funcionar defina um escutador para as requisições do servidor.<br> Esse escutador recebe uma porta e em seguida uma <a href="../js_anotacoes/jsinicio.js">Função</a> que serve como um callback simples para teste.</p>
                 <code>
                     <pre>
@@ -165,35 +222,6 @@
                 </code>
             </div>
 
-            <div class="chamadas">
-                <h3>Requisições</h3>
-                <p>Podemos declarar no index principal mas por via de organização do código é prudente considerar colocar o comando em um arquivo separado.</p>
-                <small>Lembrar sempre de referenciar o comando no arquivo principal.</small>
-                <code><pre>app.use('/caminho', função(requisicao, resposta){})</pre></code>
-                <p>Em um novo arquivo:</p>
-                <code>
-                    <pre>
-    const roteador = require('express').Router()
-
-    roteador.use('/', (requisicao, resposta) =>
-    {
-        resposta.send('connected')
-    })
-
-    module.exports = roteador
-                    </pre>
-                </code>
-
-                <h3>Verbos HTTP</h3>
-                <p>Retornar dados <code><strong>.get</strong></code>('<small>/local</small>', função)</p>
-                <p>Inserir dados no servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
-                <p>Alterar dados no servidor<code><strong>.path</strong></code>('<small>/local</small>', função)</p>
-                <p>Apagar dados no servidor<code><strong>.delete</strong></code>('<small>/local</small>', função)</p>
-
-
-                <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
-    
-            </div>
 
         </section>
 
