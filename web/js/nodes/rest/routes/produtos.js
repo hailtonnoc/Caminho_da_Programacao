@@ -4,8 +4,16 @@ const mysql = require('../mysql').pool;
 
 router.get('/',(req, res, next) => 
 {
-    res.status(200).send({
-        mensagem: 'Usando o get na rota /produtos'
+    mysql.getConnection((error, conn) => {
+        if(error) {return res.status(500).send({error: error})}
+
+        conn.query(
+            'SELECT * FROM produtos;',
+            (error, resultado, fields) => {
+                if(error) {return res.status(500).send({error: error})}
+                return res.status(200).send({response: resultado})
+            }
+            )
     })
 });
 
