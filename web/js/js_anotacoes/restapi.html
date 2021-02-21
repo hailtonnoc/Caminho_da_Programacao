@@ -65,7 +65,7 @@
                 </code>
                 <p>Defina um arquivo <strong>app.js</strong> caso siga o modelo, como pode notar no arquivo acima o mesmo de encontra na mesma pasta do arquivo principal. </p>
 
-                <details>
+                <details class="porta">
                     <summary>Portas</summary>
                     <p>Para a API funcionar defina um escutador para as requisições do servidor.<br> Esse escutador recebe uma porta e em seguida uma <a href="../js_anotacoes/jsinicio.js">Função</a> que serve como um callback simples para teste.</p>
                     <code>
@@ -142,7 +142,8 @@
     const app = express()
     const bodyParser = <strong>require('body-parser')</strong>
 
-    app.<strong>use(bodyParser.json())</strong>
+    app.<strong>use(body-parser.urlencoded({extended: false}))</strong> <small>&lt;-só dados simples</small>
+    app.<strong>use(bodyParser.json())</strong> <small>&lt;- entrada json</small>
                     </pre>
                 </code>
 
