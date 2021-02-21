@@ -78,7 +78,7 @@
                 </details>
 
 
-                <h4>Definindo Express</h4>
+                <h3>Definindo Express</h3>
                 <p>Chamando módulo do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. O mesmo deve ser requerido.<br> Após defina também sua <abbr title="'app'">instância</abbr>.</p>
                 <code>
                     <pre>
@@ -134,7 +134,7 @@
 
 
 
-                <h4>Definindo Body parser</h4>
+                <h3>Definindo Body parser</h3>
                 <p>O mesmo sera usado como um plugin, então após a requisição usar ele no <code>app</code> usando a chamada do <code>.json()</code> como função, pois sera o formato de trabalho.</p>
                 <code>
                     <pre>
@@ -146,6 +146,42 @@
     app.<strong>use(bodyParser.json())</strong> <small>&lt;- entrada json</small>
                     </pre>
                 </code>
+
+                <h3>Conectando com o Banco de Dados</h3>
+                <p>Defina um arquivo para o BD para manter as boas praticas. Nele importe o modulo do MySQL e em seguida passe os dados da conexão através do <strong>createConnection()</strong> ou de um <strong>createPool()</strong>.</p>
+                <code>
+                    <pre>
+    const mysql = require('mysql')
+
+    const conexao = mysql.createConnection(
+        {
+            host: 'localhost',
+            port: 3306,
+            user: 'root',
+            password: 'admin',
+            database: 'agenda'
+        }
+    )
+    
+    module.exports = conexao
+                    </pre>
+                    <pre>
+    const mysql = require('mysql')
+
+    const pool = mysql.createPool(
+        {
+            "user" : "root",
+            "password": "admin",
+            "database" : "lojinha",
+            "host": "localhost",
+            "port": 3306
+        }
+    )
+    
+    exports.pool = pool
+                    </pre>
+                </code>
+                <p>Importante notar que as credenciais do banco de dados devem ser passadas por instâncias protegidas, pratica passe sempre variáveis de ambiente. </p>
 
                 <h4>Comunicando com Banco de dados</h4>
                 <p>Criar arquivo .js de comunicação de preferencia em uma pasta separada para conexão. O modulo <strong>Sequelize</strong> sera o responsável por essa comunicação.</p>
