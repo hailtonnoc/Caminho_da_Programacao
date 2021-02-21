@@ -63,8 +63,20 @@
     server.listen(port);
                     </pre>
                 </code>
-
                 <p>Defina um arquivo <strong>app.js</strong> caso siga o modelo, como pode notar no arquivo acima o mesmo de encontra na mesma pasta do arquivo principal. </p>
+
+                <details>
+                    <summary>Portas</summary>
+                    <p>Para a API funcionar defina um escutador para as requisições do servidor.<br> Esse escutador recebe uma porta e em seguida uma <a href="../js_anotacoes/jsinicio.js">Função</a> que serve como um callback simples para teste.</p>
+                    <code>
+                        <pre>
+                        app<strong>.listen</strong>(<abbr title="porta">3000</abbr>, <abbr title="CALLBACK">função</abbr>)
+                    <small>ex:</small>
+                        app.listen(3000, () => console.log('servidor na porta 3000 ok'))
+                        </pre>
+                    </code>
+                </details>
+
 
                 <h4>Definindo Express</h4>
                 <p>Chamando módulo do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. O mesmo deve ser requerido.<br> Após defina também sua <abbr title="'app'">instância</abbr>.</p>
@@ -120,14 +132,7 @@
             </div>
 
 
-                <p>Para a API funcionar defina um escutador para as requisições do servidor.<br> Esse escutador recebe uma porta e em seguida uma <a href="../js_anotacoes/jsinicio.js">Função</a> que serve como um callback simples para teste.</p>
-                <code>
-                    <pre>
-    app<strong>.listen</strong>(<abbr title="porta">3000</abbr>, <abbr title="CALLBACK">função</abbr>)
-<small>ex:</small>
-    app.listen(3000, () => console.log('servidor na porta 3000 ok'))
-                    </pre>
-                </code>
+
 
                 <h4>Definindo Body parser</h4>
                 <p>O mesmo sera usado como um plugin, então após a requisição usar ele no <code>app</code> usando a chamada do <code>.json()</code> como função, pois sera o formato de trabalho.</p>
@@ -235,7 +240,7 @@
                 <pre>
     <small>ex:</small>
                         <small>"stripts":</small> {
-                        <strong>"start"</strong>: "node index.js",
+                        <u><strong>"start"</strong>: "nodemon index.js"</u>,
 
                         <small>"test": "echo \"Error: no test specified\...</small>
                 </pre>
