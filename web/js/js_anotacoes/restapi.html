@@ -102,7 +102,7 @@
                 </code>
                 
             <div class="chamadas">
-                <h3>Requisições</h3>
+                <h3 id="requisicoes">Requisições</h3>
                 <p>Podemos declarar no index principal mas por via de organização do código é prudente considerar colocar o comando em um arquivo separado.</p>
                 <small>Lembrar sempre de referenciar o comando no arquivo principal.</small>
                 <code><pre>app.use('/caminho', função(requisicao, resposta){})</pre></code>
@@ -146,8 +146,8 @@
     app.<strong>use(bodyParser.json())</strong> <small>&lt;- entrada json</small>
                     </pre>
                 </code>
-
-                <h3>Conectando com o Banco de Dados</h3>
+                <h3>Definindo MySQL</h3>
+                <h4>Conectando com o Banco de Dados</h4>
                 <p>Defina um arquivo para o BD para manter as boas praticas. Nele importe o modulo do MySQL e em seguida passe os dados da conexão através do <strong>createConnection()</strong> ou de um <strong>createPool()</strong>.</p>
                 <code>
                     <pre>
@@ -183,85 +183,86 @@
                 </code>
                 <p>Importante notar que as credenciais do banco de dados devem ser passadas por instâncias protegidas, pratica passe sempre variáveis de ambiente. </p>
 
-                <h4>Comunicando com Banco de dados</h4>
-                <p>Criar arquivo .js de comunicação de preferencia em uma pasta separada para conexão. O modulo <strong>Sequelize</strong> sera o responsável por essa comunicação.</p>
-                <code>
-                    <pre>
-    const Sequelize = require('sequelize')
-<small><i>declarando instância:</i></small>
-    const instancia = <strong>new Sequelize()</strong>
-
-    module.exports = instancia
-                    </pre>
-                </code>
-                <p>As <strong>configurações</strong> do acesso ao banco de dados vai dentro da instância.</p>
-                <code>
-                    <pre>
-
-        ...
-    const instancia = <strong>new Sequelize(</strong><i>
-            'nome_bancoDados',
-            'usuario',
-            'senha',
-            {
-                host: 'ip_maquina',
-                dialect: 'tipode_BancoDados'
-            }
-        </i>
-    <strong>)</strong>
-    
-    module.exports = instancia
-                    </pre>
-                    <pre>
-        ...
-    <strong>const config = require('config')</strong>
-    const instancia = new Sequelize(
-        config.get('mysql.banco-de-dados'),
-        config.get('mysql.usuario'),
-        config.get('mysql.senha'),
-        {
-            host: config.get('mysql.host'),
-            dialect: 'mysql'
-        }
-    )
-    
-    module.exports = instancia
-                    </pre>
-                </code>
-
-                <h5>Config</h5>
-                <p>Modulo para isolar dados importantes em produção.</p>
-                <code><pre>npm install config</pre></code>
-
-                <p>Após a instalação do modulo escrever um objeto JSON contendo o objeto com dados de acesso a modo de ser expresso nas configurações do <strong>Sequelize.</strong></p>
-                <code>
-                    <pre>
-    {
-        "mysql":
-        {
-            "banco-de-dados": "nome",
-            "usuario": "root",
-            "senha": "123456",
-            "host": "127.0.0.1"
-        }
-    }
-                    </pre>
-                </code>
+                <h4>Criando comandos de comunicação</h4>
+                <p>Após definir todos os arquivos e conectar todos ao <strong>app</strong> posteriormente ao arquivo principal, é hora de configurar os arquivos que serão responsáveis pelas paginas da api. Se trata de um arquivo com <a href="#requisicoes">Requisiões</a> agora de maneira estruturada criando a funcionalidade da api.</p>
 
 
 
-
-                
-                <h3>Exportando Modulos</h3>
-                <p>Utilize o comando <code>module.exports = <small>nome => {}</small></code><br>
-                para exportar instale o modulo <code>consign</code> ele ira agrupar todas as rotas e colocar tudo dentro do <strong>app</strong>.</p>
-                <code>
-                    <pre>
-                        consign()
-                        .include('<small>pasta</small>')
-                        .into(app)
-                    </pre>
-                </code>
+                <details class="sequelize">
+                    <summary>Sequelize (complemento)</summary>
+                    <h4>Comunicando com Banco de dados</summary>
+                    <p>Criar arquivo .js de comunicação de preferencia em uma pasta separada para conexão. O modulo <strong>Sequelize</strong> sera o responsável por essa comunicação.</p>
+                    <code>
+                        <pre>
+                        const Sequelize = require('sequelize')
+                    <small><i>declarando instância:</i></small>
+                        const instancia = <strong>new Sequelize()</strong>
+                    
+                        module.exports = instancia
+                        </pre>
+                    </code>
+                    <p>As <strong>configurações</strong> do acesso ao banco de dados vai dentro da instância.</p>
+                    <code>
+                        <pre>
+                    
+                            ...
+                        const instancia = <strong>new Sequelize(</strong><i>
+                                'nome_bancoDados',
+                                'usuario',
+                                'senha',
+                                {
+                    host: 'ip_maquina',
+                    dialect: 'tipode_BancoDados'
+                                }
+                            </i>
+                        <strong>)</strong>
+                        
+                        module.exports = instancia
+                        </pre>
+                        <pre>
+                            ...
+                        <strong>const config = require('config')</strong>
+                        const instancia = new Sequelize(
+                            config.get('mysql.banco-de-dados'),
+                            config.get('mysql.usuario'),
+                            config.get('mysql.senha'),
+                            {
+                                host: config.get('mysql.host'),
+                                dialect: 'mysql'
+                            }
+                        )
+                        
+                        module.exports = instancia
+                        </pre>
+                    </code>
+                    <h5>Config</h5>
+                    <p>Modulo para isolar dados importantes em produção.</p>
+                    <code><pre>npm install config</pre></code>
+                    <p>Após a instalação do modulo escrever um objeto JSON contendo o objeto com dados de acesso a modo de ser expresso nas configurações do <strong>Sequelize.</strong></p>
+                    <code>
+                        <pre>
+                        {
+                            "mysql":
+                            {
+                                "banco-de-dados": "nome",
+                                "usuario": "root",
+                                "senha": "123456",
+                                "host": "127.0.0.1"
+                            }
+                        }
+                        </pre>
+                    </code>
+                    <h3>Exportando Modulos</h3>
+                    <p>Utilize o comando <code>module.exports = <small>nome => {}</small></code><br>
+                    para exportar instale o modulo <code>consign</code> ele ira agrupar todas as rotas e colocar tudo dentro do <strong>app</strong>.</p>
+                    <code>
+                        <pre>
+                            consign()
+                            .include('<small>pasta</small>')
+                            .into(app)
+                        </pre>
+                    </code>
+                </details>
             </div>
 
 
