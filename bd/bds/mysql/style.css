@@ -29,7 +29,7 @@ h2
     color: rgb(190, 99, 65);
 }
 
-h3
+h3, .comandos
 {
     font: normal 1.8em 'VT323'; 
     text-shadow: rgba(24, 93, 158, 0.397) 3px 3px 1.8px;
@@ -64,6 +64,7 @@ div
     margin: 0.9%;
     padding: 1.5%;
 }
+
 
 .divg
 {
