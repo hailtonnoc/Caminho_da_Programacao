@@ -66,89 +66,89 @@
 
         </section>
 
-        <section class="dados">
-            <h2>DADOS</h2>
-            <P>Cada atributo tem recebe um tipo de dado especifico, <strong>nomes</strong> strings, <strong>peso</strong> float, <strong>observações</strong> text. <br>
-            Abaixo pode é possível visualizar os tipos de dados bem como suas definições em MySQL
-            </P>
-            <p><strong>DECIMAL</strong> permite separar valores antes e depois do fracionário <code>decimal (5,2)</code> 5 algarismos sendo 2 fracionarios e restando 3 inteiros. </p>
-            <p><strong>ENUM</strong> só permite escolher valores pre estabelecidos <code>enum ('valor_1','valor_2','valor_3')</code> </p>
-            
-        </section>
-
-        <P>Lista de comandos em categorias, porém os comandos devem ser apresentados de acordo com sua hiraquia permitindo a sentação de navegação do conhecimento. &downarrow; &downarrow; &downarrow;</P>
-        <section class="DDL">
-            <h2><strong class="titulo">D</strong>ata <strong class="titulo">D</strong>efinition <strong class="titulo">L</strong>anguage</h2>
-            <table border="1">
-                <thead>
-                    <th>Comando</th>
-                    <th>Função</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CREATE <abbr title="DATABASE   |   TABLE"><small>obj</small></abbr></td>
-                        <td>Criar </td>
-                    </tr>
-                    <tr>
-                        <td>ALTER</td>
-                        <td>Alterar</td>
-                    </tr>
-                    <tr>
-                        <td>DROP</td>
-                        <td>Apagar</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </section>
-
-        <section class="DML">
-            <h2><strong class="titulo">D</strong>ata <strong class="titulo">M</strong>anipulation <strong class="titulo">L</strong>anguage</h2>
-
-            <table border="1">
-                <thead>
-                    <th>Comando</th>
-                    <th>Função</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>INSERT INTO</td>
-                        <td>inserir dados</td>
-                    </tr>
-                    <tr>
-                        <td>UPDATE</td>
-                        <td>Altera registros</td>
-                    </tr>
-                    <tr>
-                        <td>DELETE</td>
-                        <td>Apaga registro</td>
-                    </tr>
-                    <tr>
-                        <td>TRUNCATE</td>
-                        <td>Apaga todos os registros</td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-
-        </section>
-
-        <section>
-            
-        </section>
-
-        <section>
-            <h2>Data Auxiliation Linguage</h2>
-            <p>HAHAAH pegadinha do malandro, aqui constam comandos que são apenas para auxiliar na construção e manutenção de dados. </p>
-            <h4>Visualizar estrutura</h4>
-            <p>para visualizar a estrutura de uma tabela utilize o comando <strong>describe</strong> seguido do nome do item.</p>
-            <code>
-                <pre>
-                    describe <small>nome</small>;
-                </pre>
-            </code>
-        </section>
+        <details class="genericao">
+            <summary><h3>Geral</h3></summary>
+            <div class="dados">
+                <h2>DADOS</h2>
+                <P>Cada atributo tem recebe um tipo de dado especifico, <strong>nomes</strong> strings, <strong>peso</strong> float, <strong>observações</strong> text. <br>
+                Abaixo pode é possível visualizar os tipos de dados bem como suas definições em MySQL
+                </P>
+                <p><strong>DECIMAL</strong> permite separar valores antes e depois do fracionário <code>decimal (5,2)</code> 5 algarismos sendo 2 fracionarios e restando 3 inteiros. </p>
+                <p><strong>ENUM</strong> só permite escolher valores pre estabelecidos <code>enum ('valor_1','valor_2','valor_3')</code> </p>
+    
+            </div>
+    
+            <P>Lista de comandos em categorias, porém os comandos devem ser apresentados de acordo com sua hiraquia permitindo a sentação de navegação do conhecimento. &downarrow; &downarrow; &downarrow;</P>
+    
+            <div class="DDL">
+                <h2><strong class="titulo">D</strong>ata <strong class="titulo">D</strong>efinition <strong class="titulo">L</strong>anguage</h2>
+                <table border="1">
+                    <thead>
+                        <th>Comando</th>
+                        <th>Função</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CREATE <abbr title="DATABASE   |   TABLE"><small>obj</small></abbr></td>
+                            <td>Criar </td>
+                        </tr>
+                        <tr>
+                            <td>ALTER</td>
+                            <td>Alterar</td>
+                        </tr>
+                        <tr>
+                            <td>DROP</td>
+                            <td>Apagar</td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+            </div>
+    
+            <div class="DML">
+                <h2><strong class="titulo">D</strong>ata <strong class="titulo">M</strong>anipulation <strong class="titulo">L</strong>anguage</h2>
+    
+                <table border="1">
+                    <thead>
+                        <th>Comando</th>
+                        <th>Função</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INSERT INTO</td>
+                            <td>inserir dados</td>
+                        </tr>
+                        <tr>
+                            <td>UPDATE</td>
+                            <td>Altera registros</td>
+                        </tr>
+                        <tr>
+                            <td>DELETE</td>
+                            <td>Apaga registro</td>
+                        </tr>
+                        <tr>
+                            <td>TRUNCATE</td>
+                            <td>Apaga todos os registros</td>
+                        </tr>
+    
+    
+                    </tbody>
+                </table>
+    
+            </div>
+    
+            <div class="loucura">
+                <h2>Data Auxiliation Linguage</h2>
+                <p>HAHAAH pegadinha do malandro, aqui constam comandos que são apenas para auxiliar na construção e manutenção de dados. </p>
+                <h4>Visualizar estrutura</h4>
+                <p>para visualizar a estrutura de uma tabela utilize o comando <strong>describe</strong> seguido do nome do item.</p>
+                <code>
+                    <pre>
+                        describe <small>nome</small>;
+                    </pre>
+                </code>
+            </div>
+        </details>
 
     </main>
 
