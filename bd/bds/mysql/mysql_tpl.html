@@ -144,35 +144,10 @@
             <details class="informacoes">
                 <summary><h2>Extraindo informações</h2></summary>
                 <h3>Puxando uma Lista de todos os itens</h3>
+                <p>Esta função apenas elimina valores repetidos e tem um carater de apresentação. Diferente do GROUP BY que é uma função</p>
                 <code>
                     <pre>
                         SELECT DISTINCT <small>coluna</small> FROM <small>tabela</small>;
-                    </pre>
-                </code>
-
-                <h3>Puxando uma Lista de todos os itens e sua quantidade.</h3>
-                <code>
-                    <pre>
-                        SELECT <small>coluna</small>, COUNT(*) FROM <small>tabela</small>
-                        GROUP BY <small>coluna</small>;
-                    </pre>
-                </code>
-
-                <h3>Puxando uma Lista de todos os itens e sua quantidade, que tenha determinado critério.</h3>
-                <code>
-                    <pre>
-                        SELECT <small>coluna</small>, COUNT(*) FROM <small>tabela</small>
-                        GROUP BY <small>coluna</small>
-                        HAVING <small>coluna</small> = 'valor';
-                    </pre>
-                </code>
-
-                <h3>Puxando uma Lista de todos os itens e sua quantidade, que tenha determinado critério fruto de outro select.</h3>
-                <code>
-                    <pre>
-                        SELECT <small>coluna</small>, COUNT(*) FROM <small>tabela</small>
-                        GROUP BY <small>coluna</small>
-                        HAVING <small>coluna</small> &gt; (SELECT AVG(<small>coluna</small>) FROM <small>tabela</small>);
                     </pre>
                 </code>
 
@@ -210,6 +185,37 @@
                         SELECT AVG(<small>coluna</small>) FROM <small>tabela</small>;
                     </pre>
                 </code>
+
+                <h3>Puxando uma Lista de todos os itens e sua quantidade.</h3>
+                <p>A clausula <code>GROUP BY</code> organiza dados em respetivos grupos.</p>
+                <code>
+                    <pre>
+                        SELECT <small>coluna</small>, COUNT(*) FROM <small>tabela</small>
+                        GROUP BY <small>coluna</small>;
+                    </pre>
+                </code>
+
+                <h3>Puxando uma Lista de todos os itens e sua quantidade, que tenha determinado critério.</h3>
+                <p>A clausula <code>HAVING</code> é praticamente o <code>"WHERE"</code> do GROUP. <br> Assim o <code>where</code> fica com um trabalho não de restringir a pesquisa mas de excluir o que não deve aparecer com o <code>WHERE coluna NOT IN (valores, valores)</code></p>
+                <code>
+                    <pre>
+                        SELECT <small>coluna</small>, COUNT(*) FROM <small>tabela</small>
+                        GROUP BY <small>coluna</small>
+                        HAVING <small>coluna</small> = 'valor';
+                    </pre>
+                </code>
+
+                <h2>Subquery</h2>
+                <h3>Puxando uma Lista de todos os itens e sua quantidade, que tenha determinado critério fruto de outro select.</h3>
+                <code>
+                    <pre>
+                        SELECT <small>coluna</small>, COUNT(*) FROM <small>tabela</small>
+                        GROUP BY <small>coluna</small>
+                        HAVING <small>coluna</small> &gt; (SELECT AVG(<small>coluna</small>) FROM <small>tabela</small>);
+                    </pre>
+                </code>
+
+
 
             </details>
 
