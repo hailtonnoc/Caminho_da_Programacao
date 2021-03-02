@@ -56,12 +56,12 @@
 
     CREATE PROCEDURE `primeiro_procedure` ()
     BEGIN
-    SELECT <small>'hello world'</small>; <small class="detalhes">note que o delimitador interno continua sendo o </small>;
+    SELECT <small>'hello world'</small> as <abbr title="titulo da coluna"><small>Mensagem</small></abbr>; <small class="detalhes">note que o delimitador interno continua sendo o </small>;
     END$$
                     
     DELIMITER ;
 
-<small>Chamada</small>    
+<small>Usando</small>    
 
     CALL <small>primeiro_procedure</small>;
                 </pre>
