@@ -19,17 +19,19 @@
                 <h2>Estrutura procedural simples</h2>
                 <code>
                     <pre>
-    CREATE PROCEDURE <small>nome_procedure</small>
-    <small style="color: rgba(128, 128, 128, 0.445);">Parametros</small>
-    
-    BEGIN
-    
-    DECLARE
+    DECLARE <small style="color: rgba(128, 128, 128, 0.445);">(opcional)</small>
+    <small><ul><li>Variaveis, cursores, constantes, tabelas, estruturas e exceptions</li></ul></small>
+
+    BEGIN <small>(obrigatório)</small>
     <small><ul>
-        <li>Variaveis, cursores, constantes, tabelas, estruturas e exceptions</li>
+        <li>SQL statements</li>
         <li>PL/SQL statements</li>
     </ul></small>
-    END;
+
+    EXECEPTION <small style="color: rgba(128, 128, 128, 0.445);">(opcional)</small>
+    <small><ul><li>Ações que deverão ser executadas quando ocorrer erros</li></ul></small>
+
+    END; <small>(obrigatório)</small>
                     </pre>
                 </code>
 
