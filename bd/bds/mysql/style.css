@@ -89,6 +89,11 @@ div
     box-shadow: black -4.5px 3px 6px 0px;
 }
 
+.detalhes
+{
+    color: rgba(128, 128, 128, 0.445);
+}
+
 .enfase
 {
     font-size: 1.18em;

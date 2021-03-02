@@ -15,13 +15,14 @@
     </header>
     <main>
         <section class="">
+            <h1>Store Procedure</h1>
             <div class="procedural">
                 <h2>Estrutura procedural simples</h2>
                 <code>
                     <pre>
     CREATE PROCEDURE <small>nome_procedure</small>
     <small style="color: rgba(128, 128, 128, 0.445);">Parametros</small>
-    
+
     BEGIN
     
     DECLARE
@@ -34,6 +35,37 @@
                 </code>
 
             </div>
+            <h3>Regras de nomenclatura</h3>
+            <ul>
+                <li>O nome da SP deve conter apenas letras e numeros, $ e _ para demarcar espaços</li>
+                <li>Um tamanho máximo de 64 caracteres</li>
+                <li>Deve ser nome único</li>
+                <li>É case sensitive deve ser referenciada de maneira idêntica</li>
+            </ul>
+            <h3>Usando a Store Procedure</h3>
+            <code><pre>CALL <small>nome_Sp;</small></pre></code>
+
+            <h2>Modelo pratico</h2>
+            <code>
+                <pre>
+    USE `nomeBD`;
+    DROP procedure IF EXISTS `primeiro_procedure`;
+                    
+    DELIMITER $$ <small class="detalhes">define delimitador para $$</small>
+    USE `nomeBD`$$
+
+    CREATE PROCEDURE `primeiro_procedure` ()
+    BEGIN
+    SELECT <small>'hello world'</small>; <small class="detalhes">note que o delimitador interno continua sendo o </small>;
+    END$$
+                    
+    DELIMITER ;
+
+<small>Chamada</small>    
+
+    CALL <small>primeiro_procedure</small>;
+                </pre>
+            </code>
 
         </section>
     </main>
