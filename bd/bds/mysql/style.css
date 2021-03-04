@@ -61,7 +61,7 @@ small
 
 div
 {
-    border: solid black 2px;
+    border: solid rgba(0, 0, 0, 0.335) 2px;
     margin: 0.9%;
     padding: 1.5%;
 }
@@ -115,7 +115,7 @@ details div
 
 td
 {
-    padding: 1%;
+    padding: 1.08%;
 }
 
 mark

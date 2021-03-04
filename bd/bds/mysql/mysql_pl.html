@@ -16,6 +16,7 @@
     <main>
         <section class="">
             <h1>Store Procedure</h1>
+
             <div class="procedural">
                 <h2>Estrutura procedural simples</h2>
                 <code>
@@ -25,7 +26,7 @@
 
     BEGIN
     
-    DECLARE
+    <strong><small>DECLARE</small></strong>
     <small><ul>
         <li>Variaveis, cursores, constantes, tabelas, estruturas e exceptions</li>
         <li>PL/SQL statements</li>
@@ -33,8 +34,7 @@
     END;
                     </pre>
                 </code>
-
-            </div>
+            
             <h3>Regras de nomenclatura</h3>
             <ul>
                 <li>O nome da SP deve conter apenas letras e numeros, $ e _ para demarcar espaços</li>
@@ -45,16 +45,17 @@
             <h3>Usando a Store Procedure</h3>
             <code><pre>CALL <small>nome_Sp;</small></pre></code>
 
-            <h2>Modelo pratico</h2>
+            <h3>Modelo pratico</h3>
             <code>
                 <pre>
-    USE `nomeBD`;
-    DROP procedure IF EXISTS `primeiro_procedure`;
-                    
+    USE <small>`nomeBD`</small>;
+    DROP procedure IF EXISTS <small>`primeiro_procedure`</small>;
+                </pre>
+                <pre>          
     DELIMITER $$ <small class="detalhes">define delimitador para $$</small>
-    USE `nomeBD`$$
+    USE <small>`nomeBD`</small>$$
 
-    CREATE PROCEDURE `primeiro_procedure` ()
+    CREATE PROCEDURE <small>`primeiro_procedure`</small> ()
     BEGIN
     SELECT <small>'hello world'</small> as <abbr title="titulo da coluna"><small>Mensagem</small></abbr>; <small class="detalhes">note que o delimitador interno continua sendo o </small>;
     END$$
@@ -66,6 +67,109 @@
     CALL <small>primeiro_procedure</small>;
                 </pre>
             </code>
+            <p>O Mesmo serve para alterar o comando, já que <code>se existir ele apaga.</code> <br>
+            Para apagar é só usar o <code>DROP procedure</code> sem delimitar outras configurações.</p>
+            </div>
+
+            <div class="declare">
+                <h2>VARIAVEIS</h2>
+                <p><strong>DECLARE</strong> fica responsável por iniciar a variável sem seguida o nome da mesma, o <strong>tipo de dados</strong> e um <strong>valor padrão</strong>(opcional).</p>
+                <h3>Regras de nomenclatura</h3>
+                <ul>
+                    <li>O nome da SP deve conter apenas letras e numeros, $ e _ para demarcar espaços</li>
+                    <li>Deve ser nome único</li>
+                    <li>Um tamanho máximo de 255 caracteres</li>
+                    <li>É case sensitive</li>
+                    <li>Se não declarar <abbr title="Padrão">Default</abbr> o valor da variável recebe NULL</li>
+                    <li>Termina com <strong>;</strong></li>
+                    <li>É possível declarar varias variáveis desde que tenham o mesmo <strong>tipo</strong></li>
+                </ul>
+                <h3>Tipos</h3>
+                <table border="1">
+                    <thead>
+                        <th>TIPO</th>
+                        <th>definição</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>VARCHAR<small>(n)</small></code></td>
+                            <td>Caracteres tipo texto com tamanho de n.</td>
+                        </tr>
+                        <tr>
+                            <td><code>INTEGER</code></td>
+                            <td>Variaveis tipo Inteiro.</td>
+                        </tr>
+                        <tr>
+                            <td><code>DECIMAL<small>(i,f)</small></code></td>
+                            <td>Variavies decimais 'i' e a fração em 'f'.</td>
+                        </tr>
+                        <tr>
+                            <td><code>DATE</code></td>
+                            <td>Guarda data AAAA-MM-DD.</td>
+                        </tr>
+                        <tr>
+                            <td><code>TIMESTAMP</code></td>
+                            <td>Guarda data e hora AAAA-MM-DD HH-MM-SS.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Modelo uso de Declare</h3>
+                <code>
+                    <pre>
+DELIMITER <small>$$</small>
+USE <small>'nome_bd'</small>$$
+
+    CREATE procedure <small>'ver_variavel'()</small>
+    BEGIN
+
+    <strong>declare</strong> <small>texto</small> char(15) default <small>'Hellow World'</small>;
+    <strong>declare</strong> <small>numero</small> decimal(6,3) default <small>999.666</small>;
+    <strong>declare</strong> <small>tempo </small>datetime default <abbr title="hora e data local">localtimestamp</abbr>;
+
+
+    SELECT <small>texto</small>;
+    SELECT <small>numero</small>;
+    SELECT <small>tempo</small>;
+    
+
+    END $$
+
+DELIMITER;
+                    </pre>
+                </code>
+                <h3>Múltiplas Variaveis</h3>
+                <code>
+                    <pre>
+...
+    CREATE procedure <small>'ver_multiplos'()</small>
+    BEGIN
+    declare <small>num_1, num_2</small> int default <small>369</small>;
+    SELECT <small>num_1, num_2</small>;
+
+    END$$
+DELIMITER;
+                    </pre>
+                </code>
+                <h3>Alterando Valores</h3>
+                <code>
+                    <pre>
+...
+    CREATE procedure <small>'ver_valor'()</small>
+    BEGIN
+    declare <small>num_1</small> int default <small>369</small>;
+    SELECT <small>num_1</small>;
+
+    SET <small>num_1</small> = <small>963</small>;
+    SELECT <small>num_1</small>;
+
+    END$$
+DELIMITER;
+                    </pre>
+                </code>
+
+
+            </div>
 
         </section>
     </main>
