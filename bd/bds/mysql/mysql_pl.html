@@ -71,7 +71,7 @@
             Para apagar é só usar o <code>DROP procedure</code> sem delimitar outras configurações.</p>
             </div>
 
-            <div class="declare">
+            <div class="declareV">
                 <h2>VARIAVEIS</h2>
                 <p><strong>DECLARE</strong> fica responsável por iniciar a variável sem seguida o nome da mesma, o <strong>tipo de dados</strong> e um <strong>valor padrão</strong>(opcional).</p>
                 <h3>Regras de nomenclatura</h3>
@@ -160,7 +160,7 @@ DELIMITER;
     declare <small>num_1</small> int default <small>369</small>;
     SELECT <small>num_1</small>;
 
-    SET <small>num_1</small> = <small>963</small>;
+    <strong>SET</strong> <small>num_1</small> = <small>963</small>;
     SELECT <small>num_1</small>;
 
     END$$
@@ -168,6 +168,58 @@ DELIMITER;
                     </pre>
                 </code>
 
+                <h3>Entrada por procedure</h3>
+                <code>
+                    <pre>
+DELIMITER <small>$$</small>
+use `nome_bd`$$
+    create procedure <small>`inclui_produto`</small>()
+    begin
+    declare <small>vNome</small> varchar(45) default <small>'produto'</small>;
+    declare <small>vPreco</small> decimal(5,2) default <small>'36.90'</small>;
+                        
+    insert into <small>nome_tabela</small>
+    <small>(nome, preco)</small>
+    value
+    <small>(vNome, vPreco)</small>;
+    end<small>$$</small>
+    DELIMITER ;
+                        
+                        
+    call <small>inclui_produto</small>;
+                    </pre>
+                </code>
+            </div>
+
+            <div class="declareP">
+                <h2>Parametros</h2>
+                <p>Os parametros no PL/SQL se assemelha muito a funções em POO</p>
+                <code>
+                    <pre>
+...
+    CREATE PROCEDURE <small>`produto_parametro`</small>(<small>vNome</small> varchar(45), <small>vPreco</small> decimal(5,2))
+    BEGIN
+    INSERT INTO <small>tabela</small>
+    (<small>nome</small>, <small>preco</small>)
+    VALUES
+    (<small>vNome</small>, <small>vPreco</small>);
+    END$$
+...
+
+CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</small>);
+                    </pre>
+                </code>
+
+            </div>
+
+            <div class="tratando_erro">
+                <h3>Tratando erros</h3>
+                <p>É possível ter um retorno mais amigável através da tratava erros.</p>
+
+            </div>
+
+            <div class="salvando_retorno">
+                <p>Para salvar um retorno basta referenciar a resposta com um <code>INTO</code></p>
 
             </div>
 
