@@ -214,12 +214,51 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
 
             <div class="tratando_erro">
                 <h3>Tratando erros</h3>
-                <p>É possível ter um retorno mais amigável através da tratava erros.</p>
+                <p>É possível ter um retorno mais amigável através da tratava erros. <br>
+O comando <code>DECLARE EXIT</code> libera a execução do programa como um "break", <code>HANDLER FOR</code> escuta o retorno, então referencie o codigo do erro logo após a declaração.
+                </p>
+
+                <code>
+                    <pre>
+...
+    BEGIN
+    DECLARE <small>aviso</small> varchar(36);
+    DELCARE EXIT HANDLER FOR <small>1062</small>
+<pre>
+    begin
+        set <small>aviso</small> = <small>'Chave repetida'</small>
+        select <small>aviso</small>;
+    end;
+</pre>
+    INSERT INTO <small>nome_tabela</small>
+    <small>(id_produto, nome, preco)</small>
+    VALUES
+    <small>(vId_produto, vNome, vPreco)</small>
+    SET <small>aviso</small> = <small>'Produto incluido!'</small>;
+    SELECT <small>aviso</small>;
+
+    END$$
+...
+                    </pre>
+                </code>
 
             </div>
 
             <div class="salvando_retorno">
-                <p>Para salvar um retorno basta referenciar a resposta com um <code>INTO</code></p>
+                <h3>Salvando retorno</h3>
+                <p>Para salvar um retorno basta referenciar a resposta com um <code>INTO</code> seguido do nome da variavel que vai receber o valor, devidamente declarada.</p>
+                <code>
+                    <pre>
+...
+    CREATE PROCEDURE <small>'recebe_select'</small>( <small>vId_produto</small> varchar (40))
+    BEGIN
+    DECLARE <small>vProduto</small> VARCHAR(45);
+    SELECT <strong><small>produto</small> INTO <small>vProduto</small></strong> FROM <small>tabela</small> WHERE <small>id_produto</small> = <small>vId_produto</small>;
+    SELECT <small>vProduto</small> ;
+    END$$
+...
+                    </pre>
+                </code>
 
             </div>
 
