@@ -19,6 +19,7 @@
 
             <div class="procedural">
                 <h2>Estrutura procedural simples</h2>
+                <p>Cada banco de dados decidiu criar uma liguagem extra para ter um mellhor controle de fluxo, e a porta para tudo isso foi as <strong>Store Procedures</strong>.</p>
                 <code>
                     <pre>
     CREATE PROCEDURE <small>nome_procedure</small>
@@ -71,8 +72,8 @@
             Para apagar é só usar o <code>DROP procedure</code> sem delimitar outras configurações.</p>
             </div>
 
-            <div class="declareV">
-                <h2>VARIAVEIS</h2>
+            <details class="declareV">
+                <summary><h2>VARIAVEIS</h2></summary>
                 <p><strong>DECLARE</strong> fica responsável por iniciar a variável sem seguida o nome da mesma, o <strong>tipo de dados</strong> e um <strong>valor padrão</strong>(opcional).</p>
                 <h3>Regras de nomenclatura</h3>
                 <ul>
@@ -189,7 +190,7 @@ use `nome_bd`$$
     call <small>inclui_produto</small>;
                     </pre>
                 </code>
-            </div>
+            </details>
 
             <div class="declareP">
                 <h2>Parametros</h2>
@@ -212,53 +213,101 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
 
             </div>
 
-            <div class="tratando_erro">
-                <h3>Tratando erros</h3>
-                <p>É possível ter um retorno mais amigável através da tratava erros. <br>
-O comando <code>DECLARE EXIT</code> libera a execução do programa como um "break", <code>HANDLER FOR</code> escuta o retorno, então referencie o codigo do erro logo após a declaração.
-                </p>
+            <details>
+                <summary class="tit">Tratando erros e salvando retorno</summary>
+                <div class="tratando_erro">
+                    <h3>Tratando erros</h3>
+                    <p>É possível ter um retorno mais amigável através da tratava erros. <br>
+    O comando <code>DECLARE EXIT</code> libera a execução do programa como um "break", <code>HANDLER FOR</code> escuta o retorno, então referencie o codigo do erro logo após a declaração.
+                    </p>
+    
+                    <code>
+                        <pre>
+    ...
+        BEGIN
+        DECLARE <small>aviso</small> varchar(36);
+        DELCARE EXIT HANDLER FOR <small>1062</small>
+    <pre>
+        begin
+            set <small>aviso</small> = <small>'Chave repetida'</small>
+            select <small>aviso</small>;
+        end;
+    </pre>
+        INSERT INTO <small>nome_tabela</small>
+        <small>(id_produto, nome, preco)</small>
+        VALUES
+        <small>(vId_produto, vNome, vPreco)</small>
+        SET <small>aviso</small> = <small>'Produto incluido!'</small>;
+        SELECT <small>aviso</small>;
+    
+        END$$
+    ...
+                        </pre>
+                    </code>
+    
+                </div>
+    
+                <div class="salvando_retorno">
+                    <h3>Salvando retorno</h3>
+                    <p>Para salvar um retorno basta referenciar a resposta com um <code>INTO</code> seguido do nome da variavel que vai receber o valor, devidamente declarada.</p>
+                    <code>
+                        <pre>
+    ...
+        CREATE PROCEDURE <small>'recebe_select'</small>( <small>vId_produto</small> varchar (40))
+        BEGIN
+        DECLARE <small>vProduto</small> VARCHAR(45);
+        SELECT <strong><small>produto</small> INTO <small>vProduto</small></strong> FROM <small>tabela</small> WHERE <small>id_produto</small> = <small>vId_produto</small>;
+        SELECT <small>vProduto</small> ;
+        END$$
+    ...
+                        </pre>
+                    </code>
+    
+                </div>
+            </details>
 
+
+            <div class="controleFluxo">
+                <h2>Controle de Fluxo</h2>
+                <h3>IF</h3>
+                <p>Controle de fluxo com duas saídas possíveis, caso atenda os requisitos da condição e outro para caso não atenda.<strong>Estrutura básica;</strong></p>
                 <code>
                     <pre>
-...
-    BEGIN
-    DECLARE <small>aviso</small> varchar(36);
-    DELCARE EXIT HANDLER FOR <small>1062</small>
-<pre>
+    IF <small>condition</small> THEN
+    <small>if_statements;</small>
+    ELSE
+    <small>else_statements;</small>
+    END IF
+                    </pre>
+                </code>
+                
+                <details>
+                    <summary>Modelo Pratico</summary>
+                    <code>
+                        <pre>
+    create procedure <small>`curso_nivel`</small>(<small>vId</small> int)
+
     begin
-        set <small>aviso</small> = <small>'Chave repetida'</small>
-        select <small>aviso</small>;
-    end;
-</pre>
-    INSERT INTO <small>nome_tabela</small>
-    <small>(id_produto, nome, preco)</small>
-    VALUES
-    <small>(vId_produto, vNome, vPreco)</small>
-    SET <small>aviso</small> = <small>'Produto incluido!'</small>;
-    SELECT <small>aviso</small>;
+    declare <small>vResultado</small> varchar (20);
+    declare <small>vNivel</small> int;
+    
+    select <small>NIVEL</small> INTO <small>vNivel</small> from <small>habilidades</small>
+    where <small>id_plano</small> = <small>vId</small>;
+                            
+    if <small>vNivel</small> > <small>1</small> then
+        set <small>vResultado</small> = <small>'Intermediario'</small>;
+    else
+        set <small>vResultado</small> = <small>'Iniciante'</small>;
+    end if;
 
-    END$$
-...
-                    </pre>
-                </code>
+    select <small>vResultado</small>;
+    end$$
+                        </pre>
+                    </code>
 
-            </div>
+                </details>
+                
 
-            <div class="salvando_retorno">
-                <h3>Salvando retorno</h3>
-                <p>Para salvar um retorno basta referenciar a resposta com um <code>INTO</code> seguido do nome da variavel que vai receber o valor, devidamente declarada.</p>
-                <code>
-                    <pre>
-...
-    CREATE PROCEDURE <small>'recebe_select'</small>( <small>vId_produto</small> varchar (40))
-    BEGIN
-    DECLARE <small>vProduto</small> VARCHAR(45);
-    SELECT <strong><small>produto</small> INTO <small>vProduto</small></strong> FROM <small>tabela</small> WHERE <small>id_produto</small> = <small>vId_produto</small>;
-    SELECT <small>vProduto</small> ;
-    END$$
-...
-                    </pre>
-                </code>
 
             </div>
 

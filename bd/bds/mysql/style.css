@@ -108,6 +108,12 @@ summary
     font-size: 1.16em;
 }
 
+.tit
+{
+    font: normal 2.7em 'VT323';
+    text-shadow: rgba(24, 87, 158, 0.445) 6px 6px 3.6px;
+}
+
 details div
 {
     display: inline-block;
