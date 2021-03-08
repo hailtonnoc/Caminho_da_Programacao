@@ -281,7 +281,7 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                     </pre>
                 </code>
                 
-                <details>
+                <details class="if">
                     <summary>Modelo Pratico</summary>
                     <code>
                         <pre>
@@ -327,6 +327,38 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
     end$$
                         </pre>
                     </code>
+                </details>
+
+                <h3>CASE</h3>
+                <p>Controle de fluxo do de uma variavel versus uma lista de opções, atendido o requisito para algum dos itens listados um comando correspondente será disparado.</p><strong>Estrutura básica;</strong></p>
+                <code>
+                    <pre>
+    CASE <small>selector</small>
+    WHEN <small>selector_value_1</small> THEN <small>then_statements_1;</small>
+    WHEN <small>selector_value_2</small> THEN <small>then_statements_2;</small>
+    WHEN <small>...</small>
+    
+    [ELSE <small>else_statements</small>]
+    END CASE;
+                    </pre>
+                </code>
+
+                <details class="case">
+                    <summary>Modelo pratico</summary>
+                    
+                    create procedure `class_memoria`(vMATERIA varchar(36))
+                    begin
+                    declare vMemoria tinyint;
+                    select SITUACAO_MEMORIA into vMemoria from metas
+                    where MATERIA = vMATERIA;
+                    CASE vMemoria
+                    when 1 then select 'Boa' as 'codição de memoria';
+                    when 2 then select 'Moderada' as 'codição de memoria';
+                    when 3 then select 'Decaindo' as 'codição de memoria';
+                    when 4 then select 'Esquecimento' as 'codição de memoria';
+                    when 5 then select 'Vaga Lembrança' as 'codição de memoria';
+                    else select 'Ainda não começou' as 'Sem memoria';
+                    end case;
 
                 </details>
                 
