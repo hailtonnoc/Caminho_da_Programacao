@@ -290,7 +290,7 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
     begin
     declare <small>vResultado</small> varchar (20);
     declare <small>vNivel</small> int;
-    
+
     select <small>NIVEL</small> INTO <small>vNivel</small> from <small>habilidades</small>
     where <small>id_plano</small> = <small>vId</small>;
                             
@@ -300,6 +300,29 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
         set <small>vResultado</small> = <small>'Iniciante'</small>;
     end if;
 
+    select <small>vResultado</small>;
+    end$$
+                        </pre>
+                        <pre>
+    create procedure <small>`curso_nivel`</small>(<small>vId</small> int)
+                        
+    begin
+    declare <small>vResultado</small> varchar (20);
+    declare <small>vNivel</small> int;
+                            
+    select <small>NIVEL</small> INTO <small>vNivel</small> from <small>habilidades</small>
+    where <small>id_plano</small> = <small>vId</small>;
+                                                    
+    if <small>vNivel</small> = <small>1</small> then
+        set <small>vResultado</small> = <small>'Iniciante'</small>;
+    <strong>
+    elseif <small>vNivel</small> = <small>2</small> then
+        set <small>vResultado</small> = <small>'Intermediario'</small>;
+    </strong>
+    else
+        set <small>vResultado</small> = <small>'Avançado'</small>;
+    end if;
+                        
     select <small>vResultado</small>;
     end$$
                         </pre>
