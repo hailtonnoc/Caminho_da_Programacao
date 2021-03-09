@@ -213,7 +213,7 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
 
             </div>
 
-            <details>
+            <details id="tratErro">
                 <summary class="tit">Tratando erros e salvando retorno</summary>
                 <div class="tratando_erro">
                     <h3>Tratando erros</h3>
@@ -363,7 +363,29 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                     </pre>
                 </code>
                 </details>
-                
+
+                <h4>CASE ERRO</h4>
+                <p>Podemos tratar um case sem <code>ELSE</code> e comando alheio. O mesmo pode ter um retorno sem interromper o processo como no <a href="#tratErro">tratando erros</a>.</p>
+                <details class="case">
+                    <summary>Modelo pratico</summary>
+                    <code>
+                        <pre>
+    create procedure `class_memoria`(vMATERIA varchar(36))
+    begin
+    declare <small>vMemoria</small> tinyint;
+    select <small>SITUACAO_MEMORIA</small> into <small>vMemoria</small> from <small>metas</small>
+    where <small>MATERIA</small> = <small>vMATERIA</small>;
+    CASE <small>vMemoria</small>
+    when <small>1</small> then select <small>'Boa'</small> as <small>condição de memoria</small>;
+    when <small>2</small> then select <small>'Moderada'</small> as <small>condição de memoria</small>;       
+    when <small>3</small> then select <small>'Decaindo'</small> as <small>condição de memoria</small>;
+    when <small>4</small> then select <small>'Esquecimento'</small> as <small>condição de memoria</small>;
+    when <small>5</small> then select <small>'Vaga Lembrança'</small> as <small>condição de memoria</small>;
+    else select <small>'Ainda não começou'</small> as <small>Sem memoria</small>;
+    end case;
+                    </pre>
+                </code>
+                </details>
 
 
             </div>
