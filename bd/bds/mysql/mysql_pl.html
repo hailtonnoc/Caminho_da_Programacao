@@ -397,7 +397,7 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
 
             <div class="repeticoes">
                 <h2>Looping</h2>
-                <p>D</p>
+                <p>Comandos que vão ser repetidos até que a condição seja satisfeita.</p>
 
                 <code>
                     <pre>
@@ -407,6 +407,8 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                     </pre>
                 </code>
 
+            <details>
+                <summary>Modelo pratico</summary>
                 <code>
                     <pre>
             CREA PROCEDURE <small>`looping_while`</small> <small>(vNumInicial</small> INT <small>, vNumFinal</small> INT<small>)</small>
@@ -414,7 +416,7 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                 DECLARE <small>vContador</small> INT;
                 DELETE FROM <small>TAB_LOOPING</small>;
                 SET <small>vContador</small> = <small>vNumInicial</small>;
-                WHILE <small>vContador</small> &lt;= <small>vNumFinal</small>
+<small>área de rep</small>      WHILE <small>vContador</small> &lt;= <small>vNumFinal</small>
                 DO
                     INSERT INTO <small>TAB_LOOPING (ID)</small> VALUES <small>(vContador)</small>;
                     SET <small>vContador</small> = <small>vContador</small> + <abbr title=""><small>1</small></abbr>;
@@ -423,6 +425,48 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
             END
                     </pre>
                 </code>
+            </details>
+
+            </div>
+
+            <div class="cursores">
+                <h2>Cursores</h2>
+                <p>Comandos que vão retornar uma <strong>array</strong> com todos os resultados.</p>
+
+                <code>
+                    <pre>
+    DECLARE @<small>nome</small>;
+    DECLARE <small>CURSOR_X</small> CURSOR FOR;
+    SELECT <small>NOME</small> FROM TABELA;
+    OPEN <small>CURSOR_X</small>;
+    FETCH <small>CURSOR_X</small>; INTO @<small>nome</small>;
+    FETCH <small>CURSOR_X</small>; INTO @<small>nome</small>;
+    FETCH <small>CURSOR_X</small>; INTO @<small>nome</small>;
+    ...
+    CLOSE <small>CURSOR_X</small>;
+                    </pre>
+                </code>
+
+            <details>
+                <summary>Modelo pratico</summary>
+                <code>
+                    <pre>
+            CREA PROCEDURE <small>`looping_while`</small> <small>(vNumInicial</small> INT <small>, vNumFinal</small> INT<small>)</small>
+            BENGIN
+                DECLARE <small>vContador</small> INT;
+                DELETE FROM <small>TAB_LOOPING</small>;
+                SET <small>vContador</small> = <small>vNumInicial</small>;
+<small>área de rep</small>      WHILE <small>vContador</small> &lt;= <small>vNumFinal</small>
+                DO
+                    INSERT INTO <small>TAB_LOOPING (ID)</small> VALUES <small>(vContador)</small>;
+                    SET <small>vContador</small> = <small>vContador</small> + <abbr title=""><small>1</small></abbr>;
+                END WHILE;
+                SELECT * FROM <small>TAB_LOOPING</small>;
+            END
+                    </pre>
+                </code>
+            </details>
+
             </div>
 
         </section>
