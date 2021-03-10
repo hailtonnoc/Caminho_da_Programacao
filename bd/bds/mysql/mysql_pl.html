@@ -373,6 +373,8 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
     create procedure `class_memoria`(vMATERIA varchar(36))
     begin
     declare <small>vMemoria</small> tinyint;
+    declare <small>msgErro</small> varchar (45);
+    declare continue handler for <small><abbr title="Codigo do erro">1339</abbr></small> set <small>msgErro</small> = <small>''O case não tem retorno previsto para condição evidenciada.</small>
     select <small>SITUACAO_MEMORIA</small> into <small>vMemoria</small> from <small>metas</small>
     where <small>MATERIA</small> = <small>vMATERIA</small>;
     CASE <small>vMemoria</small>
@@ -381,13 +383,46 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
     when <small>3</small> then select <small>'Decaindo'</small> as <small>condição de memoria</small>;
     when <small>4</small> then select <small>'Esquecimento'</small> as <small>condição de memoria</small>;
     when <small>5</small> then select <small>'Vaga Lembrança'</small> as <small>condição de memoria</small>;
-    else select <small>'Ainda não começou'</small> as <small>Sem memoria</small>;
+    <del>else select <small>'Ainda não começou'</small> as <small>Sem memoria</small>;</del>
     end case;
+    <strong>SELECT</strong> <small>msgErro</small>;
+    end $$
                     </pre>
                 </code>
                 </details>
 
+                <h4>Observação</h4>
+                <p>O <code>CASE</code> ainda pode ser utilizado no lugar do <code>ELSEIF</code> para caso de grande linha de testes, uma vez que o <code>ELSEIF</code> testa a variável com linha a linha e o <code>CASE</code> testa apenas a condição correspondente.</p>
+            </div>
 
+            <div class="repeticoes">
+                <h2>Looping</h2>
+                <p>D</p>
+
+                <code>
+                    <pre>
+    WHILE <small>condition</small>
+    DO <small>statements</small>;
+    END WHILE;
+                    </pre>
+                </code>
+
+                <code>
+                    <pre>
+            CREA PROCEDURE <small>`looping_while`</small> <small>(vNumInicial</small> INT <small>, vNumFinal</small> INT<small>)</small>
+            BENGIN
+                DECLARE <small>vContador</small> INT;
+                DELETE FROM <small>TAB_LOOPING</small>;
+                SET <small>vContador</small> = <small>vNumInicial</small>;
+                WHILE <small>vContador</small> &lt;= <small>vNumFinal</small>
+                DO
+                    INSERT INTO <small>TAB_LOOPING (ID)</small> VALUES <small>(vContador)</small>;
+                    SET <small>vContador</small> = <small>vContador</small> + <abbr title=""><small>1</small></abbr>;
+                END WHILE;
+                SELECT * FROM <small>TAB_LOOPING</small>;
+            END
+                    </pre>
+                </code>
             </div>
 
         </section>
