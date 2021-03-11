@@ -411,7 +411,7 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                 <summary>Modelo pratico</summary>
                 <code>
                     <pre>
-            CREA PROCEDURE <small>`looping_while`</small> <small>(vNumInicial</small> INT <small>, vNumFinal</small> INT<small>)</small>
+            CREATE PROCEDURE <small>`looping_while`</small> <small>(vNumInicial</small> INT <small>, vNumFinal</small> INT<small>)</small>
             BENGIN
                 DECLARE <small>vContador</small> INT;
                 DELETE FROM <small>TAB_LOOPING</small>;
@@ -451,18 +451,20 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                 <summary>Modelo pratico</summary>
                 <code>
                     <pre>
-            CREA PROCEDURE <small>`looping_while`</small> <small>(vNumInicial</small> INT <small>, vNumFinal</small> INT<small>)</small>
-            BENGIN
-                DECLARE <small>vContador</small> INT;
-                DELETE FROM <small>TAB_LOOPING</small>;
-                SET <small>vContador</small> = <small>vNumInicial</small>;
-<small>área de rep</small>      WHILE <small>vContador</small> &lt;= <small>vNumFinal</small>
-                DO
-                    INSERT INTO <small>TAB_LOOPING (ID)</small> VALUES <small>(vContador)</small>;
-                    SET <small>vContador</small> = <small>vContador</small> + <abbr title=""><small>1</small></abbr>;
-                END WHILE;
-                SELECT * FROM <small>TAB_LOOPING</small>;
-            END
+    CREATE PROCEDURE <small>`looping_cursor`</small> <small>()</small>
+    BENGIN
+        DECLARE <small>limite_cursor</small> INT DEFAULT <small>0</small>;
+        DECLARE <small>vNome</small> VARCHAR(45);
+        DECLARE <small>c</small> CURSOR FOR SELECT <small>COLUNA</small> FROM <small>tabela</small> LIMIT <small>3</small>;
+
+        DECLARE CONTINUE HANDLER FOR NOT FOUND SET <small>limite_cursor</small>= <small>1</small>;
+        OPEN <small>c</small>;
+        WHILE <small>limite_cursor</small> = 0
+        DO
+            FETCH <small>c</small> INTO <small>vNome</small>;
+            SELECT <small>vNome</small>;
+        END WHILE;
+        CLOSE <small>c</small>;
                     </pre>
                 </code>
             </details>
