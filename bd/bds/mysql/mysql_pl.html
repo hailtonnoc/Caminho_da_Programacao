@@ -564,6 +564,36 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
 
             </div>
 
+            <div class="gatilhos">
+                <h2>Triggers</h2>
+                <p>É um gatilho ou um escutador de processos DML. <strong>Estrutura básica;</strong></p>
+                <code>
+                    <pre>
+    CREATE TRIGGER <small>nome</small> TIME EVENT
+    ON <small>tabela</small>
+    FOR EACH <small>ROW</small>
+    <small>declarações</small>
+                    </pre>
+                </code>
+                <p>O mesmo pode ser separado nos tempos <code>BEFORE, AFTER</code>. <br>
+                E nas operações DML <code>INSERT, UPDATE, DELETE</code>.</p>
+            </div>
+            <detail>
+                <summary>Modelo pratico</summary>
+                <code>
+                    <pre>
+    CREATE TRIGGER <small>tr_nome</small> BEFORE INSERT
+    ON <small>tabela</small>
+    FOR EACH <small>ROW</small>
+    SET <small><strong>NEW</strong>.coluna3 = (NEW.coluna1 * x)</small>;
+
+<small>Disparado</small>
+    INSERT INTO <small>tabela (coluna, coluna1)</small>
+    VALUES <small>('exemplo', 9);</small>
+                    </pre>
+                </code>
+            </detail>
+
         </section>
     </main>
 
