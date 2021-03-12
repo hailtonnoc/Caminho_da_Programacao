@@ -521,7 +521,28 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                 </code>
                 <p>Diferente de uma procedure a function é chamada por <code>SELECT</code>.</p>
 
+                <details>
+                    <summary>Modelo pratico</summary>
+                    <code>
+                        <pre>
+CREATE FUNCTION `f_memoria`(<small>vMemoria</small> tinyint) 
+RETURNS varchar(27) CHARSET utf8
+BEGIN
+declare <small>vRetorno</small> varchar(27) default "";
+CASE <small>vMemoria</small>
+when <small>1</small> then set <small>vRetorno</small> = <small>'Boa'</small>;
+when <small>2</small> then set <small>vRetorno</small> = <small>'Moderada'</small>;
+when <small>3</small> then set <small>vRetorno</small> = <small>'Decaindo'</small>;
+when <small>4</small> then set <small>vRetorno</small> = <small>'Esquecimento'</small>;
+when <small>5</small> then set <small>vRetorno</small> = <small>'Vaga Lembrança'</small>;
+else set <small>vRetorno</small> = <small>'Ainda não começou'</small>;
+end case;
+RETURN <small>vRetorno</small>;
+END
+                        </pre>
+                    </code>
 
+                </details>
             </div>
 
         </section>
