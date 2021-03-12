@@ -484,7 +484,7 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
 
         DECLARE CONTINUE HANDLER FOR NOT FOUND SET <small>limite_cursor</small>= <small>1</small>;
         OPEN <small>c</small>;
-        WHILE <small>limite_cursor</small> = 0
+        WHILE <small>limite_cursor</small> = <small>0</small>
         DO
             FETCH <small>c</small> INTO <small>vNome, vPlataforma, vNivel, vMemoria</small>;
             IF <small>limite_cursor</small> = <small>0</small> then
@@ -497,6 +497,29 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                     </pre>
                 </code>
             </details>
+
+
+            </div>
+
+            <div class="funcoes">
+                <h2>Funções</h2>
+                <p>Função é uma serie de comandos bem estruturado que diferente de rotina no final me retorna um valor. A usabilidade das funções são como as nativas do MySQL (avg, concat, sum) é possível criar uma aplicabilidade infinita.</p>
+                <p>Normalmente as instalações MySQL não permitem a criação de funções, para isso é necessário executar a linha de comando <code><mark>SET GLOBAL <small>log_bin_trust_function_creators = 1</small>;</mark></code> <strong>Estrutura básica;</strong></p>
+
+                <code>
+                    <pre>
+    CREATE FUNCTION <small>`name_function`(parameters)</small>
+    RETURNS <small>datatype</small>;
+
+    BEGIN
+
+    DECLARE <small>declaration_statement;</small>
+    <small>executable_statement;</small>
+    RETURN <small>statement;</small>
+    END;
+                    </pre>
+                </code>
+                <p>Diferente de uma procedure a function é chamada por <code>SELECT</code>.</p>
 
 
             </div>
