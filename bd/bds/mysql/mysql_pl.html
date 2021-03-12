@@ -525,24 +525,43 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                     <summary>Modelo pratico</summary>
                     <code>
                         <pre>
-CREATE FUNCTION `f_memoria`(<small>vMemoria</small> tinyint) 
-RETURNS varchar(27) CHARSET utf8
-BEGIN
-declare <small>vRetorno</small> varchar(27) default "";
-CASE <small>vMemoria</small>
-when <small>1</small> then set <small>vRetorno</small> = <small>'Boa'</small>;
-when <small>2</small> then set <small>vRetorno</small> = <small>'Moderada'</small>;
-when <small>3</small> then set <small>vRetorno</small> = <small>'Decaindo'</small>;
-when <small>4</small> then set <small>vRetorno</small> = <small>'Esquecimento'</small>;
-when <small>5</small> then set <small>vRetorno</small> = <small>'Vaga Lembrança'</small>;
-else set <small>vRetorno</small> = <small>'Ainda não começou'</small>;
-end case;
-RETURN <small>vRetorno</small>;
-END
+...
+    CREATE FUNCTION `f_memoria`(<small>vMemoria</small> tinyint) 
+    RETURNS varchar(27) CHARSET utf8
+    BEGIN
+    declare <small>vRetorno</small> varchar(27) default "";
+    CASE <small>vMemoria</small>
+    when <small>1</small> then set <small>vRetorno</small> = <small>'Boa'</small>;
+    when <small>2</small> then set <small>vRetorno</small> = <small>'Moderada'</small>;
+    when <small>3</small> then set <small>vRetorno</small> = <small>'Decaindo'</small>;
+    when <small>4</small> then set <small>vRetorno</small> = <small>'Esquecimento'</small>;
+    when <small>5</small> then set <small>vRetorno</small> = <small>'Vaga Lembrança'</small>;
+    else set <small>vRetorno</small> = <small>'Ainda não começou'</small>;
+    end case;
+    RETURN <small>vRetorno</small>;
+    END $$
+
+<small>utilizando</small>
+    SELECT <small>COLUNA, f_memoria(COLUNA1)</small> FROM <small>tabela</small>;
                         </pre>
                     </code>
 
                 </details>
+                <p>Gerando números aleatórios.</p>
+                <code>
+                    <pre>
+    CREATE FUNCION <small>`num_aleatorio`</small>(<small>min</small> int, <small>max</small> int)
+    RETURNS INT
+    BEGIN
+        DECLARE <small>vRetorno</small> INT;
+        SELECT FLOOR((<strong>RAND</strong>() * (<small>max</small> - <small>min</small> + 1))+ <small>min</small>) INTO <small>vRetorno</small>;
+        RETURN <small>vRetorno</small>;
+    END
+                    </pre>
+                </code>
+
+
+
             </div>
 
         </section>
