@@ -469,6 +469,36 @@ CALL <small>produto_parametro</small>( <small>'produto'</small>, <small>9.99</sm
                 </code>
             </details>
 
+            <p>Retornando mais de um campo e <strong>concatenando</strong> resposta.</p>
+
+            <details>
+                <summary>Modelo pratico</summary>
+                <code>
+                    <pre>
+    CREATE PROCEDURE <small>`retorno_cursor`</small> <small>()</small>
+    BENGIN
+        DECLARE <small>limite_cursor</small> INT DEFAULT <small>0</small>;
+        DECLARE <small>vNome, vPlataforma</small> VARCHAR(45);
+        DECLARE <small>vNivel, vMemoria</small> TINYINT;
+        DECLARE <small>c</small> CURSOR FOR SELECT <small>COLUNA, COLUNA1, COLUNA2, COLUNA3</small> FROM <small>tabela</small>;
+
+        DECLARE CONTINUE HANDLER FOR NOT FOUND SET <small>limite_cursor</small>= <small>1</small>;
+        OPEN <small>c</small>;
+        WHILE <small>limite_cursor</small> = 0
+        DO
+            FETCH <small>c</small> INTO <small>vNome, vPlataforma, vNivel, vMemoria</small>;
+            IF <small>limite_cursor</small> = <small>0</small> then
+            SELECT concat(<small>vNome, '-', vPlataforma, 'NV: ', vNivel, 'Memoria: ', vMemoria</small>);
+            END IF;
+        END WHILE;
+        CLOSE <small>c</small>;
+
+        END $$
+                    </pre>
+                </code>
+            </details>
+
+
             </div>
 
         </section>
