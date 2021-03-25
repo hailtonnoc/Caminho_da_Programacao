@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Heroku</title>
+</head>
+<body>
+    <header>
+        <h1>Heroku</h1>
+    </header>
+    <section>
+        <div>
+            <h2>Projetos</h2>
+            <ol>
+                <li>Create New App 🌐</li>
+                <li>Acessar o Deploy do projeto</li>
+                <ol>
+                    <li>Escolher metodo Heroku Git</li>
+                </ol>
+                <li><strong>No terminal do projeto</strong>🖥️</li>
+                <ol>
+                    <li><code>heroku login</code></li>
+                    <li><code>git remote -v </code> <small>(visualizar projeto git)</small></li>
+                    <li><code>heroku git:remote -a <small>nome_projeto  </small></code> <small>(vincular projeto ao heroku)</small></li>
+                    <li>Certifique que o arquivo <strong><abbr title="web: node index.js">Procfile</abbr></strong> foi criado</li>
+                    <li><code>git push heroku main</code> <small>(Deploy finalizado)</small></li>
+                    <br>
+                </ol>
+                <li>Resourses e adicionar o add-on do banco de dados 🌐</li>
+                <li>Pegando credenciais do banco 🖥️</li>
+                <ol>
+                    <li><code>heroku config --app <small>nome_projeto</small></code>
+                    <br>
+                    Entendendo resposta: <br>
+                    <code>CLEARDB_DATABASE_URL => mysql://<div class="cred" id="usuario">adffdadf2341</div>:<div class="cred" id="senha">adf4234</div>@<div class="cred" id="host">us-cdbr-east.cleardb.com</div>/<div class="cred" id="nomebd">heroku_db963c3h18j108</div>?reconnect=true</code></li>
+                </ol>
+            </ol>
+        </div>
+        
+
+    </section>
+    
+</body>
+</html>

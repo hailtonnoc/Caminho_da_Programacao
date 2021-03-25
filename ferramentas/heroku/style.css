@@ -1,0 +1,36 @@
+body
+{
+    background-color: #79589f;
+    color: white;
+}
+
+code
+{
+    color: greenyellow;
+    font-size: 1.5em;
+}
+
+.cred
+{
+    display: inline-block;
+}
+
+#usuario
+{
+    color: red;
+}
+
+#senha
+{
+    color: yellow;
+}
+
+#host
+{
+    color: orange;
+}
+
+#nomebd
+{
+    color: blue;
+}
