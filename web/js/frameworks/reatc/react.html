@@ -9,11 +9,12 @@
 </head>
 <body>
     <header>
-        <img class="react-logo" src="./../../../../XXXMATERIAISXXX/IMAGENS/eact-icon-174d1b3209c3edf6.png" alt="react">
-        <h1>React</h1>
+        
+        <h1><img class="react-logo" src="./../../../../XXXMATERIAISXXX/IMAGENS/eact-icon-174d1b3209c3edf6.png" alt="react">React</h1>
     </header>
     <main>
         <div class="sobre">
+            <h2>react:</h2>
             <h3>Livraria</h3>
             <p>Somente interface <strong>react</strong>. <strong>React</strong> seria o ecossistema.</p>
         </div>
@@ -43,42 +44,43 @@
 
         <div class="componentes">
             <h2>Formatando pagina</h2>
-            <p>Dentro de cada função o <strong>JSX</strong> retorna uma árvore de renderização. <br>
+            <p>Dentro de cada função o <strong><abbr title="Extensão do JavaScript">JSX</abbr></strong> retorna uma árvore de renderização. <br>
             Assim como não existe árvore com dois troncos não existe renderização de objetos com 2 entradas, é necessário englobar para que devolva um elemento.</p>
 
             <h2>Criando outros componentes</h2>
             <ol>
-                <li>Para criar outros elementos crie uma nova pasta na pasta <strong>src</strong>a fim de guardar os novos elementos.</li>
+                <li>Para criar outros elementos crie uma nova pasta na pasta <strong>src</strong> a fim de guardar os novos elementos.</li>
                 <li>Crie um arquivo dentro da pasta, o arquivo pode ter a extensão .js ou .jsx <br>
                 Sua estrutura básica deve ser; <br>
             <code>
                 <pre>
     import React <s>, { Component }</s> from "react";
 
-    export default class <small>nomeClasse</small> extends Component 
+    class <small>nomeClasse</small> extends Component 
     {
         render() 
         {
             return(
-                    &lt;section&gt;
-                    <small>conteudo elemento</small>
-                    &lt;/section&gt;
+                &lt;section&gt;
+                <small>conteúdo elemento</small>
+                &lt;/section&gt;
                 );
         }
     }
+
+    export default <small>nomeClasse</small>;
                 </pre>
             </code></li>
                 <li>Referencie o caminho no arquivo principal "<strong>app.js</strong>". <br>
                     Importe a classe no inicio do arquivo; <br>
-                    <code><pre>import <small>nomeClasse</small> from <small>"./components/arquivo"</small></pre></code> <br>
+                    <code><pre>import <small>nomeClasse</small> from <small>"./pasta/arquivo"</small></pre></code> <br>
                 </li>
                 <li>
                     E dentro do <strong>return()</strong> principal referencie a classe com se fosse uma tag; <br>
                     <code><pre>&lt;nomeClasse/&gt;</pre></code>
                 </li>
-
-
             </ol>
+            <p>Como a intenção do react é reaproveitar componentes é possível renderizar elementos em outros componentes, basta realizar o <strong>import</strong> e depois referenciar a classe na renderização do elemento.</p>
 
 
         </div>
