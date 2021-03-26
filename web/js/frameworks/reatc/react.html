@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>React</title>
 </head>
 <body>
     <header>
+        <img class="react-logo" src="./../../../../XXXMATERIAISXXX/IMAGENS/eact-icon-174d1b3209c3edf6.png" alt="react">
         <h1>React</h1>
     </header>
     <main>
@@ -36,6 +38,34 @@
                 <li>reportWebVitals.js   &lt;--- retirar do arquivo index.js </li>
             </ul>
         </p>
+        </div>
+        <div>
+            <h2>Formatando pagina</h2>
+            <p>Dentro de cada função o <strong>JSX</strong> retorna uma árvore de renderização. <br>
+            Assim como não existe árvore com dois troncos não existe renderização de objetos com 2 entradas, é necessário englobar para que devolva um elemento.</p>
+
+            <h2>Criando outros componentes</h2>
+            <ol>
+                <li>Para criar outros elementos crie uma nova pasta na pasta <strong>src</strong>a fim de guardar os novos elementos.</li>
+                <li>Crie um arquivo dentro da pasta, o arquivo pode ter a extensão .js ou .jsx <br>
+                Sua estrutura básica deve ser; <br>
+            <code>
+                <pre>
+    import React, { Component } from "react";
+
+    export default class <small>nomeClasse</small> extends Component {
+        render() {
+            return(
+                    &lt;h3&gt;Titulo&lt;/h3&gt;
+            );
+        }
+    }
+                </pre>
+            </code></li>
+
+            </ol>
+
+
         </div>
     </main>
     

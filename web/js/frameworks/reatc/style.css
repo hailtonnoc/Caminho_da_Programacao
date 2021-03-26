@@ -1,0 +1,105 @@
+body 
+{
+    background: linear-gradient( rgb(0, 0, 0),rgba(19, 56, 68, 0.87));
+    color: white;
+    font-size: 1.2em;
+    margin: 1.8%;
+}
+
+h1
+{
+    font: normal 63px times; 
+    text-shadow: rgb(24, 116, 158) 9px 9px 4.5px;
+}
+
+h2
+{
+    font: normal 2.7em times;
+    text-shadow: rgb(24, 127, 158) 6px 6px 3.6px;
+}
+
+h3
+{
+    font-size: normal 45px times; 
+    text-shadow: rgb(24, 131, 158) 3px 3px 1.8px;
+}
+
+pre 
+{
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: top;
+    padding: 1.8%;
+    border: solid rgb(32, 181, 218) 1px;
+}
+
+.enfase
+{
+    font-size: 1.18em;
+}
+.aenfase:hover
+{
+    font-size: 1.08em;
+}
+
+#moldeclass, #objeto, #objetof, #inseguranca
+{
+    background: rgba(245, 245, 245, 0.493);
+    width: 63%;
+    font-size: 1.63em;
+    border-radius: 6px;
+    box-shadow: rgb(27, 90, 109) 6px 6px 3px ;
+}
+
+div#interagir {background: black;
+font: normal 27px fantasy;
+color: white;
+width: 270px;
+height: 270px;
+line-height: 270px;
+text-align: center;}
+
+.funci
+{
+    border: 3px solid rgb(138, 220, 231);
+}
+
+.stable
+{
+    border: solid rgb(32, 196, 218) 3px;
+}
+
+div
+{
+    border: solid rgb(27, 90, 109) 2.7px;
+}
+
+small
+{
+    font-size: 0.72em;
+}
+
+summary
+{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-shadow: rgb(24, 138, 158) 9px 9px 4.5px;
+}
+
+.react-logo 
+{
+    animation: App-logo-spin infinite 3s cubic-bezier(0.99, 0.6, 0.06, 0.1);
+}
+
+
+@keyframes App-logo-spin 
+{
+    from 
+    {
+        transform: rotate(0deg);
+    }
+    to 
+    {
+        transform: rotate(360deg);
+    }
+}
