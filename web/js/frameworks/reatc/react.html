@@ -53,21 +53,38 @@
                 <pre>
     import React, { Component } from "react";
 
-    export default class <small>nomeClasse</small> extends Component {
-        render() {
+    export default class <small>nomeClasse</small> extends Component 
+    {
+        render() 
+        {
             return(
-                    &lt;h3&gt;Titulo&lt;/h3&gt;
-            );
+                    &lt;section&gt;
+                    <small>conteudo elemento</small>
+                    &lt;/section&gt;
+                );
         }
     }
                 </pre>
             </code></li>
+                <li>Referencie o caminho no arquivo principal "<strong>app.js</strong>". <br>
+                    Importe a classe no inicio do arquivo; <br>
+                    <code><pre>import <small>nomeClasse</small> from <small>"./components/arquivo"</small></pre></code> <br>
+                </li>
+                <li>
+                    E dentro do <strong>return()</strong> principal referencie a classe com se fosse uma tag; <br>
+                    <code><pre>&lt;nomeClasse/&gt;</pre></code>
+                </li>
+
 
             </ol>
 
 
         </div>
     </main>
+
+
+    <br>
+    <a href="../../jsindex.html"><img src="../../../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a>
     
 </body>
 </html>
