@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>React</title>
 </head>
@@ -85,7 +87,48 @@
 
         </div>
 
-        <div>
+        <div class="EntendendoJSX">
+            <h2>Trabalhando JSX</h2>
+            <p>Por ser uma extensão do JS o JSX além de poder usar elementos do HTML5 deve comportar o JS, para isso dentro do <strong>render()</strong> basta apresentar <strong>{ <small>script</small> }</strong></p>
+            <details>
+                <summary>Compatibilidade de funções</summary>
+                <p>Nem todas as função são conveniente no <strong>react</strong> por exemplo usar um <code>forEach</code> para criar elementos não serve uma vez que esses elementos ficariam desordenados ao invés disso o método <code>Array</code> devolvendo um elemento ordenado por um <code>.map</code> performa perfeitamente a necessidade. <br> Exemplo;</p>
+                <code>
+                    <pre>
+    return(
+        &lt;ul&gt;
+            {Array.of("item_1","item_2"...)<strong>.map</strong>((<small>item</small>, index) =>
+            {
+                return(
+                    &lt;li <strong>key</strong>= {index}&gt;
+                        &lt;div&gt;
+                            {<small>item</small>}
+                        &lt;div&gt;
+                    &lt;/l1&gt;
+                );
+            }
+
+            )
+            }
+        &lt;/ul&gt;
+    );
+                    </pre>
+                </code>
+                <p>Desta forma eu tenho uma lista, previamente estruturada, e a partir dessa eu posso ter outras funções. <br> No exemplo acima um simples retorno de &lt;li&gt;. <br>
+                Importante se atentar que os itens da lista devem conter uma <code>key</code> como atributo, permitindo ao JSX identificar os marcadores de renderização.</p>
+            </details>
+
+        </div>
+
+        <div class="estilizando">
+            <h2>Estilizando react 😎</h2>
+            <p>A estilização também se da através do <strong>CSS</strong>(arquivo). <br>
+            Declare a estilização na pagina do componente através do; <pre>import "<small>./arquivo.css</small>"</pre>
+            
+            <br>
+            Ao declarar classes no JSX substitua <code>class="<small>nome_class</small>"</code> <br>
+            por <code><strong>className</strong>="<small>nome_class</small>"</code> uma vez que class é uma palavra reservada pelo JS para criação de classes.
+            </p>
 
         </div>
     </main>

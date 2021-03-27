@@ -1,6 +1,6 @@
 body 
 {
-    background: linear-gradient( rgb(0, 0, 0),rgba(19, 56, 68, 0.87));
+    background: linear-gradient( rgba(13, 37, 46, 0.87), rgb(0, 0, 0));
     color: white;
     font-size: 1.2em;
     margin: 1.8%;
@@ -24,6 +24,13 @@ h3
     text-shadow: rgb(24, 131, 158) 3px 3px 1.8px;
 }
 
+code
+{
+    font-family: 'Share Tech Mono', monospace;
+    color: rgb(32, 181, 218);
+    font-size: 1.08em;
+}
+
 pre 
 {
     display: inline-block;
@@ -31,6 +38,9 @@ pre
     vertical-align: top;
     padding: 1.8%;
     border: solid rgb(32, 181, 218) 1px;
+    font-family: 'Share Tech Mono', monospace;
+    color: rgb(32, 181, 218);
+    font-size: 1.08em;
 }
 
 .enfase
@@ -81,7 +91,7 @@ small
 
 summary
 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 900;
     text-shadow: rgb(24, 138, 158) 9px 9px 4.5px;
 }
