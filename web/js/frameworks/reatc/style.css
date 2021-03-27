@@ -20,7 +20,7 @@ h2
 
 h3
 {
-    font-size: normal 45px times; 
+    font: normal 1.8em times; 
     text-shadow: rgb(24, 131, 158) 3px 3px 1.8px;
 }
 
@@ -81,7 +81,7 @@ text-align: center;}
 
 div
 {
-    border: solid rgb(27, 90, 109) 2.7px;
+    border: solid rgba(27, 90, 109, 0.301) 2.7px;
 }
 
 small
@@ -91,7 +91,7 @@ small
 
 summary
 {
-    font-size: 1.2em;
+    font-size: 1.8em;
     font-weight: 900;
     text-shadow: rgb(24, 138, 158) 9px 9px 4.5px;
 }

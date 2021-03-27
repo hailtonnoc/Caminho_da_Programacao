@@ -131,6 +131,48 @@
             </p>
 
         </div>
+
+        <div class="eventos">
+            <h2>Comportamentos de evento</h2>
+            <p>Para inserir um evendo dentro da tag declare o <code>onChange=<small>{this.handleAção}</small></code>. <br>
+            O <code>handleAção</code> deve ser declarado como uma função dentro da classe e antes do <strong>render()</strong> como o exemplo abaixo;
+            <pre>
+    class Exemplo extends Component
+    {
+        handleAcao(<small>evento</small>)
+        {
+            console.log(<small>evento.target.value</small>)
+        }
+
+        render()
+        {...
+    }
+            </pre>
+
+            <details>
+                <summary>bind</summary>
+                No JS nem sempre o <code>this</code> pode ser associado a um objeto pois o mesmo é dinâmico, para isso usamos o associador <code>bind(<small>item associado</small>)</code>. Exemplo;<br>
+                <pre>
+                    class <small>Exemplo</small>{
+                        constructor(){
+                this.msg = <small>"exemplo"</small>
+                        }
+                
+                        entrega(){
+                console.log(this.msg)
+                        }
+                    }
+                    let ex = new <small>Exemplo</small>
+                    
+                    let evento = ex.entrega &leftarrow;
+                </pre> <br>
+                Podemos ver marcado com a seta o momento em que o <code>this</code> é reatribuido, para evitar a reatribuição;
+                <pre>let evento = ex.entrega.bind(ex)</pre> <br>
+                Construtores dentro de <code>Component</code> devem conter o <code>super();</code> para referenciar ao construtor pai já que ela esta sendo <strong>extend</strong>ida de outro componente.
+            </details>
+            
+            </p>
+        </div>
     </main>
 
 
