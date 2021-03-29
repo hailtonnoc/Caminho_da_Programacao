@@ -46,7 +46,7 @@
 
         <div class="componentes">
             <h2>Formatando pagina</h2>
-            <p>Dentro de cada função o <strong><abbr title="Extensão do JavaScript">JSX</abbr></strong> retorna uma árvore de renderização. <br>
+            <p>Dentro de cada componente o <strong><abbr title="Extensão do JavaScript">JSX</abbr></strong> retorna uma árvore de <abbr title="render() {...}">render</abbr>ização. <br>
             Assim como não existe árvore com dois troncos não existe renderização de objetos com 2 entradas, é necessário englobar para que devolva um elemento.</p>
 
             <h2>Criando outros componentes</h2>
@@ -83,6 +83,25 @@
                 </li>
             </ol>
             <p>Como a intenção do react é reaproveitar componentes é possível renderizar elementos em outros componentes, basta realizar o <strong>import</strong> e depois referenciar a classe na renderização do elemento.</p>
+
+            <details>
+                <summary>Props</summary>
+                <p>Os <strong>Props</strong> são os parâmetros que são passados para um componentes. <br>
+                Uma função recebe parâmetros assim como um componente recebe props.
+                <br>
+                Exemplo;</p>
+                <pre>
+    class Exemplo extends Component
+    {
+        render()
+        {
+            return(
+                &gt;p&lt;this.props.text&gt;/p&lt;
+            )
+        }
+    }
+                </pre>
+            </details>
 
 
         </div>
