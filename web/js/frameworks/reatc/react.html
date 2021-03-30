@@ -84,9 +84,11 @@
             </ol>
             <p>Como a intenção do react é reaproveitar componentes é possível renderizar elementos em outros componentes, basta realizar o <strong>import</strong> e depois referenciar a classe na renderização do elemento.</p>
 
-            <details>
+            <h3>This.</h3>
+
+            <details class="props">
                 <summary>Props</summary>
-                <p>Os <strong>Props</strong> são os parâmetros que são passados para um componentes. <br>
+                <p>Os <strong>Props</strong> são os parâmetros que são passados para componentes. <br>
                 Uma função recebe parâmetros assim como um componente recebe props.
                 <br>
                 Exemplo;</p>
@@ -96,11 +98,63 @@
         render()
         {
             return(
-                &gt;p&lt;this.props.text&gt;/p&lt;
+                &lt;p&gt;this.props.<strong>text</strong>&lt;/p&gt;
+            )
+        }
+    }
+
+    class App extends Component
+    {
+        render()
+        {
+            return(
+                &lt;Exemplo <strong>text</strong>="texto que sera visto"/&gt;
             )
         }
     }
                 </pre>
+            </details>
+
+            <br>
+
+            <details class="state">
+                <summary>State</summary>
+                <p>O <code>state</code> é um objeto onde armazenamos os estados que serão usados pelo componente. O state só pode ser utilizado pelo seu componente pois o mesmo é privado.<br>
+                Criação:
+                <pre>
+    constuctor(props)
+    {
+        super(props);
+
+        this.state = {}
+    }
+
+                </pre>
+            <br>
+            <h3>Use States</h3>
+                <pre>
+    import { useState } from 'react';
+
+    function Contador() {
+        const [cont, setCont] = useState(0);
+
+        function addCont() {
+            setCont(cont ++);
+        }
+
+    return (
+        &lt;div&gt;
+        &lt;div&gt;{cont}&lt;/div&gt;
+        &lt;button onClick={addCont}&gt;adicionar&lt;/button&gt;
+        &lt;/div&gt;
+    )
+    }
+
+    function Pagina() {return &lt;Contador /&gt;}
+
+                </pre>
+                </p>
+
             </details>
 
 
