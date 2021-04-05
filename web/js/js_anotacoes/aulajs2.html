@@ -11,15 +11,27 @@
     <p>Trabalhar com modulos permite uma melhor redistribuição das classes em arquivos proprios. Tornando o codigo mais padronizado e faciliando a manutenção. <small>Nomeie o arquivo com letra maiuscula para indicar classe.</small></p>
 
     <h2>Comunicação entre Classes</h2>
-    <p>Para que a classe possa ser acessada de fora do arquivo utilize <strong>export</strong><small> class</small></p>
+    <p>Para que a classe possa ser acessada de fora do arquivo utilize <strong>export</strong><small> class ou function()</small></p>
     <p>Para utilizar a classe defina o <strong>import</strong>{Nome<small>Classe</small>} <strong>from</strong> "../nodes/ClasseSeparada1.js"</p>
     <code>
         <pre>
             <strong>import</strong>{Classe} <strong>from</strong> "./ArquivoClasse.js"
         </pre>
     </code>
-    <h3>Integração entre arquivos</h3>
+
+    <h2>Integração entre arquivos</h2>
     <p>Para utilizar os comandos em um arquivo o mesmo precisa ser definido como um modulo.</p>
+    <h3>No html</h3>
+    <p>Declare a &lt;script&gt; e como atributo da tag insira o <em>type="module"</em></p>
+    <code>
+        <pre>
+    &lt;script <em>type="module"</em>&gt;
+    ...codigo
+    &lt;/script&gt;
+        </pre>
+    </code>
+
+    <h3>No package.json</h3>
     <p>Em então no terminal do <strong>node</strong> dentro da pasta que contenha o arquivo<strong>.js</strong> que acessara as classes <em>insira o comando para criar o package</em><strong>.json</strong>.</p>
     <code><strong>npm</strong> init</code>
     <code>
@@ -41,6 +53,7 @@
     </code>
     <p>Retorne no arquivo criado package.json <br>Então após <code>"license": "ISC"</code> <sTRONg>,</sTRONg></p>
     <P>Adicione <code>"type": "module"</code></P>
+
     <h3>Resultado final</h3>
     <code>
         <pre>
@@ -57,6 +70,7 @@
             
         </pre>
     </code>
+
     <h3>Atributos elasticos</h3>
     <p>Configurando atributos para serem alteradas de forma geral pela classe ao inves de maneira individual por objeto criado em classe.</p>
     <p>Para isso Adicione a função <strong><code class="funci">static</code></strong> antes do <strong>atributo</strong>.</p>
