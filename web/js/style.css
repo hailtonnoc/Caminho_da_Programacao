@@ -22,6 +22,17 @@ body
     background: repeating-linear-gradient(gold,#5f4f40);
 }
 
+.painel
+{
+    font-size: 1.8em;
+    font-weight: 900;
+    border: none;
+    border-radius: 3px;
+    padding: 3px;
+    background-color: black;
+    color: gold;
+}
+
 .menu-drop
 {
     display: inline-block;
@@ -30,6 +41,7 @@ body
 .drop-content{
     display: none;
     background-color: goldenrod;
+    border-radius: 3px;
     position: absolute;
     z-index: 1;
 }
