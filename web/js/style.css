@@ -34,13 +34,13 @@ body
     z-index: 1;
 }
 .drop-content a{
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 8px 10px;
     text-decoration: none;
     display: block;
 }
 .drop-content a:hover{
-    background-color: #5f4f40;
+    background: linear-gradient(gold, #5f4f40) ;
 }
 .menu-drop:hover .drop-content{
     display: block;
@@ -49,7 +49,7 @@ body
     background-color: goldenrod;
 }
 
-/* nav
+nav
 {
     position: absolute;
     right: 1%;
@@ -73,8 +73,8 @@ nav a
 
 nav a:hover
 {
-    font-size: 21px;
-} */
+    font-size: 1.2em;
+}
 
 main
 {
