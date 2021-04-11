@@ -34,12 +34,36 @@
             <h3>map</h3>
             <p>Em cada item de uma lista é aplicado uma ação. E o map devolvera uma nova lista ao invés de alterar. <br>
             Função <strong>callback</strong>
+            <code>
+                <pre>
+    const <small>nomeArrayRes</small> = <small>fonteDados</small>.map(<small>fonteDados</small> =&gt;{
+        return <small>fonteDados</small>.caracteristica + ex
+    });
+    console.log(<small>nomeArrayRes</small>)
+                </pre>
+            </code>
             </p>
 
             <h3>filter</h3>
+            <p>Funcionalidade para filtrar os registros. <br>
+                <code>
+                    <pre>
+    const <small>nome</small> = <small>fonteDados</small>.filter(<small>fonteDados</small> =&gt;{
+        return <small>fonteDados</small>.caracteristica &gt; 108
+    });
+    console.log(<small>nome</small>)
+                    </pre>
+                </code>
+            </p>
 
             <h3>reduce</h3>
-            <p>Tira uma informação de uma lista(varios itens).</p>
+            <p>Tira uma informação de uma lista(varios itens).
+                <code>
+                    <pre>
+    const <small>qlq</small> = <small>fDados</small>.reduce((<small>acumul, item</small>)=&gt; <small>acumul</small> + <small>item.</small>caractN, <abbr title="numero inical para acumulador">0</abbr>)
+                    </pre>
+                </code>
+            </p>
 
         </main>
 
