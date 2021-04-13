@@ -76,8 +76,11 @@
                         </pre>
                     </code>
                 </details>
+            </div>
 
-
+            <div class="preparandoApp">
+                <h2>Arquivo APP</h2>
+                <p>Este fica responsavel por mediar as rotas contendo arquivos de conexão.</p>
                 <h3>Definindo Express</h3>
                 <p>Chamando módulo do <strong>express</strong>, defina uma variavel para melhorar a visualização do codigo. O mesmo deve ser requerido.<br> Após defina também sua <abbr title="'app'">instância</abbr>.</p>
                 <code>
@@ -101,39 +104,6 @@
                     </pre>
                 </code>
                 
-            <div class="chamadas">
-                <h3 id="requisicoes">Requisições</h3>
-                <p>Podemos declarar no index principal mas por via de organização do código é prudente considerar colocar o comando em um arquivo separado.</p>
-                <small>Lembrar sempre de referenciar o comando no arquivo principal.</small>
-                <code><pre>app.use('/caminho', função(requisicao, resposta){})</pre></code>
-                <p>Em um novo arquivo:</p>
-                <code>
-                    <pre>
-    const roteador = require('express').Router()
-
-    roteador.use('/', (requisicao, resposta) =>
-    {
-        resposta.send('connected')
-    })
-
-    module.exports = roteador
-                    </pre>
-                </code>
-
-                <h3>Verbos HTTP</h3>
-                <p>Retornar dados <code><strong>.get</strong></code>('<small>/local</small>', função)</p>
-                <p>Inserir dados no servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
-                <p>Alterar dados no servidor<code><strong>.path</strong></code>('<small>/local</small>', função)</p>
-                <p>Apagar dados no servidor<code><strong>.delete</strong></code>('<small>/local</small>', função)</p>
-
-
-                <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
-    
-            </div>
-
-
-
-
                 <h3>Definindo Body parser</h3>
                 <p>O mesmo sera usado como um plugin, então após a requisição usar ele no <code>app</code> usando a chamada do <code>.json()</code> como função, pois sera o formato de trabalho.</p>
                 <code>
@@ -146,7 +116,10 @@
     app.<strong>use(bodyParser.json())</strong> <small>&lt;- entrada json</small>
                     </pre>
                 </code>
+            </div>
 
+            <div class="preparandoMySQLconnection">
+                <h2>Arquivo de Conexão</h2>
                 <h3>Definindo MySQL</h3>
                 <h4>Conectando com o Banco de Dados</h4>
                 <p>Defina um arquivo para o BD para manter as boas praticas. Nele importe o modulo do MySQL e em seguida passe os dados da conexão através do <strong>createConnection()</strong> ou de um <strong>createPool()</strong>.</p>
@@ -183,38 +156,7 @@
                     </pre>
                 </code>
                 <p>Importante notar que as credenciais do banco de dados devem ser passadas por instâncias protegidas, pratica passe sempre variáveis de ambiente. </p>
-
-                <h3>Manipulando e Consultado BD</h3>
-                <p>Após definir todos os arquivos e conectar todos ao <strong>app</strong>, é hora de configurar os arquivos que serão responsáveis pelas paginas da api. Se trata de um arquivo com <a href="#requisicoes">Requisições</a> agora de maneira estruturada criando a funcionalidade da api.</p>
-                <code>
-                    <pre>
-const express = require('express')
-const router = express.Router()
-const mysql = <strong>require('../mysql').pool</strong>;
-    
-router.get('/:id_produto', (req, res, next) => 
-{
-    mysql.getConnection((error, conn) => {
-        conn.query(
-            'SELECT * FROM produtos WHERE id_produto = ?;',
-            [req.params.id_produto],
-            (error, resultado, fields) => 
-            {
-                return res.status(200).send({response: resultado})
-            }
-            )
-    })
-})
-module.exports = router
-                    </pre>
-                </code>
-                <p>Explicando o código, inicialmente declaramos todas as dependências que por via didática também é a ordem que usei para criar o projeto de exemplo. <br>
-                Inicialmente pode se notar a clara estrutura de requisição, definindo caminho e função em um verbo ligado a estrutura. <br>
-            Dentro da Arrow function temos então uma conexão e a mesma recebe parâmetros para a função, uma responsável por retornar um erro (não tratado para simplificar o exemplo) e outra que fornece uma conexão que abrigara nosso comando <strong>query</strong>. <br>
-        Note que após declarar o comando query declaramos em um array o que deve conter no conteúdo "?". <br>
-    Por fim declaramos uma nova arrow function, com a missão de responder a solicitação recebida.</p>
-
-
+                
                 <details class="sequelize">
                     <summary>Sequelize (complemento)</summary>
                     <h4>Comunicando com Banco de dados</summary>
@@ -292,9 +234,73 @@ module.exports = router
                 </details>
             </div>
 
+            <div class="chamadas">
+                <h2 id="requisicoes">Requisições</h2>
+                <p>Podemos declarar no index principal mas por via de organização do código é prudente considerar colocar o comando em um arquivo separado.</p>
+                <small>Lembrar sempre de referenciar o comando no arquivo principal.</small>
+                <code><pre>app.use('/caminho', função(requisicao, resposta){})</pre></code>
+                <p>Em um novo arquivo:</p>
+                <code>
+                    <pre>
+    const roteador = require('express').Router()
+
+    roteador.use('/', (requisicao, resposta) =>
+    {
+        resposta.send('connected')
+    })
+
+    module.exports = roteador
+                    </pre>
+                </code>
+
+                <h3>Verbos HTTP</h3>
+                <p>Retornar dados <code><strong>.get</strong></code>('<small>/local</small>', função)</p>
+                <p>Inserir dados no servidor<code><strong>.post</strong></code>('<small>/local</small>', função)</p>
+                <p>Alterar dados no servidor<code><strong>.path</strong></code>('<small>/local</small>', função)</p>
+                <p>Apagar dados no servidor<code><strong>.delete</strong></code>('<small>/local</small>', função)</p>
+
+
+                <p><code><strong>.send</strong></code>('<small>conteudo</small>') envia dados.</p>
+    
+            </div>
+
+            <div class="chamadaQuery">
+                <h2>Arquivo de Query</h2>
+                <p>Comandos enviados para banco de dados em plataforma Query</p>
+                <h3>Manipulando e Consultado BD</h3>
+                <p>Após definir todos os arquivos e conectar todos ao <strong>app</strong>, é hora de configurar os arquivos que serão responsáveis pelas paginas da api. Se trata de um arquivo com <a href="#requisicoes">Requisições</a> agora de maneira estruturada criando a funcionalidade da api.</p>
+                <code>
+                    <pre>
+const express = require('express')
+const router = express.Router()
+const mysql = <strong>require('../mysql').pool</strong>;
+    
+router.get('/:id_produto', (req, res, next) => 
+{
+    mysql.getConnection((error, conn) => {
+        conn.query(
+            'SELECT * FROM produtos WHERE id_produto = ?;',
+            [req.params.id_produto],
+            (error, resultado, fields) => 
+            {
+                return res.status(200).send(resultado)
+            }
+            )
+    })
+})
+module.exports = router
+                    </pre>
+                </code>
+                <p>Explicando o código, inicialmente declaramos todas as dependências que por via didática também é a ordem que usei para criar o projeto de exemplo. <br>
+                Inicialmente pode se notar a clara estrutura de requisição, definindo caminho e função em um verbo ligado a estrutura. <br>
+            Dentro da Arrow function temos então uma conexão e a mesma recebe parâmetros para a função, uma responsável por retornar um erro (não tratado para simplificar o exemplo) e outra que fornece uma conexão que abrigara nosso comando <strong>query</strong>. <br>
+        Note que após declarar o comando query declaramos em um array o que deve conter no conteúdo "?". <br>
+    Por fim declaramos uma nova arrow function, com a missão de responder a solicitação recebida.</p>
+
+
+            </div>
 
         </section>
-
 
 
         <section class="ajustando_json">
