@@ -116,6 +116,27 @@
     app.<strong>use(bodyParser.json())</strong> <small>&lt;- entrada json</small>
                     </pre>
                 </code>
+
+                <h3>Definindo Cabeçalhos / Tratando erros CORS</h3>
+                <p>
+                    Essas configurações dizem respeito as permissões que são concedidas ao <strong>client</strong> permitindo definições como; tipos de requisições aceitas, formado aceito, autorizações de acesso...
+
+                    <code>
+                        <pre>
+app.use((req, res, next)=>
+{
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Header', 'Origin, X-Requrested-With, Content-Type, Accept, Authorization');
+    
+    if (req.method === 'OPITONS') {
+        res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, PATCH, DELETE');
+        return res.status(200).send({});
+    }
+    next();
+});
+                        </pre>
+                    </code>
+                </p>
             </div>
 
             <div class="preparandoMySQLconnection">
@@ -271,6 +292,30 @@
                 <p>Após definir todos os arquivos e conectar todos ao <strong>app</strong>, é hora de configurar os arquivos que serão responsáveis pelas paginas da api. Se trata de um arquivo com <a href="#requisicoes">Requisições</a> agora de maneira estruturada criando a funcionalidade da api.</p>
                 <code>
                     <pre>
+    const express = require('express')
+    const router = express.Router()
+    const mysql = require('../mysql').pool;
+    
+    router.get('/', (req, res, next) =>
+    {
+        mysql.getConnection((error, conn)=>
+        {
+            conn.query(
+                'SELECT * FROM tabelax;',
+                (error, result, fields)=>
+                {
+                    if(error) {return res.status(500).send({error: error})}
+                    return res.status(200).send(result)
+                })
+        })
+    });
+    
+    module.exports = router
+                    </pre>
+                </code>
+                <details class="comparametros">
+                    <summary>Com parametros</summary>
+                    <pre>
 const express = require('express')
 const router = express.Router()
 const mysql = <strong>require('../mysql').pool</strong>;
@@ -290,7 +335,8 @@ router.get('/:id_produto', (req, res, next) =>
 })
 module.exports = router
                     </pre>
-                </code>
+                </details>
+
                 <p>Explicando o código, inicialmente declaramos todas as dependências que por via didática também é a ordem que usei para criar o projeto de exemplo. <br>
                 Inicialmente pode se notar a clara estrutura de requisição, definindo caminho e função em um verbo ligado a estrutura. <br>
             Dentro da Arrow function temos então uma conexão e a mesma recebe parâmetros para a função, uma responsável por retornar um erro (não tratado para simplificar o exemplo) e outra que fornece uma conexão que abrigara nosso comando <strong>query</strong>. <br>
