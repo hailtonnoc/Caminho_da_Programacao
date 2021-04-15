@@ -2,7 +2,17 @@ body
 {
     font-size: 1.18em;
     margin: 1%;
+    background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url(../XXXMATERIAISXXX/IMAGENS/cubos-brancos-seamless-design-pattern_1319-68.jpg) ;
 }
+
+h1, h2, h3, h4, div, p
+{
+    background-color: rgba(255, 255, 255, 0.363);
+    border-radius: 9px;
+    padding: 1.08%;
+}
+
+
 
 #fundamentalg
 {
