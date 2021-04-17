@@ -12,7 +12,9 @@
     </header>
     <main>
         <h2>Característica</h2>
-        <p>C# é um descendente segunda geração da linguagem <strong>C</strong>, sua proposta é ser uma solução simples para problemas. Esta linguagem é inteira orientada a objetos. </p>
+        <p>
+            C# é um descendente segunda geração da linguagem <strong>C</strong>, sua proposta é ser uma solução simples para problemas. Esta linguagem é inteira orientada a objetos.
+        </p>
 
         <div class="criando">
             <h2>Criando Projeto</h2>
@@ -31,98 +33,181 @@
             </p>
 
         </div>
-        <div class="dados">
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th><div align="center">TIPO</div></th>
-                        <th><div align="center">REPRESENTAÇÃO</div></th>
-                        <th><div align="center">RANGE</div></th>
-                        <th><div align="center">VALOR PADRÃO</div></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Bool</strong></td>
-                        <td><strong>Boolean</strong></td>                        
-                        <td><strong>True or False</strong></td>
-                        <td><strong>False</strong></td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Byte</strong></td>
-                        <td>8-bit unsigned</td>                        
-                        <td>Integer 0 to 255</td>
-                        <td>0</td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Char</strong></td>
-                        <td><strong>16-bit Unicode character</strong></td>                        
-                        <td><strong>U +0000 to U +ffff</strong></td>
-                        <td><strong>'\0'</strong></td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>decimal</strong></td>
-                        <td><strong>128-bit precise decimal values with 28-29 significant digits</strong></td>                        
-                        <td><strong>(-7.9 x 1028 to 7.9 x 1028) / 100 to 28</strong></td>
-                        <td>0.0M</td>                        
-                    </tr>
+
+        <section class="variaveis">
+            <h2>Declarando Variaveis</h2>
+            <p>
+                Para declarar uma variável basta informar o <strong>tipo</strong> seguido do <em>Nome</em> exemplo:
+                <code>
+                    <pre>
+    <strong>float</strong> <em>Quant</em> = 9.36 ;
+                    </pre>
+                </code>
+            </p>
+            <details class="dados">
+                <summary>Tipo de Dados</summary>
+                <table border="1">
+                    <thead>
                         <tr>
-                        <td><strong>double</strong></td>
-                        <td><strong>64-bit double-precision floating point type</strong></td>                        
-                        <td><strong>(+/-)5.0 x 10-324 to (+/-)1.7 x 10308</strong></td>
-                        <td>0.0D</td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Float</strong></td>
-                        <td><strong>32-bit single-precision floating point type</strong></td>                        
-                        <td><strong>-3.4 x 1038 to + 3.4 x 1038</strong></td>
-                        <td><strong>0.0F</strong></td>                        
-                    </tr>
-                    <tr>
-                        <td>Int</td>
-                        <td><strong>32-bit signed integer type</strong></td>                        
-                        <td><strong>-2,147,483,648 to 2,147,483,647</strong></td>
-                        <td>0</td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Long</strong></td>
-                        <td>64-bit signed integer type</td>                        
-                        <td>923,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
-                        <td>0L</td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Sbyte</strong></td>
-                        <td>8-bit signed integer type</td>                        
-                        <td>-128 to 127</td>
-                        <td>0</td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Short</strong></td>
-                        <td>16-bit signed integer type</td>                        
-                        <td>-32,768 to 32,767</td>
-                        <td>0</td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Uint</strong></td>
-                        <td>32-bit signed integer type</td>                        
-                        <td>0 to 4,294,967,295</td>
-                        <td>0</td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Ulong</strong></td>
-                        <td>64-bit signed integer type</td>                        
-                        <td>0 to 18,446,744,073,709,551,615</td>
-                        <td>0</td>                        
-                    </tr>
-                    <tr>
-                        <td><strong>Ushort</strong></td>
-                        <td>16-bit signed integer type</td>                        
-                        <td>0 to 65,535</td>
-                        <td>0</td>                        
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                            <th><div align="center">TIPO</div></th>
+                            <th><div align="center">REPRESENTAÇÃO</div></th>
+                            <th><div align="center">RANGE</div></th>
+                            <th><div align="center">VALOR PADRÃO</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Bool</strong></td>
+                            <td><strong>Boolean</strong></td>
+                            <td><strong>True or False</strong></td>
+                            <td><strong>False</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Byte</strong></td>
+                            <td>8-bit unsigned</td>
+                            <td>Integer 0 to 255</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Char</strong></td>
+                            <td><strong>16-bit Unicode character</strong></td>
+                            <td><strong>U +0000 to U +ffff</strong></td>
+                            <td><strong>'\0'</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>decimal</strong></td>
+                            <td><strong>128-bit precise decimal values with 28-29 significant digits</strong></td>
+                            <td><strong>(-7.9 x 1028 to 7.9 x 1028) / 100 to 28</strong></td>
+                            <td>0.<abbr title="Deve-se acrescentar a letra M no final">0M</abbr></td>
+                        </tr>
+                            <tr>
+                            <td><strong>double</strong></td>
+                            <td><strong>64-bit double-precision floating point type</strong></td>
+                            <td><strong>(+/-)5.0 x 10-324 to (+/-)1.7 x 10308</strong></td>
+                            <td>0.0D</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Float</strong></td>
+                            <td><strong>32-bit single-precision floating point type</strong></td>
+                            <td><strong>-3.4 x 1038 to + 3.4 x 1038</strong></td>
+                            <td><strong>0.0F</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Int</td>
+                            <td><strong>32-bit signed integer type</strong></td>
+                            <td><strong>-2,147,483,648 to 2,147,483,647</strong></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Long</strong></td>
+                            <td>64-bit signed integer type</td>
+                            <td>923,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                            <td>0L</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sbyte</strong></td>
+                            <td>8-bit signed integer type</td>
+                            <td>-128 to 127</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Short</strong></td>
+                            <td>16-bit signed integer type</td>
+                            <td>-32,768 to 32,767</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Uint</strong></td>
+                            <td>32-bit signed integer type</td>
+                            <td>0 to 4,294,967,295</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ulong</strong></td>
+                            <td>64-bit signed integer type</td>
+                            <td>0 to 18,446,744,073,709,551,615</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ushort</strong></td>
+                            <td>16-bit signed integer type</td>
+                            <td>0 to 65,535</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+            <details class="nomes">
+                <summary>Boas praticas de nomenclatura</summary>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th><div align="center">COMPONENTE</div></th>
+                            <th><div align="center">PREFIXO</div></th>
+                            <th><div align="center">EXEMPLO</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Formulário</td>
+                            <td>frm</td>
+                            <td>frmCadastro</td>
+                        </tr>
+                        <tr>
+                            <td>Caixa de Figura (PictureBox)</td>
+                            <td>pic</td>
+                            <td>picImagens</td>
+                        </tr>
+                        <tr>
+                            <td>Label</td>
+                            <td>lbl</td>
+                            <td>lblNome</td>
+                        </tr>
+                        <tr>
+                            <td>Caixa de Texto (TextBox)</td>
+                            <td>txt</td>
+                            <td>txtNome</td>
+                        </tr>
+                        <tr>
+                            <td>Botão de Comando – Button</td>
+                            <td>btn</td>
+                            <td>btnSalvar</td>
+                        </tr>
+                        <tr>
+                            <td>Caixa de Verificação (CheckBox)</td>
+                            <td>chk</td>
+                            <td>chkData</td>
+                        </tr>
+                        <tr>
+                            <td>ComboBox</td>
+                            <td>cbo</td>
+                            <td>cboEstado</td>
+                        </tr>
+                        <tr>
+                            <td>ListBox</td>
+                            <td>lst</td>
+                            <td>lstFornecedor</td>
+                        </tr>
+                        <tr>
+                            <td>Timer</td>
+                            <td>tmr</td>
+                            <td>tmrRelogio</td>
+                        </tr>
+                        <tr>
+                            <td>Grid</td>
+                            <td>grd</td>
+                            <td>grdClientes</td>
+                        </tr>
+                        <tr>
+                            <td>Menu</td>
+                            <td>mnu</td>
+                            <td>mnuExibir</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+        </section>
+
     </main>
 
     <br>
