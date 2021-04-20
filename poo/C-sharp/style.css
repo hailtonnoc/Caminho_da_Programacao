@@ -46,7 +46,7 @@ code
 pre 
 {
     display: inline-block;
-    font-size: 1.08em;
+    font-size: 1em;
     font-family: 'VT323', monospace;
     color: rgb(243, 202, 255);
     vertical-align: top;
@@ -106,7 +106,7 @@ div
 
 summary
 {
-    font-size: 1.16em;
+    font-size: 1.35em;
 }
 
 .tit
@@ -122,7 +122,7 @@ details div
 
 td
 {
-    padding: 1.08%;
+    padding: 1.5%;
 }
 
 mark
