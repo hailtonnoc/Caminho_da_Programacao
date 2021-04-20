@@ -492,11 +492,59 @@
             </p>
         </section>
 
-        <div>
+        <div class="comentarios">
             <h2>Comentários</h2>
             <p>Para comentar uma linha use <strong style="font-size: 1.5em;">//</strong>. <br>
             Para comentar varias linhas abra com <strong style="font-size: 1.5em;">/*</strong> e feche com <strong style="font-size: 1.5em;">*/</strong>.</p>
         </div>
+
+        <section>
+            <details class="Operadores">
+                <summary>Operadores</summary>
+                <h2>Aritimeticos</h2>
+                <p>Relacionado a operações <abbr title="**   %   /   *   -    +   .">matematicas</abbr>.</p>
+                <h2>Relacionais</h2>
+                <p>Retorna um valor <abbr title="&lt;   &gt;   &lt;=   &gt;=   ==   !=">booleano</abbr>.</p>
+                <h2>Logicos</h2>
+                <p>Une Operadores ou nega. ! nega. <strong><abbr title="and">&&</abbr></strong> todos verdadeiro. <strong><abbr title="or">||</abbr></strong> um verdadeiro. </p>
+                <h2>Ternarios</h2>
+                <p><mark style="background-color: aqua;">?</mark>caso <strong>verdadeiro</strong></p>
+                <p><mark style="background-color: aqua;">:</mark>caso <strong>falso</strong></p>
+            </details>
+
+            <h3>Condicionais</h3>
+            <p>
+                Para decidir entre uma condição ou outra utilize a <code>if</code>. <br><br>
+                Estrutura de seleção unilateral:
+                <code>
+                    <pre>
+    if (<small>true</small>){
+        <small>comandos para verdadeiro</small>();
+    }
+                    </pre>
+                </code> <br>
+                Por ter apenas uma opção pode ser marcada sem as chaves.
+                <details>
+                    <summary>exemplo;</summary>
+    <code>
+        <pre>
+            int <small>x</small> = <small>10</small>;
+            if(<small>x</small> > <small>2</small>)
+                <small>x</small> = <small>25</small>;
+        </pre>
+    </code>
+                </details> <br>
+                Estrutura bilateral: <br>
+                <code>
+                    <pre>
+    if ( <small>TESTE</small> )
+    { <small>Comandos caso verdadeiro</small> }
+    else
+    { <small>Comandos caso falso</small> }
+                    </pre>
+                </code>
+            </p>
+        </section>
 
     </main>
 
