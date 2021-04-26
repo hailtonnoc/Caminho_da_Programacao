@@ -88,6 +88,7 @@ div
     background-color: rgba(192, 14, 224, 0.137);
     box-shadow: black -4.5px 3px 6px 0px;
     padding: 0.3%;
+    padding-right: 15px;
 }
 
 .detalhes

@@ -170,6 +170,7 @@
                     </tbody>
                 </table>
             </details>
+            <p>Ainda caso a variável ser definida na compilação utilize o tipo <strong>var</strong></p>
             <details class="nomes">
                 <summary>Boas praticas de nomenclatura</summary>
                 <table border="1">
@@ -492,6 +493,30 @@
                     </pre>
                 </code>
             </p>
+
+            <h3>Escopo</h3>
+            <p>
+                Até onde a variável é visível de onde ela foi declarada para onde ela pode ser acessada.
+                <code>
+                    <pre class="modeloObj">
+    class <small>exemplo</small>
+    {
+        string <small>variavel_global</small> = <small>"I'm global"</small>;
+        <div class="modeloObj">
+            static void <small>Main()</small>
+            {
+                int variavel_local = 0;
+            }
+        </div>
+
+        void <small>outroMetodo()</small>
+        {
+            int variavel_local = 0;
+        }
+    }
+                    </pre>
+                </code>
+            </p>
         </section>
 
         <div class="comentarios">
@@ -500,7 +525,7 @@
             Para comentar varias linhas abra com <strong style="font-size: 1.5em;">/*</strong> e feche com <strong style="font-size: 1.5em;">*/</strong>.</p>
         </div>
 
-        <section>
+        <section class="Operadores">
             <details class="Operadores">
                 <summary>Operadores</summary>
                 <h2>Aritimeticos</h2>
