@@ -8,9 +8,22 @@ body
 
 }
 
-section
+code
 {
-    padding: 1.8%;
+    font-family: 'VT323', monospace;
+    font-size: 1.08em;
+}
+
+details div
+{
+    display: inline-block;
+}
+
+div
+{
+    border: solid rgba(0, 0, 0, 0.335) 2px;
+    margin: 0.9%;
+    padding: 1.5%;
 }
 
 h1
@@ -26,21 +39,16 @@ h2
     text-shadow: rgb(112, 41, 106) 6px 6px 3.6px;
 }
 
-.titulo
-{
-    color: rgb(190, 99, 65);
-}
-
 h3, .comandos
 {
     font: normal 1.8em 'VT323'; 
     text-shadow: rgb(112, 41, 106) 3px 3px 1.8px;
 }
 
-code
+
+mark
 {
-    font-family: 'VT323', monospace;
-    font-size: 1.08em;
+    background-color: orange;
 }
 
 pre 
@@ -54,55 +62,15 @@ pre
     border: solid rgba(30, 129, 210, 0.103) 1px;
 }
 
+section
+{
+    padding: 1.8%;
+}
+
 small
 {
     font-family: monospace;
     color: rgb(251, 226, 255);
-}
-
-div
-{
-    border: solid rgba(0, 0, 0, 0.335) 2px;
-    margin: 0.9%;
-    padding: 1.5%;
-}
-
-
-.divg
-{
-    border: solid black 3px;
-}
-
-.enfa
-{
-    font-size: 1.8em;
-}
-
-.criando
-{
-    padding: .5%;
-}
-
-.pacotes, .agrupador, .modeloObj
-{
-    background-color: rgba(192, 14, 224, 0.137);
-    box-shadow: black -4.5px 3px 6px 1px;
-    padding: 0.3%;
-    padding-right: 15px;
-}
-
-.detalhes
-{
-    color: rgba(128, 128, 128, 0.445);
-}
-
-.enfase
-{
-    font-size: 1.18em;
-}
-.aenfase:hover
-{
-    font-size: 1.08em;
 }
 
 summary
@@ -110,25 +78,9 @@ summary
     font-size: 1.35em;
 }
 
-.tit
-{
-    font: normal 2.7em 'VT323';
-    text-shadow: rgba(24, 87, 158, 0.445) 6px 6px 3.6px;
-}
-
-details div
-{
-    display: inline-block;
-}
-
 td
 {
     padding: 1.5%;
-}
-
-mark
-{
-    background-color: orange;
 }
 
 ul
@@ -145,3 +97,62 @@ ul
 {
     color: rgb(2, 172, 2);
 }
+
+.criando
+{
+    padding: .5%;
+}
+
+.divg
+{
+    border: solid black 3px;
+}
+
+.detalhes
+{
+    color: rgba(128, 128, 128, 0.445);
+}
+
+.enfa
+{
+    font-size: 1.8em;
+}
+
+.enfase
+{
+    font-size: 1.18em;
+}
+.aenfase:hover
+{
+    font-size: 1.08em;
+}
+
+.pacotes, .agrupador, .modeloObj
+{
+    background-color: rgba(192, 14, 224, 0.137);
+    box-shadow: black -4.5px 3px 6px 1px;
+    padding: 0.3%;
+    padding-right: 15px;
+}
+
+.modeloObjdif
+{
+    background-color: rgba(65, 7, 75, 0.418);
+    box-shadow: black -4.5px 3px 6px 1px;
+    padding: 0.3%;
+    padding-right: 15px;
+}
+
+.tit
+{
+    font: normal 2.7em 'VT323';
+    text-shadow: rgba(24, 87, 158, 0.445) 6px 6px 3.6px;
+}
+
+.titulo
+{
+    color: rgb(190, 99, 65);
+}
+
+
+
