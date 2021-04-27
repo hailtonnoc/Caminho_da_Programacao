@@ -170,7 +170,17 @@
                     </tbody>
                 </table>
             </details>
-            <p>Ainda caso a variável ser definida na compilação utilize o tipo <strong>var</strong></p>
+            <p>
+                Ainda caso a variável ser definida na compilação utilize o tipo <strong>var</strong>. <br>
+                Para valores que não devem ser alterados utilize o tipo <strong>const</strong> seguido do tipo. A principal utilização é em elementos que devem ser protegidos dentro do programa.
+            </p>
+            <h3>Atribuindo valores</h3>
+            <p>Input através do teclado <code>Console.ReadLine();</code></p>
+            <code>
+                <pre>
+    String <small>variavel</small> = Console.ReadLine(); 
+                </pre>
+            </code>
             <details class="nomes">
                 <summary>Boas praticas de nomenclatura</summary>
                 <table border="1">
@@ -488,8 +498,11 @@
                 A conversão de variáveis se da a partir da declaração da variável que salvara o valor convertido seguido do processo novo_tipo<code>.Parse</code>();
                 <code>
                     <pre>
-    string <small>a</small> = <small>3</small>;
-    int <small>b</small> = int.Parse(<small>a</small>);
+    string <small>variavel</small> = <small>3</small>;
+
+    <small>b</small> = int.Parse(<small>variavel</small>);
+ou
+    <small>b</small> = Covert.To<strong>Int</strong>32(<small>variavel</small>);
                     </pre>
                 </code>
             </p>
@@ -574,7 +587,7 @@
     </main>
 
     <br>
-    <a href="../../index.html"><img src="../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar
+    <a href="../../index.html"><img src="../../XXXMATERIAISXXX/IMAGENS/left_white.png" alt="voltar
         
         "></a>
     
