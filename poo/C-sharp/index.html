@@ -182,7 +182,7 @@
     enum <strong>diasSemana</strong>{<small>Domingo, Segunda, Terça, Quarta, Quinta, Sexta, Sábado</small>};
                     </pre>
                 </code> <br>
-                A posição desses valores serão representados por índice. Basta fazer um cast informando o enumerador entre parênteses seguido do numero do índice. <br>
+                A posição desses valores serão representados por índice. Basta fazer um <strong>cast</strong> informando o enumerador entre parênteses seguido do numero do índice. <br>
                 <code>
                     <pre class="modeloObj">
     Console.WriteLine((<strong>diasSemana</strong>)5)
@@ -196,6 +196,23 @@
                     </pre>
                 </code> <br>
     Resultado da execução: <code>&gt;&gt; 5</code>
+                <br>
+                <br>
+                <details>
+                    <summary>typecast</summary>
+                    <p>
+                        É necessário toda vez que a conversão de valores for Explicita, o implícito é feito de maneira automática uma vez que a conversão não apresenta nenhum risco de alteração de valores. <br>
+                        <br>
+                        Exemplos: <br>
+                        <h4>Implícito</h4>
+                        De <strong class="colorRed">int</strong> para <strong class="colorGreen">float</strong> são acrescido zeros ao final então não existe risco de alteração valores uma vez que o zero representa a ausência de valor fracionado. <br>
+
+                        <h4>Explicito</h4>
+                        Já ao contrario, de <strong class="colorGreen">float</strong> para <strong class="colorRed">int</strong> o valor vai ser alterado em parte, uma vez que perderá seu valor fracional.
+
+                    
+                    </p>
+                </details>
             </p>
             <h3>Atribuindo valores</h3>
             <p>Input através do teclado <code>Console.ReadLine();</code></p>
@@ -576,38 +593,98 @@ ou
                 
             </details>
 
-            <h3>Condicionais</h3>
-            <p>
-                Para decidir entre uma condição ou outra utilize a <code>if</code>. <br><br>
-                Estrutura de seleção unilateral:
-                <code>
-                    <pre>
-    if (<small>true</small>){
+            <div class="Condicionais">
+                <h2>Condicionais</h2>
+                <h3>if</h3>
+                <p>
+                    Para decidir entre uma condição ou outra utilize a <code>if</code>. <br><br>
+                    Estrutura de seleção <strong>unilateral</strong>:
+                    <code>
+                        <pre class="modeloObj">
+    if (<small>true</small>)
+    {
         <small>comandos para verdadeiro</small>();
     }
-                    </pre>
-                </code> <br>
-                Por ter apenas uma opção pode ser marcada sem as chaves.
-                <details>
-                    <summary>exemplo;</summary>
-    <code>
-        <pre>
-            int <small>x</small> = <small>10</small>;
-            if(<small>x</small> > <small>2</small>)
-                <small>x</small> = <small>25</small>;
-        </pre>
-    </code>
-                </details> <br>
-                Estrutura bilateral: <br>
-                <code>
-                    <pre>
+                        </pre>
+                    </code> <br>
+
+                    Por ter apenas uma opção pode ser marcada sem as chaves.
+                    <details>
+                        <summary>exemplo;</summary>
+
+                    <code>
+                        <pre>
+    int <small>x</small> = <small>10</small>;
+
+    if(<small>x</small> > <small>2</small>)
+        <small>x</small> = <small>25</small>;
+                        </pre>
+                    </code>
+
+                    </details> <br>
+
+                    <h3>else</h3>
+                    Estrutura <strong>bilateral</strong>: <br>
+                    <code>
+                        <pre class="modeloObj">
     if ( <small>TESTE</small> )
-    { <small>Comandos caso verdadeiro</small> }
+        { <small>Comandos caso verdadeiro</small> }
     else
-    { <small>Comandos caso falso</small> }
-                    </pre>
-                </code>
-            </p>
+        { <small>Comandos caso falso</small> }
+                        </pre>
+                    </code>
+                    <h3>else if</h3>
+                    <p>
+                        Para aumentar a quantidade de verificações é só declarar o <code>else if</code> seguido do novo teste. <br>
+
+                    <code>
+                        <pre class="modeloObj">
+    if ( <small>TESTE1</small> )
+        { <small>Comandos caso verdadeiro</small> }
+    else if ( <small>TESTE2</small> )
+        { <small>Comandos caso verdadeiro</small> }
+    else
+        { <small>Comandos caso falso</small> }
+                        </pre>
+                    </code>
+
+                    </p>
+                </p>
+
+                <h2>Condições aninhadas</h2>
+                <p>
+                    Consiste em incluir condições dentro de condições criando uma árvore de execução. <br>
+                    <code>
+                        <pre class="modeloObj">
+    if(teste1)
+    {<div class="modeloObj">
+        if(teste1.1)
+        {
+            {<div class="modeloObj">
+                if(teste1.1.1)
+                {
+                    <small>(comandos caso verdadeiro)</small>
+                }
+                else
+                {
+                    <small>(comandos caso falso)</small>
+                }
+            </div>             }
+        }
+        else
+        {
+            <small>(comandos caso falso)</small>
+        }
+        </div>      }
+    else
+    {
+        <small>(comandos caso falso)</small>
+    }
+                        </pre>
+                    </code>
+
+                </p>
+            </div>
         </section>
 
     </main>
