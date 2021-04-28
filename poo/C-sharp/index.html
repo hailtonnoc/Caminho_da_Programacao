@@ -574,21 +574,66 @@ ou
                 </code>
             </p>
 
-            <h3>Arrays</h3>
+            <h2>Arrays</h2>
             <p>São um conjuntos de dados do mesmo tipo atribuído a uma variavel.</p>
-            <h4>unidimensional</h4>
+            <h3>unidimensional</h3><code>vetores</code>
             <p>
-                Declarando <strong>array</strong> basta informar o tipo com colchetes de dados que o mesmo ira suportar, seguido do nome e depois um <strong>new</strong> informando o tipo com as posições dentro do colchete.
+                Declarando <strong>array</strong> basta informar o tipo com colchetes de dados que o mesmo ira suportar, seguido do nome e depois o operador <strong>new</strong> informando o tipo com as posições dentro do colchete.
+                <code>
+                    <pre class="modeloObj">
+    int <small>nomeArray</small>[] = new int[3];
+                    </pre>
+                </code> <br>
+                Atribuindo valores; <br><br>
+                Na criação: <br>
                 <code>
                     <pre>
-    int <small>nomeArray</small>[] = new int[5];
+    int[] <small>exemplo</small> = new int[3]<small>{0,1,2}</small>;
+ou
+    int[] <small>exemplo</small> = <small>{0,1,2...}</small>;
+
+<small>&uparrow; sem especificar o tamanho o mesmo sera preenchido na compilação de acordo com a quantidade de elementos declarados.</small>
+                    </pre>
+                </code> <br>
+                Declarando elementos: <br>
+                <code>
+                    <pre>
+    int[] exemplo = new int[3];
+
+    exemplo[0]= 0;
+    exemplo[1]= 1;
+    exemplo[2]= 2;
                     </pre>
                 </code>
+
             </p>
 
-            <h4>bidimensional</h4>
+            <h3>bidimensional</h3><code>matrizes</code>
             <p>
-
+                A unica diferença é colocar uma virgula entre os colchetes depois do tipo, assim informando que a matriz ira conter dois números de índice respectivamente <code class="colorGreen">linhas</code> e <code class="colorGreen">colunas</code>. <br>
+                <code>
+                    <pre class="modeloObj">
+    int[,] exemplo = new int[2,3];
+                    </pre>
+                </code> <br>
+                Na criação: <br>
+                <code>
+                    <pre>
+    int[,] exemplo = new int[2,3]{{1,2,3},{4,5,6}};
+                    </pre>
+                </code> <br>
+                Declarando elementos: <br>
+                <code>
+                    <pre>
+    matriz[0,0]=1;
+    matriz[0,1]=2;
+    matriz[0,2]=3;
+            
+    matriz[1,0]=4;
+    matriz[1,1]=5;
+    matriz[1,2]=6;
+                    </pre>
+                </code>
             </p>
         </section>
 
