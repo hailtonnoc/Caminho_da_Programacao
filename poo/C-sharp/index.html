@@ -574,6 +574,10 @@ ou
                 </code>
             </p>
 
+        </section>
+
+        <section class="arrays">
+            
             <h2>Arrays</h2>
             <p>São um conjuntos de dados do mesmo tipo atribuído a uma variavel.</p>
             <h3>unidimensional</h3><code>vetores</code>
@@ -635,6 +639,114 @@ ou
                     </pre>
                 </code>
             </p>
+
+            <h2>Métodos para Arrays</h2>
+            <p>Métodos que manipulam vetores ou matrizes.</p>
+
+            <details class="binarysearch modeloObj">
+                <summary>Binary Search</summary>
+                <p>
+                    Retorna a posição do elemento no tipo primitivo <strong>int</strong>. <br>
+                    <code>
+                        <pre class="modeloObj">
+    int <small>resposta</small> = Array.BinarySearch(<small>nome_vetor</small>,<small>valorProcurado</small>);
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="copy modeloObj">
+                <summary>Copy</summary>
+                <p>
+                    Copia o conteúdo de um array para outro. <br>
+                    <code>
+                        <pre class="modeloObj">
+    Array.Copy(<small>nome_vetor</small>,<small>vetor_destino</small>, <abbr title="nome_vetor.Length">tamanho</abbr>);
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="copyto modeloObj">
+                <summary>Copy To</summary>
+                <p>
+                    Copia o conteúdo de um array para outro. Mas este é a partir do vetor e não a partir do método <strong>Array</strong>.<br>
+                    <code>
+                        <pre class="modeloObj">
+    nome_vetor.CopyTo(<small>vetor_destino</small>, <abbr title="posição inicial da copia">idexInicio</abbr>);
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="getlonglength modeloObj">
+                <summary>Get Long Length</summary>
+                <p>
+                    Retorna o tamanho de um conjunto de valores. <br>
+                    <code>
+                        <pre class="modeloObj">
+    long <small>elementosVetor</small> = <small>nome_vetor</small>.GetLongLength(0);
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="getlowbound modeloObj">
+                <summary>Get Low Bound</summary>
+                <p>
+                    Retorna a menor indice de um conjunto de dados. <br>
+                    <code>
+                        <pre class="modeloObj">
+    int <small>menorIndiceVetor</small> = <small>nome_vetor</small>.GetLowerBound(<abbr title="unidimensional">0</abbr>);
+<small>ou</small>
+    int <small>menorIndiceMatriz</small> = <small>nome_matriz</small>.GetLowerBound(<abbr title="bidimensional">1</abbr>);
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="getupperbound modeloObj">
+                <summary>Get Upper Bound</summary>
+                <p>
+                    Retorna a maior índice de um conjunto de dados. <br>
+                    <code>
+                        <pre class="modeloObj">
+    int <small>maiorIndiceVetor</small> = <small>nome_vetor</small>.GetLowerBound(<abbr title="unidimensional">0</abbr>);
+<small>ou</small>
+    int <small>maiorIndiceMatriz</small> = <small>nome_matriz</small>.GetLowerBound(<abbr title="bidimensional">1</abbr>);
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="getvalue modeloObj">
+                <summary>Get Value</summary>
+                <p>
+                    Retorna a valores a partir do índice de um conjunto de dados. <br>
+                    <code>
+                        <pre class="modeloObj">
+    int <small>buscaVetor</small> = Convert.ToInt32(<small>nome_vetor</small>.GetValue(<abbr title="indice terceiro item">2</abbr>));
+<small>ou</small>
+    int <small>buscaMatriz</small> = Convert.ToInt32(<small>nome_matriz</small>.GetValue(<abbr title="indice primeira linha, terceira coluna">0,2</abbr>));
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="IndexOf modeloObj">
+                <summary>IndexOf</summary>
+                <p>
+                    Retorna o índice de um elemento dentro de um conjunto de dados. <br>
+                    <code>
+                        <pre class="modeloObj">
+    int <small>buscaVetor</small> = Convert.ToInt32(<small>nome_vetor</small>.GetValue(<abbr title="indice terceiro item">2</abbr>));
+<small>ou</small>
+    int <small>buscaMatriz</small> = Convert.ToInt32(<small>nome_matriz</small>.GetValue(<abbr title="indice primeira linha, terceira coluna">0,2</abbr>));
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
         </section>
 
         <div class="comentarios">
