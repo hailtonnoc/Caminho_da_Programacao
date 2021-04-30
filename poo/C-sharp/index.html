@@ -42,7 +42,7 @@
         {<div class="modeloObj">
         Class ModeloObjto
             {
-                static void Main(String[] args)
+                static <abbr title="não retorna valor">void</abbr> Main(String[] args)
                 {
                     Console.WhiteLine("<small>Code Programa...</small>")   
                 }
@@ -643,6 +643,18 @@ ou
             <h2>Métodos para Arrays</h2>
             <p>Métodos que manipulam vetores ou matrizes.</p>
 
+            <details class="setvalue modeloObj">
+                <summary>Set Value</summary>
+                <p>
+                    Insere um valor em uma posição de um conjunto de dados. <br>
+                    <code>
+                        <pre class="modeloObj">
+    <small>nome_vetor</small>.SetValue(<small>"valor"</small>, <abbr title="posição indice">0</abbr>);
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
             <details class="binarysearch modeloObj">
                 <summary>Binary Search</summary>
                 <p>
@@ -722,7 +734,7 @@ ou
             <details class="getvalue modeloObj">
                 <summary>Get Value</summary>
                 <p>
-                    Retorna a valores a partir do índice de um conjunto de dados. <br>
+                    Retorna a valores em formade objeto a partir do índice de um conjunto de dados. Por isso o <strong>Convert</strong> entra fazendo o <strong>do valor</strong>.<br>
                     <code>
                         <pre class="modeloObj">
     int <small>buscaVetor</small> = Convert.ToInt32(<small>nome_vetor</small>.GetValue(<abbr title="indice terceiro item">2</abbr>));
@@ -733,17 +745,52 @@ ou
                 </p>
             </details>
 
-            <details class="IndexOf modeloObj">
+            <details class="indexof modeloObj">
                 <summary>IndexOf</summary>
                 <p>
-                    Retorna o índice de um elemento dentro de um conjunto de dados. <br>
+                    Retorna o índice do primeiro um elemento correspondente ao indicado nos parâmetros. <br>
                     <code>
                         <pre class="modeloObj">
-    int <small>buscaVetor</small> = Convert.ToInt32(<small>nome_vetor</small>.GetValue(<abbr title="indice terceiro item">2</abbr>));
-<small>ou</small>
-    int <small>buscaMatriz</small> = Convert.ToInt32(<small>nome_matriz</small>.GetValue(<abbr title="indice primeira linha, terceira coluna">0,2</abbr>));
+    int <small>buscaIndex</small> = Array.IndexOf(<small>nome_vetor</small>,"elemento");
                         </pre>
                     </code>
+                </p>
+            </details>
+
+            <details class="lastindexof modeloObj">
+                <summary>Last IndexOf</summary>
+                <p>
+                    Retorna o índice do ultimo um elemento correspondente ao indicado nos parâmetros. <br>
+                    <code>
+                        <pre class="modeloObj">
+    int <small>buscaIndex</small> = Array.LastIndexOf(<small>nome_vetor</small>,"elemento");
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="reverse modeloObj">
+                <summary>Reverse</summary>
+                <p>
+                    Retorna o vetor com os itens na ordem invertida. <br>
+                    <code>
+                        <pre class="modeloObj">
+    Array.Reverse(<small>nome_vetor</small>);
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="sort modeloObj">
+                <summary>Sort</summary>
+                <p>
+                    Retorna o vetor com os itens na ordem crescente. <br>
+                    <code>
+                        <pre class="modeloObj">
+    Array.Sort(<small>nome_vetor</small>);
+                        </pre>
+                    </code> <br>
+                    Para retornar a ordem decrescente organize e depoiis utilize o <strong>reverse</strong>.
                 </p>
             </details>
 
@@ -1011,6 +1058,43 @@ ou
             </div>
 
 
+
+        </section>
+
+        <section class="metodos">
+            <h2>Métodos</h2>
+            <p>
+                São conjuntos de instruções que pode ser chamado a qualquer momento durante a execução de uma programa. <br>
+                Métodos podem trabalhar a partir de paramentos de entrada, ou simplesmente retornam valores. <br>
+
+                <code>
+                    <pre>
+        <div class="agrupador">
+    namespace <small>aguradorInstruções</small>
+    {<div class="modeloObj">
+        Class ModeloObjto
+            {
+            <div class="modeloObjdif">
+                static <abbr title="não retorna valor">void</abbr> Main()
+                {
+                    Console.WhiteLine("<small>Code Programa...</small>") 
+                }
+            </div>
+            <div class="modeloObjdif">
+                static <abbr title="não retorna valor">void</abbr> Main()
+                {
+                    Console.WhiteLine("<small>Code Programa...</small>") 
+                }
+            </div>
+            }</div>
+    }
+                    </pre>
+                </code>
+
+                
+
+                
+            </p>
 
         </section>
 
