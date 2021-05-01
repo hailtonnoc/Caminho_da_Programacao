@@ -1,56 +1,78 @@
 body
 {
-    margin: 9px ;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 108%;
+    background-color: dimgray;
+    color: white;
 }
-.descri
-{
-    width: 45%;
-    float: right;
-}
-
-#header
-{
-    width: 99%;
-    height: 300px;
-    margin-top: 0;
-}
-
 header
 {
-    text-align: center;
+
 }
 
-h1
+li
 {
-    font-size: 45px;
-    margin-top: 0;
-    margin-bottom: 6%;
-    text-align: center;
+    
 }
 
-h2
+main
 {
-    font-size: 27px;
+
 }
 
-h3
+nav
 {
-    font-size: 18px;
+    position: relative;
+    left: 80%;
 }
 
-.tiposcss
+ul
+{
+    margin: 0px;
+}
+
+.painel
+{
+    font-size: 1.8em;
+    font-weight: 900;
+    border: none;
+    border-radius: 3px;
+    padding: 3px;
+    color: rgb(0, 132, 255);
+    animation: engranagem 1.5s infinite;
+}
+
+.menu-drop
 {
     display: inline-block;
-    vertical-align: top;
-    margin-left: 3px;
-    width: 45%;
+    position: relative;
+}
+.drop-content{
+    margin: none;
+    display: none;
+    background-color: rgb(32, 150, 218);
+    border-radius: 3px;
+    position: absolute;
+    z-index: 1;
+}
+.drop-content a{
+    color: rgb(0, 0, 0);
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+}
+.drop-content a:hover{
+    background: linear-gradient(rgb(32, 103, 218), #40555f) ;
+}
+.menu-drop:hover .drop-content{
+    display: block;
+}
+.menu-drop:hover .menu{
+    background-color: rgb(32, 103, 218);
 }
 
-table td
+@keyframes engranagem
 {
-    padding: 6px;
+    from
+    {transform: rotate(0);}
+    to
+    {transform: rotate(360deg);}
 }
-
-
