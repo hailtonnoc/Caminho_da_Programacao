@@ -10,7 +10,7 @@ header
 
 li
 {
-    
+
 }
 
 main
@@ -24,9 +24,13 @@ nav
     left: 80%;
 }
 
+
+
 ul
 {
     margin: 0px;
+    list-style: none;
+    
 }
 
 .painel
@@ -52,6 +56,7 @@ ul
     border-radius: 3px;
     position: absolute;
     z-index: 1;
+    text-decoration: none;
 }
 .drop-content a{
     color: rgb(0, 0, 0);
