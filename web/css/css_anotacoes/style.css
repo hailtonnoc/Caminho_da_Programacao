@@ -1,7 +1,13 @@
 body
 {
     margin: 9px;
-    background: linear-gradient( purple,  #206cfa3f);
+    background: linear-gradient( rgb(137, 183, 255),  #ffffff3f);
+
+}
+
+code
+{
+    font-size: 1.4em;
 }
 
 h1
@@ -11,6 +17,18 @@ h1
     font-size: 360%;
     margin: 1.8%;
     text-shadow: brown 9px 0px 3px, rgb(66, 0, 128) 0px 9px 6px;
+}
+h2
+{
+    font-style:unset;
+    font-weight:600;
+    font-size: 1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3
+{
+    font: oblique 900 1.2em 'Franklin Gothic Medium', sans-serif;
 }
 
 .blococ
@@ -33,7 +51,7 @@ h1
     color: rgba(56, 25, 158, 0.965);
     font-size: large;
     transition: 0.9s;
-    transform: scale(1.18);
+    transform: scale(1.08);
 }
 
 td

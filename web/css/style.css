@@ -29,8 +29,9 @@ nav
 ul
 {
     margin: 0px;
+    padding: 3px;
     list-style: none;
-    
+    font: 900 normal 1.2em sans-serif;
 }
 
 .painel
@@ -66,6 +67,7 @@ ul
 }
 .drop-content a:hover{
     background: linear-gradient(rgb(32, 103, 218), #40555f) ;
+    font-size: 1.2em;
 }
 .menu-drop:hover .drop-content{
     display: block;
