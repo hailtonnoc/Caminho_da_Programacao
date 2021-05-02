@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
+
 body
 {
     margin: 9px;
     background: linear-gradient( rgb(137, 183, 255),  #ffffff3f);
-
+    font-family: 'Quattrocento Sans', sans-serif;
 }
 
 code
@@ -22,7 +24,7 @@ h2
 {
     font-style:unset;
     font-weight:600;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
