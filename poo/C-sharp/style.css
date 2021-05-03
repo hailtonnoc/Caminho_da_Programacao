@@ -1,7 +1,7 @@
 body 
 {
-    background: linear-gradient( rgba(167, 109, 214, 0.87),  rgba(89, 9, 109, 0.698)45%);
-    color: white;
+    background: linear-gradient( #8844A6,  #5B2473 45%);
+    color: #F2F2F2;
     font-size: 1.08em;
     font-family: monospace;
     margin: 1.8%;
@@ -56,7 +56,7 @@ pre
     display: inline-block;
     font-size: 1em;
     font-family: 'VT323', monospace;
-    color: rgb(243, 202, 255);
+    color: #B18FBF;
     vertical-align: top;
     padding: 1.8%;
     border: solid rgba(30, 129, 210, 0.103) 1px;
