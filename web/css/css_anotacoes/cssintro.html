@@ -46,10 +46,9 @@
             <h3 style="color: rgba(0,0, 255, 0.637);"><i>Class</i>es</h3>
             <p>Da mesma maneira que o idenficador distigue um item o a classe distigue um conjunto de itens. <br> O simbolo de idenficação é o <strong>.</strong> resultando no selector <strong>tag.nome</strong></p>
 
-            <h4>Pseudo CLasses</h4>
+            <h4>Pseudo Classes</h4>
             <p>
-                É possivel aplicar personalização para classes com uma ação especifica.
-
+                É possível aplicar personalização para classes com uma ação especifica, pois a mesma define comportamento com base em estados de elementos.<strong style="font-size: 27px;"><code>::'ação'</code></strong>
             </p>
             <table border="1">
                 <thead>
@@ -62,8 +61,12 @@
                         <td>Caso passe o mouse </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>:active</td>
+                        <td>Quando Clicado</td>
+                    </tr>
+                    <tr>
+                        <td>:visited</td>
+                        <td>Paginas visitadas</td>
                     </tr>
                 </tbody>
             </table>
@@ -79,8 +82,8 @@
 
             <p>Para todos elementos exeto o que contem (algo) " tag:<strong style="font-size: 36px;">not</strong>(#id)"</p>
 
-            <h3>Pseudo elementos / Indicando ação</h3>
-            <p>No <strong>CSS3</strong> é possivel ainda fazer transformações através de interações com ele mesmo, após idenficar o elemento utilize <strong style="font-size: 27px;"><code>:'ação'
+            <h3>Pseudo elementos</h3>
+            <p>No <strong>CSS3</strong> é possível ainda fazer transformações através de posições com ele mesmo, após idenficar o elemento utilize <strong style="font-size: 27px;"><code>::'posição'
         
             </code></strong></p>
             <table border="2">
@@ -89,27 +92,27 @@
                     <th>Posição</th>
                 </thead>
                 <tr>
-                    <td>:nth-child(x)</td>
+                    <td>::nth-child(x)</td>
                     <td>Elemento posição x</td>
                 </tr>
                 <tr>
-                    <td>:last-child</td>
+                    <td>::last-child</td>
                     <td>Ultimo elemento</td>
                 </tr>
                 <tr>
-                    <td>:first-letter</td>
+                    <td>::first-letter</td>
                     <td>Primeira letra</td>
                 </tr>
                 <tr>
-                    <td>:first-line</td>
+                    <td>::first-line</td>
                     <td>Primeira linha</td>
                 </tr>
                 <tr>
-                    <td>:before</td>
+                    <td>::before</td>
                     <td>Antes</td>
                 </tr>
                 <tr>
-                    <td>:after</td>
+                    <td>::after</td>
                     <td>Depois</td>
                 </tr>
                 <tr>
@@ -137,7 +140,7 @@
                 </tr>
                 <tr>
                     <td>em</td>
-                    <td>Proporcinal ao <abbr title="2em == 2x">padrão</abbr></td>
+                    <td>Proporcinal ao <abbr title="2em == 2x">padrão</abbr> "m"</td>
                 </tr>
             </table>
         </section>
