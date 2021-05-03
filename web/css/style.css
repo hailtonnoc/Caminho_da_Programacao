@@ -52,7 +52,7 @@ ul
 }
 .drop-content{
     margin: none;
-    display: none;
+    display: none; /*esconde menu*/
     background-color: rgb(32, 150, 218);
     border-radius: 3px;
     position: absolute;
@@ -70,7 +70,7 @@ ul
     font-size: 1.2em;
 }
 .menu-drop:hover .drop-content{
-    display: block;
+    display: block; /*quando em um elemento, modificar outro elemento*/
 }
 .menu-drop:hover .menu{
     background-color: rgb(32, 103, 218);
