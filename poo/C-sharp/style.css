@@ -1,3 +1,14 @@
+a
+{
+    text-decoration: none;
+    color: #5B2473;
+}
+
+a:visited
+{
+    color: #5B2473;
+}
+
 body 
 {
     background: linear-gradient( #8844A6,  #5B2473 45%);
@@ -45,6 +56,10 @@ h3, .comandos
     text-shadow: rgb(112, 41, 106) 3px 3px 1.8px;
 }
 
+li::marker
+{
+    content: none;
+}
 
 mark
 {
@@ -86,7 +101,11 @@ td
 ul
 {
     margin: 0px;
+    padding: 1 ;
+    text-decoration: none;
 }
+
+
 
 .colorRed
 {
@@ -142,6 +161,46 @@ ul
     box-shadow: black -4.5px 3px 6px 1px;
     padding: 0.3%;
     padding-right: 15px;
+}
+
+.menu
+{
+    font: normal 900 1.2em sans-serif;
+    width: 150px;
+    background-color:#B18FBF;
+    border: none;
+    border-radius: 4.5px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+}
+
+.hide-drop
+{
+    font: normal 100 1.2em sans-serif;
+    display: none;
+    background-color: #8844A6;
+    color: #5B2473;
+    width: 300px;
+    text-decoration: none;
+    border-radius: 4.5px;
+
+}
+
+.hide-drop a:hover
+{
+    color: #F2F2F2;
+    font-size: 1.08em;
+    font-weight: 700 ;
+    text-shadow: #B18FBF 3px 3px 3px;
+}
+
+.menu:hover .hide-drop
+{
+    display:block;
+    position: absolute;
+    
+
 }
 
 .tit
