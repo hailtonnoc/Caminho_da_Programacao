@@ -66,6 +66,7 @@ mark
     background-color: orange;
 }
 
+
 pre 
 {
     display: inline-block;
@@ -171,13 +172,13 @@ ul
 .menu
 {
     font: normal 900 1.2em sans-serif;
-    width: 150px;
+    width: 207px;
     background-color:#B18FBF;
     border: none;
     border-radius: 4.5px;
-    text-align: center;
     position: relative;
-    left: 50%;
+    left: 63%;
+    margin: 0%;
 }
 
 .hide-drop
