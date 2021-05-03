@@ -15,75 +15,102 @@
         <section class="definicao">
             <h2>Classes</h2>
             <p>
-                Classe são tipos de dados compostos por <abbr title="variáveis">propriedades</abbr> e <abbr title="funções">métodos</abbr>. Em resumo <strong>classes</strong> são objetos compostos onde instanciámos.
+                Classe são tipos de dados compostos por <abbr title="variáveis">propriedades</abbr> e <abbr title="funções">métodos</abbr>. Em resumo <strong>classes</strong> são objetos compostos onde instanciámos. <br>
+                Modelo de Classe: <br>
+                <code>
+                    <pre class="modeloObj">
+    <small>Modificador de Classe</small> class <small>nome_Classe</small>
+    {
+    <div class="modeloObj">
+        <small>Especificador de Acesso</small>  tipo  <small>nome_variavel = ...</small>;  
+    </div>
+    <div class="modeloObjdif">
+        <small>Especificador de Acesso</small> retorno <small>nome_função</small>(argumentos...)
+        {
+            <small>comandos...</small>
+        }
+    </div>
+
+    }
+                    </pre>
+                </code>
+
+            <h2>Modificador de Classes</h2>
+            <table border="2">
+                <thead>
+                    <th>Codigo</th>
+                    <th>Função</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Public</td>
+                        <td>Sem restrição de visualização.</td>
+                    </tr>
+                    <tr>
+                        <td>Abstract</td>
+                        <td>Classe base, não pode ser instanciado objetos.</td>
+                    </tr>
+                    <tr>
+                        <td>Sealed</td>
+                        <td>Classe não possui herdeiros.</td>
+                    </tr>
+                    <tr>
+                        <td>Static</td>
+                        <td>Não permite que instanciem seus objetos ou membros.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Especificador de Acesso</h2>
+            <table border="1">
+                <thead>
+                    <th>Codigo</th>
+                    <th>Função</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Public</td>
+                        <td>Sem restrição de acesso.</td>
+                    </tr>
+                    <tr>
+                        <td>Private</td>
+                        <td>Só podem ser acessados pela própria classe.</td>
+                    </tr>
+                    <tr>
+                        <td>Protected</td>
+                        <td>Podem ser acessados pela própria classe e nas derivadas.</td>
+                    </tr>
+                    <tr>
+                        <td>Abstract</td>
+                        <td>Os metodos não podem ser implementados, somente cabeçalhos.</td>
+                    </tr>
+                    <tr>
+                        <td>Sealed</td>
+                        <td>Classe não pode ser redefinido.</td>
+                    </tr>
+                    <tr>
+                        <td>Virtual</td>
+                        <td>O metodo pode ser redefinido em uma classe derivada.</td>
+                    </tr>
+                    <tr>
+                        <td>Static</td>
+                        <td>O metodos pode ser chamado mesmo sem a instanciação de um objeto</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
             </p>
 
-            <h2>objetos</h2>
-            <p>
-                
-            </p>
         </section>
 
         <section class="modificadores">
-            <h2>Modificador de Classes</h2>
-            <h3>Public</h3>
-            <p>
-                Sem restrição de visualização.
-            </p>
-
-            <h3>Abstract</h3>
-            <p>
-                Classe base, não pode ser instanciado objetos.
-            </p>
             
-            <h3>Sealed</h3>
-            <p>
-                Classe não possui herdeiros.
-            </p>
-            
-            <h3>Static</h3>
-            <p>
-                Não permite que instanciem seus objetos ou membros. 
-            </p>
             
         </section>
 
         <section class="especAcesso">
-            <h2>Especificação de Acesso</h2>
-            <h3>Public</h3>
-            <p>
-                Sem restrição de acesso.
-            </p>
-
-            <h3>Private</h3>
-            <p>
-                Só podem ser acessados pela própria classe.
-            </p>
-
-            <h3>Protected</h3>
-            <p>
-                Podem ser acessados pela própria classe e nas derivadas.
-            </p>
-
-            <h3>Abstract</h3>
-            <p>
-                Os metodos não podem ser implementados, somente cabeçalhos.
-            </p>
             
-            <h3>Sealed</h3>
-            <p>
-                Classe não pode ser redefinido.
-            </p>
-
-            <h3>Virtual</h3>
-            <p>
-                O metodo pode ser redefinido em uma classe derivada.
-            </p>
-            
-            <h3>Static</h3>
-            <p>
-                O metodos pode ser chamado mesmo sem a instanciação de um objeto
-            </p>
 
         </section>
     </main>

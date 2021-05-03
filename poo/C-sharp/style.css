@@ -93,9 +93,16 @@ summary
     font-size: 1.35em;
 }
 
+table
+{
+    background-color:#F2F2F2;
+    color: #5B2473;
+    border-radius: 12px;
+}
+
 td
 {
-    padding: 1.5%;
+    padding: 1.8%;
 }
 
 ul
@@ -104,8 +111,6 @@ ul
     padding: 1 ;
     text-decoration: none;
 }
-
-
 
 .colorRed
 {
