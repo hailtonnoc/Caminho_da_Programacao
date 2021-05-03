@@ -13,97 +13,122 @@
     </header>
     <body>
         
-        <h2>Fontes</h2>
-        <p>
-            Ordem para utilização <strong>shothand</strong> <br>
-            <code><strong>font:</strong> style weight size, family, outra_family;</code>
-        </p>
-
+        <section>
+            <h2>Fontes</h2>
+            <p>
+                Ordem para utilização <strong>shothand</strong> <br>
+                <code><strong>font:</strong> style weight size, family, outra_family;</code>
+            </p>
+                <table border="1" class="blococ">
+                    <theader>
+                        <th>Comando</th>
+                        <th>Função</th>
+                    </theader>
+                    <tbody>
+                        <tr>
+                            <td>font-style: ;</td>
+                            <td><abbr title="italic, normal, oblique...">Estilo</abbr> de fonte</td>
+                        </tr>
+                        <tr>
+                            <td>font-weight:   ;</td>
+                            <td><abbr title="ex: 100-900  | initial, lighter, normal, bold, bolder">Peso</abbr> da fonte</td>
+                        </tr>
+                        <tr>
+                            <td>font-size: ;</td>
+                            <td><abbr title="1-99ex   |   1-99em">Tamanho</abbr> da fonte</td>
+                        </tr>
+                        <tr>
+                            <td>font-family:   ;</td>
+                            <td>Aplica <a href="https://fonts.google.com/" rel="external" target="blank">estilo</a> de <abbr title="Pode ser encontradas na web e importadas via CSS">fonte</abbr></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            <h2>Importando Famílias</h2>
+            <p>É possível enriquecer o site com fontes externas:</p>
+            <h3>Online</h3>
+            <h4>&lt;link&gt;</h4>
+            <p>Basta colar os <strong>links</strong> fornecidos no <code>&lt;head&gt;</code> da pagina HTML e referenciar o nome na <code>font-family</code> do componente desejado.</p>
+            <h4>@import</h4>
+            <p>Referencie o <strong>@import</strong> no inicio da pagina CSS e declare no <code>font-family</code> do componente desejado.</p>
+            
+            <h3>Arquivo</h3>
+            <p>Para este se fará necessário criar o <strong>@font-face</strong></p>
+            <code>
+                <pre>
+                @font-face
+                {
+            font-family: <small>'nome_desejado'</small> ;
+            src: url('<small>localização/nome_arquivo.otf</small>') format('<small  style="color: blue;">formato</small>'), <small>outras url format...</small> ;
+            font-weight: ' <small>normal</small> ', ... ;
+            font-style: ' <small>normal</small> ', ... ;
+                }
+                </pre>
+            </code>
             <table border="1" class="blococ">
-                <theader>
-                    <th>Comando</th>
-                    <th>Função</th>
-                </theader>
+                <thead>
+                    <th>Extensão</th>
+                    <th style="color: blue;">formato</th>
+                </thead>
                 <tbody>
                     <tr>
-                        <td>font-style: ;</td>
-                        <td><abbr title="italic, normal, oblique...">Estilo</abbr> de fonte</td>
+                        <td>.otf</td>
+                        <td>opentype</td>
                     </tr>
                     <tr>
-                        <td>font-weight:   ;</td>
-                        <td><abbr title="ex: 100-900  | initial, lighter, normal, bold, bolder">Peso</abbr> da fonte</td>
+                        <td>.ttf</td>
+                        <td>truetype</td>
                     </tr>
                     <tr>
-                        <td>font-size: ;</td>
-                        <td><abbr title="1-99ex   |   1-99em">Tamanho</abbr> da fonte</td>
+                        <td>embedded-opentype</td>
                     </tr>
                     <tr>
-                        <td>font-family:   ;</td>
-                        <td>Aplica <a href="https://fonts.google.com/" rel="external" target="blank">estilo</a> de <abbr title="Pode ser encontradas na web e importadas via CSS">fonte</abbr></td>
+                        <td>truetype-<abbr title="Apple Advanced Typography">aat</abbr></td>
                     </tr>
                     <tr>
-                        <td>text-shadow: ;</td>
-                        <td>Sombra de texto</td>
+                        <td>svg</td>
                     </tr>
-                    <tr>
-                        <td>text-decoration:   ;</td>
-                        <td><abbr title="EX:   Sublinhado">Tira</abbr> ou acrescenta elementos</td>
-                    </tr>
-                    <tr>
-                        <td>text-transform:   ;</td>
-                        <td>Altera <abbr title="EX:   uppercase">forma</abbr> da fonte</td>
-                    </tr>
-
                 </tbody>
             </table>
-        <h2>Importando Famílias</h2>
-        <p>É possível enriquecer o site com fontes externas:</p>
-        <h3>Online</h3>
-        <h4>&lt;link&gt;</h4>
-        <p>Basta colar os <strong>links</strong> fornecidos no <code>&lt;head&gt;</code> da pagina HTML e referenciar o nome na <code>font-family</code> do componente desejado.</p>
-        <h4>@import</h4>
-        <p>Referencie o <strong>@import</strong> no inicio da pagina CSS e declare no <code>font-family</code> do componente desejado.</p>
-        
-        <h3>Arquivo</h3>
-        <p>Para este se fará necessário criar o <strong>@font-face</strong></p>
-        <code>
-            <pre>
-    @font-face
-    {
-        font-family: <small>'nome_desejado'</small> ;
-        src: url('<small>localização/nome_arquivo.otf</small>') format('<small  style="color: blue;">formato</small>'), <small>outras url format...</small> ;
-        font-weight: ' <small>normal</small> ', ... ;
-        font-style: ' <small>normal</small> ', ... ;
-    }
-            </pre>
-        </code>
-        <table border="1">
-            <thead>
-                <th>Extensão</th>
-                <th style="color: blue;">formato</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>.otf</td>
-                    <td>opentype</td>
-                </tr>
-                <tr>
-                    <td>.ttf</td>
-                    <td>truetype</td>
-                </tr>
-                <tr>
-                    <td>embedded-opentype</td>
-                </tr>
-                <tr>
-                    <td>truetype-<abbr title="Apple Advanced Typography">aat</abbr></td>
-                </tr>
-                <tr>
-                    <td>svg</td>
-                </tr>
+            <p>Depois disso basta referenciar com o nome_desejado.</p>
+        </section>
 
-            </tbody>
-        </table>
-        <p>Depois disso basta referenciar com o nome_desejado.</p>
+        <section>
+            <h2>Textos</h2>
+
+            <div class="blococ">
+                <table border="1">
+                    <thead>
+                        <th>Comando</th>
+                        <th>Função</th>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>text-align:   ;</td>
+                            <td><abbr title="cente, justify, left, right">Alinhamento</abbr> de Texto</td>
+                        </tr>
+                        <tr>
+                            <td>text-indent:   ;</td>
+                            <td><abbr title="1...99px">Alinhamento</abbr> de inicio de texto</td>
+                        </tr>
+                        <tr>
+                            <td>text-shadow: ;</td>
+                            <td>Sombra de texto</td>
+                        </tr>
+                        <tr>
+                            <td>text-decoration:   ;</td>
+                            <td><abbr title="EX:   Sublinhado">Tira</abbr> ou acrescenta elementos</td>
+                        </tr>
+                        <tr>
+                            <td>text-transform:   ;</td>
+                            <td>Altera <abbr title="EX:   uppercase">forma</abbr> da fonte</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
 
         
         
