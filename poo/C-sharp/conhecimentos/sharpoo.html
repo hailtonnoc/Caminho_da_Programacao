@@ -115,11 +115,73 @@
             <h3>Construtor</h3>
             <p>
                 É responsável por iniciar um objeto quando instanciado. No C# quando não declarado um construtor o mesmo gera um construtor default. <br>
-                Para definir um <strong>construtor</strong> basta criar um metodo com o mesmo nome da <strong>classe</strong>.
+                Para definir um <strong>construtor</strong> basta criar um método com o mesmo nome da <strong>classe</strong>. Estrutura basica: <br>
+                <code>
+                    <pre>
+    namespace <small>aguradorInstruções</small>
+    {<div class="modeloObj">
+        public class Objetos
+        {
+            public string <small>nome</small>;
+            public int <small>alturaCm</small>;
+            public int <small>larguraCm</small>;
+            public int <small>projundidadeCm</small>;
+
+        <div class="modeloObjdif">
+            public Objetos(string <small>nm</small>, int <small>alCm</small>, int <small>lgCm</small>, int <small>pfCm</small>) 
+            {
+                nome = nm;
+                alturaCm = alCm;
+                larguraCm = lgCm;
+                projundidadeCm = pfCm;
+            }
+            </div>
+        }</div>
+    <details class="modeloObj">
+        <summary>class utilizando</summary>
+        {
+            static void Main()
+            {
+                Console.WriteLine(<small>"Qual sera o nome do objeto?"</small>);
+                string <small>nomeou</small> = Console.ReadLine();
+                Objetos <small>o1</small> = new Objetos(<small>nomeou</small>);
+                Console.WriteLine(<small>"Qual sera a altura do objeto?"</small>);
+                ...
+            }
+        }
+    </details>
+    }</div>
+                    </pre>
+            </code>
             </p>
             <h3>Destrutor</h3>
             <p>
                 É responsável por eliminar uma objeto.
+                <code>
+                    <pre>
+
+    <div class="modeloObj">
+        public class Objetos
+        {
+            public string <small>nome</small>;
+            public int <small>alturaCm</small>;
+            public int <small>larguraCm</small>;
+            public int <small>projundidadeCm</small>;
+
+        <div class="modeloObj">
+            public Objetos(<small>args...</small>) 
+            {
+                <small>...</small>
+            }
+        </div>
+        <div class="modeloObjdif">
+            ~Objetos()
+            {}
+        </div>
+        }</div>
+    </div>
+                    </pre>
+            </code>
             </p>
 
         </section>
