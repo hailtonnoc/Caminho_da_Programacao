@@ -63,7 +63,7 @@ li::marker
 
 mark
 {
-    background-color: orange;
+    background-color:#B18FBF;
 }
 
 
@@ -103,7 +103,7 @@ table
 
 td
 {
-    padding: 1.8%;
+    padding: 3px;
 }
 
 ul

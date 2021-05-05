@@ -74,7 +74,7 @@
                     </tr>
                     <tr>
                         <td>Private</td>
-                        <td>Só podem ser acessados pela própria classe.</td>
+                        <td>Só podem ser <abbr title="sendo assim os metodos para alteração de valores devem estar contidos dentro da classes">acessados</abbr> pela própria classe.</td>
                     </tr>
                     <tr>
                         <td>Protected</td>
@@ -213,13 +213,93 @@
         <div class="modeloObjdif">
             public Operacao(int <small>v1</small>, int <small>v2</small> )
             {
-    <small>v1 recebe v1? como a maquina vai saber do de qual você esta falando?</small> 
+    <small>v1 recebe v1? como a maquina vai saber de qual você esta falando?</small> 
                 this.<small>v1</small> = <small>v1</small>;
                 this.<small>v2</small> = <small>v2</small>;
             }
         </div>
         }
     </div>
+                    </pre>
+                </code>
+            </p>
+        </div>
+
+        <div>
+            <h2>Herança</h2>
+            <p>
+                Uma classe derivada, recebendo propriedades e métodos de uma classe base. Ainda sim uma classe mesmo sendo derivada possui seus membros próprios. Para referenciar uma classe pai basta usar um "<strong style="font-size: 1.5em;">:</strong>" seguido do nome da mesma. <br>
+
+                <code class="declaracaoPaiFilho">
+                    <pre class="classpai modeloObj">
+    class <small>Primata</small>
+    {
+    <div class="modeloObj">
+        public bool <small>bípede</small>;
+        public bool <small>polegar_opositor</small>;
+        <mark>private</mark> bool <small>auto_reconhece</small>;
+        <mark>private</mark> string <small>alimentacao</small>;
+    </div>
+
+        public Primata(string <small>alimentacao</small>)
+        {this.alimentacao = <small>alimentacao</small>}
+
+        public void <small>reconhece</small>()
+        {<small>auto_reconhece </small>= true;}
+        public void <small>n_reconhece</small>()
+        {<small>auto_reconhece </small>= false;}
+    }
+                    </pre>
+
+                    <pre class="classFilho modeloObj">
+    class <mark><small>Humano</small>:Primata</mark>
+    {
+    <div class="modeloObj">
+        <small>... <br> Tem acesso a tudo exceto ao <mark>private</mark></small>
+
+        string <small>etnia</small>;
+    </div>
+    <div class="modeloObjdif">
+        public Humano(string <small>etnia</small> ):base(<small>"herbívoro"</small>)
+        {
+            reconhece();
+            this.<small>etnia</small> = <small>etnia</small>;
+        }
+    </div>
+    }
+                    </pre>
+                </code> <br>
+                <details>
+                    <summary>A Utilização na classe <code>Main();</code></summary>
+                    <code>
+                        <pre class="modeloObj">
+    class <small>Principal</small>
+    {
+        static void <small>Main()</small>
+        {
+            Humano <small>pessoa</small> = new Humano("<small>Latino</small>");
+        }
+    }
+                        </pre>
+                    </code>
+                </details> <br>
+
+                Já no caso da propriedade <code>alimentacao</code> ela é uma propriedade a ser iniciada pela classe filha, então, utilizamos o operador <code>:base()</code> para fazer a declaração de valor.
+            </p>
+            <h2>Heranças Encadeadas</h2>
+            <p>
+                Para encadear heranças basta fazer o mesmo processo de usar um "<strong style="font-size: 1.5em;">:</strong>" seguido do nome da base. <br>
+                <code>
+                    <pre>
+    class <small>Individuo</small><mark>:Humano</mark>
+    {
+        public string <small>personalidade</small>;
+
+        public <small>Individuo</small>():base(<small>"Latino"</small>)
+        {
+            personalidade = <small>"neutra"</small>;
+        }
+    }
                     </pre>
                 </code>
             </p>
