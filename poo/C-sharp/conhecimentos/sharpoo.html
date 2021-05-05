@@ -189,13 +189,42 @@
 
         </section>
 
-        <section class="classstatic">
+        <div class="classstatic">
             <h2>Classe Static</h2>
             <p>
                 Quando utilizamos classes do tipo <strong>static</strong> não podemos definir construtor pois não pode se declarar objetos de classe static, então todos os membros da classe também devem ser static. Em suma pode ser entendido como um elemento comum a todo o program uma vez que usa uma posição estática de memoria.
             </p>
 
-        </section>
+        </div>
+
+        <div>
+            <h2>Operador THIS</h2>
+            <p>
+                Faz referencia a um método pai, criando uma associação coerente. <br>
+                ex;<br>
+                <code>
+                    <pre>
+    <div class="modeloObj">
+        class Operacao
+        {
+            public int <small>v1</small>;
+            public int <small>v2</small>;
+
+        <div class="modeloObjdif">
+            public Operacao(int <small>v1</small>, int <small>v2</small> )
+            {
+    <small>v1 recebe v1? como a maquina vai saber do de qual você esta falando?</small> 
+                this.<small>v1</small> = <small>v1</small>;
+                this.<small>v2</small> = <small>v2</small>;
+            }
+        </div>
+        }
+    </div>
+                    </pre>
+                </code>
+            </p>
+        </div>
+
     </main>
     
     <br>
