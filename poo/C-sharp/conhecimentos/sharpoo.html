@@ -152,11 +152,14 @@
     </details>
     }</div>
                     </pre>
-            </code>
+            </code><br>
+            Sobregarda de construtores se dá devido a uma serie de construtores com <strong>nomes iguais</strong> e funções semelhantes. 
+            
             </p>
+
             <h3>Destrutor</h3>
             <p>
-                É responsável por eliminar uma objeto.
+                É responsável por eliminar uma objeto depois de realizado todas as atividades. Para informar um destrutor basta criar um método com o mesmo nome do construtor porem com um "<strong>~</strong>" na frente. Ainda é possivel passar um <code>Console.WhiteLine();</code> para visualizar o objeto que esta sendo destruído.
                 <code>
                     <pre>
 
@@ -182,6 +185,14 @@
     </div>
                     </pre>
             </code>
+            </p>
+
+        </section>
+
+        <section class="classstatic">
+            <h2>Classe Static</h2>
+            <p>
+                Quando utilizamos classes do tipo <strong>static</strong> não podemos definir construtor pois não pode se declarar objetos de classe static, então todos os membros da classe também devem ser static. Em suma pode ser entendido como um elemento comum a todo o program uma vez que usa uma posição estática de memoria.
             </p>
 
         </section>
