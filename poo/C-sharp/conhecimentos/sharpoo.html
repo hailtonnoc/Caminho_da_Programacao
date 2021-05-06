@@ -161,30 +161,72 @@
             <p>
                 É responsável por eliminar uma objeto depois de realizado todas as atividades. Para informar um destrutor basta criar um método com o mesmo nome do construtor porem com um "<strong>~</strong>" na frente. Ainda é possivel passar um <code>Console.WhiteLine();</code> para visualizar o objeto que esta sendo destruído.
                 <code>
-                    <pre>
-
-    <div class="modeloObj">
+                    <pre><div class="modeloObj">
         public class Objetos
         {
             public string <small>nome</small>;
             public int <small>alturaCm</small>;
             public int <small>larguraCm</small>;
             public int <small>projundidadeCm</small>;
-
         <div class="modeloObj">
             public Objetos(<small>args...</small>) 
-            {
-                <small>...</small>
-            }
-        </div>
-        <div class="modeloObjdif">
+            {<small>...</small>}</div><div class="modeloObjdif">
             ~Objetos()
             {}
-        </div>
-        }</div>
-    </div>
+        </div>         }</div></div>
                     </pre>
             </code>
+            </p>
+
+            <h3>Ordem de Execução dos construtores</h3>
+            <p>
+                A Ordem de execução se da sempre a partir das bases e hierarquicamente para as derivadas. <br>
+                <details>
+                    <summary>Exemplo</summary>
+                    <code>
+                        <pre class="modeloObj">
+    class Base  
+{
+    public Base()
+    {
+        Console.WriteLine("Construtor classe base");
+    }
+}
+class Deriva1:<mark>Base</mark>
+{
+    public Deriva1()
+    {
+        Console.WriteLine("Construtor classe Deriva1");
+    }
+}
+class Deriva2:<mark>Deriva1</mark>
+{
+    public Deriva2()
+    {
+        Console.WriteLine("Construtor classe Deriva2");
+    }
+}
+<div class="modeloObj">
+    class Aula37
+    {
+        static void Main()
+        {
+            Deriva2 d2= new Deriva2();
+        }
+    }
+</div>
+                        </pre>
+                    </code>
+                    <code>
+                        <pre>
+    <small>Resultado da execução </small>>>
+        Construtor classe base
+        Construtor classe Deriva1
+        Construtor classe Deriva2
+                        </pre>
+                    </code>
+                </details>
+
             </p>
 
         </section>
