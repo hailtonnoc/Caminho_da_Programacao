@@ -65,15 +65,14 @@
             </div>
         </section>
 
-        <section>
+        <section class="forma">
             <h2>Evolução dos Codigos e formas</h2>
             <h3>50's Assembly</h3>
             <p>
                 Apesar de não ser a primeira linguagem criada nem a ter o primeiro compilador, foi a mais conhecida e a primeira permitir uma criação fácil de linguagens de alto nível. Como A base de tudo é o binário, basta que a primeira camada do compilador dessa esse dicionário de maquina para que outra linguagem mais refinada possa ser criada em cima da anterior.
             </p>
 
-            
-                <h2>Compilada e Interpretada</h2>
+                <h2>Compilada e Interpretada <small>(execução baixo nível)</small></h2>
                 <p>
                     Como todo código deve necessariamente ser entendivel ao hardware no seu nível mais elementar o fluxo é binário, assim obrigando todo código de alto nível ser convertido em linguagem de maquina. <br>
                     Então temos duas maneiras de fazer isso.
@@ -89,7 +88,7 @@
                     </div>
                 </div>
 
-                <h2>Imperativo e Declarativo</h2>
+                <h2>Imperativo e Declarativo <small>(O que executar)</small></h2>
                 <p>Duas maneiras de se programar respectivamente abordando no algoritmo <strong>como</strong> e <strong>O que</strong> fazer.</p>
                 <div class="grid2">
                     <div class="">
@@ -168,7 +167,6 @@
                 A primeira posição de um índice é 0 ou seja, um Array uni dimensional de duas posições [2] vai ter como índice posição 0 e 1.
             </p>
         </section>
-    
         
         <section id="operador">
             <h2>Operadores</h2>
@@ -250,23 +248,33 @@
             </p>
         </section>
 
-        <section>
+        <section class="paradigmas">
             <h1>Paradigmas de programação</h1>
             <p>Dis Respeito aos  padrões estruturais, a maneira de se construir um algoritmo. </p>
-            <div class="funcinal">
+            <div class="funcinal escopoup">
                 <h2>Funcional</h2>
                 <p></p>
             </div>
 
-            <div class="procedural">
+            <div class="procedural escopoup">
                 <h2>Procedural</h2>
-                <p></p>
+                <p>
+                    Permitiu um maior gerenciamento de escopo, encapsulamento de modulos, e aboliu a pratica do <abbr title="Uma espécie de portal que desviava o codigo de um ponto a outro">GoTo</abbr> uma vez que essa era uma alternativa para fazer o código andar unidimensionalmente. <br>
+                    O procedural tem uma característica bidimensional tendo <abbr title="escopo">camadas</abbr> de funções, permitindo uma visibilidade limitada dos elementos. <br>
+                    Foco na execução.
+                </p>
             </div>
 
-            <div class="orientaObjs">
+            <div class="orientaObjs escopoup">
                 <h2>Orientação a Objetos</h2>
+                <p>
+                    <br>
+                    Foco nos Dados.
+                </p>
+
+
                 <h3>Classes</h3>
-                <p>Ao longo de varias idealizações de diversos tipos de software criou-se um conceito predominate até hoje a <strong>Orientação a Objetos</strong> o brilhantismo surge com a capacidade de abstrair os componentes do sistema permitindo a criação de um corpo estrutural sem o uso de elementos concretos, permitindo criar posteriormente, e caso esse elemento fique ultra passado basta alterar o encapsulamento responsável pelo mesmo.</p>
+                <p>Ao longo de varias idealizações de diversos tipos de software criou-se um conceito predominate até hoje a <strong>Orientação a Objetos</strong> o brilhantismo surge com a capacidade de abstrair os componentes do sistema permitindo a criação de um corpo estrutural sem o uso de elementos concretos, permitindo criar posteriormente, e caso esse elemento fique ultrapassado basta alterar o encapsulamento responsável pelo mesmo.</p>
                 <h2>Herança</h2>
                 <p>Pensando pelo Darwinismo podemos compreender que todo animal tem um ancestral comum e esse ancestral detém características fundamentas presente em todos os seus sucessores. Por vez seus sucessores tem sua próprias características permitindo discernimento evolutivo.</p>
                 <p>Um exemplo pratico seria que somos da classe abstrata primatas, mas primatas em si não é acessível como objeto e sim como conjunto imaginário, humano <abbr title="Flag de compreenção, indica classe pai"><strong>é um</strong></abbr> primata, chimpanzés também e não podemos nos esquecer dos gorilas... todos esses <strong>herdam</strong> características e habilidades de seu antecessor na cadeia evolutiva.</p>

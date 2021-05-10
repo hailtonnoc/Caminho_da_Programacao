@@ -3,12 +3,7 @@
 body
 {
     font-family: 'Dosis', sans-serif;
-    background: linear-gradient(rgba(255, 255, 255, 0.69), rgba(255, 255, 255, 0.90)), url(../XXXMATERIAISXXX/IMAGENS/cubos-brancos-seamless-design-pattern_1319-68.jpg) ;
-}
-
-details
-{
-
+    background: linear-gradient(rgba(255, 255, 255, 0.54)-30%, rgba(255, 255, 255, 0.81)), url(../XXXMATERIAISXXX/IMAGENS/cubos-brancos-seamless-design-pattern_1319-68.jpg) ;
 }
 
 div
@@ -44,6 +39,18 @@ section
     border: 6px outset currentColor ;
 }
 
+summary
+{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.escopoup
+{
+    margin: 1%;
+    padding: .9%;
+    box-shadow: gray -4.5px 6px 9px 1.2px ;
+}
 
 .grid3
 {
