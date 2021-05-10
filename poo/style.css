@@ -94,6 +94,24 @@ grid-column:3/3;
     grid-area: aritimetico;
     grid-row: 1/1;
     grid-column: 3/3;
-
 }
 
+.grid2
+{
+    display: grid;
+    grid-template-areas: "comp", "inte";
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto;
+}
+.compilada
+{
+    grid-area: comp ;
+    grid-row: 1/1;
+    grid-column: 1/2;
+}
+.interpretada
+{
+    grid-area: comp ;
+    grid-row: 1/1;
+    grid-column: 2/2;
+}
