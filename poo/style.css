@@ -1,99 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
 body
 {
-    font-size: 1.18em;
-    margin: 1%;
-    background: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url(../XXXMATERIAISXXX/IMAGENS/cubos-brancos-seamless-design-pattern_1319-68.jpg) ;
+    font-family: 'Dosis', sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.69), rgba(255, 255, 255, 0.90)), url(../XXXMATERIAISXXX/IMAGENS/cubos-brancos-seamless-design-pattern_1319-68.jpg) ;
 }
 
-h1, h2, h3, h4, div, p
+details
 {
-    background-color: rgba(255, 255, 255, 0.363);
-    border-radius: 9px;
-    padding: 1.08%;
+
+}
+
+div
+{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+h1
+{
+    font-size: 2.07em;
+}
+h2
+{
+    font-size: 1.8em;
+}
+h3
+{
+    font-size: 1.5em;
+}
+h4
+{
+    font-size: 1.2em;
+}
+
+p
+{
+    margin: 1.5%;
+}
+
+section
+{
+    border: 6px outset currentColor ;
 }
 
 
-
-#fundamentalg
+.grid3
 {
     display: grid;
-    grid-template-areas:"analise", "algoritimo", "codifica" ;
-    grid-template-rows: 63vh;
+    grid-template-areas:"i1", "i2", "i3" ;
+    grid-template-rows: auto;
     grid-template-columns: 33% 33% 33%;
 }
-#analisealg
+.it1 #analisealg
 {
-grid-area: analise;
-grid-row: 1/1;
-grid-column: 1/1;
-}
-#algoritimoalg
-{
-grid-area: algoritimo;
-grid-row: 1/1;
-grid-column:2/2;
-}
-#codificaalg
-{
-grid-area: codifica;
-grid-row: 1/1;
-grid-column:3/3;
-}
-
-#dados
-{
-    display: grid;
-    grid-template-areas: "string", "number", "boleano";
-    grid-template-rows: 18vh;
-    grid-template-columns: 33% 33% 33%;
-    margin: 1%;
-    margin-top: 0%;
-    margin-bottom: 2%;
-    padding-top: 0%;
-}
-#string
-{
-    grid-area: string;
+    grid-area: i1;
     grid-row: 1/1;
     grid-column: 1/1;
 }
-#number
+.it2 #algoritimoalg
 {
-    grid-area: string;
+    grid-area: i2;
     grid-row: 1/1;
-    grid-column: 2/2;
+    grid-column:2/2;
 }
-#boleano
+.it3 #codificaalg
 {
-    grid-area: string;
+    grid-area: i3;
     grid-row: 1/1;
-    grid-column: 3/3;
-}
-
-#operador
-{
-    display: grid;
-    grid-template-areas: "aritimetico", "relacional", "logico";
-    grid-template-rows: 36vh;
-}
-#aritimetico
-{
-    grid-area: aritimetico;
-    grid-row: 1/1;
-    grid-column: 1/1;
-}
-#relacional
-{
-    grid-area: aritimetico;
-    grid-row: 1/1;
-    grid-column: 2/2;
-
-}
-#logico
-{
-    grid-area: aritimetico;
-    grid-row: 1/1;
-    grid-column: 3/3;
+    grid-column:3/3;
 }
 
 .grid2

@@ -23,25 +23,24 @@
                 <li>Testes / Correções.</li>
                 <li>Finalizar.</li>
             </ol>
-        </section>
 
-        <h2>Programação</h2>
-    
-        <p>
+            <h2>Programação</h2>
+            <p>
             Algoritmo é uma sequencia de ações que visa atingir um propósito. Qualquer ou seja <mark>descrição de procedimento</mark> é um algoritmo. <br>
             E o algoritmo tem um algoritimo:
-        </p>
-        <ol>
-            <li>Deve ter fim.</li>
-            <ul><li>Tudo deve ser realizado em um tempo finito.</li></ul>
-            <li>Deve ser claro quanto ao proximo passo.</li>
-            <li>Deve gerar informação de saida.</li>
-            
-        </ol>
+            </p>
 
-        <p>O algoritmo recebera uma ou uma serie de <strong>informação</strong> realizara uma <abbr title="Visando um objetivo">Operação</abbr> e retornara uma outra informação.</p>
-        
-        <section id="fundamentalg">
+            <ol>
+                <li>Deve ter fim.</li>
+                <ul><li>Tudo deve ser realizado em um tempo finito.</li></ul>
+                <li>Deve ser claro quanto ao proximo passo.</li>
+                <li>Deve gerar informação de saida.</li>
+            </ol>
+
+        <p>O algoritmo recebera uma ou uma serie de <strong>informações</strong> realizara uma <abbr title="Visando um objetivo">Operação</abbr> e retornara uma outra informação.</p>
+        </section>
+
+        <section class="fases grid3">
             <div id="analisealg">
                 <h3><img src="../XXXMATERIAISXXX/IMAGENS/download.png" alt="">Analise</h3>
                 <p>Define <strong>"o que"</strong> da forma, cria entendimento, fornece dados iniciais.</p>
@@ -90,7 +89,149 @@
                 </div>
             </div>
         </section>
+        
+        <section id="dados">
+            <h2>Dados</h2>
+            <p>Como vimos acima dados são essenciais para o funcionamento de um Algoritmo.</p>
+            <h3>Tipo de dados</h3>
+            <p>Os dados ou <strong>variáveis</strong> possuem características próprias</p>
+                <div class="grid3">
+                    <div class="it1" id="string">
+                        <h4>String</h4>
+                        <p>Literal ou caracteres, combinações <abbr title="Abc, Bac, c1x">alfanuméricas</abbr></p>
+                    </div>
+                    <div class="it2" id="number">
+                        <h4>Number</h4>
+                        <p>São divididos em dois grupos; <abbr title="Não contem numero fracionário">inteiros</abbr> e <abbr title="Contem numero fracionário">reais</abbr>.</p>
+                    </div>
+                    <div class="it3" id="boleano">
+                        <h4>Boolean</h4>
+                        <p>Assume 2 valores <abbr title="true">Verdadeiro</abbr> e <abbr title="false">Falso</abbr></p>
+                    </div>
+                </div>
 
+            <h2>Vetores</h2>
+            <p>Coleção de informações.</p>
+            <h3>Array ou Matrizes</h3>
+            <p>
+                Basicamente representam um conjunto de dados de mesmo tipo, armazenados na memoria através de um <strong>índice</strong>. <br>
+                Um Array pode ter varias dimensões e tudo isso é reflexível nos indices.
+                <details class="d1">
+                    <summary>1D</summary>
+                    <p>Uma matriz de uma dimensão que guarda 3 posições inteiras.</p>
+                    <code>
+                        <pre>
+    inteiro <small>nome_matriz</small> <strong>[3]</strong>
+                        </pre>
+                    </code>
+                </details>
+                <details class="d2">
+                    <summary>2D</summary>
+                    <p>Uma matriz de duas dimensões que guarda 9 posições palavras.</p>
+                    <code>
+                        <pre>
+    string <small>nome_matriz</small> <strong>[3][3]</strong>
+                        </pre>
+                        <p>Quantidades respectivas a 3 linhas e 3 colunas.</p>
+                    </code>
+                </details>
+                <details class="d3">
+                    <summary>3D</summary>
+                    <p>Uma matriz que guarda 27 posições reais.</p>
+                    <code>
+                        <pre>
+    inteiro <small>nome_matriz</small> <strong>[3][3][3]</strong>
+                        </pre>
+                    </code>
+                    <p>Respectivamente 3 linhas, 3 colunas e 3 profundidades.</p>
+                </details>
+                ... <br>
+                A primeira posição de um índice é 0 ou seja, um Array uni dimensional de duas posições [2] vai ter como indice posição 0 e 1.
+            </p>
+        </section>
+    
+        
+        <section id="operador">
+            <h2>Operadores</h2>
+            <div class="grid3">
+                <div id="aritimetico" class="it1">
+                    <h3>Aritméticos</h3>
+                    <p>Presentes na matemática:</p>
+                    <p>+, -, *, /, <abbr title="exponenciação">**</abbr>, <abbr title="modulo  |  resto de divisão">%</abbr></p>
+                </div>
+                
+                <div id="relacional" class="it2">
+                    <h3>Relacionais</h3>
+                    <p>igual a <strong>==</strong></p>
+                    <p>diferente <strong>!= ou &lt;&gt; </strong></p>
+                    <p>menor igual <strong>&lt;=</strong></p>
+                    <p>maior igual <strong>&gt;=</strong></p>
+                </div>
+                
+                <div id="logico" class="it3">
+                    <h3>Lógicos</h3>
+                    <p><strong>and</strong> relaciona premissas assim ambas precisam ser verdadeira para o resultado ser verdadeiro.</p>
+                    <p><strong>or</strong> relaciona premissa assim uma precisa ser verdadeira para o resultado ser verdadeiro.</p>
+                    <p><strong>not</strong> o resultado precisa ser falso para ter um retorno verdadeiro.</p>
+                </div>
+            </div>
+
+        </section>
+    
+        <section class="estrut">
+            <h2>Estrutura de <abbr title="algoritmo">Processamento</abbr></h2>
+            <h3>Estrutura sequencial</h3>
+            <p>Este tipo de estrutura é o mais simples seguindo a sequencia primordial de um algoritmo que é o recebimento e o processamento de dados retornando um valor final e é finalizado.</p>
+
+            <h3>Estrutura Condicional</h3>
+            <h4>Condicional simples</h4>
+            <p>Caso verdadeiro então comando é executado.</p>
+            <h4>Condicional composta</h4>
+            <p>Através de um analise inicial nos dados de entrada, se <strong>true</strong> um processo é tomado, se <strong>false</strong> outro comando é realizado.</p>
+
+            <h4>Case </h4>
+            <p>Se dado inicial for igual a caso 'x' o bloco é executado caso 'y','z'... seu respectivo bloco é executado.</p>
+
+            <h3>Estrutura de Repetição</h3>
+            <p>Utilizado quando um determinado algoritmo precisa ser repetido, pode estar atrelado a uma condição. <br>
+            
+            Caso a condição se inicie falsa o looping não sera executado.
+            <details class="tstini">
+                <summary>Repetição com teste no inicio</summary>
+                <code>
+                    <pre>
+    enquanto(<small>condição</small>)
+        {<small>comandos...</small>}
+                    </pre>
+                </code>
+            </details><br>
+
+            Mesmo se iniciado com a condição falsa ele executara no mínimo uma vez.
+            <details class="tstfim">
+                <summary>Repetição com teste no final</summary>
+                <code>
+                    <pre>
+    faça
+        {<small>comandos...</small>}
+    enquanto(<small>condição</small>)
+                    </pre>
+                </code>
+            </details><br>
+
+            Geralmente é usado quando precisamos de uma quantidade especifica de repetições, mas tambem é possível em qualquer uma das anteriores.
+            <details class="tstvar">
+                <summary>Repetição com variável de controle</summary>
+                <code>
+                    <pre>
+    para(<small>inicio_var; condições; incrementa var</small>)
+        {<small>comandos...</small>}
+                    </pre>
+                </code>
+            </details>
+            </p>
+        </section>
+
+        <h1>Paradigmas de programação</h1>
         <section class="orientaObjs">
             <h2>Orientação a Objetos</h2>
             <h3>Classes</h3>
@@ -105,79 +246,10 @@
 
         </section>
 
-
-        <h2>Dados</h2>
-        <p>Como vimos acima dados são essenciais para o funcionamento de um Algoritmo.</p>
-        <h3>Tipo de dados</h3>
-        <p>Os dados ou <strong>variáveis</strong> possuem características próprias</p>
-        
-        <section id="dados">
-
-            <div id="string">
-                <h4>String</h4>
-                <p>Literal ou caracteres, combinações <abbr title="Abc, Bac, c1x">alfanuméricas</abbr></p>
-            </div>
-        
-            <div id="number">
-                <h4>Number</h4>
-                <p>São divididos em dois grupos; <abbr title="Não contem numero fracionário">inteiros</abbr> e <abbr title="Contem numero fracionário">reais</abbr>.</p>
-            </div>
-        
-            <div id="boleano">
-                <h4>Boolean</h4>
-                <p>Assume 2 valores <abbr title="true">Verdadeiro</abbr> e <abbr title="false">Falso</abbr></p>
-            </div>
-        </section>
-    
-        <h2>Operadores</h2>
-        <section id="operador">
-            
-            <div id="aritimetico">
-                <h3>Aritméticos</h3>
-                <p>Presentes na matemática:</p>
-                <p>+, -, *, /, <abbr title="exponenciação">**</abbr>, <abbr title="modulo  |  resto de divisão">%</abbr></p>
-            </div>
-            
-            <div id="relacional">
-                <h3>Relacionais</h3>
-                <p>igual a <strong>==</strong></p>
-                <p>diferente <strong>!= ou &lt;&gt; </strong></p>
-                <p>menor igual <strong>&lt;=</strong></p>
-                <p>maior igual <strong>&gt;=</strong></p>
-            </div>
-            
-            <div id="logico">
-                <h3>Lógicos</h3>
-                <p><strong>and</strong> relaciona premissas assim ambas precisam ser verdadeira para o resultado ser verdadeiro.</p>
-                <p><strong>or</strong> relaciona premissa assim uma precisa ser verdadeira para o resultado ser verdadeiro.</p>
-                <p><strong>not</strong> o resultado precisa ser falso para ter um retorno verdadeiro.</p>
-            </div>
-
-        </section>
-    
-        <h2>Estrutura de <abbr title="algoritmo">Processamento</abbr></h2>
-        <h3>Estrutura sequencial</h3>
-        <p>Este tipo de estrutura é o mais simples seguindo a sequencia primordial de um algoritmo que é o recebimento e o processamento de dados retornando um valor final e é finalizado.</p>
-    
-        <h3>Estrutura Condicional</h3>
-        <h4>Condicional simples</h4>
-        <p>Caso verdadeiro então comando é executado.</p>
-    
-        <h4>Condicional composta</h4>
-        <p>Através de um analise inicial nos dados de entrada, se <strong>true</strong> um processo é tomado, se <strong>false</strong> outro comando é realizado.</p>
-        <h4></h4>
-    
-        <h4>Case </h4>
-        <p>Se dado inicial for igual a caso 'x' o bloco é executado caso 'y','z'... seu respectivo bloco é executado.</p>
-    
-        <h3>Estrutura de Repetição</h3>
-        <p>Utilizado quando um determinado algoritmo precisa ser repetido, pode estar atrelado a uma condição.</p>
-
-
-
     </main>
     
-    <p><a href="../index.html" rel="prev">Voltar ao Home</a></p>
+    <br>
+    <a href="../index.html" rel="prev"><img src="../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a>
 
 </body>
 </html>
