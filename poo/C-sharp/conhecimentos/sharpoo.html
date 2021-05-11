@@ -86,11 +86,11 @@
                     </tr>
                     <tr>
                         <td>Sealed</td>
-                        <td>Classe não pode ser redefinido.</td>
+                        <td>Classe não pode ser herdado.</td>
                     </tr>
                     <tr>
                         <td>Virtual</td>
-                        <td>O metodo deve ser redefinido em uma classe derivada.</td>
+                        <td>O método deve ser redefinido em uma classe derivada.</td>
                     </tr>
                     <tr>
                         <td>Static</td>
@@ -344,6 +344,67 @@ class Deriva2:<mark>Deriva1</mark>
     }
                     </pre>
                 </code>
+            </p>
+        </div>
+
+        <div class="acessores">
+            <h2>Acessors Get e Set</h2>
+            <p>
+                Apesar de parecer um método é uma propriedade especial, é utilizada para limitar a interação de um atributo private. Desta forma tera disponibilidade tanto de pegar um dado, quanto de setar um valor nele. <br> Definição:
+                <code>
+                    <pre>
+    class <small>Primata</small>
+    {
+        private int <small>vidaEstimada</small>;
+
+
+    <div class="modeloObj">
+        public int <small>idadeM</small>
+        {
+        <div class="modeloObjdif">
+            get{ return <small>vidaEstimada</small>;}
+        </div>
+        <div class="modeloObjdif">
+            set{ <small>vidaEstimada</small> = <mark>value</mark>;}
+        </div>
+        }
+    </div>
+            public <small>Primata</small>()
+        {
+            <small>idadeM</small>= 108;
+        }
+    }
+                    </pre>
+                </code> <br>
+
+                <details>
+                    <summary>Usando get</summary>
+                    <code>
+                        <pre>
+    static void Main()
+    {
+        Humano <small>pessoa</small> = new Humano();
+
+        Console.WriteLine("<small>A idade max de um humano é {0}</small>", <mark>pessoa</mark>.<mark>idadeM</mark>)
+    }
+                        </pre>
+                    </code>
+                </details>
+
+                <details>
+                    <summary>Usando set</summary>
+                    <code>
+                        <pre>
+    static void Main()
+    {
+        Humano <small>pessoa</small> = new Humano();
+
+        <mark>pessoa</mark>.<mark>idadeM</mark> = 200;
+    }
+                        </pre>
+                    </code>
+                </details>
+
             </p>
         </div>
 
