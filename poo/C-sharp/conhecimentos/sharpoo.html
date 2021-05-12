@@ -347,7 +347,7 @@ class Deriva2:<mark>Deriva1</mark>
             </p>
         </div>
 
-        <div class="acessores">
+        <section class="acessores">
             <h2>Acessors Get e Set</h2>
             <p>
                 Apesar de parecer um método é uma propriedade especial, é utilizada para limitar a interação de um atributo private. Desta forma tera disponibilidade tanto de pegar um dado, quanto de setar um valor nele. <br> Definição:
@@ -406,7 +406,127 @@ class Deriva2:<mark>Deriva1</mark>
                 </details>
 
             </p>
+        </section>
+
+        <section class="indexadores">
+            <h2>Indexadores de Classes</h2>
+            <p>
+                Permite que o objeto seja utilizado como um Array.
+                <code>
+                    <pre>
+    class <small>Primata</small>
+    {
+        private int[] <small>vidaFases</small>= new int[6]{0,9,18,27,36,45,54};
+
+
+    <div class="modeloObj">
+        public int this[int <small>i</small>]
+        {
+        <div class="modeloObjdif">
+            get{ return <small>vidaFases</small>[i];}
         </div>
+        <div class="modeloObjdif">
+            set{ <small>vidaFases</small>[i] = <mark>value</mark>;}
+        </div>
+        }
+    </div>
+            public <small>Primata</small>()
+            {}
+    }
+                    </pre>
+                </code> <br>
+                
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre>
+    static void Main()
+    {
+        Humano <small>pessoa</small> = new Humano();
+
+        <mark>pessoa</mark>[2] = 300;
+
+        Console.WriteLine("Idade:{0}", <small>pessoa</small>[2]);
+    }
+                        </pre>
+                    </code>
+                </details>
+            </p>
+        </section>
+
+        <section class="inrerface">
+            <h2>Interface OO</h2>
+            <p>
+                Interfaces só implementam só os protótipos dos métodos, uma classe pode implementar diversas interfaces. <br>
+                Características das Interfaces: <br>
+                <ul>
+                    <li>Não tem construtor ou destrutor</li>
+                    <li>Não tem método operator</li>
+                    <li>Não possui membros static</li>
+                    <li>Não possui <abbr title="declarado na classe implementação">propriedade</abbr></li>
+                </ul> <br>
+                <details>
+                    <summary>Implementando</summary>
+                    <code>
+                        <pre>
+    public interface <small>Primata</small>
+    {
+    <div class="modeloObj">
+        void <small>nascer</small>();
+        void <small>morrer</small>();
+    </div>
+    }
+                        </pre>
+                        <pre>
+    public interface <small>Homosapiens</small>
+    {
+    <div class="modeloObj">
+        void <small>evoluir</small>();
+    </div>
+    }
+                        </pre>
+                    </code>
+                </details>
+                <br>
+
+                Uma vez declarado metodos interface se faz necessario sua implementação na classe filha.
+                
+                <detail>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre>
+    class <small>Pessoa</small>:Primata, ...
+    {
+        <mark>public bool <small>nascer</small>;</mark>
+        
+        public <small>Pessoa</small>()
+        {
+
+        }
+        <div class="modeloObj">
+            public void <small>nascer</small>()
+            {
+                this.nascer = true;
+            }
+        </div>
+        <div class="modeloObj">
+            public void <small>morrer</small>()
+            {
+                this.nascer = false;
+            }
+        </div>
+    }
+
+    static void Main()
+    {
+        Pessoa <small>Pessoa1</small> = new Pessoa();
+
+    }
+                        </pre>
+                    </code>
+                </detail>
+            </p>
+        </section>
 
     </main>
     
