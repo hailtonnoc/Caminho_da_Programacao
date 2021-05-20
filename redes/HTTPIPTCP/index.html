@@ -4,46 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>HTTP</title>
 </head>
 <body>
     <header>
-        <h1>HTTP</h1>
+        <h1>Redes</h1>
     </header>
     <body>
-        <p>O <strong>HTTP</strong> é um protocolo de <strong>Pedido</strong> e <strong>Resposta</strong>, o protocolo tem uma gramática própria, uma estrutura sintática bem definida além de regras semânticas que definem como as <em>mensagens</em> transitadas devem ser interpretadas. Pode ser visto como uma linguagem e a sua derradeira versão é a <strong>2</strong>.</p>
+        <main>
+            <section class="fundamentos">
+                <div class="hist">
+                    <h2>Histórico</h2>
+                    <p>
+                        <strong>O que são redes de computadores?</strong><br>
+                        São estruturas físicas e lógicas que comunicam computadores, transmitindo dados entre eles. <br>
+                        Antecessores foram: <br>
+                        <ul>
+                            <li>60's terminais interativos, eram monitores e teclados conectados a um único servidor.</li>
+                            <li>70's mainframes/ cluster, distribuição de processamento, descentralizando o processamento e permitindo a distribuição do mesmo a vários micros.</li>
+                            <li>80's redes locais, conectava computadores e outros dispositivos de rede.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="elementosR">
+                    <h2>Elementos de rede</h2>
+                    <p>
+                        Equipamentos que permitem a conexão entre dispositivos em rede. <br>
+                        <ul>
+                            <li>
+                                <strong>Placa de rede</strong>
+                                é o dispositivo de conecta o computador a rede física.
+                            </li>
+                            <li>
+                                <strong>switch</strong>
+                                Gerência redes, enviando dados de origem a um destino.
+                            </li>
+                            <li>
+                                <strong>Roteador</strong>
+                                Também gerência as redes, porem, este tem a capacidade de escolher a melhor rota.
+                            </li>
+                        </ul>
+                    </p>
+                    <h2>Tipos de rede</h2>
+                    <p>
+                        Tipos de rede são definidas de acordo com sua abrangência
+                        <ul>
+                            <li><strong>LAN</strong>, é o termo que diz respeito a uma rede local.</li>
+                            <li><strong>MAN</strong>, são redes de abrangência metropolitana.</li>
+                            <li><strong>WAN</strong>, Conectam países e continentes.</li>
+                        </ul>
+                    </p>
+                </div>
+                <div>
+                    <h2 class="internet">Internet</h2>
+                    <p>São redes locais conectadas entre si, surgiu através da <strong>ARPANET</strong> com propósito de ter uma conexão entre as principais bases militares dos EUA e que resistisse a ataques nucleares.  </p>
+                </div>
+            </section>
 
-        <h2>Camadas</h2>
-        <ol>
-            <li>
-                <h3>Aplicação</h3>
-                <p>Protocolo HTTP</p>
-                <ul>
-                    <li>APACHE</li>
-                    <li>TOMCAT</li>
-                    <li>NODE</li>
-                    <li>NGINX</li>
-                </ul>
-                <p>Escuta em portas</p>
+            <section class="topologia">
+                <div>
+                    <h3>Topologia de Redes</h3>
+                    <p>
+                        Diz respeito a como os dispositivos estão organizados na rede. <br><br>
+                        <strong>Topologia Ponto-a-Ponto</strong> ela transmite dados em um único sentido, nesta, a informação caminham de maquina em maquina. Sua grande desvantagem é que caso alguma maquina esteja comprometida os dados muito provavelmente não cheguem a maquina final.<br>
+                        <br>
+                        <strong>Topologia Estrela</strong> essa é gerenciada por um nó roteador/ switch. .
+                    </p>
+                </div>
+                <div>
+                    <h3>ETHERNET</h3>
+                    <p>
+                        
+                    </p>
+                </div>
 
-            </li>
-            <li>
-                <h3>Transporte</h3>
-                <h4>TCP</h4>
-                <p>Define pacotes e ordena os mesmos</p>
-                <h4>UDP</h4>
-            </li>
-            <li>
-                <h3>Rede</h3>
-                <h>IP</h>
-                <p>Define o caminho</p>
-            </li>
-            <li>
-                <h3>Hardware</h3>
-            </li>
-        </ol>
+            </section>
 
-        
+            <section class="refant">
+                <h2>HTTP</h2>
+                <p>O <strong>HTTP</strong> é um protocolo de <strong>Pedido</strong> e <strong>Resposta</strong>, o protocolo tem uma gramática própria, uma estrutura sintática bem definida além de regras semânticas que definem como as <em>mensagens</em> transitadas devem ser interpretadas. Pode ser visto como uma linguagem e a sua derradeira versão é a <strong>2</strong>.</p>
+                <h2>Camadas</h2>
+                <ol>
+                    <li>
+                        <h3>Aplicação</h3>
+                        <p>Protocolo HTTP</p>
+                        <ul>
+                            <li>APACHE</li>
+                            <li>TOMCAT</li>
+                            <li>NODE</li>
+                            <li>NGINX</li>
+                        </ul>
+                        <p>Escuta em portas</p>
+                    </li>
+                    <li>
+                        <h3>Transporte</h3>
+                        <h4>TCP</h4>
+                        <p>Define pacotes e ordena os mesmos</p>
+                        <h4>UDP</h4>
+                    </li>
+                    <li>
+                        <h3>Rede</h3>
+                        <h>IP</h>
+                        <p>Define o caminho</p>
+                    </li>
+                    <li>
+                        <h3>Hardware</h3>
+                    </li>
+                </ol>
+            </section>
+        </main>
 
     </body>
     
