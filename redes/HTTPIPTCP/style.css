@@ -8,6 +8,11 @@ body
     font-family: 'Turret Road', cursive;
 }
 
+li
+{
+    margin: 1%;
+}
+
 .internet
 {
     font-size: 2.7em;
