@@ -63,7 +63,10 @@ li::marker
 
 mark
 {
-    background-color:#B18FBF;
+    background-color:#b18fbf9f;
+    padding: 0.61%;
+    font-size: 1.02em;
+    font-weight: 600;
 }
 
 
