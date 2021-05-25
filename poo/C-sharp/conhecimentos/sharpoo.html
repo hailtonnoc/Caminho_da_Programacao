@@ -455,7 +455,7 @@ class Deriva2:<mark>Deriva1</mark>
         </section>
 
         <section class="inrerface">
-            <h2>Interface OO</h2>
+            <h2>Interfaces</h2>
             <p>
                 Interfaces só implementam só os protótipos dos métodos, uma classe pode implementar diversas interfaces. <br>
                 Características das Interfaces: <br>
@@ -528,13 +528,99 @@ class Deriva2:<mark>Deriva1</mark>
             </p>
         </section>
 
-        <div>
+        <section class="estruturas">
             <h2>Estrutura</h2>
             <p>
                 Basicamente <strong>Struct</strong> é um <mark>tipo</mark> que vai armazenar diferentes tipos de dados. Metodos <strong>Struct</strong> são acessados diretamente dispensando o uso do <code>ref</code>. <br>
-                Por não se tratar de uma classe ela não pode ser <strong>Herdada</strong> porém a mesma pode contar construtores.
-            </p>
+                A estrutura deste tipo é muito semelhante a uma classe, mas, por não se tratar de uma classe ela não pode ser <strong>Herdada</strong>, ainda a mesma pode conter construtores.
+
+                <details>
+                    <summary>Implementado</summary>
+                    <code>
+                        <pre>
+<div class="modeloObjdif">
+    struct <small>Primata</small>
+    {
+        public string <small>porte</small>;
+        public string <small>raca</small>;
+        public string <small>cor</small>;
+    
+        <div class="modeloObj">
+            public Primata(string <small>porte</small>, string <small>raca</small>, string <small>cor</small>)
+            {
+                this.porte = porte;
+                this.raca = raca;
+                this.cor = cor;
+            }
         </div>
+    }
+</div>
+                        </pre>
+                    </code>
+                </details>
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre>
+<div class="modeloObj">
+    class aula44
+        {
+            static void Main()
+            {
+                <div class="modeloObjdif">Primata <small>p1</small>;</div>
+                p1.porte = "grande";
+                p1.raca = "gorila";
+                p1.cor = "grafite";
+    
+                Console.WriteLine("O animal {0} é de porte {1} e tem uma cor {2}", p1.raca, p1.porte, p1.cor);
+            }
+        }
+</div>
+                        </pre>
+                    </code>
+                </details>
+            </p>
+            <h3>Array de estruturas</h3>
+            <p>
+                Usando o mesmo principio de declaração de <strong>arrays</strong> basta evidenciar o tipo da lista.
+                <details>
+                    <summary>Implementando</summary>
+                    <code>
+                        <pre>
+<div class="modeloObj">Primata[] <small>macacos</small> = new Primata[3];</div>
+                        </pre>
+                    </code>
+                </details>
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre>
+<div class="modeloObj">
+    <div class="modeloObjdif">
+        macacos[0].porte = "grande";
+        macacos[0].raca = "gorila";
+        macacos[0].cor = "branco";
+    </div>
+
+    <div class="modeloObjdif">
+        macacos[1].porte = "medio";
+        macacos[1].raca = "chimpanze";
+        macacos[1].cor = "branco";
+    </div>
+
+    <div class="modeloObjdif">
+        macacos[2].porte = "pequeno";
+        macacos[2].raca = "mico";
+        macacos[2].cor = "branco";
+    </div>
+</div>
+                        </pre>
+                    </code>
+                </details>
+            </p>
+        </section>
+
+
 
     </main>
     
