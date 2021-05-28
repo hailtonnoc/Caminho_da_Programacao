@@ -620,9 +620,60 @@ class Deriva2:<mark>Deriva1</mark>
             </p>
         </section>
 
-        <section>
+        <section class="metodosret">
             <h2>Metodos retornando Objetos</h2>
             <p>
+                Para um método retornar um objeto o construtor do objeto dever ser referenciado como retorno do metodo, por exemplo no lugar do <code>void</code> que significa sem retorno.
+                <details>
+                    <summary>Implementação</summary>
+                    <code>
+                        <pre class="modeloObj">
+<div class="modeloObjdif">
+    class <small>Bananeira</small>
+    {
+        private string <small>nomeB</small>;
+        private int <small>numBanana</small>;
+
+        public Bananeira( string nomeB)
+        {
+            this.nomeB = nomeB;
+            numOvo = 0;
+        }
+
+        public <mark>Banana</mark> <small>botar</small>()
+        {
+            return new Banana();
+        }
+    }
+</div>
+<div class="modeloObj">
+    class <mark><small>Banana</small></mark>
+    {
+        public Banana()
+        {
+            Console.WriteLine("<small>Novo Cacho</small>");
+        }
+    }
+</div>
+
+                        </pre>
+                    </code>
+                </details>
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre class="modeloObj">
+class <small>Usando</small>
+{
+    static void Main()
+    {
+        Bananeira b1 = new Bananeira(<small>"First"</small>);
+        b1.botar();
+    }
+}
+                        </pre>
+                    </code>
+                </details>
                 
             </p>
         </section>
