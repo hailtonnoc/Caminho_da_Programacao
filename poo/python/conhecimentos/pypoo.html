@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../spyle.css">
+    <title>Orientação a objetos</title>
+</head>
+<body>
+    <header>
+        <h1>Orientação a Objetos</h1>
+    </header>
+    <main>
+        <section class="definicao">
+            <h2>Classes</h2>
+            <p>
+                Classe são tipos de dados compostos por <abbr title="variáveis">propriedades</abbr> e <abbr title="funções">métodos</abbr>. Em resumo <strong>classes</strong> são objetos compostos onde instanciámos. <br>
+                Modelo de Classe: <br>
+                <code>
+                    <pre class="modeloObj">
+    <small>Modificador de Classe</small> class <small>nome_Classe</small>
+    {
+    <div class="modeloObj">
+        <small>Especificador de Acesso</small>  tipo  <small>nome_variavel = ...</small>;  
+    </div>
+    <div class="modeloObjdif">
+        <small>Especificador de Acesso</small> retorno <small>nome_função</small>(argumentos...)
+        {
+            <small>comandos...</small>
+        }
+    </div>
+
+    }
+                    </pre>
+                </code>
+
+            <h2>Modificador de Classes</h2>
+            <table border="2">
+                <thead>
+                    <th>Codigo</th>
+                    <th>Função</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Public</td>
+                        <td>Sem restrição de visualização.</td>
+                    </tr>
+                    <tr>
+                        <td>Abstract</td>
+                        <td>Classe base, não pode ser instanciado objetos.</td>
+                    </tr>
+                    <tr>
+                        <td>Sealed</td>
+                        <td>Classe não possui herdeiros.</td>
+                    </tr>
+                    <tr>
+                        <td>Static</td>
+                        <td>Não permite que instanciem seus objetos ou membros.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Especificador de Acesso</h2>
+            <table border="1">
+                <thead>
+                    <th>Codigo</th>
+                    <th>Função</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Public</td>
+                        <td>Sem restrição de acesso.</td>
+                    </tr>
+                    <tr>
+                        <td>Private</td>
+                        <td>Só podem ser <abbr title="sendo assim os metodos para alteração de valores devem estar contidos dentro da classes">acessados</abbr> pela própria classe.</td>
+                    </tr>
+                    <tr>
+                        <td>Protected</td>
+                        <td>Podem ser acessados pela própria classe e nas derivadas.</td>
+                    </tr>
+                    <tr>
+                        <td>Abstract</td>
+                        <td>Os metodos não podem ser implementados, somente cabeçalhos.</td>
+                    </tr>
+                    <tr>
+                        <td>Sealed</td>
+                        <td>Classe não pode ser herdado.</td>
+                    </tr>
+                    <tr>
+                        <td>Virtual</td>
+                        <td>O método deve ser redefinido em uma classe derivada.</td>
+                    </tr>
+                    <tr>
+                        <td>Static</td>
+                        <td>O metodos pode ser chamado mesmo sem a instanciação de um objeto</td>
+                    </tr>
+                </tbody>
+            </table>
+            </p>
+
+        </section>
+
+        <section class="objetos">
+            <h2>Objetos</h2>
+            <p>
+                Objetos são os elementos criados a partir de uma classe. <br>
+                Para isso utilizamos o operador <code>new</code> responsável por alocar um espaço de memoria especifico para a ocupação do objeto.
+            </p>
+        </section>
+
+        <section class="constdestr">
+            <h2>Construtores e Destrutores</h2>
+            <h3>Construtor</h3>
+            <p>
+                É responsável por iniciar um objeto quando instanciado. No C# quando não declarado um construtor o mesmo gera um construtor default. <br>
+                Para definir um <strong>construtor</strong> basta criar um método com o mesmo nome da <strong>classe</strong>. Estrutura basica: <br>
+                <code>
+                    <pre>
+    namespace <small>aguradorInstruções</small>
+    {<div class="modeloObj">
+        public class Objetos
+        {
+            public string <small>nome</small>;
+            public int <small>alturaCm</small>;
+            public int <small>larguraCm</small>;
+            public int <small>projundidadeCm</small>;
+
+        <div class="modeloObjdif">
+            public Objetos(string <small>nm</small>, int <small>alCm</small>, int <small>lgCm</small>, int <small>pfCm</small>) 
+            {
+                nome = nm;
+                alturaCm = alCm;
+                larguraCm = lgCm;
+                projundidadeCm = pfCm;
+            }
+            </div>
+        }</div>
+    <details class="modeloObj">
+        <summary>class utilizando</summary>
+        {
+            static void Main()
+            {
+                Console.WriteLine(<small>"Qual sera o nome do objeto?"</small>);
+                string <small>nomeou</small> = Console.ReadLine();
+                Objetos <small>o1</small> = new Objetos(<small>nomeou</small>);
+                Console.WriteLine(<small>"Qual sera a altura do objeto?"</small>);
+                ...
+            }
+        }
+    </details>
+    }</div>
+                    </pre>
+            </code><br>
+            Sobregarda de construtores se dá devido a uma serie de construtores com <strong>nomes iguais</strong> e funções semelhantes. 
+            
+            </p>
+
+            <h3>Destrutor</h3>
+            <p>
+                É responsável por eliminar uma objeto depois de realizado todas as atividades. Para informar um destrutor basta criar um método com o mesmo nome do construtor porem com um "<strong>~</strong>" na frente. Ainda é possivel passar um <code>Console.WhiteLine();</code> para visualizar o objeto que esta sendo destruído.
+                <code>
+                    <pre><div class="modeloObj">
+        public class Objetos
+        {
+            public string <small>nome</small>;
+            public int <small>alturaCm</small>;
+            public int <small>larguraCm</small>;
+            public int <small>projundidadeCm</small>;
+        <div class="modeloObj">
+            public Objetos(<small>args...</small>) 
+            {<small>...</small>}</div><div class="modeloObjdif">
+            ~Objetos()
+            {}
+        </div>         }</div></div>
+                    </pre>
+            </code>
+            </p>
+
+            <h3>Ordem de Execução dos construtores</h3>
+            <p>
+                A Ordem de execução se da sempre a partir das bases e hierarquicamente para as derivadas. <br>
+                <details>
+                    <summary>Exemplo</summary>
+                    <code>
+                        <pre class="modeloObj">
+    class Base  
+{
+    public Base()
+    {
+        Console.WriteLine("Construtor classe base");
+    }
+}
+class Deriva1:<mark>Base</mark>
+{
+    public Deriva1()
+    {
+        Console.WriteLine("Construtor classe Deriva1");
+    }
+}
+class Deriva2:<mark>Deriva1</mark>
+{
+    public Deriva2()
+    {
+        Console.WriteLine("Construtor classe Deriva2");
+    }
+}
+<div class="modeloObj">
+    class Aula37
+    {
+        static void Main()
+        {
+            Deriva2 d2= new Deriva2();
+        }
+    }
+</div>
+                        </pre>
+                    </code>
+                    <code>
+                        <pre>
+    <small>Resultado da execução </small>>>
+        Construtor classe base
+        Construtor classe Deriva1
+        Construtor classe Deriva2
+                        </pre>
+                    </code>
+                </details>
+
+            </p>
+
+        </section>
+
+        <div class="classstatic">
+            <h2>Classe Static</h2>
+            <p>
+                Quando utilizamos classes do tipo <strong>static</strong> não podemos definir construtor pois não pode se declarar objetos de classe static, então todos os membros da classe também devem ser static. Em suma pode ser entendido como um elemento comum a todo o program uma vez que usa uma posição estática de memoria.
+            </p>
+
+        </div>
+
+        <div>
+            <h2>Operador THIS</h2>
+            <p>
+                Faz referencia a um método pai, criando uma associação coerente. <br>
+                ex;<br>
+                <code>
+                    <pre>
+    <div class="modeloObj">
+        class Operacao
+        {
+            public int <small>v1</small>;
+            public int <small>v2</small>;
+
+        <div class="modeloObjdif">
+            public Operacao(int <small>v1</small>, int <small>v2</small> )
+            {
+    <small>v1 recebe v1? como a maquina vai saber de qual você esta falando?</small> 
+                this.<small>v1</small> = <small>v1</small>;
+                this.<small>v2</small> = <small>v2</small>;
+            }
+        </div>
+        }
+    </div>
+                    </pre>
+                </code>
+            </p>
+        </div>
+
+        <div>
+            <h2>Herança</h2>
+            <p>
+                Uma classe derivada, recebendo propriedades e métodos de uma classe base. Ainda sim uma classe mesmo sendo derivada possui seus membros próprios. Para referenciar uma classe pai basta usar um "<strong style="font-size: 1.5em;">:</strong>" seguido do nome da mesma. <br>
+
+                <code class="declaracaoPaiFilho">
+                    <pre class="classpai modeloObj">
+    class <small>Primata</small>
+    {
+    <div class="modeloObj">
+        public bool <small>bípede</small>;
+        public bool <small>polegar_opositor</small>;
+        <mark>private</mark> bool <small>auto_reconhece</small>;
+        <mark>private</mark> string <small>alimentacao</small>;
+    </div>
+
+        public Primata(string <small>alimentacao</small>)
+        {this.alimentacao = <small>alimentacao</small>}
+
+        public void <small>reconhece</small>()
+        {<small>auto_reconhece </small>= true;}
+        public void <small>n_reconhece</small>()
+        {<small>auto_reconhece </small>= false;}
+    }
+                    </pre>
+
+                    <pre class="classFilho modeloObj">
+    class <mark><small>Humano</small>:Primata</mark>
+    {
+    <div class="modeloObj">
+        <small>... <br> Tem acesso a tudo exceto ao <mark>private</mark></small>
+
+        string <small>etnia</small>;
+    </div>
+    <div class="modeloObjdif">
+        public Humano(string <small>etnia</small> ):base(<small>"herbívoro"</small>)
+        {
+            reconhece();
+            this.<small>etnia</small> = <small>etnia</small>;
+        }
+    </div>
+    }
+                    </pre>
+                </code> <br>
+                <details>
+                    <summary>A Utilização na classe <code>Main();</code></summary>
+                    <code>
+                        <pre class="modeloObj">
+    class <small>Principal</small>
+    {
+        static void <small>Main()</small>
+        {
+            Humano <small>pessoa</small> = new Humano("<small>Latino</small>");
+        }
+    }
+                        </pre>
+                    </code>
+                </details> <br>
+
+                Já no caso da propriedade <code>alimentacao</code> ela é uma propriedade a ser iniciada pela classe filha, então, utilizamos o operador <code>:base()</code> para fazer a declaração de valor.
+            </p>
+            <h2>Heranças Encadeadas</h2>
+            <p>
+                Para encadear heranças basta fazer o mesmo processo de usar um "<strong style="font-size: 1.5em;">:</strong>" seguido do nome da base. <br>
+                <code>
+                    <pre>
+    class <small>Individuo</small><mark>:Humano</mark>
+    {
+        public string <small>personalidade</small>;
+
+        public <small>Individuo</small>():base(<small>"Latino"</small>)
+        {
+            personalidade = <small>"neutra"</small>;
+        }
+    }
+                    </pre>
+                </code>
+            </p>
+        </div>
+
+        <section class="acessores">
+            <h2>Acessors Get e Set</h2>
+            <p>
+                Apesar de parecer um método é uma propriedade especial, é utilizada para limitar a interação de um atributo private. Desta forma tera disponibilidade tanto de pegar um dado, quanto de setar um valor nele. <br> Definição:
+                <code>
+                    <pre>
+    class <small>Primata</small>
+    {
+        private int <small>vidaEstimada</small>;
+
+
+    <div class="modeloObj">
+        public int <small>idadeM</small>
+        {
+        <div class="modeloObjdif">
+            get{ return <small>vidaEstimada</small>;}
+        </div>
+        <div class="modeloObjdif">
+            set{ <small>vidaEstimada</small> = <mark>value</mark>;}
+        </div>
+        }
+    </div>
+            public <small>Primata</small>()
+        {
+            <small>idadeM</small>= 108;
+        }
+    }
+                    </pre>
+                </code> <br>
+
+                <details>
+                    <summary>Usando get</summary>
+                    <code>
+                        <pre>
+    static void Main()
+    {
+        Humano <small>pessoa</small> = new Humano();
+
+        Console.WriteLine("<small>A idade max de um humano é {0}</small>", <mark>pessoa</mark>.<mark>idadeM</mark>)
+    }
+                        </pre>
+                    </code>
+                </details>
+
+                <details>
+                    <summary>Usando set</summary>
+                    <code>
+                        <pre>
+    static void Main()
+    {
+        Humano <small>pessoa</small> = new Humano();
+
+        <mark>pessoa</mark>.<mark>idadeM</mark> = 200;
+    }
+                        </pre>
+                    </code>
+                </details>
+
+            </p>
+        </section>
+
+        <section class="indexadores">
+            <h2>Indexadores de Classes</h2>
+            <p>
+                Permite que o objeto seja utilizado como um Array.
+                <code>
+                    <pre>
+    class <small>Primata</small>
+    {
+        private int[] <small>vidaFases</small>= new int[6]{0,9,18,27,36,45,54};
+
+
+    <div class="modeloObj">
+        public int this[int <small>i</small>]
+        {
+        <div class="modeloObjdif">
+            get{ return <small>vidaFases</small>[i];}
+        </div>
+        <div class="modeloObjdif">
+            set{ <small>vidaFases</small>[i] = <mark>value</mark>;}
+        </div>
+        }
+    </div>
+            public <small>Primata</small>()
+            {}
+    }
+                    </pre>
+                </code> <br>
+                
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre>
+    static void Main()
+    {
+        Humano <small>pessoa</small> = new Humano();
+
+        <mark>pessoa</mark>[2] = 300;
+
+        Console.WriteLine("Idade:{0}", <small>pessoa</small>[2]);
+    }
+                        </pre>
+                    </code>
+                </details>
+            </p>
+        </section>
+
+        <section class="inrerface">
+            <h2>Interfaces</h2>
+            <p>
+                Interfaces só implementam só os protótipos dos métodos, uma classe pode implementar diversas interfaces. <br>
+                Características das Interfaces: <br>
+                <ul>
+                    <li>Não tem construtor ou destrutor</li>
+                    <li>Não tem método operator</li>
+                    <li>Não possui membros static</li>
+                    <li>Não possui <abbr title="declarado na classe implementação">propriedade</abbr></li>
+                </ul> <br>
+                <details>
+                    <summary>Implementando</summary>
+                    <code>
+                        <pre>
+    public interface <small>Primata</small>
+    {
+    <div class="modeloObj">
+        void <small>nascer</small>();
+        void <small>morrer</small>();
+    </div>
+    }
+                        </pre>
+                        <pre>
+    public interface <small>Homosapiens</small>
+    {
+    <div class="modeloObj">
+        void <small>evoluir</small>();
+    </div>
+    }
+                        </pre>
+                    </code>
+                </details>
+                <br>
+
+                Uma vez declarado metodos interface se faz necessário sua implementação na classe filha.
+                
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre>
+    class <small>Pessoa</small>:Primata, ...
+    {
+        <mark>public bool <small>nascer</small>;</mark>
+        
+        public <small>Pessoa</small>()
+        {
+
+        }
+        <div class="modeloObj">
+            public void <small>nascer</small>()
+            {
+                this.nascer = true;
+            }
+        </div>
+        <div class="modeloObj">
+            public void <small>morrer</small>()
+            {
+                this.nascer = false;
+            }
+        </div>
+    }
+
+    static void Main()
+    {
+        Pessoa <small>Pessoa1</small> = new Pessoa();
+
+    }
+                        </pre>
+                    </code>
+                </details>
+            </p>
+        </section>
+
+        <section class="estruturas">
+            <h2>Estrutura</h2>
+            <p>
+                Basicamente <strong>Struct</strong> é um <mark>tipo</mark> que vai armazenar diferentes tipos de dados. Metodos <strong>Struct</strong> são acessados diretamente dispensando o uso do <code>ref</code>. <br>
+                A estrutura deste tipo é muito semelhante a uma classe, mas, por não se tratar de uma classe ela não pode ser <strong>Herdada</strong>, ainda a mesma pode conter construtores.
+
+                <details>
+                    <summary>Implementado</summary>
+                    <code>
+                        <pre>
+<div class="modeloObjdif">
+    struct <small>Primata</small>
+    {
+        public string <small>porte</small>;
+        public string <small>raca</small>;
+        public string <small>cor</small>;
+    
+        <div class="modeloObj">
+            public Primata(string <small>porte</small>, string <small>raca</small>, string <small>cor</small>)
+            {
+                this.porte = porte;
+                this.raca = raca;
+                this.cor = cor;
+            }
+        </div>
+    }
+</div>
+                        </pre>
+                    </code>
+                </details>
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre>
+<div class="modeloObj">
+    class aula44
+        {
+            static void Main()
+            {
+                <div class="modeloObjdif">Primata <small>p1</small>;</div>
+                p1.porte = "grande";
+                p1.raca = "gorila";
+                p1.cor = "grafite";
+    
+                Console.WriteLine("O animal {0} é de porte {1} e tem uma cor {2}", p1.raca, p1.porte, p1.cor);
+            }
+        }
+</div>
+                        </pre>
+                    </code>
+                </details>
+            </p>
+            <h3>Array de estruturas</h3>
+            <p>
+                Usando o mesmo principio de declaração de <strong>arrays</strong> basta evidenciar o tipo da lista.
+                <details>
+                    <summary>Implementando</summary>
+                    <code>
+                        <pre>
+<div class="modeloObj">Primata[] <small>macacos</small> = new Primata[3];</div>
+                        </pre>
+                    </code>
+                </details>
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre>
+<div class="modeloObj">
+    <div class="modeloObjdif">
+        macacos[0].porte = "grande";
+        macacos[0].raca = "gorila";
+        macacos[0].cor = "branco";
+    </div>
+
+    <div class="modeloObjdif">
+        macacos[1].porte = "medio";
+        macacos[1].raca = "chimpanze";
+        macacos[1].cor = "branco";
+    </div>
+
+    <div class="modeloObjdif">
+        macacos[2].porte = "pequeno";
+        macacos[2].raca = "mico";
+        macacos[2].cor = "branco";
+    </div>
+</div>
+                        </pre>
+                    </code>
+                </details>
+            </p>
+        </section>
+
+        <section class="metodosret">
+            <h2>Metodos retornando Objetos</h2>
+            <p>
+                Para um método retornar um objeto o construtor do objeto dever ser referenciado como retorno do metodo, por exemplo no lugar do <code>void</code> que significa sem retorno.
+                <details>
+                    <summary>Implementação</summary>
+                    <code>
+                        <pre class="modeloObj">
+<div class="modeloObjdif">
+    class <small>Bananeira</small>
+    {
+        private string <small>nomeB</small>;
+        private int <small>numBanana</small>;
+
+        public Bananeira( string nomeB)
+        {
+            this.nomeB = nomeB;
+            numOvo = 0;
+        }
+
+        public <mark>Banana</mark> <small>botar</small>()
+        {
+            return new Banana();
+        }
+    }
+</div>
+<div class="modeloObj">
+    class <mark><small>Banana</small></mark>
+    {
+        public Banana()
+        {
+            Console.WriteLine("<small>Novo Cacho</small>");
+        }
+    }
+</div>
+
+                        </pre>
+                    </code>
+                </details>
+                <details>
+                    <summary>Usando</summary>
+                    <code>
+                        <pre class="modeloObj">
+class <small>Usando</small>
+{
+    static void Main()
+    {
+        Bananeira b1 = new Bananeira(<small>"First"</small>);
+        b1.botar();
+    }
+}
+                        </pre>
+                    </code>
+                </details>
+                
+            </p>
+        </section>
+
+    </main>
+    
+    <br>
+    <a class="voltar" href="../index.html"><img src="../../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a>
+</body>
+</html>

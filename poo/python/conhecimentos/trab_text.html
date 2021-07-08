@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Trabalhando Texto e Logs</title>
+</head>
+<body>
+    <header>
+        <h1>Manipulando textos</h1>
+    </header>
+    <main>
+        <section class="texto">
+            <h2>Caracteres de escape</h2>
+            <h3>Quebra de linha</h3>
+            <code>\n</code>
+            <h3>Tabulação</h3>
+            <code>\t</code>
+
+        </section>
+
+        <div class="indices">
+            <h2>Variáveis em indices</h2>
+            <p>
+                É possível demarcar variável por índice;
+                <code>
+                    <pre class="modeloObj">
+            class <small>Program</small>
+                {
+            static void Main(string[] args)
+            {
+                String <small>txt1, txt2, txt3</small>;
+                txt1 = <small>"rato"</small>; txt2 = <small>"rei"</small>; txt3 = <small>"roma"</small>;
+                Console.WriteLine( <small class="modeloObj">"o {0} roeu a roupa do {1} de {2}"</small>, txt1,txt2,txt3);
+            }
+                }
+                    </pre>
+                </code> <br>
+                Resultado da execução:
+                <code>&gt;&gt; o rato roeu a roupa do rei de roma</code>
+            </p>
+        </div>
+
+        <div class="saida">
+            <h2>Formatos de saida</h2>
+            <p>
+                Para formatar uam saida referencie o índice em seguida o espaçamento e depois o formado do elemento a ser impresso.
+                <code>Console.WhiteLine(<small>"Exemplo</small>: {0 , 15 :c }<small>", variável</small>);</code>
+            </p>
+
+        </div>
+    </main>
+    
+</body>
+</html>

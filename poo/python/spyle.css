@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+html::-webkit-scrollbar
+{
+    
+    width: 9px;
+}
+
+html::-webkit-scrollbar-track
+{
+    background-color: rgb(49, 65, 48);
+}
+
+html::-webkit-scrollbar-thumb
+{
+    background: rgb(204, 212, 82);
+    border-radius:27px;
+    height: 9px;
+}
+
+html::-webkit-scrollbar-thumb:hover
+{
+    background: rgb(9, 128, 9)
+}
+
+a
+{
+    text-decoration: none;
+    color: #297038;
+}
+
+a:visited
+{
+    color: #297038;
+}
+
+body 
+{
+    background: linear-gradient( #eaf5d4e1, white), url(../../XXXMATERIAISXXX/IMAGENS/snaker.png);
+
+    font: normal times;
+}
+
+code
+{
+    font-family: 'VT323', monospace;
+    font-size: 1.08em;
+}
+
+details div
+{
+    display: inline-block;
+}
+
+h1
+{
+    font: normal 4.05em ; 
+    text-shadow: #297038 9px 9px 4.5px;
+}
+
+h2
+{
+    font: normal 2.7em;
+    text-shadow: #297038 6px 6px 3.6px;
+}
+
+h3, .comandos
+{
+    font: normal 1.8em; 
+    text-shadow: #297038 3px 3px 1.8px;
+}
+
+li::marker
+{
+    content: none;
+}
+
+mark
+{
+    background-color:#8fbf8f9f;
+    padding: 0.61%;
+    font-size: 1.02em;
+    font-weight: 600;
+}
+
+
+pre 
+{
+    display: inline-block;
+    font-size: 1em;
+    color: #628a66;
+    vertical-align: top;
+    padding: 1.8%;
+    border: solid rgba(30, 129, 210, 0.103) 1px;
+}
+
+section
+{
+    border: solid rgba(0, 0, 0, 0.335) 2px;
+    margin: 0.9%;
+    padding: 1.5%;
+}
+
+small
+{
+    font-family: monospace;
+    color: rgb(128, 165, 137);
+}
+
+summary
+{
+    font-size: 1.35em;
+}
+
+table
+{
+    background-color:#F2F2F2;
+    color: #24733c;
+    border-radius: 12px;
+}
+
+td
+{
+    padding: 3px;
+    text-align: center;
+}
+
+ul
+{
+    margin: 0px;
+    padding: 1 ;
+    text-decoration: none;
+}
+
+.colorRed
+{
+    color: rgb(255, 23, 23);
+}
+
+.colorGreen
+{
+    color: rgb(2, 172, 2);
+}
+
+.criando
+{
+    padding: .5%;
+}
+
+.divg
+{
+    border: solid black 3px;
+}
+
+.detalhes
+{
+    color: rgba(128, 128, 128, 0.445);
+}
+
+.enfa
+{
+    font-size: 1.8em;
+}
+
+.enfase
+{
+    font-size: 1.18em;
+}
+.aenfase:hover
+{
+    font-size: 1.08em;
+}
+
+.pacotes, .agrupador, .modeloObj
+{
+    background-color: rgba(14, 224, 42, 0.137);
+    box-shadow: black -4.5px 3px 6px 1px;
+    padding: 0.3%;
+    padding-right: 15px;
+    margin: 0.36%;
+}
+
+.modeloObjdif
+{
+    background-color: rgba(13, 75, 7, 0.418);
+    box-shadow: black -4.5px 3px 6px 1px;
+    padding: 0.3%;
+    padding-right: 15px;
+}
+
+.menu
+{
+    font: normal 900 1.2em sans-serif;
+    width: 117px;
+    background-color:#8fbf97;
+    border: none;
+    border-radius: 4.5px;
+    position: relative;
+    left: 63%;
+    margin: 0%;
+}
+
+.hide-drop
+{
+    font: normal 100 1.2em sans-serif;
+    display: none;
+    background-color: #96cc99;
+    color: #5B2473;
+    width: 300px;
+    text-decoration: none;
+    border-radius: 4.5px;
+
+}
+
+.hide-drop a:hover
+{
+    color: #F2F2F2;
+    font-size: 1.08em;
+    font-weight: 700 ;
+    text-shadow: #8fbf95 3px 3px 3px;
+}
+
+.menu:hover .hide-drop
+{
+    display:block;
+    position: absolute;
+    
+
+}
+
+.tit
+{
+    font: normal 2.7em 'VT323';
+    text-shadow: rgba(24, 87, 158, 0.445) 6px 6px 3.6px;
+}
+
+.titulo
+{
+    color: rgb(190, 99, 65);
+}
+
+.pylg
+{
+    animation: logante 3.69s infinite reverse;
+}
+
+.voltar
+{
+    position: fixed;
+    top: 93%;
+}
+
+
+
+
+
+@keyframes logante
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
