@@ -30,7 +30,7 @@
                 </pre>
             </code>
 
-            <p>No <strong>python</strong> tudo é objeto.</p>
+            <p>No <strong>python</strong> tudo é objeto. Ou seja um mix de atributos e metodos.</p>
 
         </div>
 
@@ -75,6 +75,26 @@
                             <td><strong>Números Decimais</strong></td>
                             <td><strong>Números que contem parte fracionaria</strong></td>
                         </tr>
+                        <tr>
+                            <td><strong>list</strong></td>
+                            <td><strong></strong></td>
+                            <td><strong></strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>tuple</strong></td>
+                            <td><strong></strong></td>
+                            <td><strong></strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>dict</strong></td>
+                            <td><strong></strong></td>
+                            <td><strong></strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>set</strong></td>
+                            <td><strong></strong></td>
+                            <td><strong></strong></td>
+                        </tr>
                     </tbody>
                 </table>
             </details>
@@ -83,6 +103,12 @@
                 <h3>Verificando tipo</h3>
                 <p>
                     Para verificar o tipo da variavel pode usar a função <code>type(<small>variavel</small>)</code>
+                </p>
+            </div>
+            <div>
+                <h3>Verificando ações para o tipo</h3>
+                <p>
+                    Para verificar o leque de ações para o tipo da variavel pode usar a função <code>dir(<small>variavel</small>)</code>
                 </p>
             </div>
 
@@ -103,14 +129,19 @@
                     Toda entrada de usuario por padrão recebe uma <em>string</em>. Logo para converter precisamos explicitar o tipo de deseja receber.<br>
                     <code>
                         <pre class="modeloObj">
-    variavel = input(<small>"mensagem para que o usuário digite"</small>)
+    variavel = <strong>int</strong>(input(<small>"mensagem para que o usuário digite"</small>))
                         </pre>
                     </code>
                 </p>
+                <h3>Convertendo valor salvo</h3>
+                <code>
+                    <pre class="modeloObj">
+    variavel = <strong>int</strong>(<small>variavel</small>)
+                    </pre>
+                </code>
             </div>
         </section>
 
-        
         <section class="Operadores">
             <div class="Operadores">
                 <h2 style="font-size: 2.07em;">Operadores</h2>
@@ -211,10 +242,8 @@
                     Estrutura de seleção <strong>unilateral</strong>:
                     <code>
                         <pre class="modeloObj">
-    if (<small>true</small>)
-    {
-        <small>comandos para verdadeiro</small>();
-    }
+    if <small>teste</small>:
+        <small>comandos para verdadeiro</small>
                         </pre>
                     </code> <br>
 
@@ -224,37 +253,40 @@
 
                     <code>
                         <pre>
-    int <small>x</small> = <small>10</small>;
+    <small>x</small> = int(<small>10</small>)
 
-    if(<small>x</small> > <small>2</small>)
-        <small>x</small> = <small>25</small>;
+    if <small>x</small> &gt; <small>2</small>:
+        print (<small>maior</small>)
                         </pre>
                     </code>
 
                     </details> <br>
 
                     <h3>else</h3>
-                    Estrutura <strong>bilateral</strong>: <br>
-                    <code>
-                        <pre class="modeloObj">
-    if ( <small>TESTE</small> )
-        { <small>Comandos caso verdadeiro</small> }
-    else
-        { <small>Comandos caso falso</small> }
-                        </pre>
-                    </code>
-                    <h3>else if</h3>
                     <p>
-                        Para aumentar a quantidade de verificações é só declarar o <code>else if</code> seguido do novo teste. <br>
+                        Estrutura <strong>bilateral</strong>: <br>
+                        <code>
+                            <pre class="modeloObj">
+    if <small>teste</small>
+        <small>Comandos caso verdadeiro</small>
+    else:
+        <small>Comandos caso falso</small>
+                            </pre>
+                        </code>
+                    </p>
+
+                    <h3>elif</h3>
+                    <p>
+                        Para aumentar a quantidade de verificações é só declarar o <code>elif</code> seguido do novo teste. <br>
 
                     <code>
                         <pre class="modeloObj">
-    if ( <small>TESTE1</small> )
-        { <small>Comandos caso verdadeiro</small> }
-    else if ( <small>TESTE2</small> )
-        { <small>Comandos caso verdadeiro</small> }
-    else
-        { <small>Comandos caso falso</small> }
+    if <small>teste</small>:
+        <small>Comandos caso verdadeiro</small>
+    elif <small>teste2</small>:
+        <small>Comandos caso verdadeiro</small>
+    else:
+        <small>Comandos caso falso</small>
                         </pre>
                     </code>
 
@@ -266,30 +298,20 @@
                     Consiste em incluir condições dentro de condições criando uma árvore de execução. <br>
                     <code>
                         <pre class="modeloObj">
-    if(teste1)
-    {<div class="modeloObj">
-        if(teste1.1)
-        {
-            {<div class="modeloObj">
-                if(teste1.1.1)
-                {
+    if <small>teste1</small>
+    <div class="modeloObj">
+        if <small>teste1.1</small>
+        <div class="modeloObj">
+                if <small>teste1.1.1</small>
                     <small>(comandos caso verdadeiro)</small> 
-                }
-                else
-                {
+                else:
                     <small>(comandos caso falso)</small>
-                }
-            </div>             }
-        }
-        else
-        {
+        </div>
+        else:
             <small>(comandos caso falso)</small>
-        }
-        </div>      }
-    else
-    {
+        </div>
+    else:
         <small>(comandos caso falso)</small>
-    }
                         </pre>
                     </code>
 

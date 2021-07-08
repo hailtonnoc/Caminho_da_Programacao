@@ -1,2 +1,6 @@
-nome = input("digita seu nome ai \n")
-print("e ai " + nome)
+x = int(1)
+
+if x > 2:
+    print("é maior")
+else:
+    print("não é")
