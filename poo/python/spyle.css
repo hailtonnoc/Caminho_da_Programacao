@@ -104,7 +104,7 @@ section
 small
 {
     font-family: monospace;
-    color: rgb(128, 165, 137);
+    color: #757976;
 }
 
 summary
@@ -186,6 +186,7 @@ ul
     box-shadow: black -4.5px 3px 6px 1px;
     padding: 0.3%;
     padding-right: 15px;
+    color: #f5efe5;
 }
 
 .menu

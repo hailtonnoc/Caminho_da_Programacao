@@ -1,6 +1,5 @@
-x = int(1)
+variavel = input("Digite a senha: \n")
 
-if x > 2:
-    print("é maior")
-else:
-    print("não é")
+while variavel != "1020":
+    variavel = input ("Digite a senha correta porra: \n")
+print("Bona vinde")

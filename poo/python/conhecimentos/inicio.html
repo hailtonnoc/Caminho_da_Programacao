@@ -40,7 +40,7 @@
                 Para declarar uma variável basta informar o <em>Nome</em> exemplo:
                 <code>
                     <pre>
-    <em>Quant</em> = 9.36
+    <em>quant</em> = 9.36
                     </pre>
                 </code>
             </p>
@@ -126,7 +126,7 @@
             <div>
                 <h2>Cast de <code>Type</code></h2>
                 <p>
-                    Toda entrada de usuario por padrão recebe uma <em>string</em>. Logo para converter precisamos explicitar o tipo de deseja receber.<br>
+                    Toda entrada de usuário por padrão é uma <em>string</em>. Logo para converter precisamos explicitar o tipo que deseja receber.<br>
                     <code>
                         <pre class="modeloObj">
     variavel = <strong>int</strong>(input(<small>"mensagem para que o usuário digite"</small>))
@@ -226,8 +226,14 @@
                     </table>
                 </details>
 
-                <h3>Logicos</h3>
-                <p>Une Operadores ou nega. <code>not</code> nega. <code>and</code> todos verdadeiro. <code>or</code> um verdadeiro. </p>
+                <details class="logicos">
+                    <summary>Logicos</summary>
+                    <p>Une Operadores ou nega. <br><br>
+                        <code>not</code> inverte o valor booleano. <br> 
+                        <code>and</code> caso <strong>todas</strong> as correspondências verdadeiras então verdadeiro. <br> 
+                        <code>or</code>caso <strong>alguma</strong> correspondência verdadeiro então verdadeiro. 
+                    </p>
+                </details>
                 
                 <h2>Ternarios</h2>
                 <p>"caso <strong>verdadeiro</strong>" <mark>if</mark> teste > 0 <mark>else</mark> "caso <strong>falso</strong>"</p>
@@ -247,7 +253,6 @@
                         </pre>
                     </code> <br>
 
-                    Por ter apenas uma opção pode ser marcada sem as chaves.
                     <details>
                         <summary>exemplo;</summary>
 
@@ -317,9 +322,8 @@
 
                 </p>
 
-
             </div>
-
+<!-- 
             <div class="switch">
                 <h2>Switch</h2>
                 <p>
@@ -363,6 +367,117 @@
                 </p>
 
             </div>
+             -->
+        </section>
+
+        <section class="repeticoes">
+            <h2>Estruturas de <strong>Iteração</strong></h2>
+            <p>Propósito, <strong>repetir</strong> uma ação ou uma sequencia delas.</p>
+
+            <div class="while">
+                <h3>While</h3>
+                <p>
+                    Utilização destinada a quando não se sabe a quantidade de vezes que será repetido. <br>
+                    Estrutura: <br>
+                    <code>
+                        <pre class="modeloObj">
+    <small>contador</small> = <small>0</small>
+    while <small>contador</small> &lt; <small>x</small>
+        contador += 1
+        <small>comandos...</small>
+ ou    <div class="modeloObjdif">        <small>comandos...</small>
+        contador += 1
+  </div>
+                        </pre>
+                    </code> <br> <br>
+                    <details>
+                        <summary>exemplo;</summary>
+
+                    <code>
+                        <pre>
+    <small>variavel</small> = input(<small>"Digite a senha"</small>)
+
+    while <small>variavel</small> != <small>1020</small>:
+        variavel = input (<small>"Digite a senha correta"</small>)
+
+    print("Bona vinde")
+                        </pre>
+                    </code>
+
+                    </details> <br>
+
+                </p>
+
+            </div>
+<!-- 
+            <div class="for">
+                <h3>For</h3>
+                <p>
+                    Utilização destinada a quando sei a quantidade de vezes que a ação deve ser repetida. <br>
+                    Estrutura: <br>
+                    <code>
+                        <pre>
+    for(<small>contador</small>;<small>regra</small>;<small>incremento</small>)
+    {
+        <small>comandos ou ações a serem repetidas</small>
+    }
+                        </pre>
+                    </code>
+                    <details class="modeloObj">
+                        <summary>Exemplo pratico</summary>
+                        <code>
+                            <pre>
+    for(int <small>i</small>=0; <small>i</small> &lt; 9; <small>i</small>++)
+    {
+        Console.WriteLine(<small>"Contador correspondendo {0}"</small>, <small>i</small>);
+    }
+                            </pre>
+                        </code>
+                    </details>
+                </p>
+            </div>
+
+            <div class="foreach">
+                <h3>For Each</h3>
+                <p>
+                    Ele itera itens de uma coleção e executa uma determinada ação. <br>
+                    Estrutura: <br>
+                    <code>
+                        <pre>
+    foreach(type <small>cont_item</small> in <small>nomeArray</small>)
+    {
+        <small>comandos a serem executados</small>
+    }
+                        </pre>
+                    </code>
+                </p>
+
+            </div>
+
+            <div class="dowhile">
+                <h3>Do While</h3>
+                <p>
+                    Utilização destinada a quando não se sabe a quantidade de vezes que será repetido, Porém garantindo que <em>o comando será executado ao menos uma vez</em>, já que o teste se encontra ao final. <br>
+                    Estrutura: <br>
+                    <code>
+                        <pre>
+    int <small>contador</small> = <small>y</small>;
+    
+    do
+    {
+        contador ++
+  ou        <small>comandos...</small>
+        contador ++
+    }while(<small>contador</small> < <small>x</small>)
+                        </pre>
+                    </code>
+
+                </p>
+
+            </div>
+ -->
+
+
         </section>
 
 
@@ -586,105 +701,13 @@ ou
 
         </section>
 
+
+
         <div class="comentarios">
             <h2>Comentários</h2>
             <p>Para comentar uma linha use <strong style="font-size: 1.5em;">//</strong>. <br>
             Para comentar varias linhas abra com <strong style="font-size: 1.5em;">/*</strong> e feche com <strong style="font-size: 1.5em;">*/</strong>.</p>
         </div>
-
-        <section>
-            <h2>Estruturas de <strong>Iteração</strong></h2>
-            <p>Propósito, <strong>repetir</strong> uma ação ou uma sequencia delas.</p>
-            <div class="for">
-                <h3>For</h3>
-                <p>
-                    Utilização destinada a quando sei a quantidade de vezes que a ação deve ser repetida. <br>
-                    Estrutura: <br>
-                    <code>
-                        <pre>
-    for(<small>contador</small>;<small>regra</small>;<small>incremento</small>)
-    {
-        <small>comandos ou ações a serem repetidas</small>
-    }
-                        </pre>
-                    </code>
-                    <details class="modeloObj">
-                        <summary>Exemplo pratico</summary>
-                        <code>
-                            <pre>
-    for(int <small>i</small>=0; <small>i</small> &lt; 9; <small>i</small>++)
-    {
-        Console.WriteLine(<small>"Contador correspondendo {0}"</small>, <small>i</small>);
-    }
-                            </pre>
-                        </code>
-                    </details>
-                </p>
-            </div>
-
-            <div class="foreach">
-                <h3>For Each</h3>
-                <p>
-                    Ele itera itens de uma coleção e executa uma determinada ação. <br>
-                    Estrutura: <br>
-                    <code>
-                        <pre>
-    foreach(type <small>cont_item</small> in <small>nomeArray</small>)
-    {
-        <small>comandos a serem executados</small>
-    }
-                        </pre>
-                    </code>
-                </p>
-
-            </div>
-
-            <div class="while">
-                <h3>While</h3>
-                <p>
-                    Utilização destinada a quando não se sabe a quantidade de vezes que será repetido. <br>
-                    Estrutura: <br>
-                    <code>
-                        <pre>
-    int <small>contador</small> = <small>y</small>;
-    while(<small>contador</small> < <small>x</small>)
-    {
-        contador ++
-  ou        <small>comandos...</small>
-        contador ++
-    }
-                        </pre>
-                    </code>
-
-                </p>
-
-            </div>
-
-            <div class="dowhile">
-                <h3>Do While</h3>
-                <p>
-                    Utilização destinada a quando não se sabe a quantidade de vezes que será repetido, Porém garantindo que <em>o comando será executado ao menos uma vez</em>, já que o teste se encontra ao final. <br>
-                    Estrutura: <br>
-                    <code>
-                        <pre>
-    int <small>contador</small> = <small>y</small>;
-    
-    do
-    {
-        contador ++
-  ou        <small>comandos...</small>
-        contador ++
-    }while(<small>contador</small> < <small>x</small>)
-                        </pre>
-                    </code>
-
-                </p>
-
-            </div>
-
-
-
-        </section>
 
         <section class="metodos">
             <h2>Métodos</h2>
