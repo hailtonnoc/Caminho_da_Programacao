@@ -3,5 +3,8 @@
     "cSpell.words": [
         "Metodos",
         "respectivamente"
-    ]
+    ],
+    "pomodoro.workTime": 27,
+    "pomodoro.pauseTime": 6,
+    "pomodoro.repeat": 3
 }

@@ -1,5 +1,7 @@
-variavel = input("Digite a senha: \n")
+variavel = ['menel', 'griboson', 'lerom', 'manelnal', 'giropsidow']
 
-while variavel != "1020":
-    variavel = input ("Digite a senha correta porra: \n")
-print("Bona vinde")
+print(variavel)
+
+print(variavel[2])
+
+print(variavel[2:])
