@@ -23,7 +23,7 @@
             <p>Para execução utilize o <code>run</code> no ambiente de desenvolvimento</p>
 
             <h3>Entendendo a Sintaxe</h3>
-            <p>Python usa o ingles puro como sintaxe o transformando em uma linguaguem de facil compreensão <small>(como o portugol)</small>.</p>
+            <p>Python usa o ingles puro como sintaxe, o transformando em uma linguagem de fácil compreensão <small>(como o portugol)</small>.</p>
             <code>
                 <pre>
     <div class="pacotes">print (<small>"hellow world"</small>)</div>
@@ -35,9 +35,9 @@
         </div>
 
         <section class="variaveis">
-            <h2>Declarando Variáveis simples</h2>
+            <h2>Variáveis simples</h2>
             <p>
-                Para declarar uma variável basta informar o <em>Nome</em> exemplo:
+                Para declarar uma variável simples basta informar o <em>Nome</em> e o valor que o mesmo ira guardar. Exemplo:
                 <code>
                     <pre>
     <em>quant</em> = 9.36
@@ -97,8 +97,10 @@
                         </tr>
                     </tbody>
                 </table>
+
                 <br>
-                <details>
+
+                <details class="strings">
                     <summary>Metodos para Strings</summary>
                     <p>
                         Uma string é como um barbante de algodão feito de <strong>fragmentos</strong> menores. E para este tipo temos algumas ações. <br>
@@ -279,19 +281,21 @@
                     </p>
                 </details>
             </details>
-
-            <div>
-                <h3>Verificando tipo</h3>
-                <p>
-                    Para verificar o tipo da variavel pode usar a função <code>type(<small>variavel</small>)</code>
-                </p>
-            </div>
-            <div>
-                <h3>Verificando ações para o tipo</h3>
-                <p>
-                    Para verificar o leque de ações para o tipo da variavel pode usar a função <code>dir(<small>variavel</small>)</code>
-                </p>
-            </div>
+            <details class="verificaTipo modeloObj">
+            <summary>Verificações de tipo</summary>
+                <div>
+                    <h3>Verificando tipo</h3>
+                    <p>
+                        Para verificar o tipo da variavel pode usar a função <code class="modeloObj">type(<small>variavel</small>)</code>
+                    </p>
+                </div>
+                <div>
+                    <h3>Verificando ações para o tipo</h3>
+                    <p>
+                        Para verificar o leque de ações para o tipo da variavel pode usar a função <code class="modeloObj">dir(<small>variavel</small>)</code>
+                    </p>
+                </div>
+            </details>
 
             <div>
                 <h2>Recebendo <code>INPUT</code></h2>
@@ -305,7 +309,7 @@
                 </p>
             </div>
             <div>
-                <h2>Cast de <code>Type</code></h2>
+                <h3>Cast de <code>Type</code></h3>
                 <p>
                     Toda entrada de usuário por padrão é uma <em>string</em>. Logo para converter precisamos explicitar o tipo que deseja receber.<br>
                     <code>
@@ -496,6 +500,45 @@
                 </p>
             </details>
 
+            <details class="copiar modeloObj">
+                <summary>Copiar Lista</summary>
+                <p>
+                    Ao desejar criar uma copia para altera-la, se faz necessário criar através do <code>.copy</code>. Caso contrario colocar que uma variavel recebe outra, tudo que esta sendo feito é referenciando a memoria original e não copiando-a. <br>
+                    <code>
+                        <pre class="modeloObj">
+    <small>nome_NovaLista</small><strong> = </strong><small>listaOriginal</small><strong>.copy()</strong>
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <br>
+
+            <details class="alcance modeloObjdif">
+                <summary>Definir alcance</summary>
+                <p>
+                    Ao definir um <code>range</code> é imposto um limite onde uma determinada ação pode atuar. <br>
+                    <code>
+                        <pre class="modeloObjdif">
+    range(10)
+                        </pre>
+                    </code>
+                    Tem um limite de 10 itens. <br>
+                    <code>
+                        <pre class="modeloObjdif">
+    range(3, 10)
+                        </pre>
+                    </code>
+                    Tem um limite de 10 itens e deve começar a partir do 3. <br>
+                    <code>
+                        <pre class="modeloObjdif">
+    range(3, 10, 2)
+                        </pre>
+                    </code>
+                    Tem um limite de 10 itens e deve começar a partir do 3 e pular de 2 em 2. <br>
+                </p>
+            </details>
+
             <h2>Dicionários</h2>
             <p>
                 Para declarar um dicionário basta informar o <em>Nome</em> e a declaração da associação entre títulos e valores dentro de <mark>chaves</mark>.
@@ -511,6 +554,103 @@
                     </pre>
                 </code> <br>
             </p>
+            <details class="manipulacao modeloObj">
+                <summary>Manipulação</summary>
+                <p>
+                    Inclui, altera ou remove elementos na lista. <br> 
+                    
+                    <h4>Adiciona</h4>
+                    Inserindo item no final do dicionário.<br>
+                    <code>
+                        <pre class="modeloObj">
+    nome_Dicionario<strong>['novoTitulo'] = </strong><small>'novo dado'</small>
+                        </pre>
+                    </code>
+
+                    <h4>Altera dado</h4>
+                    Modifica valores.<br>
+                    <code>
+                        <pre class="modeloObj">
+    nome_Dicionario<strong>['titulo'] = </strong><small>'novo dado'</small>
+                        </pre>
+                    </code>
+
+                    <h4>Inserindo dados Update</h4>
+                    Modifica valores ou inclui novas chaves e valores.<br>
+                    <code>
+                        <pre class="modeloObj">
+
+    nome_DictNovosDados<strong> = </strong> {
+    <small>'novaChave'</small>:<small>'novo dado'</small>,
+    <small>'chaveExistente'</small>:<small>'novo dado'</small>
+    }
+
+    <small>nome_Dicionario</small><strong>.update(<small>nome_DictNovosDados</small>)</strong>
+                        </pre>
+                    </code>
+                    
+                    <!-- <h4>Removendo</h4>
+                    Retirando itens da lista por valor do dado.<br>
+                    <code>
+                        <pre class="modeloObj">
+    nome_lista<strong>.remove</strong>('nomeDado')
+                        </pre>
+                    </code>
+
+                    <h4>Removendo por index</h4>
+                    Retirando itens da lista por posição do index.<br>
+                    <code>
+                        <pre class="modeloObj">
+    nome_lista<strong>.pop</strong>(index posição)
+                        </pre>
+                    </code>
+                    ainda esse método retorna o valor removido. -->
+                </p>
+            </details>
+
+            <details class="copiar modeloObj">
+                <summary>Copiar Dicionário</summary>
+                <p>
+                    Ao desejar criar uma copia para altera-la é necessário fazer através do <code>.copy</code>. Caso contrario colocar que uma variavel recebe outra, tudo que esta sendo feito é referenciando a memoria original e não copiando-a. <br>
+                    <code>
+                        <pre class="modeloObj">
+    <small>nome_DicionarioNovo</small><strong> = </strong><small>dicionarioOriginal</small><strong>.copy()</strong>
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
+            <details class="convertendo modeloObj">
+                <summary>Convertendo Dicionários em listas</summary>
+                <p>
+                    Retorna elementos na forma de listas. <br> 
+                    
+                    <h4>keys</h4>
+                    Retorna uma lista de chaves de um dicionário. <br>
+                    <code>
+                        <pre class="modeloObj">
+    <small>nome_Dicionario</small><strong>.keys()</strong>
+                        </pre>
+                    </code>
+                    
+                    <h4>values</h4>
+                    Retorna uma lista de valores de um dicionário.<br>
+                    <code>
+                        <pre class="modeloObj">
+    <small>nome_Dicionario</small><strong>.values()</strong>
+                        </pre>
+                    </code>
+
+                    <h4>itens</h4>
+                    Retorna uma lista de tuplas (chave, valor) de um dicionário.<br>
+                    <code>
+                        <pre class="modeloObj">
+    <small>nome_Dicionario</small><strong>.itens()</strong>
+                        </pre>
+                    </code>
+                </p>
+            </details>
+
         </section>
 
         <section class="Operadores">
@@ -780,81 +920,33 @@
                 </p>
 
             </div>
-<!-- 
+
             <div class="for">
                 <h3>For</h3>
                 <p>
-                    Utilização destinada a quando sei a quantidade de vezes que a ação deve ser repetida. <br>
+                    Utilização destinada a quando sei a quantidade de vezes que a ação deve ser repetida. Por exemplo sobre uma lista ou tupla<br>
                     Estrutura: <br>
                     <code>
-                        <pre>
-    for(<small>contador</small>;<small>regra</small>;<small>incremento</small>)
-    {
-        <small>comandos ou ações a serem repetidas</small>
-    }
+                        <pre class="modeloObj">
+    for <small>item</small> in <small>nome_lista</small>:
+        print( <small>item</small> )
                         </pre>
-                    </code>
-                    <details class="modeloObj">
-                        <summary>Exemplo pratico</summary>
-                        <code>
-                            <pre>
-    for(int <small>i</small>=0; <small>i</small> &lt; 9; <small>i</small>++)
-    {
-        Console.WriteLine(<small>"Contador correspondendo {0}"</small>, <small>i</small>);
-    }
-                            </pre>
-                        </code>
-                    </details>
-                </p>
-            </div>
-
-            <div class="foreach">
-                <h3>For Each</h3>
-                <p>
-                    Ele itera itens de uma coleção e executa uma determinada ação. <br>
-                    Estrutura: <br>
+                    </code> <br>
+                    A utilização com dicionários requer uma atenção especial. <br>
                     <code>
-                        <pre>
-    foreach(type <small>cont_item</small> in <small>nomeArray</small>)
-    {
-        <small>comandos a serem executados</small>
-    }
+                        <pre class="modeloObj">
+    for <small>chave</small> in <small>nome_Dicionario</small>:
+        print(f'{chave}: {cidade[chave]}')
                         </pre>
                     </code>
                 </p>
-
             </div>
-
-            <div class="dowhile">
-                <h3>Do While</h3>
-                <p>
-                    Utilização destinada a quando não se sabe a quantidade de vezes que será repetido, Porém garantindo que <em>o comando será executado ao menos uma vez</em>, já que o teste se encontra ao final. <br>
-                    Estrutura: <br>
-                    <code>
-                        <pre>
-    int <small>contador</small> = <small>y</small>;
-    
-    do
-    {
-        contador ++
-  ou        <small>comandos...</small>
-        contador ++
-    }while(<small>contador</small> < <small>x</small>)
-                        </pre>
-                    </code>
-
-                </p>
-
-            </div>
- -->
-
 
         </section>
 
         <div class="comentarios">
             <h2>Comentários</h2>
-            <p>Para comentar uma linha use <strong style="font-size: 1.5em;">//</strong>. <br>
-            Para comentar varias linhas abra com <strong style="font-size: 1.5em;">/*</strong> e feche com <strong style="font-size: 1.5em;">*/</strong>.</p>
+            <p>Para comentar uma linha use <strong style="font-size: 1.5em;">#</strong>.</p>
         </div>
 
     </main>
