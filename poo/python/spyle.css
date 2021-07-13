@@ -36,7 +36,7 @@ a:visited
 
 body 
 {
-    background: linear-gradient( #eaf5d4e1, white), url(../../XXXMATERIAISXXX/IMAGENS/snaker.png);
+    background: linear-gradient( #eaf5d4e1, #eaf5d4e1), url(../../XXXMATERIAISXXX/IMAGENS/snaker.png);
 
     font: normal times;
 }
