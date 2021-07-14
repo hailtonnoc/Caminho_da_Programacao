@@ -75,7 +75,7 @@
                 </code>
 
                 <div class="modeloObj">
-                    <p>Para indefinir a quantidade de parametros para uma função, porem salvando em um dicionário basta utilizar <code>**</code> segudo do nome do parâmetro.
+                    <p>Para indefinir a quantidade de parâmetros para uma função, porem salvando em um dicionário basta utilizar <code>**</code> segudo do nome do parâmetro.
                     <code>
                         <pre class="modeloObj">
         def <small>nome</small>(**<small><abbr title="Por convenção é kwargs mais pode ser qualquer nome">kwargs</abbr></small>):
@@ -94,6 +94,23 @@
 
         </section>
 
+        <section class="utilizandoArquivos">
+            <h2>Manipulando de Arquivos</h2>
+            <p>
+                Para abrir um arquivo basta informar o comando <code>open</code> seguido da localização do arquivo, informando se sera escrita ou leitura e por via de interpretação qual o <strong>encoding</strong> do arquivo.
+                <code>
+                    <pre class="modeloObj">
+    <small>variavel </small>= open(<small>'localArquivo.extensão'</small>, '<abbr title="r = read     &    w = white">r</abbr>', encoding='utf-8')
+                    </pre>
+                </code> <br>
+                Depois de abrir o arquivo e dar uma utilidade é importante fechar por questão de segurança. <br>
+                <code>
+                    <pre class="modeloObj">
+        varialvel<strong>.close()</strong>
+                    </pre>
+                </code>
+            </p>
+        </section>
     </main>
 
     <a class="voltar" href="../index.html" rel="prev"><img src="../../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a>
