@@ -1,4 +1,2 @@
-arquivo = open('cas.txt', 'r', encoding='utf-8')
-texto = arquivo.read()
-print(texto)
-arquivo.close()
+with open('novoArquivo.txt', 'r', encoding='utf-8') as arquivo:
+    print(arquivo.read(), end='')

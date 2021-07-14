@@ -110,6 +110,65 @@
                     </pre>
                 </code>
             </p>
+            <details class="linhalinha">
+                <summary>Lendo linha a linha</summary>
+                <p>
+                    Para ler o arquivo linha alinha basta usar o comando <code>readline</code>. <br>
+                <code>
+                    <pre class="modeloObj">
+    <small>linha</small> = <small>variavel</small><strong>.readline()</strong>
+                    </pre>
+                </code> <br>
+                O Python tem um <em>cursor</em> que quando executado uma vez ele aponta uma localização no arquivo, a proxima se dará na linha subsequente. <br>
+                Especificando melhor imagine a situação onde temos um texto, gostaria de imprimir linha a linha até o final. <br>
+                <code>
+                    <pre class="modeloObj">
+    <small>variavel </small>= open(<small>'localArquivo.extensão'</small>, '<abbr title="r = read     &    w = white">r</abbr>', encoding='utf-8')
+    <small>linha</small> = <small>variavel</small><strong>.readline()</strong>
+    <strong>while </strong><small>linha</small> != '':
+        print(linha, end='')
+        <small>linha</small> = <small>arquivo</small>.readline()
+    <small>variavel</small>.close()
+                    </pre>
+                </code> 
+                <br> ou <br> 
+                <code>
+                    <pre class="modeloObjdif">
+    <small>variavel </small>= open(<small>'localArquivo.extensão'</small>, '<abbr title="r = read     &    w = white">r</abbr>', encoding='utf-8')
+    <small>linha</small> = <small>variavel</small><strong>.readline()</strong>
+    <strong>for </strong><small>linha</small> in <small>variavel</small> :
+        print(linha, end='')
+    <small>variavel</small>.close()
+                    </pre>
+                </code> 
+                </p>
+            </details>
+            <p>
+                Um bom jeito de se desobrigar a ficar fechando o arquivo é passar a obrigação ao próprio Python. <br>
+                <code>
+                    <pre class="modeloObj">
+    <strong>with</strong> open(<small>'localArquivo.extensão'</small>, 'r', encoding='utf-8') as <small>arquivo</small>:
+    <small>texto</small> = <small>arquivo</small>.read()
+    print(<small>texto</small>)
+                    </pre>
+                </code>
+            </p>
+
+            <div class="escrevendo modeloObj">
+                <h3>Criando arquivo</h3>
+                <p>
+                    Basta fazer um <code>open()</code> do arquivo no modo de escrita, caso ele não encontre o mesmo ira criar, caso já esteja criado ele vai sobrescrever. <br>
+                    <code>
+                        <pre class="modeloObj">
+        <strong>with</strong> open(<small>'nomeArquivo.extensão'</small>, <mark>'w'</mark>, encoding='utf-8') as <small>arquivo</small>:
+        <small>arquivo</small>.white(<small>'texto desejado'</small>)
+                        </pre>
+                    </code> <br>
+                    e pra adicionar mais linhas basta abrir no modo <code><mark>'a'</mark></code> além do modo <strong>update</strong> que é representado por <code><mark>r+</mark></code>.
+                </p>
+
+            </div>
+
         </section>
     </main>
 

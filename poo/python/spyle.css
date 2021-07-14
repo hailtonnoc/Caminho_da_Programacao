@@ -82,6 +82,7 @@ mark
     padding: 0.61%;
     font-size: 1.02em;
     font-weight: 600;
+    border-radius: 27%;
 }
 
 
@@ -105,7 +106,7 @@ section
 small
 {
     font-family: monospace;
-    color: #757976;
+    color: #ffa200;
 }
 
 summary

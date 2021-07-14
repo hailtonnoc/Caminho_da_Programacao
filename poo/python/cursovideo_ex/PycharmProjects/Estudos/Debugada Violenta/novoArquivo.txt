@@ -1,0 +1,2 @@
+meu primeiro texto com pythonmeu segundo texto com python
+escrevendo mais um pouco parça
