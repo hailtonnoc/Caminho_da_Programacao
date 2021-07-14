@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../spyle.css">
+    <title>Funções PY</title>
+</head>
+<body>
+    <header>
+        <h1>Funções</h1>
+        <p>
+
+        </p>
+    </header>
+
+    <main>
+        <section class="declarandoFuncao">
+            <h2>Funções simples</h2>
+            <p>
+                Para declarar uma função basta informar <code>def</code> seguido do <em>Nome</em> e sem seguida passar os parâmetros entre parênteses.
+                <code>
+                    <pre class="modeloObj">
+    def <small>hw</small>():
+        print(<small>'Hellow World'</small>)
+                    </pre>
+                </code> <br><br>
+                Para chamar a função basta digitar seu <em>Nome</em> seguido dos parâmetros. Ainda que vazio. <br>
+                <code>
+                    <pre class="modeloObjdif">
+    hw()
+                    </pre>
+                </code>
+            </p>
+            <details class="cParametros">
+                <summary>Exemplo com parâmetros</summary>
+                <p>Para passar parametros basta indicar eles detro dos parênteses</p>
+                <code>
+                    <pre class="modeloObj">
+    def <small>CalculaMedia</small>(<small>valor1</small>, <small>valor2</small>, <small>valor3</small>):
+        media = (<small>valor1</small> + <small>valor2</small> + <small>valor3</small>)/ 3
+        <strong>return</strong> media
+                    </pre>
+                </code> <br> Ainda, caso na declaração do parâmetro for atribuído após seu nome um valor, esse mesmo se torna um valor <abbr title="def nomeFunção(parametro1='defaultValor', parametro2='defaultValor'):">default</abbr>.<br> <br>
+                Usando <br>
+                <code>
+                    <pre class="modeloObjdif">
+    resultado = CalculoMedia(10, 20, 30)
+    print(resultado)
+                    </pre>
+                </code>
+
+
+            </details>
+
+            <details class="sParametros">
+                <summary>Quantidade de parâmetros indefinidos</summary>
+                <p>Para indefinir a quantidade de parametros para uma função basta utilizar <code>*</code> segudo do nome do parâmetro. Interessante notar que <code>args</code> sera salvo como uma tupla.</p>
+                <code>
+                    <pre class="modeloObj">
+    def CalculaM(*<small><abbr title="Por convenção é args mais pode ser qualquer nome">args</abbr></small>):
+        <small>soma</small> = sum(<small>args</small>)
+        <small>media</small> = <small>soma</small> / len(<small>args</small>)
+        return <small>media</small>
+                    </pre>
+                </code> <br>
+                <br>
+                Usando <br>
+                <code>
+                    <pre class="modeloObjdif">
+    resultado = CalculoM(10, 20, 30)
+    print(resultado)
+                    </pre>
+                </code>
+
+                <div class="modeloObj">
+                    <p>Para indefinir a quantidade de parametros para uma função, porem salvando em um dicionário basta utilizar <code>**</code> segudo do nome do parâmetro.
+                    <code>
+                        <pre class="modeloObj">
+        def <small>nome</small>(**<small><abbr title="Por convenção é kwargs mais pode ser qualquer nome">kwargs</abbr></small>):
+            print(<small>kwargs</small>)
+                        </pre>
+                    </code> <br>
+                    <br>
+                    Usando <br>
+                    <code>
+                        <pre class="modeloObjdif">
+        nome(primeiro=<small>'Hailton'</small>, sobrenome=<small>'Oliveira'</small>)
+                        </pre>
+                    </code>
+                </div>
+            </details>
+
+        </section>
+
+    </main>
+
+    <a class="voltar" href="../index.html" rel="prev"><img src="../../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a>
+</body>
+</html>
