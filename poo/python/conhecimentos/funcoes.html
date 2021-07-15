@@ -96,79 +96,126 @@
 
         <section class="utilizandoArquivos">
             <h2>Manipulando de Arquivos</h2>
-            <p>
-                Para abrir um arquivo basta informar o comando <code>open</code> seguido da localização do arquivo, informando se sera escrita ou leitura e por via de interpretação qual o <strong>encoding</strong> do arquivo.
-                <code>
-                    <pre class="modeloObj">
-    <small>variavel </small>= open(<small>'localArquivo.extensão'</small>, '<abbr title="r = read     &    w = white">r</abbr>', encoding='utf-8')
-                    </pre>
-                </code> <br>
-                Depois de abrir o arquivo e dar uma utilidade é importante fechar por questão de segurança. <br>
-                <code>
-                    <pre class="modeloObj">
-        varialvel<strong>.close()</strong>
-                    </pre>
-                </code>
-            </p>
-            <details class="linhalinha">
-                <summary>Lendo linha a linha</summary>
+            <div class="manipulandoTXT modeloObj">
+                <h3>TXT</h3>
                 <p>
-                    Para ler o arquivo linha alinha basta usar o comando <code>readline</code>. <br>
-                <code>
-                    <pre class="modeloObj">
+                    Para abrir um arquivo basta informar o comando <code>open</code> seguido da localização do arquivo, informando se sera escrita ou leitura e por via de interpretação qual o <strong>encoding</strong> do arquivo.
+                    <code>
+                        <pre class="modeloObj">
+    <small>variavel </small>= open(<small>'localArquivo.extensão'</small>, '<abbr title="r = read     &    w = white">r</abbr>', encoding='utf-8')
+                        </pre>
+                    </code> <br>
+                    Depois de abrir o arquivo e dar uma utilidade é importante fechar por questão de segurança. <br>
+                    <code>
+                        <pre class="modeloObj">
+    varialvel<strong>.close()</strong>
+                        </pre>
+                    </code>
+                </p>
+                <details class="linhalinha">
+                    <summary>Lendo linha a linha</summary>
+                    <p>
+                        Para ler o arquivo linha alinha basta usar o comando <code>readline</code>. <br>
+                    <code>
+                        <pre class="modeloObj">
     <small>linha</small> = <small>variavel</small><strong>.readline()</strong>
-                    </pre>
-                </code> <br>
-                O Python tem um <em>cursor</em> que quando executado uma vez ele aponta uma localização no arquivo, a proxima se dará na linha subsequente. <br>
-                Especificando melhor imagine a situação onde temos um texto, gostaria de imprimir linha a linha até o final. <br>
-                <code>
-                    <pre class="modeloObj">
+                        </pre>
+                    </code> <br>
+                    O Python tem um <em>cursor</em> que quando executado uma vez ele aponta uma localização no arquivo, a proxima se dará na linha subsequente. <br>
+                    Especificando melhor imagine a situação onde temos um texto, gostaria de imprimir linha a linha até o final. <br>
+                    <code>
+                        <pre class="modeloObj">
     <small>variavel </small>= open(<small>'localArquivo.extensão'</small>, '<abbr title="r = read     &    w = white">r</abbr>', encoding='utf-8')
     <small>linha</small> = <small>variavel</small><strong>.readline()</strong>
     <strong>while </strong><small>linha</small> != '':
         print(linha, end='')
         <small>linha</small> = <small>arquivo</small>.readline()
     <small>variavel</small>.close()
-                    </pre>
-                </code> 
-                <br> ou <br> 
-                <code>
-                    <pre class="modeloObjdif">
+                        </pre>
+                    </code>
+                    <br> ou <br>
+                    <code>
+                        <pre class="modeloObjdif">
     <small>variavel </small>= open(<small>'localArquivo.extensão'</small>, '<abbr title="r = read     &    w = white">r</abbr>', encoding='utf-8')
     <small>linha</small> = <small>variavel</small><strong>.readline()</strong>
     <strong>for </strong><small>linha</small> in <small>variavel</small> :
         print(linha, end='')
     <small>variavel</small>.close()
-                    </pre>
-                </code> 
-                </p>
-            </details>
-            <p>
-                Um bom jeito de se desobrigar a ficar fechando o arquivo é passar a obrigação ao próprio Python. <br>
-                <code>
-                    <pre class="modeloObj">
+                        </pre>
+                    </code>
+                    </p>
+                </details>
+                <p>
+                    Um bom jeito de se desobrigar a ficar fechando o arquivo é passar a obrigação ao próprio Python. <br>
+                    <code>
+                        <pre class="modeloObj">
     <strong>with</strong> open(<small>'localArquivo.extensão'</small>, 'r', encoding='utf-8') as <small>arquivo</small>:
-    <small>texto</small> = <small>arquivo</small>.read()
-    print(<small>texto</small>)
-                    </pre>
-                </code>
-            </p>
+        <small>texto</small> = <small>arquivo</small>.read()
+        print(<small>texto</small>)
+                        </pre>
+                    </code>
+                </p>
+                <div class="escrevendoCriando modeloObj">
+                    <h3>Criando arquivo</h3>
+                    <p>
+                        Basta fazer um <code>open()</code> do arquivo no modo de escrita, caso ele não encontre o mesmo ira criar, caso já esteja criado ele vai sobrescrever. <br>
+                        <code>
+                            <pre class="modeloObj">
+    <strong>with</strong> open(<small>'nomeArquivo.extensão'</small>, <mark>'w'</mark>, encoding='utf-8') as <small>arquivo</small>:
+        <small>arquivo</small>.white(<small>'texto desejado'</small>)
+                            </pre>
+                        </code> <br>
+                        e pra adicionar mais linhas basta abrir no modo <code><mark>'a'</mark></code> além do modo <strong>update</strong> que é representado por <code><mark>r+</mark></code>.
+                    </p>
+                </div>
+            </div>
 
-            <div class="escrevendo modeloObj">
+            <br>
+
+            <div class="manipulandoCSV modeloObjdif">
+                <h3>CSV</h3>
+                <p>
+                    Para manipular csv é possível usar uma biblioteca própria do Python a <code>csv</code>, depois basta referenciar a função <code>reader</code> lendo o arquivo previamente aberto e printar através de um inteirador.
+                    <code>
+                        <pre class="modeloObj">
+    import csv
+    with open(<small>'covid.csv'</small>, <small>'r'</small>, encoding=<small>'utf-8'</small>) as <small>arcovid</small>:
+        <small>leitor</small> = csv.reader(<small>arcovid</small>)
+        for <small>linha</small> in <small>leitor</small>:
+            print(<small>linha</small>)
+                        </pre>
+                    </code> <br>
+                    Para inteirar utilizando por exemplo um filtro que pule o tilulo e considere apenas resultado que tem a 3° coluna maior que 0. <br>
+                    <code>
+                        <pre class="modeloObj">
+    import csv
+    with open(<small>'covid.csv'</small>, <small>'r'</small>, encoding=<small>'utf-8'</small>) as <small>arcovid</small>:
+        <small>leitor</small> = csv.reader(<small>arcovid</small>)
+        <strong>next(<small>leitor</small>)</strong>           <small style="color: gold;">&lt;--- pula o cabeçalho</small>
+        for <small>linha</small> in <small>leitor</small>:
+        <strong>if</strong> float(<small>linha</small>[<abbr title="Referente a 3° colula ">2</abbr>]) &gt; 0: <small style="color: gold;">&lt;--- filtro coluna maior que </small>
+            print(<small>linha</small>)
+                        </pre>
+                    </code>
+                </p>
+            </div>
+
+            <div class="escrevendoCriando modeloObjdif">
                 <h3>Criando arquivo</h3>
                 <p>
                     Basta fazer um <code>open()</code> do arquivo no modo de escrita, caso ele não encontre o mesmo ira criar, caso já esteja criado ele vai sobrescrever. <br>
                     <code>
                         <pre class="modeloObj">
-        <strong>with</strong> open(<small>'nomeArquivo.extensão'</small>, <mark>'w'</mark>, encoding='utf-8') as <small>arquivo</small>:
-        <small>arquivo</small>.white(<small>'texto desejado'</small>)
+<strong>with</strong> open(<small>'nomeArquivo.csv'</small>, <mark>'w'</mark>, encoding='utf-8', <strong>newline</strong>='') as <small>arquivo</small>:
+    <small>escritor</small>= csv.whiter(<small>'arquivo'</small>)
+    <small>escritor</small>.whiterow([<small>'nome', 'email', 'genero'</small>])
+    <small>escritor</small>.whiterow([<small>'Hailton Oliveria', 'hailton.oliveira@email.com', 'Masculino'</small>])
+    <small>...</small>
                         </pre>
                     </code> <br>
                     e pra adicionar mais linhas basta abrir no modo <code><mark>'a'</mark></code> além do modo <strong>update</strong> que é representado por <code><mark>r+</mark></code>.
                 </p>
-
             </div>
-
         </section>
     </main>
 
