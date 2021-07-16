@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap');
+
 body 
 {
     background: linear-gradient( rgba(255, 217, 0, 0.507),rgba(224, 193, 14, 0.87));
@@ -5,21 +9,31 @@ body
     margin: 1.8%;
 }
 
+code
+{
+    font-family: 'Audiowide', cursive;
+}
+
+div
+{
+    border: solid rgb(109, 86, 27) 2.7px;
+}
+
 h1
 {
-    font: normal 63px times; 
+    font: normal 2.7em times; 
     text-shadow: rgb(158, 120, 24) 9px 9px 4.5px;
 }
 
 h2
 {
-    font: normal 2.7em times;
+    font: normal 1.8em times;
     text-shadow: rgb(158, 120, 24) 6px 6px 3.6px;
 }
 
 h3
 {
-    font-size: normal 45px times; 
+    font-size: normal 1.44em times; 
     text-shadow: rgb(158, 120, 24) 3px 3px 1.8px;
 }
 
@@ -30,6 +44,34 @@ pre
     vertical-align: top;
     padding: 1.8%;
     border: solid goldenrod 1px;
+}
+
+small
+{
+    color: #7c4f0293;
+}
+
+summary
+{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-shadow: rgb(167, 121, 5) 9px 9px 4.5px;
+}
+
+.modeloObj
+{
+    background-color: rgba(255, 255, 255, 0.253);
+    box-shadow: black -4.5px 3px 6px 1px;
+    padding: 0.3%;
+    padding-right: 15px;
+    margin: 0.36%;
+}
+
+/* _________________________________________________________________velhas classes */
+
+#posspi, #obrvoto
+{
+    width: 50%;
 }
 
 .enfase
@@ -68,14 +110,3 @@ text-align: center;}
     border: solid goldenrod 3px;
 }
 
-div
-{
-    border: solid rgb(109, 86, 27) 2.7px;
-}
-
-summary
-{
-    font-size: 1.5em;
-    font-weight: 900;
-    text-shadow: rgb(158, 120, 24) 9px 9px 4.5px;
-}

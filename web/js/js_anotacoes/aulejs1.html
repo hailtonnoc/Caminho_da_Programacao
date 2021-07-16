@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS</title>
+    <title>JS Basic</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,21 +22,29 @@
         </section>
     
         <section class="variaveis">
-            <h2>Variaveis e Tipos Primitivos </h2>
-            <p>Espaço para memoria com configuração previa.</p>
+            <h2>Variáveis</h2>
+            <p>Espaço para memoria com configuração previa para armazenar uma informação.</p>
+
             <h3>procedimento;</h3>
-            <p>Declarar que o é uma <strong>var</strong>iavel.</p>
-            <p><strong><code>var</code></strong> = tem uma amplitude de chamada <strong>local</strong>.</p>
-            <q>No JavaScript moderno tambem é possivel uasar a palavra <code>let</code></q>
-            <p>Ainda caso não pretenda motificar a estrutura da variavel utilize a palavra reservada <code><strong>const</strong></code></p>
-            <p>Após Declarar a varriavel precisa declarar tbm sua <strong>identificação</strong>.</p>
-            <p><code>var <strong>nome</strong>=</code>' o dado '</p>
-            <h3>Tipos Primitivos Primordiais</h3>
+            <h4>1- Declarar que o é uma <strong>var</strong>iavel.</h4>
+            <p><strong><code>var</code></strong> = Tem uma amplitude de chamada <strong>global</strong>, por isso tem uma baixa segurança e é pouco recomendada.</p>
+            <p><strong><code>let</code></strong> = Tem uma amplitude de chamada <strong>escopo</strong>, por isso tem uma alta segurança e é amplamente recomendada.</p>
+            <p><code><strong>const</strong></code> Caso não pretenda modificar a estrutura da variável essa é considerada extremamente segura, porém é pouco variável. 🤣</p> <br>
+
+            <h4>2- Após Declarar a variável precisa declarar tbm sua <strong>identificação</strong>.</h4>
+            <p>
+                <code>var <strong>nome</strong>=</code>' o dado '. <br> <br>
+                Caso uma variável seja declarada porém a mesma não tenha um dado definido por padrão ela será <code>undefined</code> e qualquer operação com ela retornara um <strong>erro</strong>. Para evitar o erro caso não tenha valor prévio a declarar pode se usar a palavra reservada <code>null</code>.
+            </p>
+
+            <h3>Tipos Primitivos</h3>
             <h4><abbr title="ex; Hailton, JavaScript, abc123...">STRING</abbr></h4>
             <h4><abbr title="ex; 3, 6, 9, 1.618033, -18.81...">NUMBER</abbr></h4>
             <h4><abbr title=" true | false">BOOLEANO</abbr></h4>
             <h4>OBJECT</h4>
-            <p>Para ver o tipo Primitivos utilize a palavra reservada <code>typeof </code> seguido da varialvel.</p>
+
+            <h4>Verificando tipo</h4>
+            <p>Para ver o tipo Primitivos utilize a palavra reservada <code>typeof </code> seguido da variável.</p>
             <p><pre>
                 <code>
             var nome = <small>'Hailton'</small>
@@ -50,7 +58,7 @@
             </pre></p>
             <h2>Modelagem de dados</h2>
             <p>O JavaScript sempre salva os input de dados como <abbr title="conjunto de carateres"><strong>string</strong></abbr></p>
-            <h3>É necessario converter os dados.</h3>
+            <h3>É necessário converter os dados.</h3>
             <p>Para isso basta usar a seguinte sintaxe;</p>
             <pre><code>
                 Number.<strong>parseInt</strong><small>(variavel)</small>
@@ -119,9 +127,39 @@
 
         <section class="condicoes">
             <h2>Condições</h2>
-            <h3>Condição composta</h3>
-            <p>Use a tag <strong>if</strong></p>
-            <p>Par ou Impar</p>
+
+            <h3>Condição</h3>
+            <p>
+                Use a palavra reservada <code>if</code> para atestar uma condição. <br>
+                <code>
+                    <pre class="modeloObj">
+    let <small>e_verdade</small> = false;
+    if(<small>e_verdade</small>)
+    {
+        console.log(<small>'é verdade mesmo!'</small>);
+    }
+                    </pre>
+                </code>
+            </p>
+            <h3>Condição Composta</h3>
+            <p>
+                Use a palavra reservada <code>else</code> para executar uma ação caso condição não seja satisfeita. <br>
+                <code>
+                    <pre class="modeloObj">
+    let <small>e_verdade</small> = false;
+    if(<small>e_verdade</small>)
+    {
+        console.log(<small>'é verdade mesmo!'</small>);
+    }
+    else
+    {
+        console.log(<small>'é mentira!'</small>);
+    }
+    
+                    </pre>
+                </code>
+            </p>
+            <p>Par ou Impar:</p>
             
             <input type="number" name="parimpar" id="numpi">
             <input type="button" value="verificar" onclick="parimpou()">
@@ -140,12 +178,37 @@
                 } </script>
         
             <h3>Condições Aninhadas</h3>
-            <p>Condições dentro de Conções. Dentro do verdadeiro ou falso é so acrescentar mais Condições.</p>
-            <p>Para isso use o <mark>else if</mark></p>
-        
+            <p>Condições dentro de Condições. Dentro do verdadeiro ou falso é so acrescentar mais Condições. Ainda é possível fazer mais verificações em uma unica estrutura.</p>
+            <p>
+                Para isso use o <mark>else if</mark>
+
+                <code>
+                    <pre class="modeloObj">
+    let <small>num</small> = 0;
+
+    if(<small>num</small>)
+    {
+        console.log(<small>'é verdade mesmo!'</small>);
+    }
+    <strong>
+        else if (<small>num</small> == 0)
+        {
+            console.log(<small>'O numero é ZERO!'</small>);
+        }
+    </strong>
+    else
+    {
+        console.log(<small>'é mentira!'</small>);
+    }
+
+                    </pre>
+                </code>
+            </p>
+        <br>
+        <p>Verificando obrigatoriedade de voto:</p>
             Digite sua idade <input type="number" name="idade" id="idade">
             <input type="button" value="Confirmar" onclick="votar()">
-            <div id="obrvoto"></div>
+            <div id="obrvoto">Aguardando idade...</div>
         
             <script>
                 var idade = document.querySelector('input#idade')
