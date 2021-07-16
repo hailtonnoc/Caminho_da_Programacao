@@ -186,9 +186,9 @@
                     <pre class="modeloObj">
     let <small>num</small> = 0;
 
-    if(<small>num</small>)
+    if(<small>num</small> &gt; 0)
     {
-        console.log(<small>'é verdade mesmo!'</small>);
+        console.log(<small>'Maior que Zero!'</small>);
     }
     <strong>
         else if (<small>num</small> == 0)
@@ -198,7 +198,7 @@
     </strong>
     else
     {
-        console.log(<small>'é mentira!'</small>);
+        console.log(<small>'Menor que Zero!'</small>);
     }
 
                     </pre>
@@ -223,22 +223,28 @@
                 {votores.innerHTML = 'Não vota.'}}
                 </script>
         
-            <h3>Condições Multiplas</h3>
-            <p>O mando <strong>swich</strong>() e nele existe o case e sempre coloque o <mark>break</mark> após cada um. <br></p>
+            <h3>Condições Múltiplas</h3>
+            <p>
+                O mando <strong>swich</strong>() e nele existe o case e sempre coloque o <mark>break</mark> após cada um. <br>
             <code>
-                <pre>
-                    swich()
-                    {
-                        case "criterio":
-                        acao = 'x'
-                        break;
-                        caso "outro":
-                        acao = 'y'
-                        break;
-                    }
+                <pre class="modeloObj">
+    swich(<small>'variavelComparação'</small>)
+    {
+        case "<small>variavelComparada</small>":
+            acao = 'x'
+            break;
+        caso "<small>outraComparada"</small>:
+            acao = 'y'
+            break;
+
+        default:
+            console.log(<small>'variavel não correspondida'</small>);
+    }
                 </pre>
-            </code>
-        
+            </code> <br>
+            Por via de segurança é possível adicionar um comportamento padrão para caso nenhum critério seja atendido.
+            </p>
+
             <h4>Dia da semana</h4>
             <table border="1">
                 <tr>
@@ -328,7 +334,7 @@
 
 
 
-<p><a href="../jsindex.html">Voltar ao JS intro</a></p>
+<a class="voltar" href="../jsindex.html" rel="prev"><img src="../../../XXXMATERIAISXXX/IMAGENS/left.png" alt="voltar"></a>
     
 </body>
 </html>

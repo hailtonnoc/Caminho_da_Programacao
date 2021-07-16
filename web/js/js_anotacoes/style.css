@@ -67,6 +67,15 @@ summary
     margin: 0.36%;
 }
 
+.voltar
+{
+    position: fixed;
+    bottom: 3%;
+}
+.voltar:hover
+{
+    transform: scale(1.08);
+}
 /* _________________________________________________________________velhas classes */
 
 #posspi, #obrvoto
