@@ -22,19 +22,27 @@ div
 h1
 {
     font: normal 2.7em times; 
-    text-shadow: rgb(158, 120, 24) 9px 9px 4.5px;
+    text-shadow: #9e7818 9px 9px 4.5px;
 }
 
 h2
 {
     font: normal 1.8em times;
-    text-shadow: rgb(158, 120, 24) 6px 6px 3.6px;
+    text-shadow: #9e7818 6px 6px 3.6px;
 }
 
 h3
 {
     font-size: normal 1.44em times; 
-    text-shadow: rgb(158, 120, 24) 3px 3px 1.8px;
+    text-shadow: #9e7818 3px 3px 1.8px;
+}
+
+mark
+{
+    border-radius: 15px;
+    padding: .5%;
+    margin: 0%;
+    box-shadow: #9e7818 -1.5px 1.5px 6px 0px;
 }
 
 pre 
@@ -76,12 +84,16 @@ summary
 {
     transform: scale(1.08);
 }
+
+
 /* _________________________________________________________________velhas classes */
 
 #posspi, #obrvoto
 {
     width: 50%;
 }
+
+
 
 .enfase
 {
@@ -101,13 +113,16 @@ summary
     box-shadow: rgb(109, 86, 27) 6px 6px 3px ;
 }
 
-div#interagir {background: black;
-font: normal 27px fantasy;
-color: white;
-width: 270px;
-height: 270px;
-line-height: 270px;
-text-align: center;}
+div#interagir 
+{
+    background: black;
+    font: normal 27px fantasy;
+    color: white;
+    width: 270px;
+    height: 270px;
+    line-height: 270px;
+    text-align: center;
+}
 
 .funci
 {
